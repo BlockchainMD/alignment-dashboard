@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
-      content="An hourly updated archive of AI alignment research, with source coverage, historical backfill, and original research links."
+      content="New AI alignment preprints, reports, papers, and research posts, checked hourly with original sources and visible coverage."
     />
     <meta name="theme-color" content="#f6f5f0" />
     <title>Alignment Daily — Research, without the noise</title>
@@ -99,17 +99,19 @@
               ><span class="tiny-star">✳</span> Broad collection. Visible
               coverage gaps.</span
             ><span
-              >Hourly updates <i>·</i> Original sources <i>·</i> Persistent
-              history</span
+              >Hourly updates <i>·</i> Original sources <i>·</i> New
+              publications</span
             >
           </div>
+          <p class="archive-status" id="collection-window" hidden></p>
           <div
             class="archive-metrics"
             id="archive-metrics"
             aria-label="Archive coverage"
           >
             <div>
-              <strong id="metric-total">—</strong><span>archived records</span>
+              <strong id="metric-total">—</strong
+              ><span>records since start</span>
             </div>
             <div>
               <strong id="metric-relevant">—</strong><span>topic matches</span>
@@ -241,21 +243,20 @@
               </div>
             </div>
             <p class="sources-intro">
-              New research is checked hourly while historical discovery
-              continues in the background. “Available” means a source responded;
-              it does not mean every article has been collected. Feed windows,
-              backfill progress, failures, and warnings are shown below.
+              New research is checked hourly from the fixed start time shown
+              above. Preprints, lab reports, workshop papers, and substantive
+              research posts are included. “Available” means a source responded;
+              source limits, catch-up progress, failures, and warnings are shown
+              below.
             </p>
             <div id="source-list" class="source-list"></div>
             <div class="method-note">
-              <h3>An archive that keeps its history</h3>
+              <h3>Broad research coverage, from now onward</h3>
               <p>
-                Records are retained without a rolling expiry. Dedicated
-                alignment sources are collected broadly; uncertain matches from
-                mixed sources remain visible as candidates. Keyword labels
-                organize the collection and are not assessments of quality.
-                Publication dates stay unknown when a source does not provide
-                them.
+                New records are retained without a rolling expiry. Research is
+                collected broadly; opinion, news, and uncertain matches stay in
+                Candidates to review. Labels help discovery and are not quality
+                assessments. Uncertain publication timing requires review.
               </p>
               <p>
                 Original links, identifiers, author metadata, and source
@@ -266,8 +267,10 @@
               <p>
                 Coverage is bounded by the configured sources and queries. This
                 is not a guarantee of all alignment research published anywhere.
-                Historical backfill is gradual and some sources expose only a
-                recent feed window.
+                Historical backfill is disabled. Existing undated publisher
+                indexes establish a baseline, and some sources expose only a
+                recent feed window. Previously collected older records remain
+                preserved in the repository outside this monitored collection.
               </p>
               <p>
                 Collection is scheduled at 17 minutes past every hour. GitHub

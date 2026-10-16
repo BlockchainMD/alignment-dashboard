@@ -135,6 +135,14 @@ function renderArticle(item, index) {
     );
   if (item.relevance === "candidate")
     meta.append(node("span", "tag candidate-tag", "Candidate · needs review"));
+  if (
+    ["publication_time_uncertain", "publication_date_unverified"].includes(
+      item.temporal_status,
+    )
+  )
+    meta.append(
+      node("span", "tag candidate-tag", "Publication timing unverified"),
+    );
   if (read) meta.append(node("span", "read-indicator", "Read"));
   const heading = node("h3", "article-title");
   const title = link(item.url, item.title);
@@ -293,6 +301,8 @@ function updateCounts() {
   $("library-count").textContent =
     total === undefined ? "—" : total.toLocaleString();
   $("saved-count").textContent = reading.saved.length;
+  $("collection-window").hidden = !collectionWindow();
+  $("collection-window").textContent = collectionWindow();
   if (edition) {
     $("metric-total").textContent = total.toLocaleString();
     $("metric-relevant").textContent = (
@@ -307,6 +317,12 @@ function updateCounts() {
       `${edition.sources.filter((s) => s.status === "ok").length}/${edition.sources.length}`;
   }
 }
+function collectionWindow() {
+  const policy = edition?.coverage_policy;
+  return policy?.mode === "forward_only" && policy.publication_start
+    ? `Monitoring publications since ${date(policy.publication_start, { year: "numeric", hour: "numeric", minute: "2-digit" })} ET.`
+    : "";
+}
 function renderArticles() {
   if (!edition) return;
   $("load-more").hidden = true;
@@ -318,8 +334,8 @@ function renderArticles() {
     (archiveLoading
       ? "Loading the full research archive… Search results are partial until loading completes."
       : archiveLoaded
-        ? "Full collected archive loaded. Candidates are retained for review; historical source backfill continues."
-        : "Showing recent records. Loading the historical archive when available.");
+        ? `${collectionWindow()} Full monitored collection loaded. Opinion, news, and uncertain matches stay in Candidates to review.`.trim()
+        : "Showing the latest records. Loading the full monitored collection when available.");
   $("articles").replaceChildren();
   $("catchup").replaceChildren();
   $("catchup-section").hidden = true;
@@ -343,7 +359,7 @@ function renderArticles() {
       $("articles").append(
         empty(
           "A quiet edition.",
-          "No new matching research was collected in this edition’s 48-hour window. Check source status for coverage, or read a little further back.",
+          `No new matching research has been collected in this edition’s 48-hour window. ${collectionWindow()} Check source status for coverage.`,
           true,
         ),
       );
@@ -368,10 +384,14 @@ function renderArticles() {
         empty(
           view === "saved" && !reading.saved.length
             ? "Make room for a good read."
-            : "No matching records.",
+            : edition.stats?.total_items === 0
+              ? "Watching for new research."
+              : "No matching records.",
           view === "saved" && !reading.saved.length
             ? "Use the bookmark beside an article to save it for a quieter moment."
-            : "Try another topic, source, review status, or search. Check the loading status above for archive availability.",
+            : edition.stats?.total_items === 0
+              ? `${collectionWindow()} New publications will appear after collection. Source status shows any discovery gaps.`
+              : "Try another topic, source, review status, or search. Check the loading status above for archive availability.",
           view === "saved",
         ),
       );
@@ -393,19 +413,29 @@ function renderSources() {
       node(
         "p",
         "",
-        `Last checked: ${date(source.checked_at, { year: "numeric", hour: "numeric", minute: "2-digit" })} ET · ${source.item_count ?? 0} records returned`,
+        `Last checked: ${date(source.checked_at, { year: "numeric", hour: "numeric", minute: "2-digit" })} ET · ${source.item_count ?? 0} records in the monitored collection`,
       ),
     );
     const coverage = source.coverage || {};
+    const fallbackActive =
+      coverage.adapter_mode === "rss_fallback" ||
+      coverage.mode === "rss_fallback" ||
+      !!coverage.fallback_scope;
     const notes = [
       coverage.description,
       coverage.scope,
-      coverage.history_limit,
-      coverage.backfill_complete === true
-        ? "Available historical pages traversed; source scope still applies."
-        : coverage.has_more || coverage.backfill_complete === false
-          ? "Historical coverage is incomplete. See source notes below."
-          : "Historical completeness is not verified.",
+      edition.coverage_policy?.mode === "forward_only"
+        ? `${collectionWindow()} Historical backfill is disabled.`
+        : coverage.history_limit,
+      edition.coverage_policy?.mode === "forward_only"
+        ? coverage.pending_incremental
+          ? "Forward catch-up is pending or incomplete; inspect the source notes below."
+          : "Bounded by the source’s feed, index, or search coverage."
+        : coverage.backfill_complete === true
+          ? "Available historical pages traversed; source scope still applies."
+          : coverage.has_more || coverage.backfill_complete === false
+            ? "Historical coverage is incomplete. See source notes below."
+            : "Historical completeness is not verified.",
     ];
     if (coverage.pages_fetched !== undefined || coverage.pages !== undefined)
       notes.push(
@@ -413,9 +443,11 @@ function renderSources() {
       );
     if (coverage.degraded)
       notes.push(
-        "Fallback discovery active; the primary archive route is unavailable.",
+        fallbackActive
+          ? "Fallback discovery is active; the primary search route is unavailable."
+          : "Discovery coverage is limited; inspect the warnings below.",
       );
-    if (coverage.next_year)
+    if (coverage.next_year && edition.coverage_policy?.mode !== "forward_only")
       notes.push(
         `Historical cursor: ${coverage.next_year}, offset ${coverage.next_offset || 0}.`,
       );
@@ -458,7 +490,7 @@ function renderSources() {
           "p",
           "",
           source.last_success_at
-            ? `Last successful retrieval: ${date(source.last_success_at, { year: "numeric", hour: "numeric", minute: "2-digit" })} ET. Earlier research remains in the library.`
+            ? `Last successful retrieval: ${date(source.last_success_at, { year: "numeric", hour: "numeric", minute: "2-digit" })} ET. Retained records remain preserved.`
             : "No successful retrieval has been recorded yet.",
         ),
       );
@@ -469,7 +501,9 @@ function renderSources() {
       source.status === "ok"
         ? "● Available"
         : source.status === "degraded"
-          ? "◐ Fallback active"
+          ? fallbackActive
+            ? "◐ Fallback active"
+            : "◐ Coverage limited"
           : source.status === "warning"
             ? "◌ Needs attention"
             : "◌ Unavailable",
@@ -548,8 +582,8 @@ const views = {
   ],
   library: [
     "The alignment\nresearch archive.",
-    "Broad discovery. Persistent history. Hourly updates.\nExplore original research and review uncertain matches.",
-    "EXPLORE THE FULL COLLECTION",
+    "New preprints, reports, papers, and substantive research posts.\nChecked hourly, with original sources and a separate review queue.",
+    "NEW RESEARCH FROM NOW ON",
   ],
   saved: [
     "Good research.\nOn your own time.",
@@ -558,7 +592,7 @@ const views = {
   ],
   sources: [
     "Coverage you\ncan inspect.",
-    "A transparent look at discovery, backfill, and source health.\nSee what has been checked and where gaps remain.",
+    "A transparent look at discovery and source health.\nSee what has been checked and where gaps remain.",
     "SOURCE COVERAGE",
   ],
 };
@@ -708,7 +742,7 @@ async function loadArchive() {
     updateCounts();
   } catch (error) {
     if (edition === current)
-      archiveError = `Historical archive could not be fully loaded (${error.message}). Showing recent records only; results are incomplete. Reload to retry.`;
+      archiveError = `The full monitored collection could not be loaded (${error.message}). Showing recent records only; results are incomplete. Reload to retry.`;
   } finally {
     if (edition === current) {
       archiveLoading = false;

@@ -56,12 +56,12 @@ jobs:
             node --test "${browser_tests[@]}"
           fi
 
-      - name: Collect new publications and continue historical backfill
+      - name: Collect new publications from the fixed cutoff
         id: collect
         # A total source outage still writes health and retained records. Deploy
         # that honest state, then mark this workflow failed after publication.
         continue-on-error: true
-        run: python scripts/collect.py --output site/data/edition.json --backfill-pages 2
+        run: python scripts/collect.py --output site/data/edition.json --backfill-pages 0
 
       - name: Validate the generated edition
         run: python -m json.tool site/data/edition.json > /dev/null

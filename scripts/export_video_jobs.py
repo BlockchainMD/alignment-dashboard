@@ -13,9 +13,9 @@ from pathlib import Path
 import tempfile
 
 try:
-    from .archive_store import load_archive
+    from .archive_store import active_archive_items, load_archive
 except ImportError:
-    from archive_store import load_archive
+    from archive_store import active_archive_items, load_archive
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -34,6 +34,7 @@ def make_packet(article):
         "published_date": article.get("published_date"),
         "publication_year": article.get("publication_year"),
         "date_precision": article.get("date_precision", "unknown"),
+        "temporal_status": article.get("temporal_status"),
         "source_excerpt": article.get("summary", ""),
         "excerpt_kind": article.get("summary_kind", "publisher excerpt"),
         "provenance": article.get("provenance", []),
@@ -67,6 +68,7 @@ def make_packet(article):
         },
         "required_reviews": [
             "Confirm that the record is substantive alignment research.",
+            "Verify the publication date and monitoring-window eligibility; discovery time is not publication time.",
             "Retrieve and read the original paper or article; an excerpt is not sufficient evidence.",
             "Attach a source section or page to each factual claim in the script.",
             "Preserve the distinction between measured findings, hypotheses, and commentary.",
@@ -86,11 +88,11 @@ def main(argv=None):
     parser.add_argument("--article-id", help="Prepare a single record instead of the whole archive")
     args = parser.parse_args(argv)
     archive = load_archive(args.archive)
-    items = archive["items"]
+    items = active_archive_items(archive)
     if args.article_id:
         items = [item for item in items if item["id"] == args.article_id or args.article_id in item.get("aliases", [])]
         if not items:
-            parser.error("No matching article is present in the archive")
+            parser.error("No matching article is present in the active publication scope")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile("w", dir=args.output.parent, encoding="utf-8", delete=False) as stream:
         temporary = Path(stream.name)

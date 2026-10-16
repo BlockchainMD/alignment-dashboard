@@ -1,15 +1,25 @@
 {
   "coverage_policy": {
-    "objective": "Broad, auditable discovery of public AI alignment research, preserving uncertain candidates for review.",
+    "objective": "Broad, auditable discovery of newly published public AI alignment research, preserving uncertain candidates for review.",
     "completeness": "No finite registry, keyword query, publisher feed, or crawler establishes that all alignment research has been collected.",
     "refresh_interval_minutes": 60,
-    "history": "Retain discovered records indefinitely; resume bounded historical backfills each run.",
+    "history": "Monitor new publications from the fixed start timestamp onward. Historical backfill is disabled; previously collected records remain preserved in the canonical archive.",
     "known_gaps": [
       "Unindexed papers, private or paywalled material, personal sites outside the registry, missing publisher metadata, and non-English terminology.",
-      "Publisher RSS windows are finite; older archives may need additional adapters.",
+      "Finite feed windows can lose publications during long outages. Existing undated publisher-index links are baselined without historical article crawling; their publication timing cannot be verified from the index alone.",
       "Scholarly keyword searches trade precision for recall and still miss papers using unfamiliar terminology.",
-      "New sources require registration and validation; source success does not imply archive completeness."
-    ]
+      "New sources require registration and validation; source success does not imply archive completeness.",
+      "Paginated discovery feeds use a bounded seven-day publication overlap. Items indexed later than that window or amid pagination churn can be missed. OpenReview search ordering is checked at runtime; unverifiable ordering is reported as degraded coverage."
+    ],
+    "mode": "forward_only",
+    "publication_start": "2026-10-16T23:48:48Z",
+    "research_scope": [
+      "technical preprints",
+      "lab reports",
+      "workshop and conference papers",
+      "substantive Alignment Forum and LessWrong research posts"
+    ],
+    "review_policy": "Opinion, news, uncertain relevance, and newly discovered items with uncertain publication timing remain candidates for review."
   },
   "sources": [
     {
@@ -23,7 +33,7 @@
       "feed_url": "https://api.alignmentfeed.org/v1/articles",
       "page_size": 100,
       "catchup_pages": 2,
-      "coverage_note": "Secondary discovery index, including commentary and capabilities news; page-number archive is progressively traversed."
+      "coverage_note": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
     },
     {
       "id": "arxiv",
@@ -38,7 +48,7 @@
       "page_size": 100,
       "catchup_pages": 2,
       "request_interval_seconds": 3.05,
-      "coverage_note": "Cross-category keyword search without a cs.AI/cs.LG restriction; new/updated papers plus year-partitioned historical pagination back to 1991. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; archive cursors do not advance.",
+      "coverage_note": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance.",
       "rss_fallback_url": "https://rss.arxiv.org/rss/cs.AI+cs.LG+cs.CL+cs.MA+stat.ML",
       "fallback_match": "(?i)\\b(?:align(?:ment|ed|ing)?|interpretability|scheming|sandbagging|oversight|monitoring|safety|control|agents?|reward.hacking|reward.tampering|specification.gaming|goal.misgeneralization|constitutional.ai|weak.to.strong|corrigib\\w*|wireheading|decept\\w*|model.organism\\w*|evaluation.awareness|monitorability|sleeper.agent\\w*|ai.safety|ai.control|catastrophic.risk|existential.risk|mesa.optim\\w*|honesty.elicitation)\\b"
     },
@@ -64,7 +74,7 @@
         "sandbagging"
       ],
       "priority": 0,
-      "coverage_note": "Public API v2 paper submissions matching exact phrases, with progressive pagination. API v1 venues and work without configured terminology may be missing; search result ceilings are reported explicitly."
+      "coverage_note": "Public API v2 paper submissions matching exact phrases. Forward discovery uses update metadata; publication metadata determines admission. API v1 venues and unfamiliar terminology may be missed; search ceilings are reported."
     },
     {
       "id": "alignment-forum",
@@ -77,7 +87,7 @@
       "feed_url": "https://www.alignmentforum.org/graphql",
       "af_only": true,
       "page_size": 50,
-      "coverage_note": "Public Alignment Forum posts, including informal research and discussion, with date-based archive and catch-up cursors."
+      "coverage_note": "Public Alignment Forum posts from the fixed cutoff, including substantive informal research. Discussion and opinion remain review candidates."
     },
     {
       "id": "lesswrong",
@@ -89,7 +99,7 @@
       "priority": 1,
       "feed_url": "https://www.lesswrong.com/graphql",
       "page_size": 50,
-      "coverage_note": "All public posts are scanned as discovery candidates, avoiding reliance on incomplete alignment tags; relevance labels distinguish research from unrelated discussion."
+      "coverage_note": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
     },
     {
       "id": "metr",
@@ -100,7 +110,7 @@
       "summary_kind": "publisher excerpt",
       "priority": 1,
       "feed_url": "https://metr.org/feed.xml",
-      "coverage_note": "Publisher RSS includes evaluations and methodology; historical coverage is bounded by the publisher feed."
+      "coverage_note": "New evaluations and methodology in the publisher RSS window; gaps during outages longer than that window may require recovery."
     },
     {
       "id": "anthropic-alignment",
@@ -111,7 +121,7 @@
       "summary_kind": "publisher excerpt",
       "priority": 1,
       "article_budget": 10,
-      "coverage_note": "Publisher-owned article cards from the current index, progressively fetched; publication dates come from article metadata and bylines."
+      "coverage_note": "Publisher-owned article index monitored for newly listed or recently modified pages. Publication dates come from article metadata and bylines; existing undated links establish a baseline."
     },
     {
       "id": "redwood",
@@ -124,7 +134,7 @@
       "feed_url": "https://blog.redwoodresearch.org/feed",
       "archive_url": "https://blog.redwoodresearch.org/api/v1/archive",
       "page_size": 50,
-      "coverage_note": "Public Substack archive paginated beyond its finite RSS window. Older work absent from the archive may be discovered through other indexes."
+      "coverage_note": "New public Substack publications, with bounded forward catch-up pagination when necessary. Historical archive crawling is disabled."
     },
     {
       "id": "transformer-circuits",
@@ -135,7 +145,7 @@
       "summary_kind": "publisher excerpt",
       "priority": 1,
       "feed_url": "https://transformer-circuits.pub/feed.xml",
-      "coverage_note": "All article cards on the publisher historical index, with its explicit data-date publication dates and summaries. Fetches the lightweight index rather than embedding-heavy article HTML."
+      "coverage_note": "Lightweight publisher index checked hourly; explicit publication dates determine which cards are new after the fixed cutoff."
     },
     {
       "id": "far-ai",
@@ -148,7 +158,7 @@
       "feed_url": "https://www.far.ai/sitemap.xml",
       "include_pattern": "^https://www\\.far\\.ai/research/[^/]+/?$",
       "article_budget": 10,
-      "coverage_note": "Research collection URLs in the publisher sitemap, progressively fetched. Original publication bylines override website-migration dates."
+      "coverage_note": "Research URLs monitored in the publisher sitemap. New or recently modified pages are fetched; original publication bylines override migration dates. Historical article rotation is disabled."
     },
     {
       "id": "apollo",
@@ -159,13 +169,10 @@
       "summary_kind": "publisher excerpt",
       "priority": 1,
       "feed_url": "https://www.apolloresearch.ai/sitemap.xml",
-      "allowed_hosts": [
-        "apolloresearch.ai",
-        "www.apolloresearch.ai"
-      ],
+      "allowed_hosts": ["apolloresearch.ai", "www.apolloresearch.ai"],
       "include_pattern": "^https://(?:www\\.)?apolloresearch\\.ai/(?:science|monitoring|governance)/[^/]+/?$",
       "article_budget": 10,
-      "coverage_note": "Science, monitoring and governance research pages in the publisher sitemap, progressively fetched with explicit publication dates where supplied."
+      "coverage_note": "New science, monitoring and governance research pages from the publisher sitemap. Existing undated URLs establish a baseline; old article rotation is disabled."
     },
     {
       "id": "arc",
@@ -176,7 +183,7 @@
       "summary_kind": "publisher excerpt",
       "priority": 1,
       "feed_url": "https://www.alignment.org/sitemap-posts.xml",
-      "coverage_note": "All research-blog URLs in the publisher post sitemap, progressively fetched beyond the shorter RSS feed. Old pages rotate for metadata refresh.",
+      "coverage_note": "New research-blog URLs discovered through the publisher post sitemap. Existing undated URLs establish a baseline; historical article rotation is disabled.",
       "include_pattern": "^https://www\\.alignment\\.org/blog/[^/]+/?$",
       "article_budget": 10
     },
@@ -189,7 +196,7 @@
       "summary_kind": "publisher excerpt",
       "priority": 1,
       "feed_url": "https://intelligence.org/feed/",
-      "coverage_note": "RSS mixes technical alignment work, policy, organizational updates and newsletters; older technical reports need separate archive indexing."
+      "coverage_note": "Publisher RSS mixes technical alignment work, policy, organizational updates and newsletters; new non-research entries remain review candidates."
     },
     {
       "id": "miri-publications",
@@ -200,7 +207,7 @@
       "scope": "alignment",
       "summary_kind": "publisher excerpt",
       "priority": 1,
-      "coverage_note": "Technical reports and venue papers explicitly cited in the official historical bibliography, including direct PDFs absent from arXiv. Citation years are preserved as text; exact dates remain unknown unless another source provides them."
+      "coverage_note": "Official technical bibliography monitored for newly added citations. Year-only dates are preserved; uncertain new publication timing requires review. Existing citations establish a baseline."
     },
     {
       "id": "openai",
@@ -211,7 +218,7 @@
       "summary_kind": "publisher excerpt",
       "priority": 1,
       "feed_url": "https://openai.com/news/rss.xml",
-      "coverage_note": "Publisher-wide feed includes safety research alongside products and company news; candidates are retained for relevance review."
+      "coverage_note": "Publisher-wide feed includes safety research alongside products and company news; new non-research entries remain review candidates."
     },
     {
       "id": "deepmind",
@@ -222,7 +229,7 @@
       "summary_kind": "publisher excerpt",
       "priority": 1,
       "feed_url": "https://deepmind.google/blog/rss.xml",
-      "coverage_note": "Publisher-wide blog includes technical safety and general AI news; older history is bounded by the feed window."
+      "coverage_note": "Publisher-wide blog includes technical safety and general AI news; new uncertain matches remain review candidates and outages are bounded by its feed window."
     }
   ]
 }

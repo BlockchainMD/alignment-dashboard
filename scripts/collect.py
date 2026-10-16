@@ -295,6 +295,26 @@ def _trusted_alignment_source(source):
             or source.get("research_scope") == "alignment" or source.get("alignment_research") is True)
 
 
+NONRESEARCH_TITLE = re.compile(
+    r"\b(?:newsletter|news roundup|reading list|link roundup|job openings?|we(?:'re| are) hiring|"
+    r"career opportunities|fundraising|funding round|office hours|conference announcement|"
+    r"workshop announcement|call for (?:papers|applications)|applications? (?:are )?open)\b|"
+    r"^(?:(?:weekly|monthly|daily) .{0,60}(?:digest|roundup|news|update)|"
+    r"opinion\s*:|my (?:thoughts|take)\b|thoughts on\b|what i think\b|join us\b)", re.I)
+ANNOUNCEMENT_TITLE = re.compile(r"^(?:announcing|launching|introducing|welcoming|welcome to)\b", re.I)
+RESEARCH_DESCRIPTION = re.compile(r"\b(?:paper|study|technical report|experiment|benchmark|dataset|evaluation|"
+    r"algorithm|theorem|method|circuit|interpretability|steering|training|elicitation|model organisms?)\b", re.I)
+
+
+def _needs_research_review(item):
+    """Conservative routing only: opinion and news remain collected for review."""
+    publication_type = str(item.get("publication_type") or "").casefold()
+    return bool(NONRESEARCH_TITLE.search(item.get("title", "")) or
+                ANNOUNCEMENT_TITLE.search(item.get("title", "")) and not RESEARCH_DESCRIPTION.search(
+                    item.get("title", "") + " " + str(item.get("summary") or "")) or
+                publication_type in {"news", "opinion", "editorial", "announcement", "newsletter"})
+
+
 def _content_hash(item):
     fields = {key: item.get(key) for key in (
         "title", "url", "published_at", "published_date", "publication_year", "summary", "summary_kind",
@@ -334,6 +354,9 @@ def normalize_item(raw, source, now):
     # Archived relevance decisions must survive a source disappearing from config.
     if raw.get("relevance") == "relevant" and not source.get("scope"):
         relevance = "relevant"
+    needs_review = _needs_research_review({**raw, "title": title})
+    if needs_review:
+        relevance = "candidate"
     priority = source.get("priority", 0)
     priority = min(max(priority, 0), 2) if isinstance(priority, (int, float)) else 0
     kind = raw.get("summary_kind", source.get("summary_kind", "publisher excerpt"))
@@ -365,7 +388,8 @@ def normalize_item(raw, source, now):
         "date_precision": ("day" if day_only else "instant") if published else "year" if publication_year else "unknown",
         "summary": summary, "summary_kind": kind, "topics": topics,
         "score": min(score + priority, 100), "relevance": relevance,
-        "relevance_reason": "trusted alignment source" if trusted else "topic heuristic" if matches else "discovery candidate; needs review",
+        "relevance_reason": ("Possible opinion, news, or announcement; substantive research needs review." if needs_review
+            else "trusted alignment source; topic metadata only" if trusted else "topic heuristic; topic metadata only" if matches else "discovery candidate; needs review"),
         "authors": _authors(raw.get("authors")),
         "first_seen": iso(first_seen) if first_seen else observed,
         "discovered_at": iso(first_seen) if first_seen else observed,
@@ -388,6 +412,8 @@ def normalize_item(raw, source, now):
     for key in ("version", "external_id", "publication_type", "language"):
         if raw.get(key):
             result[key] = clean_text(str(raw[key]), 200)
+    if raw.get("legacy_before_forward_scope") is True:
+        result["legacy_before_forward_scope"] = True
     provenance = []
     for row in raw.get("provenance", []) if isinstance(raw.get("provenance"), list) else []:
         if not isinstance(row, dict):
@@ -465,6 +491,8 @@ def _merge_items(previous, incoming):
     first = min(filter(None, [previous.get("first_seen"), incoming.get("first_seen")]), default=None)
     result["first_seen"] = result["discovered_at"] = first
     result["last_seen"] = max(previous.get("last_seen") or "", incoming.get("last_seen") or "")
+    if previous.get("legacy_before_forward_scope") is True or incoming.get("legacy_before_forward_scope") is True:
+        result["legacy_before_forward_scope"] = True
     for key in ("doi", "arxiv_id", "published_at", "published_date", "publication_year", "updated_at", "authors", "external_id", "version"):
         if not result.get(key) and other.get(key):
             result[key] = copy.deepcopy(other[key])
@@ -478,6 +506,9 @@ def _merge_items(previous, incoming):
     elif result.get("publication_year"):
         result["date_precision"] = "year"
     result["relevance"] = "relevant" if "relevant" in {previous.get("relevance"), incoming.get("relevance")} else "candidate"
+    if _needs_research_review(result):
+        result["relevance"] = "candidate"
+        result["relevance_reason"] = "Possible opinion, news, or announcement; substantive research needs review."
     result["topics"] = sorted(set(previous.get("topics", [])) | set(incoming.get("topics", [])))
     result["links"] = sorted(set(previous.get("links", [])) | set(incoming.get("links", [])) | {previous["url"], incoming["url"]})
     provenance = {}
@@ -776,7 +807,7 @@ def fetch_source(source, state=None, now=None, request=None):
     return fetch(source, state or {}, now or datetime.now(UTC), request or fetch_bytes)
 
 
-def collect(sources, previous=None, now=None, fetcher=None, source_states=None, backfill_pages=3):
+def collect(sources, previous=None, now=None, fetcher=None, source_states=None, backfill_pages=3, coverage_policy=None):
     """Collect without deleting history; checkpoints advance only on valid success.
 
     Offline seam ``fetcher(source)`` accepts a list or an adapter outcome dict.
@@ -785,6 +816,16 @@ def collect(sources, previous=None, now=None, fetcher=None, source_states=None, 
     """
     now = (now or datetime.now(UTC)).astimezone(UTC)
     previous = previous if isinstance(previous, dict) else {}
+    coverage_policy = copy.deepcopy(coverage_policy if coverage_policy is not None else previous.get("coverage_policy"))
+    if not coverage_policy:
+        forward_source = next((source for source in sources if source.get("forward_only") and source.get("publication_start")), None)
+        if forward_source:
+            coverage_policy = {"mode": "forward_only", "publication_start": forward_source["publication_start"]}
+    forward_only = bool(coverage_policy and coverage_policy.get("mode") == "forward_only")
+    if forward_only:
+        # Validate the scope before making requests or advancing any checkpoints.
+        publication_scope({}, coverage_policy)
+        sources = [{**source, "forward_only": True, "publication_start": coverage_policy["publication_start"]} for source in sources]
     checked = iso(now)
     old_states = copy.deepcopy(source_states if source_states is not None else previous.get("source_states", {}))
     old_states = old_states if isinstance(old_states, dict) else {}
@@ -803,19 +844,30 @@ def collect(sources, previous=None, now=None, fetcher=None, source_states=None, 
             migrated_observation = parse_datetime(previous.get("generated_at"), now=now)
             if migrated_observation:
                 retained_raw = {**raw, "first_seen": iso(migrated_observation), "last_seen": raw.get("last_seen") or iso(migrated_observation)}
+            if forward_only and not previous.get("coverage_policy"):
+                retained_raw = {**retained_raw, "legacy_before_forward_scope": True}
         item = normalize_item(retained_raw, source, now)
         if item:
             all_items.append(item)
     retained = len(all_items)
+    active_retained = sum(publication_scope(item, coverage_policy)[0] for item in all_items)
+    known_urls = {}
+    for item in all_items:
+        known_urls.setdefault(item.get("source_id"), set()).add(item["url"])
+        for row in item.get("provenance", []):
+            if isinstance(row, dict) and row.get("article_url"):
+                known_urls.setdefault(row.get("source_id"), set()).add(row["article_url"])
     known_source_ids = {row.get("source_id") for row in all_items}
     known_source_ids.update(provenance.get("source_id") for row in all_items for provenance in row.get("provenance", []))
     health, errors = [], []
     fetched = accepted = successes = suspicious = 0
+    received_items = []
     for source in sources:
         if not isinstance(source.get("id"), str) or not canonical_url(source.get("url")):
             raise ValueError("Every source needs a stable id and a public HTTP(S) homepage")
 
     def run(source):
+        source = {**source, "known_urls": sorted(known_urls.get(source["id"], set()))} if forward_only else source
         if fetcher:
             return fetcher(copy.deepcopy(source))
         return fetch_source({**source, "backfill_pages": backfill_pages},
@@ -876,6 +928,7 @@ def collect(sources, previous=None, now=None, fetcher=None, source_states=None, 
                 if state["coverage"].get("degraded") is True:
                     state["status"] = "degraded"
                 all_items.extend(items)
+                received_items.extend(items)
                 accepted += len(items)
                 successes += 1
                 state.update(last_success_at=checked, failure_streak=0)
@@ -883,7 +936,7 @@ def collect(sources, previous=None, now=None, fetcher=None, source_states=None, 
                     state["last_nonempty_at"] = checked
                 if rows and len(items) < len(rows):
                     state["warnings"].append(f"{len(rows) - len(items)} records lacked a valid title or public article link.")
-                if state["coverage"].get("pending_backfill") or state["coverage"].get("truncated"):
+                if not forward_only and (state["coverage"].get("pending_backfill") or state["coverage"].get("truncated")):
                     state["warnings"].append("Historical coverage is incomplete; later runs retry the backlog when its discovery route is available.")
             except Exception as exc:
                 error = clean_text(str(exc), 220) or type(exc).__name__
@@ -896,11 +949,24 @@ def collect(sources, previous=None, now=None, fetcher=None, source_states=None, 
     health.sort(key=lambda row: order[row["id"]])
     errors.sort(key=lambda row: order[row["source_id"]])
     items = deduplicate(all_items)
+    if forward_only:
+        items = [apply_publication_scope(item, coverage_policy) for item in items]
     # A targeted recovery retains health for sources outside the requested subset.
     health.extend(copy.deepcopy(row) for row in previous.get("sources", [])
                   if isinstance(row, dict) and row.get("id") not in source_by_id)
-    known_publications = [item["published_at"] for item in items if item.get("published_at")]
-    return {
+    active_items = active_archive_items({"items": items, "coverage_policy": coverage_policy})
+    eligible_identities = {identity for item in active_items for identity in _identities(item)}
+    active_accepted = sum(bool(_identities(item) & eligible_identities) for item in received_items)
+    for source in health:
+        source["item_count"] = source_archive_counts(active_items, source.get("id"))
+        source["lifetime_item_count"] = source_archive_counts(items, source.get("id"))
+        if forward_only:
+            if not isinstance(source.get("coverage"), dict):
+                source["coverage"] = {}
+            source["coverage"].update(mode="forward_only", monitoring_since=coverage_policy["publication_start"], pending_backfill=False)
+            source["warnings"] = [message for message in source.get("warnings", [])
+                if not isinstance(message, str) or not message.startswith("Historical coverage is incomplete; later runs retry the backlog")]
+    archive = {
         "schema_version": ARCHIVE_SCHEMA_VERSION,
         "generated_at": checked,
         "last_successful_update": checked if successes else previous.get("last_successful_update"),
@@ -910,21 +976,27 @@ def collect(sources, previous=None, now=None, fetcher=None, source_states=None, 
         "coverage": {"completeness": "unverified", "description": "An expanding metadata archive; feeds and search APIs cannot guarantee every published alignment work.",
                      "configured_sources": len(health), "pending_backfill_sources": sum(bool(row.get("coverage", {}).get("pending_backfill")) for row in health),
                      "feed_window_sources": sum(row.get("coverage", {}).get("mode") == "feed_window" for row in health)},
-        "stats": {"total_items": len(items), "fetched_items": fetched, "accepted_items": accepted,
-                  "retained_items": retained, "successful_sources": successes, "total_sources": len(sources),
+        "stats": {"fetched_items": fetched, "accepted_items": active_accepted if forward_only else accepted,
+                  "retained_items": active_retained if forward_only else retained,
+                  "lifetime_accepted_items": accepted, "lifetime_retained_items": retained,
+                  "successful_sources": successes, "total_sources": len(sources),
                   "retention_days": None, "minimum_relevance_score": None,
-                  "relevant_items": sum(row.get("relevance") == "relevant" for row in items),
-                  "candidate_items": sum(row.get("relevance") == "candidate" for row in items),
-                  "undated_items": sum(not row.get("published_at") and not row.get("publication_year") for row in items),
-                  "year_only_items": sum(not row.get("published_at") and bool(row.get("publication_year")) for row in items),
                   "suspicious_empty_sources": suspicious,
                   "duplicates_removed": len(all_items) - len(items),
-                  "newest_publication": max(known_publications, default=None)},
+                  **active_archive_stats(active_items, len(items))},
     }
+    if coverage_policy:
+        archive["coverage_policy"] = coverage_policy
+    if forward_only:
+        archive["coverage"].update(mode="forward_only", monitoring_since=coverage_policy["publication_start"],
+            description="Monitoring new publications from the collection start; newly discovered works with uncertain dates remain in review.",
+            pending_backfill_sources=0)
+    return archive
 
 
 # Re-export the atomic writer to keep the established collector API stable.
-from archive_store import atomic_write, load_archive, save_archive, write_public_archive
+from archive_store import (active_archive_items, active_archive_stats, apply_publication_scope, atomic_write,
+                           load_archive, publication_scope, save_archive, source_archive_counts, write_public_archive)
 
 
 def main(argv=None):
@@ -935,7 +1007,7 @@ def main(argv=None):
     parser.add_argument("--cache-dir", type=Path, default=ROOT / ".cache/alignment-http")
     parser.add_argument("--now", help="Optional ISO clock for reproducible verification")
     parser.add_argument("--source", action="append", help="Collect only this configured source id; repeatable")
-    parser.add_argument("--backfill-pages", type=int, default=3, help="Historical page budget per source per run (1–50)")
+    parser.add_argument("--backfill-pages", type=int, default=3, help="Historical page budget per source per run (0–50; 0 for forward-only monitoring)")
     args = parser.parse_args(argv)
     # Normalize before deciding the archive location: the scheduled workflow
     # passes a relative --output, which must never move private checkpoints into
@@ -948,10 +1020,18 @@ def main(argv=None):
     now = parse_datetime(args.now) if args.now else datetime.now(UTC)
     if now is None:
         parser.error("--now must be a valid ISO/RFC3339 timestamp")
-    if not 1 <= args.backfill_pages <= 50:
-        parser.error("--backfill-pages must be between 1 and 50")
-    sources = json.loads(args.config.read_text(encoding="utf-8"))
-    sources = sources["sources"] if isinstance(sources, dict) else sources
+    if not 0 <= args.backfill_pages <= 50:
+        parser.error("--backfill-pages must be between 0 and 50")
+    config = json.loads(args.config.read_text(encoding="utf-8"))
+    args.coverage_policy = copy.deepcopy(config.get("coverage_policy")) if isinstance(config, dict) else None
+    if args.coverage_policy and args.coverage_policy.get("mode") == "forward_only":
+        try:
+            publication_scope({}, args.coverage_policy)
+        except ValueError as exc:
+            parser.error(str(exc))
+    elif args.backfill_pages == 0:
+        parser.error("--backfill-pages 0 requires a forward_only coverage_policy")
+    sources = config["sources"] if isinstance(config, dict) else config
     if not isinstance(sources, list) or not sources:
         parser.error("Source configuration must contain a nonempty sources list")
     if args.source:
@@ -985,7 +1065,8 @@ def _run_collection(args, sources, archive_path, now):
     def adapter(source):
         return fetch_source({**source, "backfill_pages": args.backfill_pages},
                             copy.deepcopy(previous.get("source_states", {}).get(source["id"], {})), now=now, request=network)
-    archive = collect(sources, previous=previous, now=now, fetcher=adapter, backfill_pages=args.backfill_pages)
+    policy = getattr(args, "coverage_policy", None)
+    archive = collect(sources, previous=previous, now=now, fetcher=adapter, backfill_pages=args.backfill_pages, coverage_policy=policy)
     # The single archive commit makes records and cursors durable together.
     save_archive(archive_path, archive)
     write_public_archive(archive, args.output)
@@ -993,7 +1074,7 @@ def _run_collection(args, sources, archive_path, now):
         network.save()
     except OSError as exc:
         print(f"Optional HTTP cache was not saved: {exc}", file=sys.stderr)
-    print(f"Archived {archive['stats']['total_items']} records; {archive['stats']['relevant_items']} relevant, {archive['stats']['candidate_items']} candidates; {archive['stats']['successful_sources']}/{len(sources)} sources retrieved.")
+    print(f"Active archive: {archive['stats']['total_items']} records; {archive['stats']['relevant_items']} topic matches, {archive['stats']['candidate_items']} candidates; {archive['stats']['lifetime_total_items']} lifetime records retained; {archive['stats']['successful_sources']}/{len(sources)} sources retrieved.")
     for error in archive["errors"]:
         print(f"{error['source']}: {error['message']}", file=sys.stderr)
     return 0 if archive["stats"]["successful_sources"] else 1

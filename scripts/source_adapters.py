@@ -165,6 +165,114 @@ def _identity(row):
     return str(row.get("external_id") or row.get("url") or "")
 
 
+def _cutoff(source):
+    value = _date(source.get("publication_start"))
+    if source.get("forward_only") and value is None:
+        raise ValueError("Forward monitoring requires an explicit publication_start")
+    return value
+
+
+def _possibly_new(row, cutoff):
+    """Keep ambiguous dates for core review, never invent a publication time."""
+    value = row.get("published_at")
+    date = _date(value)
+    precision = row.get("date_precision")
+    if precision == "year" or (not date and row.get("publication_year")):
+        return int(row.get("publication_year", cutoff.year)) >= cutoff.year
+    if not date:
+        return True
+    if precision == "day" or re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(value)):
+        return date.date() >= cutoff.date()
+    return date >= cutoff
+
+
+def _forward_offset(source, state, now, page, size, cache):
+    """Walk an overlapping new-publication window, clamped to activation."""
+    latest = page(1)
+    cutoff = _cutoff(source)
+    lower = max(_date(state.get("scan_lower") or state.get("watermark")) or cutoff, cutoff)
+    current_head = _identity(latest[0]) if latest else None
+    previous_head = state.get("observed_head") or state.get("scan_head")
+    segments = state.get("scan_segments", [])
+    if not segments and state.get("head_scan_page"):
+        segments = [{"next_page": max(2, int(state["head_scan_page"]))}]
+
+    def reached(rows, stop_id=None):
+        return (len(rows) < size or
+                (stop_id and stop_id in {_identity(row) for row in rows}) or
+                any(not _possibly_new(row, lower) for row in rows))
+
+    def ordered(rows):
+        dates = [_date(row.get("published_at")) for row in rows]
+        return all(date is not None for date in dates) and dates == sorted(dates, reverse=True)
+
+    degraded = not ordered(latest)
+    if reached(latest):
+        segments = []
+    elif not segments:
+        segments = [{"next_page": 2}]
+    elif previous_head and not degraded:
+        # Locate the previous head within a strictly bounded front probe. Its
+        # absolute index gives the observed insertion shift, so a moving head
+        # cannot make a saved tail repeatedly read the same old page. Unlocated
+        # larger bursts retain an independent segment and remain visibly pending.
+        head_ids = [_identity(row) for row in latest]
+        inserted = head_ids.index(previous_head) if previous_head in head_ids else None
+        front = None
+        if inserted is None:
+            front = page(2)
+            if not ordered(front):
+                degraded = True
+            front_ids = [_identity(row) for row in front]
+            if previous_head in front_ids:
+                inserted = size + front_ids.index(previous_head)
+        if inserted is not None:
+            for segment in segments:
+                offset = int(segment.get("next_offset", (int(segment.get("next_page", 2)) - 1) * size))
+                segment["next_offset"] = offset + inserted
+                segment.pop("next_page", None)
+        elif front is not None and not degraded and not reached(front, previous_head):
+            segments.append({"next_offset": size * 2, "stop_id": previous_head})
+    if not degraded:
+        for _ in range(max(1, int(source.get("catchup_pages", 2)))):
+            if not segments:
+                break
+            segment = segments.pop(0)
+            offset = int(segment.get("next_offset", (int(segment.get("next_page", 2)) - 1) * size))
+            number = max(2, offset // size + 1)
+            rows = page(number)
+            if not ordered(rows):
+                degraded = True
+                segments.insert(0, segment)
+                break
+            if not reached(rows, segment.get("stop_id")):
+                segment["next_offset"] = number * size
+                segment.pop("next_page", None)
+                segments.append(segment)
+    pending = bool(segments) or degraded
+    state["observed_head"] = current_head
+    for key in ("head_scan_page", "scan_head"):
+        state.pop(key, None)
+    if pending:
+        state.update(scan_segments=segments, scan_lower=_iso(lower))
+    if not pending:
+        if current_head:
+            state["head_id"] = current_head
+        state.pop("scan_segments", None)
+        state.pop("scan_lower", None)
+        lookback = max(1, min(int(source.get("publication_lookback_days", 7)), 30))
+        state["watermark"] = _iso(max(cutoff, now - timedelta(days=lookback)))
+    items = [row for rows in cache.values() for row in rows]
+    warnings = ["A bounded publication-date overlap catches late indexing; publications indexed later than that lookback may be missed."]
+    if pending:
+        warnings.append("New-publication catch-up is pending; its recent-page cursor resumes next run.")
+    if degraded:
+        warnings.append("Archive pagination lacks verified publication-date ordering; completeness is unverified and deeper historical paging was skipped.")
+    return _result(items, state, _coverage(items, "forward_only", len(cache), False,
+                   pending_incremental=pending, pending_backfill=False, degraded=degraded,
+                   incremental_window_start=_iso(lower)), warnings)
+
+
 def _offset_archive(source, state, now, request, kind):
     size = max(1, min(int(source.get("page_size", 50)), 100))
     budget = max(1, min(int(source.get("backfill_pages", 1)), 20))
@@ -204,6 +312,8 @@ def _offset_archive(source, state, now, request, kind):
         cache[number] = parsed
         return parsed
 
+    if source.get("forward_only"):
+        return _forward_offset(source, state, now, page, size, cache)
     latest = page(1)
     previous_head = state.get("head_id")
     # A delayed run scans until the previously observed newest article. This
@@ -273,7 +383,9 @@ def _forum(source, state, now, request):
     # Incremental windows are frozen while being paginated. An overlapping day
     # catches publication-time edits; long outages resume without a latest-page cap.
     upper = state.get("incremental_upper") or _iso(now)
-    lower = state.get("watermark") or _iso(now - timedelta(days=7))
+    lower = state.get("watermark") or (_iso(_cutoff(source)) if source.get("forward_only") else _iso(now - timedelta(days=7)))
+    if source.get("forward_only"):
+        lower = _iso(max(_date(lower) or _cutoff(source), _cutoff(source)))
     cursor = state.get("incremental_before") or upper
     offset = int(state.get("incremental_offset", 0))
     incremental_complete = False
@@ -288,13 +400,14 @@ def _forum(source, state, now, request):
         offset = offset + same if cursor == next_cursor else same
         cursor = next_cursor
     if incremental_complete:
-        state["watermark"] = _iso((_date(upper) or now) - timedelta(days=1))
+        watermark = (_date(upper) or now) - timedelta(days=1)
+        state["watermark"] = _iso(max(watermark, _cutoff(source)) if source.get("forward_only") else watermark)
         for key in ("incremental_upper", "incremental_before", "incremental_offset"):
             state.pop(key, None)
     else:
         state.update(incremental_upper=upper, incremental_before=cursor, incremental_offset=offset)
     complete = bool(state.get("backfill_complete"))
-    if not complete:
+    if not complete and not source.get("forward_only"):
         cursor = state.get("backfill_before") or _iso(now)
         offset = int(state.get("backfill_offset", 0))
         for _ in range(max(1, min(int(source.get("backfill_pages", 1)), 20))):
@@ -347,26 +460,29 @@ def _arxiv(source, state, now, request):
 
     upper = state.get("incremental_upper") or _iso(now)
     start = int(state.get("incremental_start", 0))
-    lower = _date(state.get("watermark")) or now - timedelta(days=7)
+    lower = _date(state.get("watermark")) or (_cutoff(source) if source.get("forward_only") else now - timedelta(days=7))
     # arXiv documents submittedDate as its sole date-search field. In particular,
     # lastUpdatedDate is a SORT option, not a supported range-search field. Sort
     # the query by updates and stop client-side at the overlapping watermark.
     # The submitted-date ceiling keeps newly submitted papers out of a pending
     # snapshot; changed older versions can still move and are re-read on overlap.
-    query = f'({search}) AND submittedDate:[199101010000 TO {stamp(_date(upper) or now)}]'
+    if source.get("forward_only"):
+        lower = max(lower, _cutoff(source))
+    query = f'({search}) AND submittedDate:[{stamp(lower) if source.get("forward_only") else "199101010000"} TO {stamp(_date(upper) or now)}]'
     incremental_complete = False
     for _ in range(max(1, int(source.get("catchup_pages", 1)))):
-        rows, total = page(query, start, "lastUpdatedDate")
+        rows, total = page(query, start, "submittedDate" if source.get("forward_only") else "lastUpdatedDate")
         start += len(rows)
         update_dates = [_date(row.get("updated_at")) for row in rows]
         crossed_watermark = bool(rows) and all(date is not None for date in update_dates) and min(update_dates) < lower
-        if start >= total or crossed_watermark:
+        if start >= total or (crossed_watermark and not source.get("forward_only")):
             incremental_complete = True
             break
         if start >= 30000:
             raise ValueError("arXiv update window exceeds 30,000 results; narrow the query/date window")
     if incremental_complete:
-        state["watermark"] = _iso((_date(upper) or now) - timedelta(days=7))
+        watermark = (_date(upper) or now) - timedelta(days=7)
+        state["watermark"] = _iso(max(watermark, _cutoff(source)) if source.get("forward_only") else watermark)
         state.pop("incremental_start", None)
         state.pop("incremental_upper", None)
     else:
@@ -375,7 +491,7 @@ def _arxiv(source, state, now, request):
     year = int(state.get("backfill_year", now.year))
     start = int(state.get("backfill_start", 0))
     complete = bool(state.get("backfill_complete"))
-    if not complete:
+    if not complete and not source.get("forward_only"):
         for _ in range(max(1, min(int(source.get("backfill_pages", 1)), 20))):
             query = f'({search}) AND submittedDate:[{year}01010000 TO {year}12312359]'
             rows, total = page(query, start)
@@ -512,6 +628,92 @@ def parse_article(body, url):
             "external_id": url}
 
 
+def _forward_documents(source, state, now, request, documents, pages, latest=False):
+    """Baseline an index once; never rotate through its historical documents."""
+    initialized = bool(state.get("index_initialized"))
+    previous = state.get("index_urls", {})
+    baseline = set(source.get("_baseline_urls", []))
+    cutoff = _cutoff(source)
+    pending = state.setdefault("pending_documents", {})
+    failures = state.setdefault("failures", {})
+    for url, modified in documents:
+        recent_modification = bool(_date(modified) and _possibly_new({"published_at": modified}, cutoff))
+        if initialized:
+            eligible = ((url not in previous and url not in baseline) or
+                        (recent_modification and previous.get(url) != modified))
+        else:
+            eligible = recent_modification
+        if eligible:
+            pending[url] = modified
+    if latest and documents and not initialized and documents[0][0] not in baseline:
+        # An undated index cannot establish when its leading card appeared.
+        # Checking only that newest card avoids an initial historical sweep.
+        pending[documents[0][0]] = documents[0][1]
+    state["index_initialized"] = True
+    state["index_urls"] = {**previous, **dict(documents)}
+    budget = max(1, min(int(source.get("article_budget", 12)), 200))
+    selected = []
+    for url, modified in sorted(pending.items(), key=lambda pair: (pair[1], pair[0]), reverse=True):
+        retry = _date((failures.get(url) or {}).get("retry_after"))
+        if retry is None or retry <= now:
+            selected.append((url, modified))
+        if len(selected) >= budget:
+            break
+    rows, failed_this_run = [], 0
+    allowed_hosts = source.get("allowed_hosts", [urlsplit(source["url"]).hostname])
+    for url, modified in selected:
+        if urlsplit(url).hostname not in allowed_hosts:
+            raise ValueError("Publisher index linked to an unexpected host")
+        pages += 1
+        try:
+            row = parse_article(request(url), url)
+            if not row["title"]:
+                raise ValueError("Research page has no article title")
+        except Exception as error:
+            attempts = min(20, int((failures.get(url) or {}).get("attempts", 0)) + 1)
+            failures[url] = {"attempts": attempts, "error": _plain(str(error), 180),
+                             "retry_after": _iso(now + timedelta(hours=min(24, 2 ** min(attempts - 1, 5))))}
+            failed_this_run += 1
+            continue
+        rows.append(row)
+        pending.pop(url, None)
+        failures.pop(url, None)
+    warnings = ["Publisher discovery is limited to its current index; existing undated links were baselined when monitoring began. An undated publication added between activation and the first index poll may be missed."]
+    if any(not row.get("published_at") for row in rows):
+        warnings.append("Newly discovered pages without explicit publication dates require temporal review.")
+    if failures:
+        warnings.append(f"{len(failures)} new or recently modified publisher pages await bounded retries.")
+    return _result(rows, state, _coverage(rows, "forward_only", pages, False,
+                   pending_backfill=False, pending_incremental=bool(pending),
+                   discovered_urls=len(documents), baseline_urls=len(state["index_urls"]),
+                   baseline_boundary_uncertain=True,
+                   pending_documents=len(pending), failed_documents=len(failures),
+                   failed_this_run=failed_this_run, degraded=bool(failures), validated_empty=not rows), warnings)
+
+
+def _forward_index_rows(rows, source, state, admit_initial_unknown=False):
+    """An index's pre-existing undated entries are a baseline, not new work."""
+    initialized = bool(state.get("index_initialized"))
+    previous = set(state.get("index_urls", [])) | set(source.get("_baseline_urls", []))
+    unknown = set(state.get("unknown_candidates", []))
+    cutoff = _cutoff(source)
+    result = []
+    for row in rows:
+        url = row.get("url")
+        ambiguous = not _date(row.get("published_at")) or row.get("date_precision") == "year"
+        if ambiguous:
+            if (initialized or admit_initial_unknown) and url not in previous:
+                unknown.add(url)
+            if url not in unknown:
+                continue
+        if _possibly_new(row, cutoff):
+            result.append(row)
+    state["index_initialized"] = True
+    state["index_urls"] = sorted(previous | {row.get("url") for row in rows if row.get("url")})
+    state["unknown_candidates"] = sorted(unknown)
+    return result
+
+
 def _sitemap(source, state, now, request):
     body = request(source["feed_url"])
     root = _xml(body)
@@ -537,6 +739,8 @@ def _sitemap(source, state, now, request):
                 documents.append((url, modified))
     if not documents:
         raise ValueError("Sitemap contains no matching research pages")
+    if source.get("forward_only"):
+        return _forward_documents(source, state, now, request, documents, pages)
     old = state.get("documents", {})
     if not isinstance(old, dict):
         old = {}
@@ -647,9 +851,12 @@ def _dated_index(source, state, now, request):
         rows.append(row)
     if not rows or any(not row["title"] for row in rows):
         raise ValueError("Publisher index contains no recognized article cards")
+    if source.get("forward_only"):
+        rows = _forward_index_rows(rows, source, state)
     state["last_index_scan_at"] = _iso(now)
     return _result(rows, state, _coverage(rows, "publisher_dated_index", 1, True,
-                   discovered_urls=len(rows), scope="Article cards linked by the publisher's current dated index."),
+                   discovered_urls=len(rows), validated_empty=not rows,
+                   scope="Article cards linked by the publisher's current dated index."),
                    ["Coverage is limited to the publisher's current index; publication dates are the explicit data-date attributes on its article cards."])
 
 
@@ -660,6 +867,8 @@ def _anthropic(source, state, now, request):
     urls = [url for url in urls if urlsplit(url).hostname == urlsplit(source["url"]).hostname]
     if not urls:
         raise ValueError("Anthropic research index has no article cards")
+    if source.get("forward_only"):
+        return _forward_documents(source, state, now, request, [(url, "") for url in urls], 1, latest=True)
     old = state.get("documents", {})
     pending = [url for url in urls if url not in old]
     failures = state.setdefault("failures", {})
@@ -728,9 +937,12 @@ def _bibliography(source, state, now, request):
     if not rows:
         raise ValueError("Publisher bibliography contains no recognized publication citations")
     items = list(rows.values())
+    if source.get("forward_only"):
+        items = _forward_index_rows(items, source, state)
     state["last_index_scan_at"] = _iso(now)
     return _result(items, state, _coverage(items, "publisher_bibliography", 1, True,
-                   discovered_urls=len(items), scope="Publications explicitly listed in the publisher's current bibliography."),
+                   discovered_urls=len(items), validated_empty=not items,
+                   scope="Publications explicitly listed in the publisher's current bibliography."),
                    ["Bibliography supplies citation years, not exact publication dates; retained with unknown dates until another source supplies a precise date."])
 
 
@@ -751,13 +963,18 @@ def _fetch(source, state, now, request):
             feed_had_items = bool(rows)
             pattern = re.compile(source.get("fallback_match", r"alignment|interpretability|scheming|sandbagging|oversight|reward.hacking"), re.I)
             rows = [row for row in rows if pattern.search(row.get("title", "") + " " + row.get("summary", ""))]
+            if source.get("forward_only"):
+                rows = _forward_index_rows(rows, source, checkpoint, admit_initial_unknown=True)
             message = _plain(str(error), 180) or type(error).__name__
             return _result(rows, checkpoint, _coverage(rows, "rss_fallback", 1, False,
                            degraded=True, primary_error=message, archive_available=False,
+                           pending_incremental=bool(source.get("forward_only")),
                            validated_empty=not rows and feed_had_items,
                            fallback_scope="Current arXiv announcement feed for cs.AI, cs.LG, cs.CL, cs.MA and stat.ML, matched locally against discovery keywords."),
                            ["arXiv search API failed: " + message,
-                            "Backup RSS discovers only the current announcement window in five configured categories. Search/archive coverage is degraded; saved API backfill cursors are unchanged."])
+                            ("Backup RSS discovers only the current announcement window in five configured categories. New-publication API catch-up remains pending."
+                             if source.get("forward_only") else
+                             "Backup RSS discovers only the current announcement window in five configured categories. Search/archive coverage is degraded; saved API backfill cursors are unchanged.")])
     if kind == "forum_graphql":
         return _forum(source, state, now, request)
     if kind == "sitemap":
@@ -776,6 +993,9 @@ def _fetch(source, state, now, request):
         return fetch_openreview(source, state, now, request)
     if kind == "rss":
         rows = parse_feed(request(source["feed_url"]))
+        feed_had_items = bool(rows)
+        if source.get("forward_only"):
+            rows = _forward_index_rows(rows, source, state, admit_initial_unknown=True)
         extra_pages, pending = 0, 0
         if source.get("enrich_metadata"):
             metadata = state.setdefault("article_metadata", {})
@@ -794,17 +1014,51 @@ def _fetch(source, state, now, request):
                         row[key] = enriched[key]
         # Most RSS endpoints publish a finite recent window, with no historical
         # pagination contract. A successful fetch cannot establish archive coverage.
-        warnings = ["RSS coverage is the publisher's current feed window; older history may be missing."]
+        warnings = [("RSS monitoring is limited to the publisher's current feed window; a long outage may exceed that window. Undated entries absent from the prior archive require temporal review."
+                     if source.get("forward_only") else
+                     "RSS coverage is the publisher's current feed window; older history may be missing.")]
         if pending:
             warnings.append(f"Publication-date metadata for {pending} feed entries is pending and will resume next run.")
         return _result(rows, state, _coverage(rows, "rolling_feed", 1 + extra_pages, False,
-                       archive_available=False, pending_documents=pending), warnings)
+                       archive_available=False, pending_documents=pending,
+                       pending_incremental=bool(pending), validated_empty=feed_had_items and not rows), warnings)
     raise ValueError("Unsupported source kind: " + str(kind))
 
 
 def fetch(source, state, now, request):
     """Public adapter contract, including human-readable source scope metadata."""
-    result = _fetch(source, state, now, request)
+    if source.get("forward_only"):
+        cutoff = _cutoff(source)
+        original = deepcopy(state) if isinstance(state, dict) else {}
+        forward = original.get("forward_state", {})
+        # A changed activation date starts a separate monitoring checkpoint and
+        # preserves earlier monitoring/history state for audit or later reuse.
+        if forward.get("monitoring_since") not in (None, _iso(cutoff)):
+            original.setdefault("previous_forward_states", []).append(forward)
+            forward = {}
+        forward = deepcopy(forward)
+        forward["monitoring_since"] = _iso(cutoff)
+        known = set(source.get("known_urls", []))
+        documents = original.get("documents", {})
+        if isinstance(documents, dict):
+            known.update(documents)
+        result = _fetch({**source, "_baseline_urls": sorted(known)}, forward, now, request)
+        original["forward_state"] = result["state"]
+        result["state"] = original
+        had_items = bool(result["items"])
+        result["items"] = [row for row in result["items"] if _possibly_new(row, cutoff)]
+        coverage = result["coverage"]
+        coverage.update(adapter_mode=coverage.get("mode"), mode="forward_only", monitoring_since=_iso(cutoff),
+                        backfill_complete=False, pending_backfill=False)
+        coverage.setdefault("pending_incremental", bool(coverage.get("pending_documents")))
+        if had_items and not result["items"]:
+            coverage["validated_empty"] = True
+        if source.get("kind") in {"dated_index", "bibliography"}:
+            coverage["baseline_boundary_uncertain"] = True
+        for key in ("next_year", "next_offset", "next_page"):
+            coverage.pop(key, None)
+    else:
+        result = _fetch(source, state, now, request)
     if source.get("coverage_note"):
         result["coverage"]["description"] = source["coverage_note"]
     return result

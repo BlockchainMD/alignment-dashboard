@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 import copy
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -21,6 +22,89 @@ STORAGE_FORMAT = "sharded-v1"
 MAX_CANONICAL_CHUNK_BYTES = 8 * 1024 * 1024
 MAX_CANONICAL_MANIFEST_BYTES = 64 * 1024 * 1024
 _STORAGE_KEYS = {"storage_format", "storage_chunks", "items_count", "storage_generation"}
+
+
+def _scope_datetime(value):
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        result = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+        return result.replace(tzinfo=timezone.utc) if result.tzinfo is None else result.astimezone(timezone.utc)
+    except ValueError:
+        return None
+
+
+def publication_scope(item, policy=None):
+    """Return admission and date confidence for the configured publication window.
+
+    Discovery time never proves a publication date. Newly encountered undated
+    records and cutoff-day dates remain visible in review with explicit doubt;
+    records already known before the window cannot become new by being fetched
+    again. Legacy archive records are retained independently of this view.
+    """
+    if not policy or policy.get("mode") != "forward_only":
+        return True, None
+    start = _scope_datetime(policy.get("publication_start"))
+    if start is None:
+        raise ValueError("Forward-only coverage requires a valid publication_start")
+    published = _scope_datetime(item.get("published_at"))
+    date_only = item.get("date_precision") == "day" or (
+        isinstance(item.get("published_at"), str) and bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", item["published_at"])))
+    if published:
+        if date_only and published.date() == start.date():
+            discovered = _scope_datetime(item.get("first_seen") or item.get("discovered_at"))
+            if item.get("legacy_before_forward_scope") is True or discovered is not None and discovered < start:
+                return False, "before_collection_start"
+            return True, "publication_time_uncertain"
+        return (True, "published_after_start") if published >= start else (False, "before_collection_start")
+    year = item.get("publication_year")
+    if isinstance(year, (int, str)) and not isinstance(year, bool) and re.fullmatch(r"\d{4}", str(year)) and int(year) < start.year:
+        return False, "before_collection_start"
+    if item.get("legacy_before_forward_scope") is True:
+        return False, "before_collection_start"
+    discovered = _scope_datetime(item.get("first_seen") or item.get("discovered_at"))
+    if discovered is None or discovered < start:
+        return False, "before_collection_start"
+    return True, "publication_date_unverified"
+
+
+def apply_publication_scope(item, policy=None):
+    """Annotate a copy, preserving canonical metadata even when out of scope."""
+    result = copy.deepcopy(item)
+    eligible, status = publication_scope(result, policy)
+    if status:
+        result["temporal_status"] = status
+    if eligible and status in {"publication_time_uncertain", "publication_date_unverified"}:
+        result["relevance"] = "candidate"
+        result["relevance_reason"] = ("Publication time on the collection-start day needs verification."
+            if status == "publication_time_uncertain" else "Publication date needs verification; first discovered after collection began.")
+    return result
+
+
+def active_archive_items(archive):
+    """The shared public-library and video-queue view of the durable archive."""
+    policy = archive.get("coverage_policy")
+    return [apply_publication_scope(item, policy) for item in archive.get("items", [])
+            if publication_scope(item, policy)[0]]
+
+
+def active_archive_stats(items, lifetime_count=None):
+    """Counts for the active publication scope, independently of legacy totals."""
+    result = {"total_items": len(items),
+              "relevant_items": sum(item.get("relevance") == "relevant" for item in items),
+              "candidate_items": sum(item.get("relevance") == "candidate" for item in items),
+              "undated_items": sum(not item.get("published_at") and not item.get("publication_year") for item in items),
+              "year_only_items": sum(not item.get("published_at") and bool(item.get("publication_year")) for item in items),
+              "newest_publication": max((item["published_at"] for item in items if item.get("published_at")), default=None)}
+    if lifetime_count is not None:
+        result["lifetime_total_items"] = lifetime_count
+        result["excluded_legacy_items"] = lifetime_count - len(items)
+    return result
+
+
+def source_archive_counts(items, source_id):
+    return sum(item.get("source_id") == source_id or any(
+        isinstance(row, dict) and row.get("source_id") == source_id for row in item.get("provenance", [])) for item in items)
 
 
 def _json_bytes(data):
@@ -234,6 +318,7 @@ def _public_item(item):
         "date_precision", "publication_year", "summary", "summary_kind", "topics", "score", "relevance", "relevance_reason",
         "authors", "first_seen", "discovered_at", "doi", "arxiv_id", "links", "updated_at",
         "version", "external_id", "publication_type", "language", "provenance", "content_hash",
+        "temporal_status",
     }
     result = {key: copy.deepcopy(value) for key, value in item.items() if key in keys}
     if isinstance(result.get("provenance"), list):
@@ -324,7 +409,8 @@ def write_public_archive(archive, output, recent_limit=1500, chunk_size=500):
     # entry point. A custom output retains the same logical data/ URL contract.
     url_prefix = "data/archive/"
     groups = defaultdict(list)
-    public_items = [_public_item(item) for item in archive["items"]]
+    active_items = active_archive_items(archive)
+    public_items = [_public_item(item) for item in active_items]
     for item in public_items:
         date = item.get("published_at")
         known_year = item.get("publication_year")
@@ -342,9 +428,26 @@ def write_public_archive(archive, output, recent_limit=1500, chunk_size=500):
                            "sha256": digest, "year": year})
     manifest = {"schema_version": 1, "generated_at": archive.get("generated_at"),
                 "total_items": len(public_items), "chunks": chunks}
+    if archive.get("coverage_policy"):
+        manifest["coverage_policy"] = copy.deepcopy(archive["coverage_policy"])
     manifest_path, digest = _write_content_addressed(directory, "manifest", manifest)
     atomic_write(directory / "manifest.json", manifest)
     edition = {key: copy.deepcopy(value) for key, value in archive.items() if key not in {"items", "source_states"}}
+    edition["stats"] = {**edition.get("stats", {}), **active_archive_stats(active_items, len(archive["items"]))}
+    forward_policy = archive.get("coverage_policy", {}) or {}
+    if forward_policy.get("mode") == "forward_only":
+        edition["coverage"] = {**edition.get("coverage", {}), "mode": "forward_only",
+            "monitoring_since": forward_policy["publication_start"], "pending_backfill_sources": 0,
+            "description": "Monitoring new publications from the collection start; uncertain publication dates remain in review."}
+    for source in edition.get("sources", []):
+        source["item_count"] = source_archive_counts(active_items, source.get("id"))
+        source["lifetime_item_count"] = source_archive_counts(archive["items"], source.get("id"))
+        if forward_policy.get("mode") == "forward_only":
+            prior_coverage = source.get("coverage") if isinstance(source.get("coverage"), dict) else {}
+            source["coverage"] = {**prior_coverage, "mode": "forward_only", "pending_backfill": False,
+                "monitoring_since": forward_policy["publication_start"]}
+            source["warnings"] = [message for message in source.get("warnings", [])
+                if not isinstance(message, str) or not message.startswith("Historical coverage is incomplete; later runs retry the backlog")]
     edition["items"] = public_items[:recent_limit]
     edition["library_index"] = {"manifest": url_prefix + manifest_path.name, "sha256": digest,
                                 "total_items": len(public_items), "edition_items": len(edition["items"]),
