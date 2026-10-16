@@ -1,0 +1,136 @@
+name: Refresh and publish dashboard
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # 08:17 in Detroit is 12:17 UTC during daylight time, 13:17 otherwise.
+    # The gate below selects one daily run using America/Detroit timezone data.
+    - cron: '17 12 * * *'
+    - cron: '17 13 * * *'
+
+permissions: {}
+
+# Serialize collection, repository writes, and deployment as one operation.
+concurrency:
+  group: alignment-dashboard-pages
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      refresh: ${{ steps.schedule.outputs.refresh }}
+    steps:
+      - name: Select the Detroit morning schedule
+        id: schedule
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from datetime import datetime, timezone
+          from zoneinfo import ZoneInfo
+
+          refresh = True
+          if os.environ["EVENT_NAME"] == "schedule":
+              cron = os.environ["EVENT_SCHEDULE"].split()
+              # Use the intended UTC hour, not the runner start hour: GitHub
+              # can start a scheduled workflow late when its queues are busy.
+              nominal = datetime.now(timezone.utc).replace(
+                  hour=int(cron[1]), minute=int(cron[0]), second=0, microsecond=0
+              )
+              refresh = nominal.astimezone(ZoneInfo("America/Detroit")).hour == 8
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"refresh={str(refresh).lower()}\n")
+          print("Refreshing the dashboard." if refresh else "Skipping the other UTC schedule.")
+          PY
+
+  refresh-and-deploy:
+    needs: gate
+    if: >-
+      needs.gate.outputs.refresh == 'true' &&
+      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+    steps:
+      - name: Check out the latest default branch
+        uses: actions/checkout@v7.0.1
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.13'
+
+      - name: Set up Node for browser logic tests
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Test the collector and browser logic
+        shell: bash
+        run: |
+          python -m unittest discover -s tests
+          shopt -s nullglob
+          browser_tests=(tests/*.test.mjs)
+          if ((${#browser_tests[@]})); then
+            node --test "${browser_tests[@]}"
+          fi
+
+      - name: Collect the daily edition
+        id: collect
+        # A total source outage still writes health and retained records. Deploy
+        # that honest state, then mark this workflow failed after publication.
+        continue-on-error: true
+        run: python scripts/collect.py --output site/data/edition.json
+
+      - name: Validate the generated edition
+        run: python -m json.tool site/data/edition.json > /dev/null
+
+      - name: Retain the edition for the next refresh
+        shell: bash
+        run: |
+          git fetch --no-tags origin "$DEFAULT_BRANCH"
+          if [[ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]]; then
+            echo "::error::The default branch changed during collection. A newer push run will refresh and publish it."
+            exit 1
+          fi
+          git add -- site/data/edition.json
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Refresh alignment dashboard edition"
+            git push origin "HEAD:$DEFAULT_BRANCH"
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6.0.0
+
+      - name: Upload the static site
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: site
+
+      - name: Publish GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1
+
+      - name: Report collection failure after publishing
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "::error::The collector failed. The dashboard may show retained records; review its source health and the collector logs."
+          exit 1

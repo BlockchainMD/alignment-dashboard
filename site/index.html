@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A finite daily briefing of AI alignment and safety research. Free sources, original research, and room to think.">
+  <meta name="theme-color" content="#f6f5f0">
+  <title>Alignment Daily — Research, without the noise</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to research</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#briefing" aria-label="Alignment Daily home"><span class="brand-mark">a<span>·</span></span><span>Alignment<br><strong>Daily</strong></span></a>
+      <div class="nav-label">YOUR RESEARCH DESK</div>
+      <nav aria-label="Main navigation">
+        <a href="#briefing" data-view="briefing"><span aria-hidden="true">◫</span> Daily briefing <span class="nav-dot"></span></a>
+        <a href="#library" data-view="library"><span aria-hidden="true">▤</span> Research library <small id="library-count">—</small></a>
+        <a href="#saved" data-view="saved"><span aria-hidden="true">♧</span> Saved for later <small id="saved-count">0</small></a>
+        <a href="#sources" data-view="sources"><span aria-hidden="true">◎</span> Sources & status</a>
+      </nav>
+      <div class="sidebar-note"><span class="note-spark" aria-hidden="true">✳</span><p>Stay informed.<br>Keep your attention.</p><small>A daily edition.<br>No timelines. No rabbit holes.</small></div>
+      <div class="sidebar-bottom"><button id="theme-button" class="quiet-button" type="button" aria-label="Change color theme">◐ <span>Change theme</span></button><span class="version-label">INDEPENDENT RESEARCH FEED</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span>Research, without the noise.</span><div><span class="update-dot" id="update-dot"></span><span id="update-label">Loading edition</span><button class="icon-button" id="reload-button" type="button" aria-label="Reload published edition" title="Reload the published edition">↻</button></div></header>
+      <main id="main" tabindex="-1">
+        <div id="notice" class="notice" hidden></div>
+        <section class="intro"><div><p class="eyebrow" id="edition-date">DAILY ALIGNMENT RESEARCH</p><h1 id="view-title">A little signal.<br>A clearer perspective.</h1><p class="intro-copy" id="view-description">The research that moves AI safety forward.<br>A focused daily read, with the original sources close at hand.</p></div><div class="edition-seal" aria-hidden="true"><svg viewBox="0 0 120 100"><path d="M5 85L45 15 85 85Z"/><path d="M35 85L75 15 115 85Z"/><path d="M25 52H95"/></svg><span>THE ALIGNMENT<br>DAILY EDITION</span></div></section>
+        <div class="edition-meta" id="edition-meta"><span><span class="tiny-star">✳</span> A finite feed for a complex field</span><span>Free sources <i>·</i> No paid APIs <i>·</i> Original links</span></div>
+        <section id="research-view">
+          <div class="section-heading"><div><p class="eyebrow" id="section-eyebrow">YOUR DAILY BRIEFING</p><h2 id="section-title">Worth your attention <span id="section-count"></span></h2></div><span id="section-caption" class="muted">Past 48 hours · up to 5 reads</span></div>
+          <div class="filters" id="filters" hidden><label class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Search titles, topics, and research…" aria-label="Search research"></label><div class="filter-row"><label><span class="sr-only">Topic</span><select id="topic-filter"><option value="">All topics</option></select></label><label><span class="sr-only">Source</span><select id="source-filter"><option value="">All sources</option></select></label><label><span class="sr-only">Sort</span><select id="sort"><option value="newest">Newest first</option><option value="relevance">Topic relevance</option><option value="oldest">Oldest first</option></select></label></div></div>
+          <div id="articles" class="articles" aria-live="polite"><div class="loading-state">Gathering your research desk…</div></div>
+          <section id="catchup-section" hidden><div class="section-heading catchup-heading"><div><p class="eyebrow">IN CASE YOU MISSED IT</p><h2>A few recent reads</h2></div><span class="muted">Earlier research · past 14 days</span></div><div id="catchup" class="articles compact"></div></section>
+          <div class="edition-end" id="edition-end" hidden><span aria-hidden="true">✳</span><p>You're at the end of this edition.</p><small>A little less scrolling. A little more thinking.</small><a href="#library">Explore the research library <span aria-hidden="true">↗</span></a></div>
+          <div id="reading-tools" class="reading-tools" hidden><p>Saved articles and read status stay in this browser. Export and import your reading list to move it between devices.</p><div><button id="export-button" class="secondary-button" type="button">Export reading list ↗</button><label class="secondary-button file-label">Import reading list<input id="import-input" type="file" accept="application/json,.json"></label></div></div>
+        </section>
+        <section id="sources-view" hidden><div class="section-heading"><div><p class="eyebrow">TRANSPARENT BY DESIGN</p><h2>Sources & collection status</h2></div></div><p class="sources-intro">Feeds are collected each morning. A failed source keeps its previously collected research. Source summaries are excerpts or aggregator summaries, and have not been independently verified.</p><div id="source-list" class="source-list"></div><div class="method-note"><h3>How this desk works</h3><p>Research is filtered by alignment and catastrophic-risk topics, then grouped into a finite daily edition. Keyword relevance helps organize the library; it is not an assessment of research quality. The library keeps up to 90 days of collected research.</p><p>No X posts are collected. Reading lists live in your browser. The public site contains only public research.</p><p>Updates are requested for 8:17 a.m. Eastern daily. GitHub may delay scheduled runs. “Reload” fetches the latest published edition; it does not start a new collection.</p><a href="https://github.com/BlockchainMD/alignment-dashboard/actions" target="_blank" rel="noopener noreferrer">View update runs on GitHub ↗</a></div></section>
+        <footer><a href="#briefing">a<span>·</span> <strong>Alignment Daily</strong></a><p>Read the research. Keep the rest of your day.</p><a href="https://github.com/BlockchainMD/alignment-dashboard" target="_blank" rel="noopener noreferrer">About this project ↗</a></footer>
+      </main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

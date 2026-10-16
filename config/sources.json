@@ -1,0 +1,58 @@
+{
+  "sources": [
+    {
+      "id": "alignment-feed",
+      "name": "Alignment Feed",
+      "url": "https://alignmentfeed.org/",
+      "feed_url": "https://api.alignmentfeed.org/v1/articles?limit=100",
+      "kind": "alignment_feed",
+      "summary_kind": "aggregator summary",
+      "priority": 0
+    },
+    {
+      "id": "arxiv",
+      "name": "arXiv",
+      "url": "https://arxiv.org/",
+      "feed_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28abs%3A%22AI+alignment%22+OR+abs%3A%22value+alignment%22+OR+abs%3A%22preference+alignment%22+OR+abs%3A%22deceptive+alignment%22+OR+ti%3Ascheming+OR+abs%3A%22AI+control%22+OR+abs%3A%22mechanistic+interpretability%22+OR+abs%3A%22scalable+oversight%22+OR+abs%3A%22reward+hacking%22+OR+abs%3A%22AI+safety%22+OR+abs%3A%22alignment+faking%22+OR+abs%3Asandbagging%29&start=0&max_results=80&sortBy=submittedDate&sortOrder=descending",
+      "kind": "rss",
+      "summary_kind": "publisher excerpt",
+      "priority": 0
+    },
+    {
+      "id": "alignment-forum",
+      "name": "Alignment Forum",
+      "url": "https://www.alignmentforum.org/",
+      "feed_url": "https://www.alignmentforum.org/feed.xml",
+      "kind": "rss",
+      "summary_kind": "publisher excerpt",
+      "priority": 0
+    },
+    {
+      "id": "metr",
+      "name": "METR",
+      "url": "https://metr.org/",
+      "feed_url": "https://metr.org/feed.xml",
+      "kind": "rss",
+      "summary_kind": "publisher excerpt",
+      "priority": 1
+    },
+    {
+      "id": "anthropic-alignment",
+      "name": "Anthropic Alignment Science",
+      "url": "https://alignment.anthropic.com/",
+      "kind": "anthropic",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "max_articles": 14
+    },
+    {
+      "id": "redwood",
+      "name": "Redwood Research",
+      "url": "https://www.redwoodresearch.org/",
+      "feed_url": "https://blog.redwoodresearch.org/feed",
+      "kind": "rss",
+      "summary_kind": "publisher excerpt",
+      "priority": 1
+    }
+  ]
+}
