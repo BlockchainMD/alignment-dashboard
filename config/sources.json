@@ -1,58 +1,228 @@
 {
+  "coverage_policy": {
+    "objective": "Broad, auditable discovery of public AI alignment research, preserving uncertain candidates for review.",
+    "completeness": "No finite registry, keyword query, publisher feed, or crawler establishes that all alignment research has been collected.",
+    "refresh_interval_minutes": 60,
+    "history": "Retain discovered records indefinitely; resume bounded historical backfills each run.",
+    "known_gaps": [
+      "Unindexed papers, private or paywalled material, personal sites outside the registry, missing publisher metadata, and non-English terminology.",
+      "Publisher RSS windows are finite; older archives may need additional adapters.",
+      "Scholarly keyword searches trade precision for recall and still miss papers using unfamiliar terminology.",
+      "New sources require registration and validation; source success does not imply archive completeness."
+    ]
+  },
   "sources": [
     {
       "id": "alignment-feed",
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
-      "feed_url": "https://api.alignmentfeed.org/v1/articles?limit=100",
       "kind": "alignment_feed",
+      "scope": "mixed",
       "summary_kind": "aggregator summary",
-      "priority": 0
+      "priority": 1,
+      "feed_url": "https://api.alignmentfeed.org/v1/articles",
+      "page_size": 100,
+      "catchup_pages": 2,
+      "coverage_note": "Secondary discovery index, including commentary and capabilities news; page-number archive is progressively traversed."
     },
     {
       "id": "arxiv",
       "name": "arXiv",
       "url": "https://arxiv.org/",
-      "feed_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28abs%3A%22AI+alignment%22+OR+abs%3A%22value+alignment%22+OR+abs%3A%22preference+alignment%22+OR+abs%3A%22deceptive+alignment%22+OR+ti%3Ascheming+OR+abs%3A%22AI+control%22+OR+abs%3A%22mechanistic+interpretability%22+OR+abs%3A%22scalable+oversight%22+OR+abs%3A%22reward+hacking%22+OR+abs%3A%22AI+safety%22+OR+abs%3A%22alignment+faking%22+OR+abs%3Asandbagging%29&start=0&max_results=80&sortBy=submittedDate&sortOrder=descending",
-      "kind": "rss",
+      "kind": "arxiv",
+      "scope": "mixed",
       "summary_kind": "publisher excerpt",
-      "priority": 0
+      "priority": 1,
+      "feed_url": "https://export.arxiv.org/api/query",
+      "search_query": "all:\"AI alignment\" OR all:\"AI safety\" OR all:\"artificial intelligence safety\" OR all:\"value alignment\" OR all:\"preference alignment\" OR all:\"deceptive alignment\" OR all:\"mechanistic interpretability\" OR all:\"scalable oversight\" OR all:\"AI control\" OR all:\"reward hacking\" OR all:\"reward tampering\" OR all:\"specification gaming\" OR all:\"goal misgeneralization\" OR all:\"alignment faking\" OR all:\"weak-to-strong\" OR all:\"constitutional AI\" OR all:\"eliciting latent knowledge\" OR all:\"sleeper agents\" OR all:\"mesa optimization\" OR all:\"mesa-optimization\" OR all:\"inner alignment\" OR all:\"outer alignment\" OR all:\"superalignment\" OR all:\"evaluation awareness\" OR all:\"model organisms\" OR all:\"chain of thought faithfulness\" OR all:\"chain-of-thought monitorability\" OR all:\"AI scheming\" OR all:\"AI sandbagging\" OR all:\"corrigibility\" OR all:\"wireheading\" OR ti:scheming OR ti:sandbagging OR ((ti:alignment OR ti:interpretability OR ti:honesty OR ti:deception OR ti:oversight OR ti:shutdown) AND (all:\"language model\" OR all:\"AI agent\" OR all:\"reinforcement learning\" OR all:\"artificial intelligence\" OR all:\"neural network\"))",
+      "page_size": 100,
+      "catchup_pages": 2,
+      "request_interval_seconds": 3.05,
+      "coverage_note": "Cross-category keyword search without a cs.AI/cs.LG restriction; new/updated papers plus year-partitioned historical pagination back to 1991. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; archive cursors do not advance.",
+      "rss_fallback_url": "https://rss.arxiv.org/rss/cs.AI+cs.LG+cs.CL+cs.MA+stat.ML",
+      "fallback_match": "(?i)\\b(?:align(?:ment|ed|ing)?|interpretability|scheming|sandbagging|oversight|monitoring|safety|control|agents?|reward.hacking|reward.tampering|specification.gaming|goal.misgeneralization|constitutional.ai|weak.to.strong|corrigib\\w*|wireheading|decept\\w*|model.organism\\w*|evaluation.awareness|monitorability|sleeper.agent\\w*|ai.safety|ai.control|catastrophic.risk|existential.risk|mesa.optim\\w*|honesty.elicitation)\\b"
+    },
+    {
+      "id": "openreview",
+      "name": "OpenReview",
+      "url": "https://openreview.net/",
+      "feed_url": "https://api2.openreview.net/notes/search",
+      "kind": "openreview",
+      "scope": "mixed",
+      "summary_kind": "publisher excerpt",
+      "page_size": 100,
+      "catchup_pages": 2,
+      "queries": [
+        "AI alignment",
+        "AI safety",
+        "mechanistic interpretability",
+        "scalable oversight",
+        "reward hacking",
+        "deceptive alignment",
+        "AI control",
+        "scheming",
+        "sandbagging"
+      ],
+      "priority": 0,
+      "coverage_note": "Public API v2 paper submissions matching exact phrases, with progressive pagination. API v1 venues and work without configured terminology may be missing; search result ceilings are reported explicitly."
     },
     {
       "id": "alignment-forum",
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
-      "feed_url": "https://www.alignmentforum.org/feed.xml",
-      "kind": "rss",
+      "kind": "forum_graphql",
+      "scope": "alignment",
       "summary_kind": "publisher excerpt",
-      "priority": 0
+      "priority": 1,
+      "feed_url": "https://www.alignmentforum.org/graphql",
+      "af_only": true,
+      "page_size": 50,
+      "coverage_note": "Public Alignment Forum posts, including informal research and discussion, with date-based archive and catch-up cursors."
+    },
+    {
+      "id": "lesswrong",
+      "name": "LessWrong",
+      "url": "https://www.lesswrong.com/",
+      "kind": "forum_graphql",
+      "scope": "mixed",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "feed_url": "https://www.lesswrong.com/graphql",
+      "page_size": 50,
+      "coverage_note": "All public posts are scanned as discovery candidates, avoiding reliance on incomplete alignment tags; relevance labels distinguish research from unrelated discussion."
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
-      "feed_url": "https://metr.org/feed.xml",
       "kind": "rss",
+      "scope": "alignment",
       "summary_kind": "publisher excerpt",
-      "priority": 1
+      "priority": 1,
+      "feed_url": "https://metr.org/feed.xml",
+      "coverage_note": "Publisher RSS includes evaluations and methodology; historical coverage is bounded by the publisher feed."
     },
     {
       "id": "anthropic-alignment",
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "kind": "anthropic",
+      "scope": "alignment",
       "summary_kind": "publisher excerpt",
       "priority": 1,
-      "max_articles": 14
+      "article_budget": 10,
+      "coverage_note": "Publisher-owned article cards from the current index, progressively fetched; publication dates come from article metadata and bylines."
     },
     {
       "id": "redwood",
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
-      "feed_url": "https://blog.redwoodresearch.org/feed",
-      "kind": "rss",
+      "kind": "substack",
+      "scope": "alignment",
       "summary_kind": "publisher excerpt",
-      "priority": 1
+      "priority": 1,
+      "feed_url": "https://blog.redwoodresearch.org/feed",
+      "archive_url": "https://blog.redwoodresearch.org/api/v1/archive",
+      "page_size": 50,
+      "coverage_note": "Public Substack archive paginated beyond its finite RSS window. Older work absent from the archive may be discovered through other indexes."
+    },
+    {
+      "id": "transformer-circuits",
+      "name": "Transformer Circuits",
+      "url": "https://transformer-circuits.pub/",
+      "kind": "dated_index",
+      "scope": "alignment",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "feed_url": "https://transformer-circuits.pub/feed.xml",
+      "coverage_note": "All article cards on the publisher historical index, with its explicit data-date publication dates and summaries. Fetches the lightweight index rather than embedding-heavy article HTML."
+    },
+    {
+      "id": "far-ai",
+      "name": "FAR.AI",
+      "url": "https://www.far.ai/",
+      "kind": "sitemap",
+      "scope": "alignment",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "feed_url": "https://www.far.ai/sitemap.xml",
+      "include_pattern": "^https://www\\.far\\.ai/research/[^/]+/?$",
+      "article_budget": 10,
+      "coverage_note": "Research collection URLs in the publisher sitemap, progressively fetched. Original publication bylines override website-migration dates."
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo Research",
+      "url": "https://apolloresearch.ai/",
+      "kind": "sitemap",
+      "scope": "alignment",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "feed_url": "https://www.apolloresearch.ai/sitemap.xml",
+      "allowed_hosts": [
+        "apolloresearch.ai",
+        "www.apolloresearch.ai"
+      ],
+      "include_pattern": "^https://(?:www\\.)?apolloresearch\\.ai/(?:science|monitoring|governance)/[^/]+/?$",
+      "article_budget": 10,
+      "coverage_note": "Science, monitoring and governance research pages in the publisher sitemap, progressively fetched with explicit publication dates where supplied."
+    },
+    {
+      "id": "arc",
+      "name": "Alignment Research Center",
+      "url": "https://www.alignment.org/",
+      "kind": "sitemap",
+      "scope": "alignment",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "feed_url": "https://www.alignment.org/sitemap-posts.xml",
+      "coverage_note": "All research-blog URLs in the publisher post sitemap, progressively fetched beyond the shorter RSS feed. Old pages rotate for metadata refresh.",
+      "include_pattern": "^https://www\\.alignment\\.org/blog/[^/]+/?$",
+      "article_budget": 10
+    },
+    {
+      "id": "miri",
+      "name": "MIRI",
+      "url": "https://intelligence.org/",
+      "kind": "rss",
+      "scope": "mixed",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "feed_url": "https://intelligence.org/feed/",
+      "coverage_note": "RSS mixes technical alignment work, policy, organizational updates and newsletters; older technical reports need separate archive indexing."
+    },
+    {
+      "id": "miri-publications",
+      "name": "MIRI Publications",
+      "url": "https://intelligence.org/",
+      "feed_url": "https://intelligence.org/all-publications/",
+      "kind": "bibliography",
+      "scope": "alignment",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "coverage_note": "Technical reports and venue papers explicitly cited in the official historical bibliography, including direct PDFs absent from arXiv. Citation years are preserved as text; exact dates remain unknown unless another source provides them."
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "url": "https://openai.com/",
+      "kind": "rss",
+      "scope": "mixed",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "feed_url": "https://openai.com/news/rss.xml",
+      "coverage_note": "Publisher-wide feed includes safety research alongside products and company news; candidates are retained for relevance review."
+    },
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/",
+      "kind": "rss",
+      "scope": "mixed",
+      "summary_kind": "publisher excerpt",
+      "priority": 1,
+      "feed_url": "https://deepmind.google/blog/rss.xml",
+      "coverage_note": "Publisher-wide blog includes technical safety and general AI news; older history is bounded by the feed window."
     }
   ]
 }

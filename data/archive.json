@@ -1,0 +1,816 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-10-16T19:34:36Z",
+  "last_successful_update": "2026-10-16T19:34:36Z",
+  "edition_date": "2026-10-16",
+  "timezone": "America/Detroit",
+  "sources": [
+    {
+      "id": "arxiv",
+      "name": "arXiv",
+      "url": "https://arxiv.org/",
+      "status": "degraded",
+      "checked_at": "2026-10-16T19:34:36Z",
+      "last_success_at": "2026-10-16T19:34:36Z",
+      "last_failure_at": "2026-10-16T19:26:59Z",
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:34:36Z",
+      "item_count": 399,
+      "parsed_count": 399,
+      "error": null,
+      "warnings": [
+        "arXiv search API failed: The read operation timed out",
+        "Backup RSS discovers only the current announcement window in five configured categories. Search/archive coverage is degraded; saved API backfill cursors are unchanged.",
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "mixed",
+      "coverage": {
+        "mode": "rss_fallback",
+        "pages": 1,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "Fri, 16 Oct 2026 00:00:00 -0400",
+        "latest_fetched_at": "Fri, 16 Oct 2026 00:00:00 -0400",
+        "degraded": true,
+        "primary_error": "The read operation timed out",
+        "archive_available": false,
+        "validated_empty": false,
+        "fallback_scope": "Current arXiv announcement feed for cs.AI, cs.LG, cs.CL, cs.MA and stat.ML, matched locally against discovery keywords.",
+        "description": "Cross-category keyword search without a cs.AI/cs.LG restriction; new/updated papers plus year-partitioned historical pagination back to 1991. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; archive cursors do not advance."
+      }
+    },
+    {
+      "id": "transformer-circuits",
+      "name": "Transformer Circuits",
+      "url": "https://transformer-circuits.pub/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:34:36Z",
+      "last_success_at": "2026-10-16T19:34:36Z",
+      "last_failure_at": "2026-10-16T19:26:59Z",
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:34:36Z",
+      "item_count": 56,
+      "parsed_count": 56,
+      "error": null,
+      "warnings": [
+        "Coverage is limited to the publisher's current index; publication dates are the explicit data-date attributes on its article cards."
+      ],
+      "scope": "alignment",
+      "coverage": {
+        "mode": "publisher_dated_index",
+        "pages": 1,
+        "backfill_complete": true,
+        "pending_backfill": false,
+        "oldest_fetched_at": "2020-03-10",
+        "latest_fetched_at": "2026-08-21",
+        "discovered_urls": 56,
+        "scope": "Article cards linked by the publisher's current dated index.",
+        "description": "All article cards on the publisher historical index, with its explicit data-date publication dates and summaries. Fetches the lightweight index rather than embedding-heavy article HTML."
+      }
+    },
+    {
+      "id": "arc",
+      "name": "Alignment Research Center",
+      "url": "https://www.alignment.org/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:34:36Z",
+      "last_success_at": "2026-10-16T19:34:36Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:34:36Z",
+      "item_count": 20,
+      "parsed_count": 20,
+      "error": null,
+      "warnings": [
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "alignment",
+      "coverage": {
+        "mode": "publisher_sitemap",
+        "pages": 21,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "2021-12-14T20:09:00.000Z",
+        "latest_fetched_at": "2026-06-09T18:27:31.000Z",
+        "discovered_urls": 28,
+        "pending_documents": 8,
+        "failed_documents": 0,
+        "failed_this_run": 0,
+        "degraded": false,
+        "validated_empty": false,
+        "description": "All research-blog URLs in the publisher post sitemap, progressively fetched beyond the shorter RSS feed. Old pages rotate for metadata refresh."
+      }
+    },
+    {
+      "id": "miri-publications",
+      "name": "MIRI Publications",
+      "url": "https://intelligence.org/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:34:36Z",
+      "last_success_at": "2026-10-16T19:34:36Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:34:36Z",
+      "item_count": 118,
+      "parsed_count": 118,
+      "error": null,
+      "warnings": [
+        "Bibliography supplies citation years, not exact publication dates; retained with unknown dates until another source supplies a precise date."
+      ],
+      "scope": "alignment",
+      "coverage": {
+        "mode": "publisher_bibliography",
+        "pages": 1,
+        "backfill_complete": true,
+        "pending_backfill": false,
+        "oldest_fetched_at": null,
+        "latest_fetched_at": null,
+        "discovered_urls": 118,
+        "scope": "Publications explicitly listed in the publisher's current bibliography.",
+        "description": "Technical reports and venue papers explicitly cited in the official historical bibliography, including direct PDFs absent from arXiv. Citation years are preserved as text; exact dates remain unknown unless another source provides them."
+      }
+    },
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:34:36Z",
+      "last_success_at": "2026-10-16T19:34:36Z",
+      "last_failure_at": "2026-10-16T19:26:59Z",
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:34:36Z",
+      "item_count": 100,
+      "parsed_count": 100,
+      "error": null,
+      "warnings": [
+        "RSS coverage is the publisher's current feed window; older history may be missing.",
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "mixed",
+      "coverage": {
+        "mode": "rolling_feed",
+        "pages": 1,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "Fri, 03 Jul 2026 14:25:43 +0000",
+        "latest_fetched_at": "Wed, 30 Sep 2026 20:01:45 +0000",
+        "archive_available": false,
+        "pending_documents": 0,
+        "description": "Publisher-wide blog includes technical safety and general AI news; older history is bounded by the feed window."
+      }
+    },
+    {
+      "id": "alignment-feed",
+      "name": "Alignment Feed",
+      "url": "https://alignmentfeed.org/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 200,
+      "parsed_count": 200,
+      "error": null,
+      "warnings": [
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "mixed",
+      "coverage": {
+        "mode": "paginated_public_archive",
+        "pages": 2,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "2025-07-09T02:16:46Z",
+        "latest_fetched_at": "2026-10-12T12:30:39Z",
+        "pending_incremental": false,
+        "next_page": 3,
+        "description": "Secondary discovery index, including commentary and capabilities news; page-number archive is progressively traversed."
+      }
+    },
+    {
+      "id": "openreview",
+      "name": "OpenReview",
+      "url": "https://openreview.net/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 1199,
+      "parsed_count": 1203,
+      "error": null,
+      "warnings": [
+        "OpenReview coverage is limited to public API v2 submissions matching configured phrases; API v1 venues and unindexed work may be missing.",
+        "4 records lacked a valid title or public article link.",
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "mixed",
+      "coverage": {
+        "mode": "scholarly_query",
+        "scope": "Public OpenReview API v2 paper submissions; phrase-matched title and abstract discovery.",
+        "pages": 15,
+        "query_totals": {
+          "AI alignment": 587,
+          "AI safety": 2110,
+          "mechanistic interpretability": 2835,
+          "scalable oversight": 180,
+          "reward hacking": 993,
+          "deceptive alignment": 28,
+          "AI control": 131,
+          "scheming": 54,
+          "sandbagging": 58
+        },
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "query_limited": true,
+        "truncated": false,
+        "description": "Public API v2 paper submissions matching exact phrases, with progressive pagination. API v1 venues and work without configured terminology may be missing; search result ceilings are reported explicitly."
+      }
+    },
+    {
+      "id": "alignment-forum",
+      "name": "Alignment Forum",
+      "url": "https://www.alignmentforum.org/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 105,
+      "parsed_count": 105,
+      "error": null,
+      "warnings": [
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "alignment",
+      "coverage": {
+        "mode": "date_paginated_forum",
+        "pages": 3,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "2026-05-23T00:06:50.302Z",
+        "latest_fetched_at": "2026-10-15T20:45:38.208Z",
+        "pending_incremental": false,
+        "description": "Public Alignment Forum posts, including informal research and discussion, with date-based archive and catch-up cursors."
+      }
+    },
+    {
+      "id": "lesswrong",
+      "name": "LessWrong",
+      "url": "https://www.lesswrong.com/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 150,
+      "parsed_count": 150,
+      "error": null,
+      "warnings": [
+        "Recent forum catch-up is pending and will resume from its saved date cursor.",
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "mixed",
+      "coverage": {
+        "mode": "date_paginated_forum",
+        "pages": 3,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "2026-10-12T17:45:18.513Z",
+        "latest_fetched_at": "2026-10-16T17:05:31.485Z",
+        "pending_incremental": true,
+        "description": "All public posts are scanned as discovery candidates, avoiding reliance on incomplete alignment tags; relevance labels distinguish research from unrelated discussion."
+      }
+    },
+    {
+      "id": "metr",
+      "name": "METR",
+      "url": "https://metr.org/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 109,
+      "parsed_count": 110,
+      "error": null,
+      "warnings": [
+        "RSS coverage is the publisher's current feed window; older history may be missing.",
+        "1 records lacked a valid title or public article link.",
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "alignment",
+      "coverage": {
+        "mode": "rolling_feed",
+        "pages": 1,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "Fri, 04 Apr 2025 00:00:00 -0700",
+        "latest_fetched_at": "Wed, 30 Sep 2026 00:00:00 -0700",
+        "archive_available": false,
+        "pending_documents": 0,
+        "description": "Publisher RSS includes evaluations and methodology; historical coverage is bounded by the publisher feed."
+      }
+    },
+    {
+      "id": "anthropic-alignment",
+      "name": "Anthropic Alignment Science",
+      "url": "https://alignment.anthropic.com/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 20,
+      "parsed_count": 20,
+      "error": null,
+      "warnings": [
+        "Publisher index coverage is limited to the articles linked by the current index.",
+        "10 research pages have no explicit publication date; retained for review.",
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "alignment",
+      "coverage": {
+        "mode": "publisher_index",
+        "pages": 21,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "2026-03-23",
+        "latest_fetched_at": "2026-10-15",
+        "discovered_urls": 61,
+        "pending_documents": 41,
+        "description": "Publisher-owned article cards from the current index, progressively fetched; publication dates come from article metadata and bylines."
+      }
+    },
+    {
+      "id": "redwood",
+      "name": "Redwood Research",
+      "url": "https://www.redwoodresearch.org/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 23,
+      "parsed_count": 23,
+      "error": null,
+      "warnings": [],
+      "scope": "alignment",
+      "coverage": {
+        "mode": "paginated_public_archive",
+        "pages": 1,
+        "backfill_complete": true,
+        "pending_backfill": false,
+        "oldest_fetched_at": "2026-05-29T17:01:53.053Z",
+        "latest_fetched_at": "2026-10-16T16:01:26.407Z",
+        "pending_incremental": false,
+        "next_page": 2,
+        "description": "Public Substack archive paginated beyond its finite RSS window. Older work absent from the archive may be discovered through other indexes."
+      }
+    },
+    {
+      "id": "far-ai",
+      "name": "FAR.AI",
+      "url": "https://www.far.ai/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 20,
+      "parsed_count": 20,
+      "error": null,
+      "warnings": [
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "alignment",
+      "coverage": {
+        "mode": "publisher_sitemap",
+        "pages": 21,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "2022-08-07",
+        "latest_fetched_at": "2026-02-16",
+        "discovered_urls": 59,
+        "pending_documents": 39,
+        "description": "Research collection URLs in the publisher sitemap, progressively fetched. Original publication bylines override website-migration dates."
+      }
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo Research",
+      "url": "https://apolloresearch.ai/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 20,
+      "parsed_count": 20,
+      "error": null,
+      "warnings": [
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "alignment",
+      "coverage": {
+        "mode": "publisher_sitemap",
+        "pages": 21,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "2023-09-15",
+        "latest_fetched_at": "2026-10-15",
+        "discovered_urls": 50,
+        "pending_documents": 30,
+        "description": "Science, monitoring and governance research pages in the publisher sitemap, progressively fetched with explicit publication dates where supplied."
+      }
+    },
+    {
+      "id": "miri",
+      "name": "MIRI",
+      "url": "https://intelligence.org/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 6,
+      "parsed_count": 6,
+      "error": null,
+      "warnings": [
+        "RSS coverage is the publisher's current feed window; older history may be missing.",
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "mixed",
+      "coverage": {
+        "mode": "rolling_feed",
+        "pages": 1,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "Thu, 30 Jul 2026 20:44:49 +0000",
+        "latest_fetched_at": "Wed, 30 Sep 2026 20:00:11 +0000",
+        "archive_available": false,
+        "pending_documents": 0,
+        "description": "RSS mixes technical alignment work, policy, organizational updates and newsletters; older technical reports need separate archive indexing."
+      }
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "url": "https://openai.com/",
+      "status": "ok",
+      "checked_at": "2026-10-16T19:26:59Z",
+      "last_success_at": "2026-10-16T19:26:59Z",
+      "last_failure_at": null,
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-16T19:26:59Z",
+      "item_count": 1296,
+      "parsed_count": 1296,
+      "error": null,
+      "warnings": [
+        "RSS coverage is the publisher's current feed window; older history may be missing.",
+        "Historical coverage is incomplete; the next scheduled runs will continue the available backlog."
+      ],
+      "scope": "mixed",
+      "coverage": {
+        "mode": "rolling_feed",
+        "pages": 1,
+        "backfill_complete": false,
+        "pending_backfill": true,
+        "oldest_fetched_at": "Fri, 01 Aug 2025 00:00:00 GMT",
+        "latest_fetched_at": "Wed, 31 Oct 2018 07:00:00 GMT",
+        "archive_available": false,
+        "pending_documents": 0,
+        "description": "Publisher-wide feed includes safety research alongside products and company news; candidates are retained for relevance review."
+      }
+    }
+  ],
+  "errors": [],
+  "source_states": {
+    "alignment-feed": {
+      "head_id": "3a336ce5b52505bedb7c5c066f53d5d9",
+      "backfill_page": 3,
+      "backfill_complete": false
+    },
+    "metr": {},
+    "redwood": {
+      "head_id": "220720028",
+      "backfill_page": 2,
+      "backfill_complete": true
+    },
+    "alignment-forum": {
+      "watermark": "2026-10-15T19:26:59.015Z",
+      "backfill_before": "2026-05-23T00:06:50.303Z",
+      "backfill_offset": 1,
+      "backfill_complete": false
+    },
+    "lesswrong": {
+      "incremental_upper": "2026-10-16T19:26:59.015Z",
+      "incremental_before": "2026-10-14T15:03:14.580Z",
+      "incremental_offset": 1,
+      "backfill_before": "2026-10-12T17:45:18.514Z",
+      "backfill_offset": 1,
+      "backfill_complete": false
+    },
+    "openreview": {
+      "queries": {
+        "AI alignment": {
+          "head_id": "aC8D55CfeU",
+          "backfill_offset": 200,
+          "backfill_complete": false
+        },
+        "AI safety": {
+          "head_id": "V4c1VeXFrZ",
+          "backfill_offset": 200,
+          "backfill_complete": false
+        },
+        "mechanistic interpretability": {
+          "head_id": "RkX3UyGunC",
+          "backfill_offset": 200,
+          "backfill_complete": false
+        },
+        "scalable oversight": {
+          "head_id": "ePE9BMoh8L",
+          "backfill_offset": 100,
+          "backfill_complete": true
+        },
+        "reward hacking": {
+          "head_id": "mKPpS6n3cZ",
+          "backfill_offset": 200,
+          "backfill_complete": false
+        },
+        "deceptive alignment": {
+          "head_id": "obsO44GFhh",
+          "backfill_offset": 0,
+          "backfill_complete": true
+        },
+        "AI control": {
+          "head_id": "wSs1Ez3aKl",
+          "backfill_offset": 100,
+          "backfill_complete": true
+        },
+        "scheming": {
+          "head_id": "Mk49gDdKIX",
+          "backfill_offset": 0,
+          "backfill_complete": true
+        },
+        "sandbagging": {
+          "head_id": "uUWb5eawL9",
+          "backfill_offset": 0,
+          "backfill_complete": true
+        }
+      }
+    },
+    "far-ai": {
+      "checked_at": {
+        "https://www.far.ai/research/tamperbench-systematically-stress-testing-llm-safety-under-fine-tuning-and-tampering": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/why-does-training-on-insecure-code-make-models-broadly-misaligned": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/vision-language-models-are-zero-shot-reward-models-for-reinforcement-learning": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/universal-sparse-autoencoders-interpretable-cross-model-concept-alignment": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/uncovering-latent-human-wellbeing-in-language-model-embeddings": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/transformers-dont-need-layernorm-at-inference-time": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/transformer-circuit-faithfulness-metrics-are-not-robust": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/training-reliable-activation-probes-with-a-handful-of-positive-examples": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/training-language-models-with-language-feedback-at-scale": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/training-language-models-with-language-feedback": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/towards-guaranteed-safe-ai-a-framework-for-ensuring-robust-and-reliable-ai-systems": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/towards-automated-circuit-discovery-for-mechanistic-interpretability": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/the-singapore-consensus-on-global-ai-safety-research-priorities": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/the-safety-gap-toolkit-evaluating-hidden-dangers-of-open-source-models": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/the-obfuscation-atlas-mapping-where-honesty-emerges-in-rlvr-with-deception-probes": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/starc-a-general-framework-for-quantifying-differences-between-reward-functions": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/stack-adversarial-attacks-on-llm-safeguard-pipelines": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/securing-agentic-ai-discussion-paper": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/scaling-laws-for-data-poisoning-in-llms": "2026-10-16T19:26:59.015Z",
+        "https://www.far.ai/research/rl-with-kl-penalties-is-better-viewed-as-bayesian-inference": "2026-10-16T19:26:59.015Z"
+      },
+      "documents": {
+        "https://www.far.ai/research/tamperbench-systematically-stress-testing-llm-safety-under-fine-tuning-and-tampering": "2026-07-20T20:06:42.614Z",
+        "https://www.far.ai/research/why-does-training-on-insecure-code-make-models-broadly-misaligned": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/vision-language-models-are-zero-shot-reward-models-for-reinforcement-learning": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/universal-sparse-autoencoders-interpretable-cross-model-concept-alignment": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/uncovering-latent-human-wellbeing-in-language-model-embeddings": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/transformers-dont-need-layernorm-at-inference-time": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/transformer-circuit-faithfulness-metrics-are-not-robust": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/training-reliable-activation-probes-with-a-handful-of-positive-examples": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/training-language-models-with-language-feedback-at-scale": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/training-language-models-with-language-feedback": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/towards-guaranteed-safe-ai-a-framework-for-ensuring-robust-and-reliable-ai-systems": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/towards-automated-circuit-discovery-for-mechanistic-interpretability": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/the-singapore-consensus-on-global-ai-safety-research-priorities": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/the-safety-gap-toolkit-evaluating-hidden-dangers-of-open-source-models": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/the-obfuscation-atlas-mapping-where-honesty-emerges-in-rlvr-with-deception-probes": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/starc-a-general-framework-for-quantifying-differences-between-reward-functions": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/stack-adversarial-attacks-on-llm-safeguard-pipelines": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/securing-agentic-ai-discussion-paper": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/scaling-laws-for-data-poisoning-in-llms": "2026-07-13T22:54:15.437Z",
+        "https://www.far.ai/research/rl-with-kl-penalties-is-better-viewed-as-bayesian-inference": "2026-07-13T22:54:15.437Z"
+      }
+    },
+    "miri": {},
+    "arc": {
+      "checked_at": {
+        "https://www.alignment.org/blog/a-birds-eye-view-of-arcs-research/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/announcing-the-arc-white-box-estimation-challenge/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/a-mikes-eye-view-of-arcs-research/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/mechanistic-estimation-for-wide-random-mlps/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/mechanistic-estimation-for-expectations-of-random-products/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/formal-verification-heuristic-explanations-and-surprise-accounting/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/algzoo-uninterpreted-models-with-fewer-than-1-500-parameters/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/obstacles-in-arcs-research-agenda/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/competing-with-sampling/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/a-computational-no-coincidence-principle/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/low-probability-estimation-in-language-models/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/research-update-towards-a-law-of-iterated-expectations-for-heuristic-estimators/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/backdoors-as-an-analogy-for-deceptive-alignment/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/estimating-tail-risk-in-neural-networks/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/arcs-first-technical-report-eliciting-latent-knowledge/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/prize-for-matrix-completion-problems/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/arc-is-hiring-theoretical-researchers/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/matrix-completion-prize-results/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/early-2022-hiring-round/": "2026-10-16T19:34:36.637Z",
+        "https://www.alignment.org/blog/finding-gliders-in-the-game-of-life/": "2026-10-16T19:34:36.637Z"
+      },
+      "failures": {},
+      "documents": {
+        "https://www.alignment.org/blog/a-birds-eye-view-of-arcs-research/": "2026-06-09T19:06:07.000Z",
+        "https://www.alignment.org/blog/announcing-the-arc-white-box-estimation-challenge/": "2026-06-09T19:06:00.000Z",
+        "https://www.alignment.org/blog/a-mikes-eye-view-of-arcs-research/": "2026-06-09T19:05:51.000Z",
+        "https://www.alignment.org/blog/mechanistic-estimation-for-wide-random-mlps/": "2026-05-15T17:06:17.000Z",
+        "https://www.alignment.org/blog/mechanistic-estimation-for-expectations-of-random-products/": "2026-05-15T17:06:15.000Z",
+        "https://www.alignment.org/blog/formal-verification-heuristic-explanations-and-surprise-accounting/": "2026-05-07T16:25:28.000Z",
+        "https://www.alignment.org/blog/algzoo-uninterpreted-models-with-fewer-than-1-500-parameters/": "2026-01-26T17:55:50.000Z",
+        "https://www.alignment.org/blog/obstacles-in-arcs-research-agenda/": "2025-12-18T16:38:54.000Z",
+        "https://www.alignment.org/blog/competing-with-sampling/": "2025-12-18T00:06:48.000Z",
+        "https://www.alignment.org/blog/a-computational-no-coincidence-principle/": "2025-02-21T02:12:10.000Z",
+        "https://www.alignment.org/blog/low-probability-estimation-in-language-models/": "2024-11-12T21:19:44.000Z",
+        "https://www.alignment.org/blog/research-update-towards-a-law-of-iterated-expectations-for-heuristic-estimators/": "2024-11-12T18:08:30.000Z",
+        "https://www.alignment.org/blog/backdoors-as-an-analogy-for-deceptive-alignment/": "2024-10-16T21:31:05.000Z",
+        "https://www.alignment.org/blog/estimating-tail-risk-in-neural-networks/": "2024-10-08T00:38:04.000Z",
+        "https://www.alignment.org/blog/arcs-first-technical-report-eliciting-latent-knowledge/": "2024-10-04T02:40:08.000Z",
+        "https://www.alignment.org/blog/prize-for-matrix-completion-problems/": "2024-04-30T15:17:37.000Z",
+        "https://www.alignment.org/blog/arc-is-hiring-theoretical-researchers/": "2024-03-20T20:58:21.000Z",
+        "https://www.alignment.org/blog/matrix-completion-prize-results/": "2023-12-20T15:34:35.000Z",
+        "https://www.alignment.org/blog/early-2022-hiring-round/": "2023-07-15T22:59:07.000Z",
+        "https://www.alignment.org/blog/finding-gliders-in-the-game-of-life/": "2023-06-09T00:09:04.000Z"
+      }
+    },
+    "openai": {},
+    "apollo": {
+      "checked_at": {
+        "https://apolloresearch.ai/science/update-aware-reasoning-glm-5-3": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/monitoring/reflections-from-red-teaming-codex-auto-review": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/monitoring/a-scalable-monitoring-research-agenda": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/we-need-3rd-party-training-run-evaluations": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/we-need-a-science-of-evals": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/understanding-strategic-deception-and-deceptive-alignment": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/towards-safety-cases-for-ai-scheming": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/the-local-interaction-basis-identifying-computationally-relevant-and-sparsely-interacting-features-in-neural-networks": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/the-evals-gap": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/stress-testing-deliberative-alignment-for-anti-scheming-training": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/science-of-scheming": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/research-note-our-scheming-precursor-evals-had-limited-predictive-power-for-our-in-context-scheming-evals": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/our-research-on-strategic-deception-presented-at-the-uks-ai-safety-summit": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/more-capable-models-are-better-at-in-context-scheming": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/measuring-reward-seeking-via-contrastive-belief-updates": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/large-language-models-can-strategically-deceive-their-users-when-put-under-pressure": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/interpretability-in-parameter-space-minimizing-mechanistic-description-length-with-attribution-based-parameter-decomposition": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/identifying-functionally-important-features-with-end-to-end-sparse-dictionary-learning": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/frontier-models-are-capable-of-incontext-scheming": "2026-10-16T19:26:59.015Z",
+        "https://apolloresearch.ai/science/forecasting-frontier-language-model-agent-capabilities": "2026-10-16T19:26:59.015Z"
+      },
+      "documents": {
+        "https://apolloresearch.ai/science/update-aware-reasoning-glm-5-3": "2026-10-15T10:33:03.257Z",
+        "https://apolloresearch.ai/monitoring/reflections-from-red-teaming-codex-auto-review": "2026-10-14T17:24:23.613Z",
+        "https://apolloresearch.ai/monitoring/a-scalable-monitoring-research-agenda": "2026-10-14T17:24:23.613Z",
+        "https://apolloresearch.ai/science/we-need-3rd-party-training-run-evaluations": "2026-09-23T11:32:18.374Z",
+        "https://apolloresearch.ai/science/we-need-a-science-of-evals": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/understanding-strategic-deception-and-deceptive-alignment": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/towards-safety-cases-for-ai-scheming": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/the-local-interaction-basis-identifying-computationally-relevant-and-sparsely-interacting-features-in-neural-networks": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/the-evals-gap": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/stress-testing-deliberative-alignment-for-anti-scheming-training": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/science-of-scheming": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/research-note-our-scheming-precursor-evals-had-limited-predictive-power-for-our-in-context-scheming-evals": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/our-research-on-strategic-deception-presented-at-the-uks-ai-safety-summit": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/more-capable-models-are-better-at-in-context-scheming": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/measuring-reward-seeking-via-contrastive-belief-updates": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/large-language-models-can-strategically-deceive-their-users-when-put-under-pressure": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/interpretability-in-parameter-space-minimizing-mechanistic-description-length-with-attribution-based-parameter-decomposition": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/identifying-functionally-important-features-with-end-to-end-sparse-dictionary-learning": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/frontier-models-are-capable-of-incontext-scheming": "2026-09-11T10:30:54.879Z",
+        "https://apolloresearch.ai/science/forecasting-frontier-language-model-agent-capabilities": "2026-09-11T10:30:54.879Z"
+      }
+    },
+    "anthropic-alignment": {
+      "documents": {
+        "https://alignment.anthropic.com/2026/training-alignment-auditors/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/reward-seeker/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/automated-alignment-researchers/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/taste/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/chive/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/lie-detectors/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/conceptual-reasoning-index/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/modular-pretraining/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/diffuse-ai-control/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/sleight-bench/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/teaching-claude-why/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/msm/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/backdooring-classifiers/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/introspection-adapters/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/ai-organizations/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/automated-w2s-researcher/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/abstractive-red-teaming/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/coding-audit-realism/": "2026-10-16T19:26:59.015Z",
+        "https://alignment.anthropic.com/2026/automated-alignment-agent/": "2026-10-16T19:26:59.015Z"
+      }
+    },
+    "deepmind": {},
+    "miri-publications": {
+      "last_index_scan_at": "2026-10-16T19:34:36.637Z"
+    },
+    "transformer-circuits": {
+      "last_index_scan_at": "2026-10-16T19:34:36.637Z"
+    },
+    "arxiv": {}
+  },
+  "coverage": {
+    "completeness": "unverified",
+    "description": "An expanding metadata archive; feeds and search APIs cannot guarantee every published alignment work.",
+    "configured_sources": 16,
+    "pending_backfill_sources": 13,
+    "feed_window_sources": 0
+  },
+  "stats": {
+    "total_items": 3795,
+    "fetched_items": 693,
+    "accepted_items": 693,
+    "retained_items": 3131,
+    "successful_sources": 5,
+    "total_sources": 5,
+    "retention_days": null,
+    "minimum_relevance_score": null,
+    "relevant_items": 1804,
+    "candidate_items": 1991,
+    "undated_items": 658,
+    "suspicious_empty_sources": 0,
+    "duplicates_removed": 29,
+    "newest_publication": "2026-10-16T17:05:31Z"
+  },
+  "storage_format": "sharded-v1",
+  "items_count": 3795,
+  "storage_chunks": [
+    {
+      "path": "archive/records-ac8ff08f604ac040.json",
+      "count": 500,
+      "sha256": "ac8ff08f604ac040d5fec4624c28ed5699cda81b581a850ec6f49786ff6b5c62"
+    },
+    {
+      "path": "archive/records-101f029f901e43bb.json",
+      "count": 500,
+      "sha256": "101f029f901e43bbca48c2dc1b8d9c47e493d9595baf2a216081c383065a38f7"
+    },
+    {
+      "path": "archive/records-d95ebaa8d981d4be.json",
+      "count": 500,
+      "sha256": "d95ebaa8d981d4be4b63b1d261172a87c82d4f9e13eaeb0c276e4a29fdecaaff"
+    },
+    {
+      "path": "archive/records-9f697bd119fe1d7a.json",
+      "count": 500,
+      "sha256": "9f697bd119fe1d7a7b3e413f1dc55fe641fde3b9eaf30235bdf0fda318e95f5e"
+    },
+    {
+      "path": "archive/records-ff912f86ef107027.json",
+      "count": 500,
+      "sha256": "ff912f86ef107027924b3ff94e84a4899ecf7df3018646aaebf1990249e2823e"
+    },
+    {
+      "path": "archive/records-e9dfb2bf10eea4e9.json",
+      "count": 500,
+      "sha256": "e9dfb2bf10eea4e9c79d6d7a067b2a8cc19b89262e0676d824157923013c7723"
+    },
+    {
+      "path": "archive/records-8f60b37bc4507d41.json",
+      "count": 500,
+      "sha256": "8f60b37bc4507d418d46ee3704fc0ad8a70947a27145331cab5bcadf0a7bdddb"
+    },
+    {
+      "path": "archive/records-098473513a856962.json",
+      "count": 295,
+      "sha256": "098473513a8569627ff460a4f3e6ce78daed3c8511889893fd8db0cb3d967d68"
+    }
+  ],
+  "storage_generation": "archive/manifest-8bd155180399ac79.json"
+}

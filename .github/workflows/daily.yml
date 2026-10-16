@@ -1,14 +1,12 @@
-name: Refresh and publish dashboard
+name: Hourly collection and publish
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # 08:17 in Detroit is 12:17 UTC during daylight time, 13:17 otherwise.
-    # The gate below selects one daily run using America/Detroit timezone data.
-    - cron: '17 12 * * *'
-    - cron: '17 13 * * *'
+    # Away from the top of the hour to reduce GitHub's peak scheduling load.
+    - cron: "17 * * * *"
 
 permissions: {}
 
@@ -18,43 +16,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  gate:
-    runs-on: ubuntu-latest
-    outputs:
-      refresh: ${{ steps.schedule.outputs.refresh }}
-    steps:
-      - name: Select the Detroit morning schedule
-        id: schedule
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          EVENT_SCHEDULE: ${{ github.event.schedule }}
-        run: |
-          python3 - <<'PY'
-          import os
-          from datetime import datetime, timezone
-          from zoneinfo import ZoneInfo
-
-          refresh = True
-          if os.environ["EVENT_NAME"] == "schedule":
-              cron = os.environ["EVENT_SCHEDULE"].split()
-              # Use the intended UTC hour, not the runner start hour: GitHub
-              # can start a scheduled workflow late when its queues are busy.
-              nominal = datetime.now(timezone.utc).replace(
-                  hour=int(cron[1]), minute=int(cron[0]), second=0, microsecond=0
-              )
-              refresh = nominal.astimezone(ZoneInfo("America/Detroit")).hour == 8
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
-              output.write(f"refresh={str(refresh).lower()}\n")
-          print("Refreshing the dashboard." if refresh else "Skipping the other UTC schedule.")
-          PY
-
   refresh-and-deploy:
-    needs: gate
-    if: >-
-      needs.gate.outputs.refresh == 'true' &&
-      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     permissions:
       contents: write
       pages: write
@@ -73,12 +38,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v7.0.0
         with:
-          python-version: '3.13'
+          python-version: "3.13"
 
       - name: Set up Node for browser logic tests
         uses: actions/setup-node@v7.1.0
         with:
-          node-version: '24'
+          node-version: "24"
           package-manager-cache: false
 
       - name: Test the collector and browser logic
@@ -91,12 +56,12 @@ jobs:
             node --test "${browser_tests[@]}"
           fi
 
-      - name: Collect the daily edition
+      - name: Collect new publications and continue historical backfill
         id: collect
         # A total source outage still writes health and retained records. Deploy
         # that honest state, then mark this workflow failed after publication.
         continue-on-error: true
-        run: python scripts/collect.py --output site/data/edition.json
+        run: python scripts/collect.py --output site/data/edition.json --backfill-pages 2
 
       - name: Validate the generated edition
         run: python -m json.tool site/data/edition.json > /dev/null
@@ -109,7 +74,7 @@ jobs:
             echo "::error::The default branch changed during collection. A newer push run will refresh and publish it."
             exit 1
           fi
-          git add -- site/data/edition.json
+          git add -- data site/data
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -129,8 +94,12 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5.0.1
 
+      - name: Report important coverage outages after publishing
+        if: always() && steps.deployment.outcome == 'success'
+        run: python scripts/check_health.py --edition site/data/edition.json
+
       - name: Report collection failure after publishing
-        if: steps.collect.outcome == 'failure'
+        if: always() && steps.collect.outcome == 'failure'
         run: |
           echo "::error::The collector failed. The dashboard may show retained records; review its source health and the collector logs."
           exit 1

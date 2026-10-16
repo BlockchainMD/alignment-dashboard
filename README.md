@@ -1,57 +1,95 @@
-# Alignment Dashboard
+# Alignment research archive
 
-A daily reading desk for AI alignment and safety research, built for a quick morning scan and a short list of articles to return to. The site is static HTML, CSS, and JavaScript; a Python standard library collector updates its public data file.
+An hourly discovery and historical-archiving system for public AI alignment research, with a dashboard at [Alignment Daily](https://blockchainmd.github.io/alignment-dashboard/).
 
-The intended public home is [BlockchainMD/alignment-dashboard](https://github.com/BlockchainMD/alignment-dashboard), with the dashboard served at [blockchainmd.github.io/alignment-dashboard](https://blockchainmd.github.io/alignment-dashboard/).
+**Collection coverage is the priority.** The archive retains uncertain candidates, undated records, and old publications. A small reading shortlist is separate from the full collection. No finite source registry or keyword search establishes that every alignment work published anywhere has been collected; coverage and backfill gaps are visible in the dashboard.
 
-## What it collects
+## Discovery and coverage
 
-Sources are declared in [`config/sources.json`](config/sources.json). The collector reads public feeds and research pages, normalizes article titles, links, publication dates, and source excerpts, removes duplicate links, and scores relevance with explicit alignment and safety keywords. It does not call an AI model or generate summaries. Any excerpt is source text, and a relevance score is a browsing aid rather than an assessment of research quality.
+The versioned [source registry](config/sources.json) defines the scope:
 
-The initial sources are Alignment Feed, arXiv, Alignment Forum, METR, Anthropic Alignment Science, and Redwood Research. The library retains up to 90 days of dated, relevant research.
+| Source | Discovery route and limits |
+| --- | --- |
+| arXiv | Cross-category alignment/safety queries, incremental updates, and historical pagination by year. Keyword recall is incomplete. If the API is unavailable, category-limited RSS discovery is explicitly degraded and historical progress pauses. |
+| OpenReview | Public API v2 paper forums matching configured phrases. Per-query historical progress, update catch-up, and search-ceiling warnings. API v1 venues are not indexed directly. |
+| Alignment Forum and LessWrong | Public GraphQL posts, frozen incremental windows, and date-based historical cursors. Informal research and discussion are included. |
+| Alignment Feed | Paginated secondary discovery index. Aggregator summaries remain labeled. |
+| Anthropic Alignment Science | Research index and progressive article metadata retrieval. Missing publication dates remain unknown. |
+| Redwood Research | Public archive pagination beyond the finite RSS window. |
+| FAR.AI and Apollo Research | Research-specific sitemap URLs, historical batches, and periodic article rechecks. |
+| METR, Transformer Circuits, ARC, MIRI, OpenAI, Google DeepMind | Publisher RSS/Atom feeds. Feed windows do not establish historical completeness; general lab feeds also contain non-research news. |
 
-This version has no X/Twitter collection and requires no API key, paid service, or model subscription. Open the original article to read it in full and verify its claims.
+Dedicated alignment sources are ingested broadly. Mixed sources retain ambiguous matches as candidates rather than discarding them. Labels and keyword scores aid discovery; they are not assessments of evidence quality. The archive can contain commentary and unrelated candidates. Use the review-status filter to narrow the reading view.
 
-## Freshness and source health
+Known gaps include personal blogs outside the registry, unfamiliar terminology, unindexed or inaccessible material, older feed-only history, and work in other languages. A successful fetch means a source was retrieved and parsed, not that its archive is complete. Publisher metadata can also be inaccurate.
 
-The edition records when collection was attempted and shows the result for each source. A successful fetch means the source responded and its content could be parsed; it does not mean that the source published something today. Publication dates come from the source. Items without a reliable publication date are omitted rather than assigned the collection time.
+## Durable records and recovery
 
-When a source fails, previously collected items from that source are retained within the library's retention period, and source health reports the error. The dashboard keeps the source's last successful fetch time. A partial outage still publishes the available material. If every source fails, the workflow publishes the failure state and retained records, then marks the Actions run failed so the outage is visible. These are public sources and can change their feed formats, block requests, or become unavailable.
+- `data/archive.json` is the authoritative snapshot manifest. It commits source checkpoints together with checksummed metadata chunks under `data/archive/`, so historical growth does not create one file that eventually exceeds GitHub's file-size limit. `scripts.archive_store.load_archive` reads the complete snapshot and also supports the original flat format. It has no automatic age or record-count expiry.
+- Publication, discovery, and source-update dates are distinct. Unknown dates are retained and never presented as newly published research.
+- Canonical URLs, DOI/arXiv identifiers, and known forum crossposts merge duplicates while preserving provenance, stable IDs, aliases, and metadata revision hashes.
+- Outages preserve records and checkpoints. Suspicious empty results, failures, incomplete catch-up, and historical backlogs remain visible.
+- The hosted workflow serializes runs. Local collection also holds a nonblocking per-archive process lock to prevent overlapping commands from overwriting each other's progress.
+- Retryable HTTP failures use bounded retries. HTTP validators and a bounded local cache reduce repeated transfers during local runs. Raw responses stay in ignored `.cache/`; fresh GitHub runners refetch them.
+- `site/data/edition.json` is a recent-record bootstrap. The complete public archive is in checksummed, content-addressed chunks referenced by a versioned manifest. Browser search loads the full collected archive and reports incomplete loading explicitly.
+- Current and previous two public export generations remain in the working tree for in-progress browser loads. Canonical article history is never pruned; Git also retains earlier versions. A browser holding a much older manifest should reload.
 
-## Saved reading
+Only metadata and bounded source excerpts are published, rather than full articles. Revisions describe changes observed at collection time; revisit schedules do not guarantee immediate discovery of every historical edit. Some publisher pages are periodically rechecked even when their sitemap modification dates stay unchanged.
 
-Saved articles and reading state live in your browser's local storage. They persist on that browser and site address, but do not automatically sync between devices or browsers. Use **Export** to keep a JSON backup and **Import** to restore it elsewhere. Clearing site data removes the local copy. The public repository and deployed site do not receive your reading list.
+## Hourly operation
 
-## Run locally
+The [GitHub Actions workflow](.github/workflows/daily.yml) runs at **17 minutes past every hour**, on pushes to `main`, and on manual dispatch. Each run checks recent publications and continues bounded historical backfill. Records and cursors are committed before GitHub Pages deployment. Runs are serialized, and a rejected data push stops publication.
 
-Use Python 3.11 or newer to collect and serve the site; no Python packages need to be installed.
+GitHub schedules are [best effort and can be delayed or dropped](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule). The dashboard warns after three hours without successful collection and shows failures source by source. After publishing the visible health state, the workflow flags a core discovery-source outage or a publisher failure repeated three times. GitHub notification delivery depends on your repository notification settings. This free deployment provides no guaranteed hourly service-level agreement. A strict delivery requirement would need an independently monitored scheduler and durable database/queue; the archive and adapters can be moved there.
+
+The collector requires no model calls, paid research API, or API key. It does not collect X posts. No private notes, credentials, or reading lists are sent to the public repository.
+
+To update immediately, use [Actions → Hourly collection and publish → Run workflow](https://github.com/BlockchainMD/alignment-dashboard/actions). Reload retrieves published data; it does not start collection. Open tabs refresh on return after 15 minutes.
+
+## Local operation
+
+Python 3.11+ and Node.js 22+ are sufficient; there are no application dependencies.
 
 ```sh
-python3 scripts/collect.py --output site/data/edition.json
+python3 scripts/collect.py --output site/data/edition.json --backfill-pages 2
 python3 -m http.server 4173 --directory site
 ```
 
-Open [localhost:4173](http://localhost:4173). Serving over HTTP is needed for the browser to load the edition JSON. To preview the existing edition without fetching sources, run only the server command.
+Open [localhost:4173](http://localhost:4173). Collection grows the archive; running only the server previews existing data. Increase historical page budgets deliberately while respecting provider rate limits. Recover one source without resetting other checkpoints:
 
-Run the checks with Python and Node.js 22 or newer:
+```sh
+python3 scripts/collect.py --source arxiv --backfill-pages 2
+```
+
+Corrupt archives stop collection instead of silently resetting history. Restore a known-good `data/archive.json` **and its referenced `data/archive/` files from the same Git commit** before retrying; do not delete the archive to clear a source error. The current and previous two canonical snapshot manifests are also retained under `data/archive/`. A retained recovery manifest can be copied to the authoritative `data/archive.json` location; its chunk references are resolved relative to `data/`.
 
 ```sh
 python3 -m unittest discover -s tests
 node --test tests/*.test.mjs
 ```
 
-## Daily refresh and GitHub Pages
+Saved/read state is browser-local. Export/import transfers it between devices. The research archive itself is accessible anywhere without a login.
 
-The [`Refresh and publish dashboard`](.github/workflows/daily.yml) workflow collects the edition, commits `site/data/edition.json` when it changes, and publishes `site/` through the official GitHub Pages actions. Keeping the edition in Git lets future runs retain article history and source health across runner restarts. The workflow uses the repository's built-in token with permission to update repository contents and deploy Pages; it needs no personal access token or repository secrets. Repository or organization rules must permit that token to push the generated data to `main`.
+## Foundation for videos of two minutes or less
 
-For initial hosting, push this project to the public repository, then select **Settings → Pages → Build and deployment → Source → GitHub Actions**. Enable Actions if GitHub prompts for it. Pushes to `main` run the workflow; manual runs and scheduled runs publish only from the repository's default branch. The intended default branch is `main`.
+The archive is the discovery input for a later media pipeline. It does not generate finished scripts, videos, or social posts.
 
-Refresh is scheduled for approximately **8:17 a.m. America/Detroit** each day. Two UTC schedules cover daylight saving time, and a timezone check selects the correct one. A queued run uses its intended schedule hour so an ordinary start delay does not silently skip collection. GitHub [can delay or drop scheduled jobs during heavy load and disables public-repository schedules after 60 days without repository activity](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule); this is a daily digest rather than a guaranteed delivery service.
+Export JSONL research packets for every record, or one article:
 
-To refresh on demand, open the repository's **Actions → Refresh and publish dashboard → Run workflow**, choose `main`, and run it. Reload the dashboard after the deployment completes. Reloading the web page alone only reloads the latest published edition.
+```sh
+python3 scripts/export_video_jobs.py
+python3 scripts/export_video_jobs.py --article-id ARTICLE_ID --output artifacts/one-video-job.jsonl
+```
 
-Collection and deployment runs are serialized. If someone updates the default branch during collection, the older run stops before writing or deploying, and the newer push run rebuilds from the updated branch. A rejected data push or a failed test also stops publication.
+Packets include stable article IDs, content fingerprints, original links, available author/date/identifier metadata, source excerpts and provenance, an empty script/claims structure, and review steps. Fingerprints ignore collection-time churn so unchanged research does not become a new job every hour. Candidates first need relevance review. The exporter does not retrieve or verify full articles.
 
-## Change the coverage
+The proposed production sequence is:
 
-Edit the source configuration to add or remove sources and adjust the collector's keyword rules to tune relevance. Review the source health display after a change, then use the manual workflow to collect and publish. Keep feed use modest and preserve the original source links and attribution.
+1. Retrieve and read the original research; preserve page/section references.
+2. Draft a plain-language explanation: the question, an everyday example, the finding, and the limitation. Aim for 180–230 spoken words.
+3. Check each factual claim against the source, retaining uncertainty and attribution.
+4. Create narration, original explanatory visuals, captions, and portrait/landscape versions.
+5. Measure the rendered video and enforce a maximum of **120 seconds**.
+6. Review the final video and platform-specific post before publication to YouTube or X. Track remote IDs to avoid duplicate posts.
+
+Generation services, voice/style choices, rendering infrastructure, and publishing integrations remain future work. Research collection does not incur those future media-generation costs.
