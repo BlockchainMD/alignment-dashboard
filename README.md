@@ -19,7 +19,7 @@ The versioned [source registry](config/sources.json) defines the scope:
 | FAR.AI and Apollo Research | Research-specific sitemap URLs, historical batches, and periodic article rechecks. |
 | METR, Transformer Circuits, ARC, MIRI, OpenAI, Google DeepMind | Publisher RSS/Atom feeds. Feed windows do not establish historical completeness; general lab feeds also contain non-research news. |
 
-Dedicated alignment sources are ingested broadly. Mixed sources retain ambiguous matches as candidates rather than discarding them. Labels and keyword scores aid discovery; they are not assessments of evidence quality. The archive can contain commentary and unrelated candidates. Use the review-status filter to narrow the reading view.
+Dedicated alignment sources are ingested broadly. Mixed sources retain ambiguous matches as candidates rather than discarding them. Labels and keyword scores aid discovery; they are not assessments of evidence quality. The archive can contain commentary and unrelated candidates. The reading view defaults to topic matches; select **All records** or **Candidates to review** to inspect the rest of the collected archive.
 
 Known gaps include personal blogs outside the registry, unfamiliar terminology, unindexed or inaccessible material, older feed-only history, and work in other languages. A successful fetch means a source was retrieved and parsed, not that its archive is complete. Publisher metadata can also be inaccurate.
 
