@@ -3,76 +3,185 @@
   "article_id": "70fab32c0c2057e8f247",
   "source_sha256": "fe534d917fc89085aafa3ef45a7f6ec80093bb2033f96c13d104a0cfb1dbb80e",
   "title": "When does a neuron explanation actually work?",
-  "description": "A plain-language explanation of Leo Gao’s research discussion about testing neuron explanations. The traffic-light analogy and animated diagrams are illustrations, not experimental results.",
+  "description": "Leo Gao's research discussion explained in three passes per idea: the technical statement, an eighth-grade restatement, and the simplest faithful explanation. Original diagrams are illustrations, not experimental results.",
   "research_type": "commentary",
   "scenes": [
     {
       "id": "s1",
-      "heading": "A label is a hypothesis",
-      "narration": "A neuron is one small computational unit inside a neural network. If it responds to a recognizable pattern, have we explained it? In a new research discussion, Leo Gao argues that a neat label is only the start.",
+      "heading": "Labels can miss activation detail",
+      "narration": "A semantic label alone may miss a neuron's activation selectivity and magnitude.",
       "visual": "neuron",
-      "labels": ["Inputs", "Neuron responses", "A pattern is a clue"],
-      "claim_ids": ["c1"]
+      "labels": [
+        "Input patterns",
+        "Neuron activation",
+        "Selectivity + magnitude"
+      ],
+      "claim_ids": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "concept_id": "labels",
+      "concept_title": "What does a label explain?",
+      "explanation_level": "technical"
     },
     {
       "id": "s2",
-      "heading": "Predict beyond the examples",
-      "narration": "Think of guessing traffic-light rules from a few photos. You see a red light, and the cars are stopped. Seems simple. But does your rule predict what happens in situations you haven’t seen? This is just an analogy.",
-      "visual": "analogy",
+      "heading": "A name may leave things out",
+      "narration": "A name for the pattern may leave out which examples a neuron responds to, or how strong each response is.",
+      "visual": "neuron",
       "labels": [
-        "A few photos",
-        "An unseen situation",
-        "Does the rule still work?"
+        "Which inputs?",
+        "How strong?",
+        "A name leaves things out"
       ],
-      "claim_ids": ["c1", "c2"]
+      "claim_ids": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "concept_id": "labels",
+      "concept_title": "What does a label explain?",
+      "explanation_level": "plain"
     },
     {
       "id": "s3",
-      "heading": "Two ways a label can fail",
-      "narration": "Gao points to two gaps. A neuron may respond to only some examples matching its label. And activation strength means the size of its response. That strength may carry information the label ignores.",
-      "visual": "comparison",
-      "labels": ["Which examples?", "How strong a response?", "Both matter"],
-      "claim_ids": ["c2", "c3"]
+      "heading": "When, and how much?",
+      "narration": "A name can miss things: when it reacts, and how much.",
+      "visual": "neuron",
+      "labels": [
+        "When it reacts",
+        "How much",
+        "A name is only a clue"
+      ],
+      "claim_ids": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "concept_id": "labels",
+      "concept_title": "What does a label explain?",
+      "explanation_level": "simple"
     },
     {
       "id": "s4",
-      "heading": "Replace the response",
-      "narration": "His proposed check is simulation: predict a neuron's numerical response, then replace the real response with that prediction. Does the network still behave the same way?",
+      "heading": "Test simulated activations",
+      "narration": "The proposed test: replace actual activations with predicted values, then measure downstream Kullback Leibler divergence, or KL divergence, across many inputs.",
       "visual": "test",
       "labels": [
         "Predict activations",
-        "Swap in predictions",
-        "Compare outputs"
+        "Substitute values",
+        "Measure downstream KL"
       ],
-      "claim_ids": ["c4"]
+      "claim_ids": [
+        "c4",
+        "c5"
+      ],
+      "concept_id": "intervention",
+      "concept_title": "How do we test an explanation?",
+      "explanation_level": "technical"
     },
     {
       "id": "s5",
-      "heading": "Measure what changes",
-      "narration": "One comparison uses downstream KL divergence. It measures how much the model's output probabilities change, across many inputs. A pretty explanation that changes those outputs can be missing something important.",
+      "heading": "Compare the likely answers",
+      "narration": "Predict the neuron's response, then put that prediction into the network. Across many examples, compare the chances of different answers before and after the swap.",
       "visual": "comparison",
       "labels": [
-        "Original network",
-        "With predicted values",
-        "Compare output probabilities"
+        "Original probabilities",
+        "After substitution",
+        "Compare across inputs"
       ],
-      "claim_ids": ["c5"]
+      "claim_ids": [
+        "c4",
+        "c5"
+      ],
+      "concept_id": "intervention",
+      "concept_title": "How do we test an explanation?",
+      "explanation_level": "plain"
     },
     {
       "id": "s6",
-      "heading": "A test, not a safety guarantee",
-      "narration": "This is a research argument, not a new experimental result. The metric is imperfect, and explaining individual neurons still doesn't explain the computations between them.",
-      "visual": "takeaway",
-      "labels": ["A useful check", "Imperfect metric", "Neurons are only part"],
-      "claim_ids": ["c6"]
+      "heading": "Try your explanation inside",
+      "narration": "Try the predicted numbers inside the model. Across many examples, do the chances of each answer change?",
+      "visual": "test",
+      "labels": [
+        "Your explanation",
+        "Try it inside",
+        "What changes?"
+      ],
+      "claim_ids": [
+        "c4",
+        "c5"
+      ],
+      "concept_id": "intervention",
+      "concept_title": "How do we test an explanation?",
+      "explanation_level": "simple"
     },
     {
       "id": "s7",
-      "heading": "Understand the mechanism",
-      "narration": "The takeaway: use patterns to form hypotheses, then test what those hypotheses preserve. Read Leo Gao's full post, Neural networks are not already clean, for the argument and caveats.",
+      "heading": "A proxy, not a full explanation",
+      "narration": "Downstream KL is an imperfect evaluation proxy, and neuron-level explanations alone do not explain inter-neuron computation. This is a methodological argument, not an empirical result.",
+      "visual": "takeaway",
+      "labels": [
+        "Imperfect proxy",
+        "Neuron-level explanation",
+        "Inter-neuron computation"
+      ],
+      "claim_ids": [
+        "c6"
+      ],
+      "concept_id": "limits",
+      "concept_title": "What does this leave unresolved?",
+      "explanation_level": "technical"
+    },
+    {
+      "id": "s8",
+      "heading": "The parts are not the whole",
+      "narration": "This is a proposed way to test explanations, not a new experiment. The comparison has limits, and individual neurons don't explain how the network works as a whole.",
+      "visual": "takeaway",
+      "labels": [
+        "A proposed test",
+        "An imperfect comparison",
+        "How parts work together"
+      ],
+      "claim_ids": [
+        "c6"
+      ],
+      "concept_id": "limits",
+      "concept_title": "What does this leave unresolved?",
+      "explanation_level": "plain"
+    },
+    {
+      "id": "s9",
+      "heading": "A check, not the final answer",
+      "narration": "It's a proposed check, not a new experiment. It has limits: understanding the parts doesn't mean we understand the whole.",
+      "visual": "takeaway",
+      "labels": [
+        "A useful check",
+        "Parts of the picture",
+        "More to understand"
+      ],
+      "claim_ids": [
+        "c6"
+      ],
+      "concept_id": "limits",
+      "concept_title": "What does this leave unresolved?",
+      "explanation_level": "simple"
+    },
+    {
+      "id": "s10",
+      "heading": "Read the full argument",
+      "narration": "These ideas come from Leo Gao's research discussion, Neural networks are not already clean. Read the full post for its argument and caveats.",
       "visual": "source",
-      "labels": ["Patterns", "Predictions", "Behavior"],
-      "claim_ids": ["c1", "c4", "c6"]
+      "labels": [
+        "Original research discussion",
+        "Leo Gao",
+        "Read the full post"
+      ],
+      "claim_ids": [],
+      "concept_id": null,
+      "concept_title": null,
+      "explanation_level": null
     }
   ],
   "claims": [
@@ -153,8 +262,11 @@
     "Understanding individual neurons does not by itself explain the computations between them."
   ],
   "credits": {
-    "authors": ["leogao"],
+    "authors": [
+      "leogao"
+    ],
     "title": "Neural networks are not already clean",
     "source_url": "https://www.lesswrong.com/posts/Dkh7pXKjoNWkkxQDz/neural-networks-are-not-already-clean"
-  }
+  },
+  "teaching_format": "three_levels"
 }

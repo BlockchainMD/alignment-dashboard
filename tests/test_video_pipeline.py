@@ -47,7 +47,8 @@ class VideoPipelineTests(unittest.TestCase):
         (directory / "index.html").write_text('<a href="script.json">Review this generation</a>')
         return {"schema_version": 1, "article_id": script["article_id"], "source_sha256": script["source_sha256"],
                 "title": script["title"], "formats": outputs, "duration_seconds": 60.5,
-                "voice": {"synthetic": True, **pipeline.voice_settings(speech_provider, voice, rate, speech_speed)}, "fps": 24,
+                "voice": {"synthetic": True, **pipeline.voice_settings(speech_provider, voice, rate, speech_speed)},
+                "visual_design": pipeline.visual_settings(), "fps": 24,
                 "timeline": [{"audio_path": str(directory / "audio/scene-01.wav")}],
                 "narration_path": str(directory / "narration.wav"), "srt_path": str(directory / "captions.srt"),
                 "vtt_path": str(directory / "captions.vtt"), "manifest_path": str(directory / "manifest.json"),
@@ -113,6 +114,19 @@ class VideoPipelineTests(unittest.TestCase):
         self.assertTrue(pipeline.render_is_current(self.article, self.work))
         path.unlink()
         self.assertFalse(pipeline.render_is_current(self.article, self.work))
+
+    def test_design_and_font_changes_require_a_new_render(self):
+        self.produce()
+        original = pipeline.visual_settings()
+        changed = deepcopy(original)
+        changed["design"]["palette"]["midnight"] = "#102E35"
+        with patch.object(pipeline, "visual_settings", return_value=changed):
+            self.assertFalse(pipeline.render_is_current(self.article, self.work))
+        changed = deepcopy(original)
+        changed["fonts"]["bold"]["sha256"] = "0" * 64
+        with patch.object(pipeline, "visual_settings", return_value=changed):
+            self.assertFalse(pipeline.render_is_current(self.article, self.work))
+        self.assertTrue(pipeline.render_is_current(self.article, self.work))
 
     def test_voice_profile_model_and_implementation_identity_invalidate_reuse(self):
         self.produce()

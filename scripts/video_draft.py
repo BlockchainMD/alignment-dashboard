@@ -43,8 +43,13 @@ in everyday words. Assume curiosity, not prior knowledge. Sound like a clear,
 thoughtful human explaining an interesting idea to a friend. Avoid hype, fear,
 sales language, filler, unexplained acronyms, and claims that alignment is solved.
 
-Use 5–7 scenes and aim for 180–225 spoken words in total, including attribution.
-Keep the finished explanation comfortably under 120 seconds at 155 words/minute
+Use teaching_format "three_levels". Choose only 2–3 substantive concepts so there
+is room to explain each carefully. Every concept gets exactly three consecutive
+scenes: technical, then plain (approximately eighth-grade language), then simple
+(the clearest possible explanation). Aim for 7–11 scenes and 180–225 spoken words
+in total, including attribution. If the explanation cannot fit, cover fewer
+concepts; never omit a level or rush the voice to fit more research in.
+Keep the finished explanation comfortably under 120 seconds at a natural pace
 with pauses. Give each scene one clear idea, a short heading, and at most four
 short visual labels. Narration must work without reading the on-screen text.
 Write for the ear: use short sentences, natural contractions, and varied sentence
@@ -61,17 +66,39 @@ when confusion is possible. Labels should fit both a phone and a wide screen.
 Visual template contract: neuron draws an abstract network with three labels.
 analogy draws three labeled concepts with connecting flow; it draws a literal
 traffic light only for an explicitly stated traffic-light analogy. comparison
-draws paired label cards; response/strength labels receive toy activation signals
+draws paired comparisons; response/strength labels receive toy activation signals
 and probability labels receive toy output profiles. test draws a three-step
-flow. takeaway draws a focus diagram. source draws attribution. These are the
-available templates, not generated footage: a dog-and-bicycle analogy will show
+flow. takeaway draws a focus diagram. source draws attribution. The diagrams
+become visually simpler from technical to plain to simple; use the same visual
+and consistent concept labels when that helps the viewer follow one idea. These
+are the available templates, not generated footage: a dog-and-bicycle analogy will show
 labeled concepts, not dogs or bicycles. Choose labels and narration accordingly.
 All toy signals and profiles are conceptual illustrations, never measured data.
 
-Suggested arc: a concrete question or puzzle; an everyday example or analogy;
-the core technical idea; what the authors actually tested, proved, or argued;
-a useful counterpoint or limitation; why the result matters; original credit.
-These are functions, not mandatory generic headings. Make the title specific.
+Teaching structure is mandatory, not an optional style. For each concept:
+1. technical: present the precise research statement and necessary technical
+   terms. Do not substitute vague everyday words for technical vocabulary here.
+2. plain: immediately explain the SAME statement in approximately eighth-grade
+   language, defining necessary terms in context. Preserve its technical meaning.
+3. simple: immediately explain the SAME statement as clearly as possible, using
+   short familiar words and one concrete intuition. Be respectful, not babyish.
+Use an identical nonempty concept_id, identical concept_title and identical
+nonempty claim_ids across all three scenes. Never interleave concepts or add a
+fourth level. Each substantive research assertion, including limitations, must be
+covered in all three levels. Preserve conditions, quantifiers, uncertainty,
+causal strength and empirical/theoretical status at EVERY level. A simpler
+sentence must not become a stronger claim, broaden a result beyond tested tasks,
+or turn an association into causation. Keep caveats attached to the relevant
+claim in all three versions; do not rely only on a disclaimer at the end.
+A non-substantive opening or final source-credit scene may use visual "source"
+with concept_id, concept_title and explanation_level all null and claim_ids [];
+those scenes must not introduce, summarize or strengthen a research assertion.
+Use at most one opening and one closing credit scene. All claims must occur in
+a complete three-level concept group, including at least one sourced limitation.
+Choose specific short headings and a specific title. The same concept is being
+explained three ways, not three unrelated points or a jargon list followed by an
+unrelated analogy. Preserve the viewer's attention by changing the illustration's
+focus while connecting each new wording explicitly to the same core idea.
 Do not fabricate an experiment for a theoretical paper or commentary. Distinguish
 measured results, mathematical assumptions, the authors' interpretation, and your
 analogy. Keep uncertainty and conditions attached to the claim they qualify.
@@ -90,10 +117,10 @@ meaning, and limitation for boundaries. Commentary normally supports arguments,
 not new experimental findings. Include at least one sourced limitation claim and
 one limitation in limitations; explain a meaningful limitation in the narration.
 If the supplied text does not support a desired claim, omit it. Do not fill gaps
-from your memory or from external references. Every scene other than a purely
-credit/source scene must have at least one claim_id, including the technical
-point behind an analogy or opening question. Never treat an abstract or excerpt
-as the full paper. If the source is incomplete, say so in the description and
+from your memory or from external references. Every substantive scene must have
+at least one claim_id and belong to a full technical/plain/simple group, including
+the research point behind an analogy or opening question. Never treat an abstract
+or excerpt as the full paper. If the source is incomplete, say so in the description and
 limit claims to what the supplied text actually supports.
 
 Quotes belong only in the evidence map, not as long copied narration. Write your
@@ -170,13 +197,19 @@ def build_prompt(source: dict) -> str:
             + "\n\nEND OF SOURCE DATA. Follow the editorial instructions above.\n")
 
 
-def validate_draft(draft: Any, source: dict | None = None) -> dict:
+def validate_draft(draft: Any, source: dict | None = None, *, allow_legacy: bool = False) -> dict:
     """Validate structure, source identity, claim links, and exact evidence quotes.
 
-    This checks traceability, not whether the research or paraphrase is correct.
-    Editorial approval remains a separate, human decision.
+    This checks traceability and three-level grouping, not semantic equivalence
+    or whether the research or paraphrase is correct. Editorial approval remains
+    a separate human decision. Older drafts require explicit allow_legacy=True;
+    generation and production always use the current teaching format by default.
     """
-    _object_keys(draft, set(SCRIPT_SCHEMA["required"]), "Draft")
+    legacy = bool(allow_legacy and isinstance(draft, dict) and "teaching_format" not in draft)
+    required = set(SCRIPT_SCHEMA["required"]) - ({"teaching_format"} if legacy else set())
+    _object_keys(draft, required, "Draft")
+    if not legacy and draft["teaching_format"] != "three_levels":
+        raise DraftError("Draft teaching_format must be three_levels")
     if type(draft["schema_version"]) is not int or draft["schema_version"] != 1:
         raise DraftError("Unsupported draft schema_version")
     for name, limit in (("article_id", 4_000), ("source_sha256", 64), ("title", 180), ("description", 4_000)):
@@ -222,13 +255,17 @@ def validate_draft(draft: Any, source: dict | None = None) -> dict:
     if not limitation_ids:
         raise DraftError("Draft needs at least one sourced limitation claim")
     scenes = draft["scenes"]
-    if not isinstance(scenes, list) or not 5 <= len(scenes) <= 7:
-        raise DraftError("Draft needs 5–7 scenes")
+    minimum_scenes, maximum_scenes = (5, 7) if legacy else (7, 11)
+    if not isinstance(scenes, list) or not minimum_scenes <= len(scenes) <= maximum_scenes:
+        raise DraftError(f"Draft needs {minimum_scenes}–{maximum_scenes} scenes")
     scene_ids = set()
     referenced_ids = set()
     word_count = 0
     for scene in scenes:
-        _object_keys(scene, {"id", "heading", "narration", "visual", "labels", "claim_ids"}, "Scene")
+        scene_keys = {"id", "heading", "narration", "visual", "labels", "claim_ids"}
+        if not legacy:
+            scene_keys |= {"concept_id", "concept_title", "explanation_level"}
+        _object_keys(scene, scene_keys, "Scene")
         identifier = _text(scene["id"], "Scene id", 80)
         if identifier in scene_ids:
             raise DraftError("Scene IDs must be unique")
@@ -250,6 +287,10 @@ def validate_draft(draft: Any, source: dict | None = None) -> dict:
             if not isinstance(claim_id, str) or claim_id not in claim_ids:
                 raise DraftError("Scene references an unknown claim")
             referenced_ids.add(claim_id)
+        if len(set(scene["claim_ids"])) != len(scene["claim_ids"]):
+            raise DraftError("Scene claim_ids must be unique")
+    if not legacy:
+        _validate_three_levels(scenes, claim_ids, limitation_ids)
     if not 80 <= word_count <= 270:
         raise DraftError(f"Narration has {word_count} words; keep a complete draft within 80–270 words (target 180–225)")
     if not limitation_ids.intersection(referenced_ids):
@@ -271,6 +312,51 @@ def validate_draft(draft: Any, source: dict | None = None) -> dict:
                                or credits["authors"] != source["authors"]):
         raise DraftError("Credits must preserve the supplied authors, source title, and URL exactly")
     return draft
+
+
+def _validate_three_levels(scenes: list[dict], claim_ids: set[str], limitation_ids: set[str]) -> None:
+    """Enforce ordered coverage, without pretending to prove semantic equivalence."""
+    concepts: set[str] = set()
+    taught_claims: set[str] = set()
+    cursor = 0
+    while cursor < len(scenes):
+        scene = scenes[cursor]
+        metadata = (scene["concept_id"], scene["concept_title"], scene["explanation_level"])
+        if all(value is None for value in metadata):
+            if scene["visual"] != "source" or scene["claim_ids"]:
+                raise DraftError("Unlayered credit/source scenes must use source visual and no research claims")
+            if cursor not in {0, len(scenes) - 1}:
+                raise DraftError("Unlayered opening/source credits may appear only first or last")
+            cursor += 1
+            continue
+        if any(value is None for value in metadata):
+            raise DraftError("A concept requires concept_id, concept_title and explanation_level together")
+        if scene["visual"] == "source":
+            raise DraftError("Source visuals are reserved for unlayered, claim-free credits")
+        concept_id = _text(scene["concept_id"], "Scene concept_id", 80)
+        concept_title = _text(scene["concept_title"], "Scene concept_title", 100)
+        if concept_id in concepts:
+            raise DraftError("Each concept must be one contiguous technical/plain/simple triple")
+        group = scenes[cursor:cursor + 3]
+        if len(group) != 3 or [item["explanation_level"] for item in group] != ["technical", "plain", "simple"]:
+            raise DraftError("Each concept needs exactly technical, plain, simple scenes in that order")
+        if not scene["claim_ids"]:
+            raise DraftError("Each three-level concept needs nonempty sourced claim_ids")
+        expected_claims = set(scene["claim_ids"])
+        for item in group:
+            if item["concept_id"] != concept_id or item["concept_title"] != concept_title:
+                raise DraftError("All three levels must share an identical concept_id and concept_title")
+            if set(item["claim_ids"]) != expected_claims:
+                raise DraftError("All three levels must preserve identical claim_ids, including limitations")
+        concepts.add(concept_id)
+        taught_claims.update(expected_claims)
+        cursor += 3
+    if not 2 <= len(concepts) <= 3:
+        raise DraftError("A three-level draft must teach 2–3 substantive concepts")
+    if claim_ids != taught_claims:
+        raise DraftError("Every sourced claim must be covered in a complete three-level concept")
+    if not limitation_ids.intersection(taught_claims):
+        raise DraftError("At least one sourced limitation must be taught at all three levels")
 
 
 def _request(payload: dict, api_key: str) -> dict:

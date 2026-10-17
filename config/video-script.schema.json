@@ -10,25 +10,43 @@
     "title",
     "description",
     "research_type",
+    "teaching_format",
     "scenes",
     "claims",
     "limitations",
     "credits"
   ],
   "properties": {
-    "schema_version": { "type": "integer", "enum": [1] },
-    "article_id": { "type": "string" },
-    "source_sha256": { "type": "string" },
-    "title": { "type": "string" },
-    "description": { "type": "string" },
+    "schema_version": {
+      "type": "integer",
+      "enum": [
+        1
+      ]
+    },
+    "article_id": {
+      "type": "string"
+    },
+    "source_sha256": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
     "research_type": {
       "type": "string",
-      "enum": ["empirical", "theoretical", "commentary"]
+      "enum": [
+        "empirical",
+        "theoretical",
+        "commentary"
+      ]
     },
     "scenes": {
       "type": "array",
-      "minItems": 5,
-      "maxItems": 7,
+      "minItems": 7,
+      "maxItems": 11,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -38,12 +56,21 @@
           "narration",
           "visual",
           "labels",
-          "claim_ids"
+          "claim_ids",
+          "concept_id",
+          "concept_title",
+          "explanation_level"
         ],
         "properties": {
-          "id": { "type": "string" },
-          "heading": { "type": "string" },
-          "narration": { "type": "string" },
+          "id": {
+            "type": "string"
+          },
+          "heading": {
+            "type": "string"
+          },
+          "narration": {
+            "type": "string"
+          },
           "visual": {
             "type": "string",
             "enum": [
@@ -58,9 +85,40 @@
           "labels": {
             "type": "array",
             "maxItems": 4,
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
-          "claim_ids": { "type": "array", "items": { "type": "string" } }
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "concept_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "concept_title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "explanation_level": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "technical",
+              "plain",
+              "simple",
+              null
+            ]
+          }
         }
       }
     },
@@ -71,13 +129,26 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "text", "evidence", "kind"],
+        "required": [
+          "id",
+          "text",
+          "evidence",
+          "kind"
+        ],
         "properties": {
-          "id": { "type": "string" },
-          "text": { "type": "string" },
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
           "kind": {
             "type": "string",
-            "enum": ["finding", "interpretation", "limitation"]
+            "enum": [
+              "finding",
+              "interpretation",
+              "limitation"
+            ]
           },
           "evidence": {
             "type": "array",
@@ -86,10 +157,17 @@
             "items": {
               "type": "object",
               "additionalProperties": false,
-              "required": ["section_id", "quote"],
+              "required": [
+                "section_id",
+                "quote"
+              ],
               "properties": {
-                "section_id": { "type": "string" },
-                "quote": { "type": "string" }
+                "section_id": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -100,17 +178,38 @@
       "type": "array",
       "minItems": 1,
       "maxItems": 4,
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "credits": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["authors", "title", "source_url"],
+      "required": [
+        "authors",
+        "title",
+        "source_url"
+      ],
       "properties": {
-        "authors": { "type": "array", "items": { "type": "string" } },
-        "title": { "type": "string" },
-        "source_url": { "type": "string" }
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string"
+        }
       }
+    },
+    "teaching_format": {
+      "type": "string",
+      "enum": [
+        "three_levels"
+      ]
     }
   }
 }

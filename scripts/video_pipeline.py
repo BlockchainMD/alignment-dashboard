@@ -20,11 +20,13 @@ try:
     from .collect import archive_lock
     from .export_video_jobs import make_packet
     from .video_voice import CONFIG_PATH as VOICE_CONFIG_PATH, voice_settings
+    from .video_design import visual_settings
 except ImportError:
     from archive_store import active_archive_items, atomic_write, load_archive
     from collect import archive_lock
     from export_video_jobs import make_packet
     from video_voice import CONFIG_PATH as VOICE_CONFIG_PATH, voice_settings
+    from video_design import visual_settings
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_QUEUE = ROOT / "data/video-queue.json"
@@ -125,7 +127,7 @@ def _file_digest(path):
 
 def _settings(formats, voice, rate, preview, speech_provider="kokoro", speech_speed=None):
     speech = voice_settings(speech_provider=speech_provider, voice=voice, rate=rate, speech_speed=speech_speed)
-    return {"formats": sorted(formats), "speech": speech, "preview": bool(preview), "fps": 24,
+    return {"formats": sorted(formats), "speech": speech, "visual_design": visual_settings(), "preview": bool(preview), "fps": 24,
             "renderer_sha256": _file_digest(Path(__file__).with_name("video_render.py")),
             "voice_module_sha256": _file_digest(Path(__file__).with_name("video_voice.py")),
             "voice_profile_sha256": _file_digest(VOICE_CONFIG_PATH)}
@@ -254,6 +256,8 @@ def render_is_current(article, work_dir=DEFAULT_WORK, *, formats=("landscape", "
             return False
         if report.get("voice") != {"synthetic": True, **settings["speech"]}:
             return False
+        if report.get("visual_design") != settings["visual_design"]:
+            return False
         if read_json(_inside(generation, "script.json")) != script or read_json(_inside(generation, "source.json")) != source:
             return False
         _verify_render_files(report, generation, formats, preview)
@@ -330,6 +334,8 @@ def produce(article, work_dir=DEFAULT_WORK, script_path=None, provider="codex", 
                 _verify_render_files(render_report, staging, formats, preview)
                 if render_report.get("voice") != {"synthetic": True, **settings["speech"]}:
                     raise ValueError("Rendered voice does not match the requested speech settings")
+                if render_report.get("visual_design") != settings["visual_design"]:
+                    raise ValueError("Rendered visuals do not match the requested design settings")
                 if render_report.get("source_sha256") != source["sha256"] or render_report.get("article_id") != article["id"]:
                     raise ValueError("Rendered report does not match the source identity")
                 render_report = _relocate_paths(render_report, staging, generation)

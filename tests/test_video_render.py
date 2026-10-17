@@ -152,12 +152,45 @@ class RenderValidationTests(unittest.TestCase):
             resolve.assert_called_once_with(speech_provider="kokoro", voice=None, rate=155, speech_speed=None)
             self.assertEqual(narrate.call_count, 2)
             self.assertEqual(report["voice"], {"synthetic": True, **speech})
+            self.assertEqual(report["visual_design"], render.visual_settings())
             self.assertTrue(all(call.kwargs["speech_settings"] == speech for call in narrate.call_args_list))
             self.assertEqual([call.args[1] for call in encode_scene.call_args_list[:2]],
                              [call.args[1] for call in encode_scene.call_args_list[2:]])
             self.assertAlmostEqual(report["timeline"][1]["start"], 56 / 24, places=5)
             self.assertEqual(report["captions"][-1]["end"], round(56 / 24 + 2, 6))
             self.assertIn("Kokoro neural speech engine", (Path(directory) / "index.html").read_text())
+
+    @unittest.skipIf(render.Image is None, "Pillow is an optional video dependency")
+    def test_three_level_timeline_leaves_room_between_levels_and_concepts(self):
+        from tests.test_video_draft import draft_fixture
+
+        def narration(text, path, **kwargs):
+            path.write_bytes(b"measured speech")
+            return 1.0
+
+        def encode(painter, audio, output, *args):
+            output.write_bytes(b"encoded scene")
+
+        def ffmpeg(command):
+            Path(command[-1]).write_bytes(b"final media")
+
+        with tempfile.TemporaryDirectory() as directory, patch.object(render.shutil, "which", return_value="tool"), \
+                patch.object(render, "voice_settings", return_value=speech_fixture()), \
+                patch.object(render, "create_narration", side_effect=narration), \
+                patch.object(render, "_encode_scene", side_effect=encode), \
+                patch.object(render, "_run", side_effect=ffmpeg), \
+                patch.object(render, "media_duration", return_value=12.0):
+            report = render.render_video(draft_fixture(), Path(directory), formats=("landscape",), preview=True)
+        timeline = report["timeline"]
+        self.assertEqual([item["explanation_level"] for item in timeline[:3]], ["technical", "plain", "simple"])
+        for item in timeline:
+            if item["explanation_level"] in {"technical", "plain"}:
+                self.assertGreaterEqual(item["duration"] - item["audio_duration"], .55)
+            elif item["explanation_level"] == "simple":
+                self.assertGreaterEqual(item["duration"] - item["audio_duration"], .85)
+        for left, right in zip(timeline, timeline[1:]):
+            self.assertAlmostEqual(left["end"], right["start"])
+        self.assertEqual(report["teaching_format"], "three_levels")
 
     def test_html_escapes_script_and_restricts_source_link_scheme(self):
         script = sample_script()

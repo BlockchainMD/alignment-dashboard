@@ -1,14 +1,14 @@
 # Research video pipeline
 
-The production target is a clear explanation of one alignment idea in at most **120 seconds**, in landscape and portrait. The intended audience includes alignment researchers and curious enthusiasts. Simplicity means explaining the technical point clearly, while keeping its assumptions and limits.
+The production target is a clear explanation of alignment research in at most **120 seconds**, in landscape and portrait. The intended audience includes alignment researchers and curious enthusiasts. Every substantive idea is taught in three consecutive passes: **technical language → approximately eighth-grade language → the simplest faithful explanation**. Simplicity preserves the idea's assumptions, uncertainty, and limits.
 
 ## What runs
 
 1. **Discovery queue:** the hourly research workflow runs `video_pipeline.py sync`. Stable article and content fingerprints prevent unchanged research from becoming a new job every hour. Uncertain relevance or dates are held for review. Old article versions remain recorded as superseded.
 2. **Original source:** the producer retrieves full article text or a scholarly PDF. LessWrong/Alignment Forum use full revision HTML because their default plaintext field can truncate. Abstract-only pages do not count as full papers. Numbered paragraphs, the source URL, and a SHA-256 bind the evidence to the script.
-3. **Script:** supply a structured script, use locally signed-in Codex, or explicitly select an API model. Each research claim links to original paragraphs with short exact quote locators. Drafts distinguish empirical findings, theory, and research discussion. The source is data, never instructions to the drafting agent.
-4. **Validation:** reject mismatched source hashes, altered paragraph text, unknown citations, absent limitations, oversized scripts, and missing attribution. These are traceability checks. They do not establish that a paraphrase is scientifically correct.
-5. **Media:** synthesize each scene separately, measure its audio, animate original diagrams, burn captions, and encode H.264/AAC MP4s. Portrait is composed independently. The renderer measures the final files and rejects anything longer than 120 seconds rather than truncating or unnaturally speeding it up.
+3. **Script:** supply a structured script, use locally signed-in Codex, or explicitly select an API model. Choose 2–3 substantive concepts. Each gets three adjacent scenes in technical/plain/simple order, with the same concept title and source-linked claims. Limitations are taught at all three levels too. Drafts distinguish empirical findings, theory, and research discussion. The source is data, never instructions to the drafting agent.
+4. **Validation:** reject missing or reordered teaching levels, inconsistent claims within a group, claims outside a complete group, absent sourced limitations, mismatched source hashes, altered paragraph text, unknown citations, oversized scripts, and missing attribution. These are structural and traceability checks. They do not establish that the three phrasings have equivalent scientific meaning; that remains part of human review.
+5. **Media:** synthesize each scene separately, measure its audio, animate original diagrams, burn captions, and encode H.264/AAC MP4s. The shared editorial design uses bundled Manrope typography, deep teal and ivory scenes, restrained lime/aqua/coral accents, progressive diagrams, concept anchors, and three-level indicators. Portrait is composed independently with reserved caption and phone-interface space. Short pauses separate levels and longer pauses separate concepts. The renderer measures final files and rejects anything longer than 120 seconds rather than truncating or unnaturally speeding it up.
 6. **Review package:** each complete render is an immutable generation. A failed rerender cannot mix a new script with old video or captions. Local job state and output checksums support safe batch resumption. Nothing posts to a social platform.
 
 ## Install
@@ -48,6 +48,18 @@ python3 -m http.server 4174 --bind 127.0.0.1 --directory artifacts/videos
 The studio is then at [localhost:4174](http://localhost:4174). A local server provides reliable video seeking and caption tracks. The `artifacts/` directory is deliberately outside the published dashboard.
 
 Use `--preview` for 1280 × 720 and 720 × 1280 iteration. Use `--format landscape` or `--format portrait` to render only one format. Excessive measured total duration fails validation; speech is never automatically accelerated to squeeze a long script under the limit.
+
+## Visual direction and teaching format
+
+`config/video-design.json` is the reusable visual profile. `scripts/video_design.py` composes the title, persistent concept cue, teaching-level badge, diagram, captions, and source disclosure into separate safe regions. `scripts/video_diagrams.py` animates six original visual types: focused networks, explicitly illustrative analogies, toy comparisons, intervention flows, bounded takeaways, and source credits. Technical scenes can show more structure; plain and simple scenes reduce visual complexity while retaining the same conceptual relationship.
+
+Motion reveals steps and changes focus throughout a scene. Probability diagrams use normalized illustrative distributions and carry an explicit toy-data notice. They never depict measurements from the paper. Other diagrams also remain illustrative. No copied article figures, stock footage, or generated raster images are needed.
+
+The design profile, both drawing modules, and the fonts actually used enter the render fingerprint and production manifest. A style or font change therefore regenerates the video. The bundled regular/bold Manrope files make macOS and Linux typography consistent; their license and upstream provenance are in `assets/fonts/`.
+
+New scripts require `teaching_format: "three_levels"`. Every substantive scene has `concept_id`, `concept_title`, and `explanation_level` (`technical`, `plain`, or `simple`). A concept is exactly one contiguous triple, with identical nonempty `claim_ids` in all three scenes. A source-credit scene may use null teaching metadata and no claims, but must not introduce a research assertion. Teach fewer ideas if the three passes cannot fit comfortably in two minutes.
+
+Older scripts without this structure must be rewritten or regenerated before a new production run. Previously completed media remain available. The drafting validator's explicit legacy-reading option is not enabled by the production pipeline.
 
 ## Narration and voice auditions
 
@@ -102,7 +114,7 @@ For drafting in an existing chat or editor, prepare an offline prompt:
 python3 scripts/video_pipeline.py prepare --article-id ARTICLE_ID
 ```
 
-The job directory contains `source.json`, `packet.json`, and `draft-prompt.txt`. Save the returned JSON as a script, then pass `--script PATH`. Drafts need 5–7 scenes, a target of 180–225 spoken words, source-linked claims, limitations, and exact credits. Short evidence locators total no more than 25 words; paragraph references carry the surrounding context.
+The job directory contains `source.json`, `packet.json`, and `draft-prompt.txt`. Save the returned JSON as a script, then pass `--script PATH`. Drafts need 7–11 scenes: 2–3 complete concept triples plus optional opening/closing credit scenes. Target 180–225 spoken words, with source-linked claims, limitations, and exact credits. Short evidence locators total no more than 25 words; paragraph references carry the surrounding context.
 
 `--include-candidate` explicitly selects a candidate for individual draft review; it does not classify the article as confirmed research or enable publication. `--refresh-source` recaptures the source. `--redraft` requests a new generated script. A changed source requires a newly validated script.
 
@@ -112,7 +124,7 @@ Each job lives under `artifacts/videos/JOB_ID/`. Complete media generations cont
 
 - Landscape and portrait MP4s, with original animated diagrams and burned captions.
 - Posters/thumbnails, combined narration WAV, SRT and VTT captions.
-- The exact script, a measured timeline, output dimensions, durations, checksums, and voice disclosure in a production manifest.
+- The exact script, concept/teaching levels, measured timeline and pauses, output dimensions, durations, checksums, voice disclosure, and versioned visual profile in a production manifest.
 - A review page with playable videos, original research links, and limitations.
 
 Job metadata and `publish-package.json` hold the proposed title, description, credits, limits, and review requirements. Publishing remains unapproved and remote platform IDs remain empty.
@@ -130,13 +142,14 @@ The hourly **Hourly collection and publish** workflow updates the research and v
 Before sharing a render, review the original source and the video together:
 
 - The hook states a real question rather than a sensational promise.
-- Necessary terms are defined when introduced; each scene develops one idea.
+- Necessary technical terms are retained in the first pass and clearly defined in the following plain-language pass; each concept develops one idea.
+- Every substantive idea is explained in technical language, then approximately eighth-grade language, then the simplest faithful language. All three preserve its scope, conditions, uncertainty, and limitations.
 - Analogies are clearly illustrative and preserve the relevant relationship.
 - Experimental results, theoretical claims, and commentary are distinguished.
 - Every factual assertion is supported in context; exact quote matching alone is insufficient.
 - Meaningful assumptions and limitations stay attached to the result.
 - The narrator sounds conversational, technical words and names are pronounced correctly, and pauses make the argument easier to follow.
-- Captions and diagrams remain readable on a phone, and the final duration is at most 120 seconds.
+- Captions preserve all spoken words, diagram labels remain readable on a phone, and the final duration is at most 120 seconds.
 
 Source capture uses public HTTP(S), rejects private addresses and unsafe redirects, bounds downloads, and stores complete research only under ignored local artifacts. Keep original figure reuse, music, additional hosted narration providers, and social-account integrations as deliberate later additions.
 
@@ -148,7 +161,7 @@ node --test tests/*.test.mjs
 python3 -m unittest discover -s tests -p 'test_video_*.py'
 ```
 
-The tests cover source extraction and boundaries, evidence binding, draft parsing, queue versioning, candidate holds, rendering timing/layout helpers, safe resume, and failed rerenders. Actual sample renders are additionally inspected visually and measured with FFprobe.
+The tests cover source extraction and boundaries, evidence binding, ordered three-level teaching groups, draft parsing, queue versioning, candidate holds, layout/caption bounds, semantic diagram selection, illustrative distributions, motion, visual/voice fingerprinting, safe resume, and failed rerenders. Actual sample keyframes and both completed video formats are additionally inspected and measured with FFprobe.
 
 Provider references: [Codex non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode), [Responses Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses).
 

@@ -80,7 +80,9 @@ Saved/read state is browser-local. Export/import transfers it between devices. T
 
 The working pipeline now captures the original research, creates an evidence-linked script, narrates it, animates explanatory diagrams, and renders both **1920 × 1080 landscape** and **1080 × 1920 portrait** videos. Every output remains a draft for review. Videos are not automatically posted to YouTube or X.
 
-The audience is alignment researchers and anyone interested in alignment. Preserve the necessary technical detail and explain it simply: one idea per scene, a concrete example, defined terms, an explicit limitation, and original credit. The first example explains when a neuron explanation earns confidence; its source is a research discussion, so it is labeled accordingly.
+The audience is alignment researchers and anyone interested in alignment. Each substantive idea gets three consecutive passes: **technical → approximately eighth-grade → simplest faithful explanation**. The script validator enforces complete teaching groups with consistent source-linked claims, including limitations. Cover 2–3 ideas well within two minutes. The example explains when a neuron explanation earns confidence; its source is a research discussion, so it is labeled accordingly.
+
+Every new render uses the shared editorial design: bundled Manrope typography, deep teal/ivory scenes, progressive animated diagrams, concept anchors, three-level indicators, and complete readable captions. Landscape and portrait are composed separately. Design, drawing code, and font changes invalidate old render caches automatically.
 
 See [the video production guide](docs/VIDEO_PIPELINE.md) for setup, commands, evidence checks, output files, and operation. Start with:
 
