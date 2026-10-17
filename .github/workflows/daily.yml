@@ -66,6 +66,10 @@ jobs:
       - name: Validate the generated edition
         run: python -m json.tool site/data/edition.json > /dev/null
 
+      - name: Queue new research for video production
+        # Discovery only: no model, speech, rendering, or publishing calls.
+        run: python scripts/video_pipeline.py sync
+
       - name: Retain the edition for the next refresh
         shell: bash
         run: |

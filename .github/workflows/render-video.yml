@@ -1,0 +1,58 @@
+name: Render a research video for review
+
+on:
+  workflow_dispatch:
+    inputs:
+      article_id:
+        description: Active archive article ID
+        required: true
+        default: "70fab32c0c2057e8f247"
+      script_path:
+        description: Evidence-linked script JSON already in this repository
+        required: true
+        default: examples/videos/neuron-explanations.json
+
+permissions:
+  contents: read
+
+concurrency:
+  group: alignment-video-${{ github.event.inputs.article_id }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Install local rendering tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core
+          python -m pip install -r requirements-video.txt
+      - name: Check pipeline invariants
+        run: python -m unittest discover -s tests -p 'test_video_*.py'
+      - name: Capture source and render both formats
+        env:
+          ARTICLE_ID: ${{ inputs.article_id }}
+          SCRIPT_PATH: ${{ inputs.script_path }}
+        run: |
+          python scripts/video_pipeline.py produce --article-id "$ARTICLE_ID" --script "$SCRIPT_PATH"
+      - name: Save the review package
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: alignment-video-review
+          # Keep complete original articles and source-bearing prompts private.
+          path: |
+            artifacts/videos/index.html
+            artifacts/videos/*/index.html
+            artifacts/videos/*/job.json
+            artifacts/videos/*/publish-package.json
+            artifacts/videos/*/renders/**
+            !artifacts/videos/**/source.json
+          if-no-files-found: warn
+          retention-days: 14

@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "article_id": "70fab32c0c2057e8f247",
+  "source_sha256": "fe534d917fc89085aafa3ef45a7f6ec80093bb2033f96c13d104a0cfb1dbb80e",
+  "title": "When does a neuron explanation actually work?",
+  "description": "A plain-language explanation of Leo Gao’s research discussion about testing neuron explanations. The traffic-light analogy and animated diagrams are illustrations, not experimental results.",
+  "research_type": "commentary",
+  "scenes": [
+    {
+      "id": "s1",
+      "heading": "A label is a hypothesis",
+      "narration": "A neuron is one small computational unit inside a neural network. If it responds to a recognizable pattern, have we explained it? In a new research discussion, Leo Gao argues that a neat label is only the start.",
+      "visual": "neuron",
+      "labels": ["Inputs", "Neuron responses", "A pattern is a clue"],
+      "claim_ids": ["c1"]
+    },
+    {
+      "id": "s2",
+      "heading": "Predict beyond the examples",
+      "narration": "Think of guessing traffic-light rules from a few photos. Red, stopped cars: seems simple. But does your rule predict what happens in situations you haven’t seen? This is just an analogy.",
+      "visual": "analogy",
+      "labels": [
+        "A few photos",
+        "An unseen situation",
+        "Does the rule still work?"
+      ],
+      "claim_ids": ["c1", "c2"]
+    },
+    {
+      "id": "s3",
+      "heading": "Two ways a label can fail",
+      "narration": "Gao points to two gaps. A neuron may respond to only some examples matching its label. And activation strength—the size of its response—may carry information the label ignores.",
+      "visual": "comparison",
+      "labels": ["Which examples?", "How strong a response?", "Both matter"],
+      "claim_ids": ["c2", "c3"]
+    },
+    {
+      "id": "s4",
+      "heading": "Replace the response",
+      "narration": "His proposed check is simulation: predict a neuron's numerical response, then replace the real response with that prediction. Does the network still behave the same way?",
+      "visual": "test",
+      "labels": [
+        "Predict activations",
+        "Swap in predictions",
+        "Compare outputs"
+      ],
+      "claim_ids": ["c4"]
+    },
+    {
+      "id": "s5",
+      "heading": "Measure what changes",
+      "narration": "One comparison uses downstream K L divergence: how much the model's output probabilities change, over many inputs. A pretty explanation that changes those outputs can be missing something important.",
+      "visual": "comparison",
+      "labels": [
+        "Original network",
+        "With predicted values",
+        "Compare output probabilities"
+      ],
+      "claim_ids": ["c5"]
+    },
+    {
+      "id": "s6",
+      "heading": "A test, not a safety guarantee",
+      "narration": "This is an argument about how to test explanations, not a new experiment proving interpretability impossible. The metric is imperfect, and explaining individual neurons still doesn't explain the computations between them.",
+      "visual": "takeaway",
+      "labels": ["A useful check", "Imperfect metric", "Neurons are only part"],
+      "claim_ids": ["c6"]
+    },
+    {
+      "id": "s7",
+      "heading": "Understand the mechanism",
+      "narration": "The takeaway: use patterns to form hypotheses, then test what those hypotheses preserve. Read Leo Gao's full post, Neural networks are not already clean, for the argument and caveats.",
+      "visual": "source",
+      "labels": ["Patterns", "Predictions", "Behavior"],
+      "claim_ids": ["c1", "c4", "c6"]
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "text": "A plausible pattern among activating examples is not sufficient to establish that a neuron is explained.",
+      "kind": "interpretation",
+      "evidence": [
+        {
+          "section_id": "p002",
+          "quote": "sufficient argument"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "A neuron can respond to only a subset of the situations matching a proposed label.",
+      "kind": "interpretation",
+      "evidence": [
+        {
+          "section_id": "p005",
+          "quote": "specific subset"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Activation strength may carry important information that a category label leaves unexplained.",
+      "kind": "interpretation",
+      "evidence": [
+        {
+          "section_id": "p006",
+          "quote": "activation magnitudes"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Gao proposes predicting activations and substituting the simulated values to check whether model behavior is preserved.",
+      "kind": "interpretation",
+      "evidence": [
+        {
+          "section_id": "p008",
+          "quote": "simulated values"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "Gao proposes evaluating explanations with downstream KL divergence over a large dataset.",
+      "kind": "interpretation",
+      "evidence": [
+        {
+          "section_id": "p009",
+          "quote": "downstream KL"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "Gao considers the KL metric imperfect; individual neuron explanations are only part of understanding the network.",
+      "kind": "limitation",
+      "evidence": [
+        {
+          "section_id": "p012",
+          "quote": "don’t think"
+        },
+        {
+          "section_id": "p014",
+          "quote": "only part"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "This source is a research argument, not a new empirical demonstration.",
+    "Downstream KL is an imperfect test; preserving it does not establish complete understanding or general AI safety.",
+    "Understanding individual neurons does not by itself explain the computations between them."
+  ],
+  "credits": {
+    "authors": ["leogao"],
+    "title": "Neural networks are not already clean",
+    "source_url": "https://www.lesswrong.com/posts/Dkh7pXKjoNWkkxQDz/neural-networks-are-not-already-clean"
+  }
+}

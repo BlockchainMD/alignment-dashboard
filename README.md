@@ -76,26 +76,17 @@ node --test tests/*.test.mjs
 
 Saved/read state is browser-local. Export/import transfers it between devices. The research archive itself is accessible anywhere without a login.
 
-## Foundation for videos of two minutes or less
+## Videos of two minutes or less
 
-The archive is the discovery input for a later media pipeline. It does not generate finished scripts, videos, or social posts.
+The working pipeline now captures the original research, creates an evidence-linked script, narrates it, animates explanatory diagrams, and renders both **1920 × 1080 landscape** and **1080 × 1920 portrait** videos. Every output remains a draft for review. Videos are not automatically posted to YouTube or X.
 
-Export JSONL research packets for the active forward collection, or one eligible article:
+The audience is alignment researchers and anyone interested in alignment. Preserve the necessary technical detail and explain it simply: one idea per scene, a concrete example, defined terms, an explicit limitation, and original credit. The first example explains when a neuron explanation earns confidence; its source is a research discussion, so it is labeled accordingly.
+
+See [the video production guide](docs/VIDEO_PIPELINE.md) for setup, commands, evidence checks, output files, and operation. Start with:
 
 ```sh
-python3 scripts/export_video_jobs.py
-python3 scripts/export_video_jobs.py --article-id ARTICLE_ID --output artifacts/one-video-job.jsonl
+python3 -m pip install -r requirements-video.txt
+python3 scripts/video_pipeline.py produce --article-id 70fab32c0c2057e8f247 --script examples/videos/neuron-explanations.json
 ```
 
-Packets include stable article IDs, content fingerprints, original links, available author/date/identifier metadata, source excerpts and provenance, an empty script/claims structure, and review steps. Fingerprints ignore collection-time churn so unchanged research does not become a new job every hour. Candidates first need relevance and publication-timing review. The exporter does not retrieve or verify full articles.
-
-The proposed production sequence is:
-
-1. Retrieve and read the original research; preserve page/section references.
-2. Draft a plain-language explanation: the question, an everyday example, the finding, and the limitation. Aim for 180–230 spoken words.
-3. Check each factual claim against the source, retaining uncertainty and attribution.
-4. Create narration, original explanatory visuals, captions, and portrait/landscape versions.
-5. Measure the rendered video and enforce a maximum of **120 seconds**.
-6. Review the final video and platform-specific post before publication to YouTube or X. Track remote IDs to avoid duplicate posts.
-
-Generation services, voice/style choices, rendering infrastructure, and publishing integrations remain future work. Research collection does not incur those future media-generation costs.
+FFmpeg/FFprobe and a local speech engine are also required. macOS uses its installed `say` voices; Linux uses eSpeak. Optional automatic scripting uses locally signed-in Codex or an explicitly configured OpenAI API model. The hourly collector only updates the discovery queue; it makes no drafting or speech API calls. Complete source snapshots, prompts, and media stay in ignored `artifacts/`.
