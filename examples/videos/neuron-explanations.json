@@ -17,7 +17,7 @@
     {
       "id": "s2",
       "heading": "Predict beyond the examples",
-      "narration": "Think of guessing traffic-light rules from a few photos. Red, stopped cars: seems simple. But does your rule predict what happens in situations you haven’t seen? This is just an analogy.",
+      "narration": "Think of guessing traffic-light rules from a few photos. You see a red light, and the cars are stopped. Seems simple. But does your rule predict what happens in situations you haven’t seen? This is just an analogy.",
       "visual": "analogy",
       "labels": [
         "A few photos",
@@ -29,7 +29,7 @@
     {
       "id": "s3",
       "heading": "Two ways a label can fail",
-      "narration": "Gao points to two gaps. A neuron may respond to only some examples matching its label. And activation strength—the size of its response—may carry information the label ignores.",
+      "narration": "Gao points to two gaps. A neuron may respond to only some examples matching its label. And activation strength means the size of its response. That strength may carry information the label ignores.",
       "visual": "comparison",
       "labels": ["Which examples?", "How strong a response?", "Both matter"],
       "claim_ids": ["c2", "c3"]
@@ -49,7 +49,7 @@
     {
       "id": "s5",
       "heading": "Measure what changes",
-      "narration": "One comparison uses downstream K L divergence: how much the model's output probabilities change, over many inputs. A pretty explanation that changes those outputs can be missing something important.",
+      "narration": "One comparison uses downstream KL divergence. It measures how much the model's output probabilities change, across many inputs. A pretty explanation that changes those outputs can be missing something important.",
       "visual": "comparison",
       "labels": [
         "Original network",
@@ -61,7 +61,7 @@
     {
       "id": "s6",
       "heading": "A test, not a safety guarantee",
-      "narration": "This is an argument about how to test explanations, not a new experiment proving interpretability impossible. The metric is imperfect, and explaining individual neurons still doesn't explain the computations between them.",
+      "narration": "This is a research argument, not a new experimental result. The metric is imperfect, and explaining individual neurons still doesn't explain the computations between them.",
       "visual": "takeaway",
       "labels": ["A useful check", "Imperfect metric", "Neurons are only part"],
       "claim_ids": ["c6"]

@@ -27,12 +27,14 @@ jobs:
       - uses: actions/checkout@v7.0.1
       - uses: actions/setup-python@v7.0.0
         with:
-          python-version: "3.13"
+          python-version: "3.12"
       - name: Install local rendering tools
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core
-          python -m pip install -r requirements-video.txt
+          python -m pip install -r requirements-video.txt -r requirements-voice.txt
+      - name: Prepare the neural narrator
+        run: python scripts/video_voice.py setup
       - name: Check pipeline invariants
         run: python -m unittest discover -s tests -p 'test_video_*.py'
       - name: Capture source and render both formats

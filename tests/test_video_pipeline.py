@@ -26,8 +26,9 @@ class VideoPipelineTests(unittest.TestCase):
     def capture(self, article, directory):
         return deepcopy(self.source)
 
-    def renderer(self, script, directory, *, formats, voice, rate, preview):
-        self.render_calls.append({"directory": directory, "formats": formats, "voice": voice, "rate": rate, "preview": preview})
+    def renderer(self, script, directory, *, formats, voice, rate, preview, speech_provider, speech_speed):
+        self.render_calls.append({"directory": directory, "formats": formats, "voice": voice, "rate": rate, "preview": preview,
+                                  "speech_provider": speech_provider, "speech_speed": speech_speed})
         dimensions = {"landscape": (1280, 720) if preview else (1920, 1080),
                       "portrait": (720, 1280) if preview else (1080, 1920)}
         outputs = {}
@@ -46,7 +47,7 @@ class VideoPipelineTests(unittest.TestCase):
         (directory / "index.html").write_text('<a href="script.json">Review this generation</a>')
         return {"schema_version": 1, "article_id": script["article_id"], "source_sha256": script["source_sha256"],
                 "title": script["title"], "formats": outputs, "duration_seconds": 60.5,
-                "voice": {"name": voice, "rate": rate}, "fps": 24,
+                "voice": {"synthetic": True, **pipeline.voice_settings(speech_provider, voice, rate, speech_speed)}, "fps": 24,
                 "timeline": [{"audio_path": str(directory / "audio/scene-01.wav")}],
                 "narration_path": str(directory / "narration.wav"), "srt_path": str(directory / "captions.srt"),
                 "vtt_path": str(directory / "captions.vtt"), "manifest_path": str(directory / "manifest.json"),
@@ -94,7 +95,8 @@ class VideoPipelineTests(unittest.TestCase):
 
     def test_settings_source_script_and_media_integrity_control_reuse(self):
         state = self.produce()
-        for settings in ({"formats": ("portrait",)}, {"voice": "Alex"}, {"rate": 140}, {"preview": True}):
+        for settings in ({"formats": ("portrait",)}, {"voice": "af_bella"}, {"rate": 140}, {"preview": True},
+                         {"speech_speed": 1.05}, {"speech_provider": "system"}):
             with self.subTest(settings=settings):
                 self.assertFalse(pipeline.render_is_current(self.article, self.work, **settings))
         directory = self.job_directory()
@@ -111,6 +113,45 @@ class VideoPipelineTests(unittest.TestCase):
         self.assertTrue(pipeline.render_is_current(self.article, self.work))
         path.unlink()
         self.assertFalse(pipeline.render_is_current(self.article, self.work))
+
+    def test_voice_profile_model_and_implementation_identity_invalidate_reuse(self):
+        self.produce()
+        current = pipeline.voice_settings()
+        for section, changed in (("voice", "af_bella"), ("model", {"sha256": "a" * 64}),
+                                 ("pronunciation", {"profile": "revised", "substitutions": {"KL": "Kay ell"}}),
+                                 ("mastering", {"integrated_loudness_lufs": -15})):
+            with self.subTest(section=section), patch.object(pipeline, "voice_settings", return_value={**current, section: changed}):
+                self.assertFalse(pipeline.render_is_current(self.article, self.work))
+        digest = pipeline._file_digest
+        for name in ("video_voice.py", "video-voice.json"):
+            def changed_digest(path):
+                return "changed code or profile" if Path(path).name == name else digest(path)
+            with self.subTest(file=name), patch.object(pipeline, "_file_digest", side_effect=changed_digest):
+                self.assertFalse(pipeline.render_is_current(self.article, self.work))
+
+    def test_invalid_voice_does_not_invalidate_a_complete_generation(self):
+        state = self.produce()
+        directory = self.job_directory()
+        preview = (directory / "index.html").read_bytes()
+        with patch.object(pipeline, "voice_settings", side_effect=ValueError("Unknown voice")), \
+                self.assertRaisesRegex(ValueError, "Unknown voice"):
+            self.produce(voice="unknown")
+        self.assertEqual((directory / "index.html").read_bytes(), preview)
+        self.assertEqual(pipeline.read_json(directory / "job.json"), state)
+        self.assertTrue(pipeline.render_is_current(self.article, self.work))
+
+    def test_neural_voice_and_speed_options_reach_the_renderer(self):
+        state = self.produce(voice="af_bella", speech_speed=1.03)
+        self.assertEqual(self.render_calls[0]["speech_provider"], "kokoro")
+        self.assertEqual(self.render_calls[0]["speech_speed"], 1.03)
+        self.assertEqual(state["render_settings"]["speech"]["voice"], "af_bella")
+        self.assertEqual(state["render_settings"]["speech"]["speed"], 1.03)
+        with patch.object(pipeline, "load_archive", return_value={"items": [self.article]}), \
+                patch.object(pipeline, "produce", return_value={"job_id": "new"}) as produce:
+            self.assertEqual(pipeline.main(["batch", "--work-dir", str(self.work), "--voice", "af_nicole",
+                                           "--speech-provider", "kokoro", "--speech-speed", "1.02"]), 0)
+        self.assertEqual(produce.call_args.kwargs["speech_provider"], "kokoro")
+        self.assertEqual(produce.call_args.kwargs["speech_speed"], 1.02)
 
     def test_batch_skips_matching_render_and_retries_different_formats(self):
         self.produce(formats=("portrait",))

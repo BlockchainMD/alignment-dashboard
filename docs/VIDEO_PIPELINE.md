@@ -13,13 +13,18 @@ The production target is a clear explanation of one alignment idea in at most **
 
 ## Install
 
-Python 3.11+, Pillow, FFmpeg, FFprobe, and local speech are required for rendering. `pypdf` supports scholarly PDF extraction. The research collector still uses only the Python standard library.
+Use Python 3.12 for the neural narrator, plus Pillow, FFmpeg and FFprobe. Kokoro ONNX currently supports Python 3.10–3.13; the complete pipeline needs at least 3.11. `pypdf` supports scholarly PDF extraction. The research collector still uses only the Python standard library and does not load speech dependencies.
 
 ```sh
-python3 -m pip install -r requirements-video.txt
+uv venv --python 3.12 .venv
+uv pip install --python .venv/bin/python -r requirements-video.txt -r requirements-voice.txt
+.venv/bin/python scripts/video_voice.py setup
+source .venv/bin/activate
 ```
 
-On macOS, install FFmpeg through your package manager if needed. The renderer uses `say`; `--voice Samantha` selects the default example voice. On Linux, install FFmpeg, eSpeak/eSpeak NG, and DejaVu fonts. The manual GitHub render workflow installs these automatically.
+If you do not use `uv`, create a Python 3.12 virtual environment and install both requirements files with its pip. Install FFmpeg through your package manager. Linux also needs DejaVu fonts. The manual GitHub render workflow installs these tools and the neural narrator automatically.
+
+The setup command explicitly downloads checksum-pinned model and voice files into ignored `.cache/kokoro/`. Normal rendering never downloads a model or silently changes providers. Allow roughly 1 GB of free disk space for the voice runtime and model. An explicit smaller-model option is described below.
 
 No API key is needed for a supplied script or local narration. Automatic Codex drafting uses the computer's existing Codex sign-in and consumes its usage allowance. Keep that sign-in on the local computer; never copy authentication files into this public repository or GitHub Actions.
 
@@ -42,7 +47,33 @@ python3 -m http.server 4174 --bind 127.0.0.1 --directory artifacts/videos
 
 The studio is then at [localhost:4174](http://localhost:4174). A local server provides reliable video seeking and caption tracks. The `artifacts/` directory is deliberately outside the published dashboard.
 
-Use `--preview` for 1280 × 720 and 720 × 1280 iteration. Use `--format landscape` or `--format portrait` to render only one format. `--rate` sets the requested natural speaking rate; excessive total duration fails validation.
+Use `--preview` for 1280 × 720 and 720 × 1280 iteration. Use `--format landscape` or `--format portrait` to render only one format. Excessive measured total duration fails validation; speech is never automatically accelerated to squeeze a long script under the limit.
+
+## Narration and voice auditions
+
+The default is **Kokoro `af_heart`**, a warm American English neural voice, at a natural speed factor of `0.96`. Voice preference is subjective: audition the same passage before choosing the series voice. `af_bella` offers another feminine voice; `am_michael` offers a masculine alternative.
+
+```sh
+python scripts/video_voice.py sample --voice af_heart --text "A pattern can suggest an explanation. But does that explanation predict what the network will do?" --output artifacts/voice-heart.wav
+python scripts/video_voice.py sample --voice af_bella --text "A pattern can suggest an explanation. But does that explanation predict what the network will do?" --output artifacts/voice-bella.wav
+python scripts/video_voice.py sample --voice am_michael --text "A pattern can suggest an explanation. But does that explanation predict what the network will do?" --output artifacts/voice-michael.wav
+python scripts/video_pipeline.py produce --article-id 70fab32c0c2057e8f247 --script examples/videos/neuron-explanations.json --voice af_heart --speech-speed 0.96
+```
+
+`config/video-voice.json` defines the production delivery profile: voice, natural speed, sentence/clause and scene pauses, pronunciation replacements, and audio mastering. Kokoro uses voice and speed controls; it does not accept free-form acting instructions. Scripts provide the conversational rhythm through short sentences, meaningful punctuation, and one idea at a time. The goal is a thoughtful person explaining an interesting result, with restrained emphasis and room to think.
+
+Technical acronyms can have pronunciation replacements without changing the displayed script or captions. Review author names individually. Every synthesized scene is mastered to a consistent **−16 LUFS** target with a **−1.5 dB true-peak** ceiling before the renderer measures it. Pauses and measured speech determine the timeline for both formats.
+
+For limited disk space, explicitly install the smaller quantized model and select it for rendering:
+
+```sh
+python scripts/video_voice.py setup --model int8
+ALIGNMENT_KOKORO_MODEL=int8 python scripts/video_pipeline.py produce --article-id 70fab32c0c2057e8f247 --script examples/videos/neuron-explanations.json
+```
+
+Model identity, voice, speed, pronunciation rules, mastering settings, and implementation hashes participate in render reuse. Changing the voice regenerates the video instead of reusing old narration. `ALIGNMENT_KOKORO_DIR` can select another local asset directory. Model weights remain local and are excluded from review packages.
+
+For a lightweight system-voice preview, explicitly request `--speech-provider system`. macOS then uses `say` (`--voice Samantha`); Linux requires eSpeak/eSpeak NG. `--rate 155` is a system-speech words-per-minute setting; neural narration uses `--speech-speed` instead. A missing neural dependency or model is an actionable error, never a silent fallback to a different voice.
 
 ## Automatic scripts
 
@@ -86,11 +117,11 @@ Each job lives under `artifacts/videos/JOB_ID/`. Complete media generations cont
 
 Job metadata and `publish-package.json` hold the proposed title, description, credits, limits, and review requirements. Publishing remains unapproved and remote platform IDs remain empty.
 
-Caption chunks use measured scene audio and proportional phrase timing. They are not word-level forced alignment; listen to the full video and check pronunciation/timing. The local voice is a working baseline. The renderer also accepts supplied per-scene audio through its Python API for a different narration service or a recorded voice.
+Caption chunks use measured scene audio and proportional phrase timing. They are not word-level forced alignment; listen to the full video and check pronunciation/timing, especially around expressive pauses. The standalone renderer also accepts supplied per-scene audio through `--audio-dir` for a recorded narrator or another narration service.
 
 ## GitHub rendering
 
-The **Render a research video for review** workflow is manual. Select an active article ID and a source-linked script already committed in the repository. It renders both formats with Linux speech and retains a downloadable review artifact for 14 days. It does not invoke a paid model or publish to YouTube/X. Complete article snapshots and source-bearing prompts are excluded from uploaded artifacts.
+The **Render a research video for review** workflow is manual. Select an active article ID and a source-linked script already committed in the repository. It renders both formats with the pinned neural narrator and retains a downloadable review artifact for 14 days. It does not invoke a paid model or publish to YouTube/X. Complete article snapshots and source-bearing prompts are excluded from uploaded artifacts.
 
 The hourly **Hourly collection and publish** workflow updates the research and video discovery queue only. It continues to publish source health even when a final health step flags an upstream outage. Video production does not hold up research collection with model calls or rendering.
 
@@ -104,9 +135,10 @@ Before sharing a render, review the original source and the video together:
 - Experimental results, theoretical claims, and commentary are distinguished.
 - Every factual assertion is supported in context; exact quote matching alone is insufficient.
 - Meaningful assumptions and limitations stay attached to the result.
+- The narrator sounds conversational, technical words and names are pronounced correctly, and pauses make the argument easier to follow.
 - Captions and diagrams remain readable on a phone, and the final duration is at most 120 seconds.
 
-Source capture uses public HTTP(S), rejects private addresses and unsafe redirects, bounds downloads, and stores complete research only under ignored local artifacts. Keep original figure reuse, music, extra narration providers, and social-account integrations as deliberate later additions.
+Source capture uses public HTTP(S), rejects private addresses and unsafe redirects, bounds downloads, and stores complete research only under ignored local artifacts. Keep original figure reuse, music, additional hosted narration providers, and social-account integrations as deliberate later additions.
 
 ## Verification
 
@@ -119,3 +151,5 @@ python3 -m unittest discover -s tests -p 'test_video_*.py'
 The tests cover source extraction and boundaries, evidence binding, draft parsing, queue versioning, candidate holds, rendering timing/layout helpers, safe resume, and failed rerenders. Actual sample renders are additionally inspected visually and measured with FFprobe.
 
 Provider references: [Codex non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode), [Responses Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses).
+
+Voice references: [Kokoro ONNX runtime](https://github.com/thewh1teagle/kokoro-onnx) (MIT), [Kokoro model and voice guide](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) (model weights Apache 2.0). These notices travel with the production profile; the narration remains disclosed as synthetic.

@@ -85,8 +85,10 @@ The audience is alignment researchers and anyone interested in alignment. Preser
 See [the video production guide](docs/VIDEO_PIPELINE.md) for setup, commands, evidence checks, output files, and operation. Start with:
 
 ```sh
-python3 -m pip install -r requirements-video.txt
-python3 scripts/video_pipeline.py produce --article-id 70fab32c0c2057e8f247 --script examples/videos/neuron-explanations.json
+uv venv --python 3.12 .venv
+uv pip install --python .venv/bin/python -r requirements-video.txt -r requirements-voice.txt
+.venv/bin/python scripts/video_voice.py setup
+.venv/bin/python scripts/video_pipeline.py produce --article-id 70fab32c0c2057e8f247 --script examples/videos/neuron-explanations.json
 ```
 
-FFmpeg/FFprobe and a local speech engine are also required. macOS uses its installed `say` voices; Linux uses eSpeak. Optional automatic scripting uses locally signed-in Codex or an explicitly configured OpenAI API model. The hourly collector only updates the discovery queue; it makes no drafting or speech API calls. Complete source snapshots, prompts, and media stay in ignored `artifacts/`.
+FFmpeg/FFprobe are also required. Narration defaults to a warm local **Kokoro neural voice**, with a pronunciation dictionary, deliberate pauses, and consistent loudness. The same model and voice run on macOS and Linux without a speech API key. The voice guide includes auditions and an explicit system-speech option for lightweight previews. Optional automatic scripting uses locally signed-in Codex or an explicitly configured OpenAI API model. The hourly collector only updates the discovery queue; it makes no drafting or speech API calls. Complete source snapshots, prompts, and media stay in ignored `artifacts/`.

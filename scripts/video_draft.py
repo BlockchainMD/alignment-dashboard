@@ -47,6 +47,12 @@ Use 5–7 scenes and aim for 180–225 spoken words in total, including attribut
 Keep the finished explanation comfortably under 120 seconds at 155 words/minute
 with pauses. Give each scene one clear idea, a short heading, and at most four
 short visual labels. Narration must work without reading the on-screen text.
+Write for the ear: use short sentences, natural contractions, and varied sentence
+lengths. Give an important idea a sentence of its own so the narrator can pause.
+Use questions sparingly to create curiosity, then answer them directly. Prefer
+spoken words to symbols or citation strings; define an acronym before using it.
+Keep technical names and qualifications accurate. Do not add stage directions,
+emotion tags, SSML, or artificial enthusiasm to the spoken narration.
 Choose simple conceptual visuals supported by the allowed visual enum. Never
 ask for stock footage, copied article figures, fabricated graphs, or images that
 could be mistaken for research evidence. An analogy is an illustration; say so

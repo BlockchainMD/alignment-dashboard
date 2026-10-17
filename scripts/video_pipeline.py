@@ -19,10 +19,12 @@ try:
     from .archive_store import active_archive_items, atomic_write, load_archive
     from .collect import archive_lock
     from .export_video_jobs import make_packet
+    from .video_voice import CONFIG_PATH as VOICE_CONFIG_PATH, voice_settings
 except ImportError:
     from archive_store import active_archive_items, atomic_write, load_archive
     from collect import archive_lock
     from export_video_jobs import make_packet
+    from video_voice import CONFIG_PATH as VOICE_CONFIG_PATH, voice_settings
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_QUEUE = ROOT / "data/video-queue.json"
@@ -121,9 +123,12 @@ def _file_digest(path):
     return digest.hexdigest()
 
 
-def _settings(formats, voice, rate, preview):
-    return {"formats": sorted(formats), "voice": voice, "rate": rate, "preview": bool(preview), "fps": 24,
-            "renderer_sha256": _file_digest(Path(__file__).with_name("video_render.py"))}
+def _settings(formats, voice, rate, preview, speech_provider="kokoro", speech_speed=None):
+    speech = voice_settings(speech_provider=speech_provider, voice=voice, rate=rate, speech_speed=speech_speed)
+    return {"formats": sorted(formats), "speech": speech, "preview": bool(preview), "fps": 24,
+            "renderer_sha256": _file_digest(Path(__file__).with_name("video_render.py")),
+            "voice_module_sha256": _file_digest(Path(__file__).with_name("video_voice.py")),
+            "voice_profile_sha256": _file_digest(VOICE_CONFIG_PATH)}
 
 
 def _render_fingerprint(source, script, settings):
@@ -216,7 +221,8 @@ def prepare_job(article, work_dir=DEFAULT_WORK, allow_candidate=False, refresh_s
 
 
 def render_is_current(article, work_dir=DEFAULT_WORK, *, formats=("landscape", "portrait"),
-                      voice="Samantha", rate=155, preview=False, script_path=None):
+                      voice=None, rate=155, preview=False, script_path=None,
+                      speech_provider="kokoro", speech_speed=None):
     """Reuse only a complete generation bound to this source/script/settings."""
     directory = _work_path(work_dir, make_packet(article)["job_id"])
     try:
@@ -233,7 +239,7 @@ def render_is_current(article, work_dir=DEFAULT_WORK, *, formats=("landscape", "
             return False
         script = read_json(script_path or _inside(directory, "script.json"))
         validate_draft(script, source)
-        settings = _settings(formats, voice, rate, preview)
+        settings = _settings(formats, voice, rate, preview, speech_provider, speech_speed)
         if state.get("source_sha256") != source["sha256"] or state.get("script_sha256") != _digest(script):
             return False
         if state.get("render_settings") != settings or state.get("render_fingerprint") != _render_fingerprint(source, script, settings):
@@ -246,18 +252,24 @@ def render_is_current(article, work_dir=DEFAULT_WORK, *, formats=("landscape", "
             return False
         if report.get("source_sha256") != source["sha256"] or report.get("script_sha256") != _digest(script):
             return False
+        if report.get("voice") != {"synthetic": True, **settings["speech"]}:
+            return False
         if read_json(_inside(generation, "script.json")) != script or read_json(_inside(generation, "source.json")) != source:
             return False
         _verify_render_files(report, generation, formats, preview)
         return _inside(directory, "index.html").is_file() and _inside(directory, "publish-package.json").is_file()
-    except (ValueError, OSError, KeyError, TypeError):
+    except (ValueError, OSError, KeyError, TypeError, RuntimeError):
         return False
 
 
 def produce(article, work_dir=DEFAULT_WORK, script_path=None, provider="codex", model=None,
-            formats=("landscape", "portrait"), voice="Samantha", rate=155, preview=False,
+            formats=("landscape", "portrait"), voice=None, rate=155, preview=False,
             allow_candidate=False, refresh_source=False, redraft=False, capture=None,
-            draft_generator=None, renderer=None, codex_cli_defaults=False):
+            draft_generator=None, renderer=None, codex_cli_defaults=False,
+            speech_provider="kokoro", speech_speed=None):
+    # Validate the complete speech identity before capturing, drafting, or
+    # invalidating an existing generation. This does not load a neural model.
+    settings = _settings(formats, voice, rate, preview, speech_provider, speech_speed)
     packet = make_packet(article)
     directory = _work_path(work_dir, packet["job_id"])
     directory.mkdir(parents=True, exist_ok=True)
@@ -296,7 +308,6 @@ def produce(article, work_dir=DEFAULT_WORK, script_path=None, provider="codex", 
                 raise ValueError("Supply --script, or select an installed drafting provider")
             validate_draft(script, source)
             atomic_write(local_script, script)
-            settings = _settings(formats, voice, rate, preview)
             fingerprint = _render_fingerprint(source, script, settings)
             state.update(status="draft_ready", drafting_provider="supplied_script" if script_path else provider,
                          script_sha256=_digest(script), render_settings=settings, render_fingerprint=fingerprint)
@@ -314,8 +325,11 @@ def produce(article, work_dir=DEFAULT_WORK, script_path=None, provider="codex", 
                 staging = Path(staged).resolve()
                 atomic_write(_inside(staging, "script.json"), script)
                 atomic_write(_inside(staging, "source.json"), source)
-                render_report = renderer(script, staging, formats=tuple(formats), voice=voice, rate=rate, preview=preview)
+                render_report = renderer(script, staging, formats=tuple(formats), voice=voice, rate=rate, preview=preview,
+                                         speech_provider=speech_provider, speech_speed=speech_speed)
                 _verify_render_files(render_report, staging, formats, preview)
+                if render_report.get("voice") != {"synthetic": True, **settings["speech"]}:
+                    raise ValueError("Rendered voice does not match the requested speech settings")
                 if render_report.get("source_sha256") != source["sha256"] or render_report.get("article_id") != article["id"]:
                     raise ValueError("Rendered report does not match the source identity")
                 render_report = _relocate_paths(render_report, staging, generation)
@@ -385,8 +399,11 @@ def main(argv=None):
     parser.add_argument("--model", help="Explicit model for API drafting; Codex uses its configured model")
     parser.add_argument("--codex-cli-defaults", action="store_true", help="Explicitly use Codex CLI defaults for this drafting process")
     parser.add_argument("--format", choices=["both", "landscape", "portrait"], default="both")
-    parser.add_argument("--voice", default="Samantha")
-    parser.add_argument("--rate", type=int, default=155)
+    parser.add_argument("--speech-provider", choices=["kokoro", "system"], default="kokoro",
+                        help="Narration engine; Kokoro neural speech is the production default")
+    parser.add_argument("--voice", help="Voice ID; defaults to af_heart for Kokoro or Samantha on macOS")
+    parser.add_argument("--rate", type=int, default=155, help="System speech words per minute; use --speech-speed for Kokoro")
+    parser.add_argument("--speech-speed", type=float, help="Kokoro delivery speed factor; independent of system words per minute")
     parser.add_argument("--preview", action="store_true", help="Render at 720p for faster iteration")
     parser.add_argument("--include-candidate", action="store_true")
     parser.add_argument("--refresh-source", action="store_true")
@@ -424,12 +441,14 @@ def main(argv=None):
                 if done + failures >= args.limit:
                     break
                 if not (args.refresh_source or args.redraft) and render_is_current(article, args.work_dir,
-                        formats=formats, voice=args.voice, rate=args.rate, preview=args.preview, script_path=args.script):
+                        formats=formats, voice=args.voice, rate=args.rate, preview=args.preview, script_path=args.script,
+                        speech_provider=args.speech_provider, speech_speed=args.speech_speed):
                     continue
             try:
                 job = produce(article, args.work_dir, args.script, args.provider, args.model, formats,
                               args.voice, args.rate, args.preview, args.include_candidate,
-                              args.refresh_source, args.redraft, codex_cli_defaults=args.codex_cli_defaults)
+                              args.refresh_source, args.redraft, codex_cli_defaults=args.codex_cli_defaults,
+                              speech_provider=args.speech_provider, speech_speed=args.speech_speed)
                 done += 1
                 print(f"{job['job_id']}: rendered for review. No social posts were published.")
             except Exception as exc:

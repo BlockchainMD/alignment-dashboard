@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Render reviewed research scripts as original, captioned diagram explainers.
 
-No generation service is required: Pillow draws the diagrams, a local speech
-engine provides a disclosed synthetic voice, and FFmpeg encodes the video.
+Pillow draws the diagrams, local neural speech provides a disclosed synthetic
+voice, and FFmpeg encodes the video. System speech remains an explicit option.
 Caption chunks are timed proportionally within measured scene audio. They are
 not forced-aligned, word-accurate transcripts.
 """
@@ -25,6 +25,11 @@ import sys
 import tempfile
 from typing import Any
 from urllib.parse import urlparse
+
+try:
+    from .video_voice import synthesize, voice_settings
+except ImportError:
+    from video_voice import synthesize, voice_settings
 
 try:
     from PIL import Image, ImageDraw, ImageFont
@@ -184,24 +189,15 @@ def write_subtitles(captions: list[dict], destination: Path) -> tuple[Path, Path
     return srt, vtt
 
 
-def create_narration(text: str, output: Path, *, voice: str, rate: int,
-                     external_audio: Path | None = None) -> float:
+def create_narration(text: str, output: Path, *, voice: str | None = None, rate: int = 155,
+                     external_audio: Path | None = None, speech_settings: dict | None = None) -> float:
     if external_audio is not None:
         if not external_audio.is_file():
             raise FileNotFoundError(f"Narration file missing: {external_audio}")
         _run(["ffmpeg", "-y", "-v", "error", "-i", str(external_audio), "-ar", "48000", "-ac", "1", str(output)])
-    elif shutil.which("say"):
-        with tempfile.TemporaryDirectory(prefix="alignment-speech-") as temp:
-            text_path = Path(temp) / "narration.txt"
-            source = Path(temp) / "voice.aiff"
-            text_path.write_text(text, encoding="utf-8")
-            _run(["say", "-v", voice, "-r", str(rate), "-f", str(text_path), "-o", str(source)])
-            _run(["ffmpeg", "-y", "-v", "error", "-i", str(source), "-ar", "48000", "-ac", "1", str(output)])
-    elif shutil.which("espeak-ng") or shutil.which("espeak"):
-        executable = shutil.which("espeak-ng") or shutil.which("espeak")
-        _run([str(executable), "-s", str(rate), "-w", str(output), "--stdin"], input=text.encode("utf-8"))
     else:
-        raise RuntimeError("Install a local speech engine (macOS say or espeak-ng), or provide --audio-dir.")
+        settings = speech_settings if speech_settings is not None else voice_settings(voice=voice, rate=rate)
+        synthesize(text, output, settings)
     return media_duration(output)
 
 
@@ -555,8 +551,13 @@ def _preview_html(script: dict, outputs: dict, destination: Path, report: dict) 
     if urlparse(source_url).scheme not in {"https", "http"}:
         source_url = "#"
     limitations = "".join(f"<li>{escape(str(item))}</li>" for item in script.get("limitations", []))
-    voice_note = ("Narration supplied by the operator; confirm its voice disclosure during review." if report.get("voice", {}).get("engine") == "external audio"
-                  else "Synthetic narration by a local speech engine.")
+    speech = report.get("voice", {})
+    if speech.get("provider") == "external" or speech.get("engine") == "external audio":
+        voice_note = "Narration supplied by the operator; confirm its voice disclosure during review."
+    elif speech.get("provider") == "kokoro":
+        voice_note = f"Synthetic narration by the local Kokoro neural speech engine, voice {escape(str(speech.get('voice', '')))}."
+    else:
+        voice_note = "Synthetic narration by an explicitly selected local system speech engine."
     page = f'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(script['title'])} — Alignment Daily draft</title><style>
 :root{{color-scheme:light}}*{{box-sizing:border-box}}body{{margin:0;background:{CREAM};color:{GREEN};font:17px/1.6 system-ui,sans-serif}}main{{max-width:1160px;margin:0 auto;padding:48px 24px}}.eyebrow{{font-size:13px;letter-spacing:.13em;font-weight:700}}h1{{font-size:clamp(30px,5vw,52px);line-height:1.1;max-width:850px}}h2{{font-size:22px}}.notice{{background:{PALE};padding:18px 22px;border-radius:12px}}.grid{{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:start}}video{{width:100%;display:block;max-height:650px;background:{GREEN};border-radius:14px}}a{{color:{GREEN}}}section{{min-width:0}}li{{margin-bottom:7px}}footer{{border-top:1px solid {LINE};margin-top:34px;padding-top:20px;font-size:14px}}@media(max-width:760px){{.grid{{display:block}}section{{margin-top:30px}}main{{padding:28px 18px}}}}
@@ -571,8 +572,9 @@ def _preview_html(script: dict, outputs: dict, destination: Path, report: dict) 
 
 
 def render_video(script: dict, output_dir: Path, formats: tuple[str, ...] = ("landscape", "portrait"),
-                 voice: str = "Samantha", rate: int = 155, fps: int = 24, preview: bool = False,
-                 max_duration: float = 120, audio_dir: Path | None = None) -> dict:
+                 voice: str | None = None, rate: int = 155, fps: int = 24, preview: bool = False,
+                 max_duration: float = 120, audio_dir: Path | None = None,
+                 speech_provider: str = "kokoro", speech_speed: float | None = None) -> dict:
     """Render a script already validated by the editorial pipeline.
 
     Raises before video rendering when measured narration exceeds the duration
@@ -591,6 +593,9 @@ def render_video(script: dict, output_dir: Path, formats: tuple[str, ...] = ("la
         raise ValueError("A video needs 1–12 scenes")
     if any(not str(scene.get("narration", "")).strip() or scene.get("visual") not in VISUALS for scene in scenes):
         raise ValueError("Every scene needs narration and a supported diagram visual")
+    speech = ({"provider": "external", "engine": "external audio", "voice": None, "rate": None,
+               "synthetic": None, "pause_seconds": .32} if audio_dir else
+              voice_settings(speech_provider=speech_provider, voice=voice, rate=rate, speech_speed=speech_speed))
     if Image is None:
         raise RuntimeError("Pillow is required for rendering. Install requirements-video.txt.")
     if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
@@ -605,10 +610,11 @@ def render_video(script: dict, output_dir: Path, formats: tuple[str, ...] = ("la
     for index, scene in enumerate(scenes):
         audio = narration_dir / f"scene-{index+1:02d}.wav"
         external = audio_dir / f"scene-{index+1:02d}.wav" if audio_dir else None
-        duration = create_narration(str(scene["narration"]), audio, voice=voice, rate=rate, external_audio=external)
+        duration = create_narration(str(scene["narration"]), audio, voice=voice, rate=rate, external_audio=external,
+                                    speech_settings=speech)
         # Small natural pauses, quantized to whole frames so concatenation and
         # caption offsets share exactly the same clock.
-        frames = math.ceil((duration + .32) * fps)
+        frames = math.ceil((duration + speech["pause_seconds"]) * fps)
         slot_duration = frames / fps
         captions.extend(time_captions(str(scene["narration"]), cursor, duration))
         timeline.append({"scene_id": scene.get("id", f"scene-{index+1}"), "start": round(cursor, 6),
@@ -658,7 +664,7 @@ def render_video(script: dict, output_dir: Path, formats: tuple[str, ...] = ("la
               "-vn", "-c:a", "pcm_s16le", str(output_dir / "narration.wav")])
     report = {"schema_version": 1, "article_id": script.get("article_id"),
               "source_sha256": script.get("source_sha256"), "status": "draft_for_review", "publishing_approved": False,
-              "title": script.get("title"), "voice": {"engine": "external audio" if audio_dir else "macOS say" if shutil.which("say") else "espeak", "name": None if audio_dir else voice if shutil.which("say") else "default English", "rate": rate if not audio_dir else None, "synthetic": None if audio_dir else True},
+              "title": script.get("title"), "voice": ({"synthetic": True, **speech} if not audio_dir else speech),
               "fps": fps, "caption_timing": CAPTION_TIMING, "timeline": timeline, "captions": captions,
               "formats": outputs, "duration_seconds": max(item["duration_seconds"] for item in outputs.values()),
               "narration_path": str(output_dir / "narration.wav"), "srt_path": str(srt), "vtt_path": str(vtt),
@@ -676,15 +682,18 @@ def main() -> int:
     parser.add_argument("script", type=Path, help="Reviewed, evidence-linked script JSON")
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--format", action="append", choices=sorted(CANVASES))
-    parser.add_argument("--voice", default="Samantha")
-    parser.add_argument("--rate", type=int, default=155)
+    parser.add_argument("--speech-provider", choices=["kokoro", "system"], default="kokoro")
+    parser.add_argument("--voice", help="Voice ID; defaults to af_heart for Kokoro or Samantha on macOS")
+    parser.add_argument("--rate", type=int, default=155, help="System speech words per minute; use --speech-speed for Kokoro")
+    parser.add_argument("--speech-speed", type=float, help="Kokoro speech speed factor")
     parser.add_argument("--fps", type=int, default=24)
     parser.add_argument("--preview", action="store_true", help="720p landscape / 720×1280 portrait")
     parser.add_argument("--audio-dir", type=Path, help="Use supplied scene-01.wav etc. instead of local TTS")
     args = parser.parse_args()
     script = json.loads(args.script.read_text(encoding="utf-8"))
     report = render_video(script, args.output_dir, tuple(args.format or ["landscape", "portrait"]),
-                          voice=args.voice, rate=args.rate, fps=args.fps, preview=args.preview, audio_dir=args.audio_dir)
+                          voice=args.voice, rate=args.rate, fps=args.fps, preview=args.preview, audio_dir=args.audio_dir,
+                          speech_provider=args.speech_provider, speech_speed=args.speech_speed)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0
 

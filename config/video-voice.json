@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "default_provider": "kokoro",
+  "kokoro": {
+    "engine_version": "0.6.1",
+    "voice": "af_heart",
+    "speed": 0.96,
+    "model_release": "model-files-v1.1",
+    "model_filename": "kokoro-v1.0.onnx",
+    "model_sha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+    "voices_filename": "voices-v1.0.bin",
+    "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+  },
+  "system": {
+    "macos_voice": "Samantha",
+    "espeak_voice": "en-us"
+  },
+  "pronunciation": {
+    "profile": "alignment-en-v1",
+    "substitutions": {
+      "KL divergence": "kay ell divergence",
+      "RLHF": "R L H F",
+      "RLAIF": "R L A I F",
+      "LLMs": "L L Ms",
+      "LLM": "L L M",
+      "AI": "A I",
+      "KL": "kay ell"
+    }
+  },
+  "sentence_pause_seconds": 0.25,
+  "clause_pause_seconds": 0.1,
+  "pause_seconds": 0.32,
+  "mastering": {
+    "integrated_loudness_lufs": -16.0,
+    "true_peak_db": -1.5,
+    "loudness_range_lu": 7.0,
+    "highpass_hz": 70,
+    "sample_rate": 48000,
+    "channels": 1
+  }
+}

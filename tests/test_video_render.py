@@ -1,6 +1,5 @@
 """Renderer contracts that do not require a full media encode in collection CI."""
 
-import importlib.util
 import json
 from pathlib import Path
 import tempfile
@@ -8,10 +7,12 @@ import unittest
 from unittest.mock import patch
 
 
-ROOT = Path(__file__).resolve().parents[1]
-SPEC = importlib.util.spec_from_file_location("video_render", ROOT / "scripts" / "video_render.py")
-render = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(render)
+from scripts import video_render as render
+
+
+def speech_fixture(**changes):
+    return {"provider": "kokoro", "engine": "kokoro-onnx", "voice": "af_heart", "rate": None,
+            "speed": .96, "pause_seconds": .32, "mastering": {"integrated_loudness_lufs": -16}, **changes}
 
 
 def sample_script():
@@ -92,11 +93,71 @@ class RenderValidationTests(unittest.TestCase):
     @unittest.skipIf(render.Image is None, "Pillow is an optional video dependency")
     def test_overlong_measured_audio_rejected_before_encoding(self):
         with tempfile.TemporaryDirectory() as directory, patch.object(render.shutil, "which", return_value="tool"), \
+                patch.object(render, "voice_settings", return_value=speech_fixture()), \
                 patch.object(render, "create_narration", side_effect=[61, 61]), patch.object(render, "_encode_scene") as encode:
             with self.assertRaisesRegex(ValueError, "Shorten the script"):
                 render.render_video(sample_script(), Path(directory))
             encode.assert_not_called()
             self.assertFalse(list(Path(directory).glob("*.mp4")))
+
+    def test_speech_synthesis_uses_resolved_settings_without_a_system_fallback(self):
+        settings = speech_fixture(voice="af_bella")
+        with tempfile.TemporaryDirectory() as directory, patch.object(render, "synthesize") as synthesize, \
+                patch.object(render, "voice_settings") as resolve, patch.object(render, "media_duration", return_value=3.25):
+            output = Path(directory) / "narration.wav"
+            self.assertEqual(render.create_narration("A clear idea.", output, speech_settings=settings), 3.25)
+            synthesize.assert_called_once_with("A clear idea.", output, settings)
+            resolve.assert_not_called()
+        with tempfile.TemporaryDirectory() as directory, patch.object(render, "synthesize", side_effect=RuntimeError("Neural model unavailable")), \
+                patch.object(render.shutil, "which") as system_engine:
+            with self.assertRaisesRegex(RuntimeError, "Neural model unavailable"):
+                render.create_narration("No silent fallback.", Path(directory) / "voice.wav", speech_settings=settings)
+            system_engine.assert_not_called()
+
+    def test_supplied_audio_does_not_resolve_or_synthesize_a_neural_voice(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(render, "synthesize") as synthesize, \
+                patch.object(render, "voice_settings") as resolve, patch.object(render, "_run") as convert, \
+                patch.object(render, "media_duration", return_value=2.5):
+            source = Path(directory) / "supplied.wav"
+            source.write_bytes(b"supplied recording")
+            output = Path(directory) / "converted.wav"
+            self.assertEqual(render.create_narration("Transcript.", output, external_audio=source), 2.5)
+            synthesize.assert_not_called()
+            resolve.assert_not_called()
+            command = convert.call_args.args[0]
+            self.assertIn(str(source), command)
+            self.assertIn("48000", command)
+
+    @unittest.skipIf(render.Image is None, "Pillow is an optional video dependency")
+    def test_both_exports_share_one_resolved_voice_and_scene_narration(self):
+        speech = speech_fixture()
+
+        def narration(text, path, **kwargs):
+            path.write_bytes(b"measured speech")
+            return 2.0
+
+        def encode(painter, audio, output, *args):
+            output.write_bytes(b"encoded scene")
+
+        def ffmpeg(command):
+            Path(command[-1]).write_bytes(b"final media")
+
+        with tempfile.TemporaryDirectory() as directory, patch.object(render.shutil, "which", return_value="tool"), \
+                patch.object(render, "voice_settings", return_value=speech) as resolve, \
+                patch.object(render, "create_narration", side_effect=narration) as narrate, \
+                patch.object(render, "_encode_scene", side_effect=encode) as encode_scene, \
+                patch.object(render, "_run", side_effect=ffmpeg), \
+                patch.object(render, "media_duration", return_value=4.667):
+            report = render.render_video(sample_script(), Path(directory), preview=True)
+            resolve.assert_called_once_with(speech_provider="kokoro", voice=None, rate=155, speech_speed=None)
+            self.assertEqual(narrate.call_count, 2)
+            self.assertEqual(report["voice"], {"synthetic": True, **speech})
+            self.assertTrue(all(call.kwargs["speech_settings"] == speech for call in narrate.call_args_list))
+            self.assertEqual([call.args[1] for call in encode_scene.call_args_list[:2]],
+                             [call.args[1] for call in encode_scene.call_args_list[2:]])
+            self.assertAlmostEqual(report["timeline"][1]["start"], 56 / 24, places=5)
+            self.assertEqual(report["captions"][-1]["end"], round(56 / 24 + 2, 6))
+            self.assertIn("Kokoro neural speech engine", (Path(directory) / "index.html").read_text())
 
     def test_html_escapes_script_and_restricts_source_link_scheme(self):
         script = sample_script()
@@ -109,6 +170,19 @@ class RenderValidationTests(unittest.TestCase):
             self.assertNotIn("javascript:", page)
             self.assertIn("Draft for human review", page)
             self.assertIn(render.CAPTION_TIMING, page)
+
+    def test_preview_discloses_the_actual_voice_provider(self):
+        with tempfile.TemporaryDirectory() as directory:
+            destination = Path(directory)
+            page = render._preview_html(sample_script(), {}, destination,
+                                        {"voice": speech_fixture(voice="<unsafe>")}).read_text()
+            self.assertIn("Kokoro neural speech engine", page)
+            self.assertIn("&lt;unsafe&gt;", page)
+            self.assertNotIn("voice <unsafe>", page)
+            page = render._preview_html(sample_script(), {}, destination,
+                                        {"voice": {"provider": "external", "engine": "external audio"}}).read_text()
+            self.assertIn("Narration supplied by the operator", page)
+            self.assertNotIn("Kokoro", page)
 
 
 @unittest.skipIf(render.Image is None, "Pillow is an optional video dependency")
