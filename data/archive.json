@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-18T00:04:06Z",
-  "last_successful_update": "2026-10-18T00:04:06Z",
-  "edition_date": "2026-10-17",
+  "generated_at": "2026-10-18T04:37:23Z",
+  "last_successful_update": "2026-10-18T04:37:23Z",
+  "edition_date": "2026-10-18",
   "timezone": "America/Detroit",
   "sources": [
     {
@@ -10,8 +10,8 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -43,20 +43,16 @@
       "id": "arxiv",
       "name": "arXiv",
       "url": "https://arxiv.org/",
-      "status": "degraded",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "status": "ok",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-17T00:00:49Z",
       "item_count": 0,
       "parsed_count": 0,
       "error": null,
-      "warnings": [
-        "arXiv search API failed: HTTP Error 429: Unknown Error",
-        "Backup RSS discovers only the current announcement window in five configured categories. New-publication API catch-up remains pending.",
-        "No records parsed; source may be empty or its format may have changed. Checkpoint retained."
-      ],
+      "warnings": [],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
@@ -69,10 +65,7 @@
         "validated_empty": true,
         "adapter_mode": "year_partitioned_arxiv",
         "monitoring_since": "2026-10-16T23:48:48Z",
-        "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance.",
-        "degraded": true,
-        "primary_error": "HTTP Error 429: Unknown Error",
-        "suspicious_empty": true
+        "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance."
       },
       "lifetime_item_count": 641
     },
@@ -81,11 +74,11 @@
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-18T00:04:06Z",
+      "last_nonempty_at": "2026-10-18T04:37:23Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -110,7 +103,7 @@
         "pages": 9,
         "query_totals": {
           "AI alignment": 587,
-          "AI safety": 2110,
+          "AI safety": 2111,
           "mechanistic interpretability": 2836,
           "scalable oversight": 180,
           "reward hacking": 996,
@@ -137,11 +130,11 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-18T00:04:06Z",
+      "last_nonempty_at": "2026-10-18T04:37:23Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -167,13 +160,13 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-18T00:04:06Z",
-      "item_count": 22,
-      "parsed_count": 22,
+      "last_nonempty_at": "2026-10-18T04:37:23Z",
+      "item_count": 28,
+      "parsed_count": 28,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -183,22 +176,22 @@
         "backfill_complete": false,
         "pending_backfill": false,
         "oldest_fetched_at": "2026-10-17T00:51:30.494Z",
-        "latest_fetched_at": "2026-10-17T23:20:25.360Z",
+        "latest_fetched_at": "2026-10-18T04:00:37.076Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 422
+      "lifetime_item_count": 428
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -231,8 +224,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -270,8 +263,8 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -304,8 +297,8 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -339,8 +332,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -378,8 +371,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -417,8 +410,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -456,8 +449,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -490,8 +483,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -525,8 +518,8 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -559,8 +552,8 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-10-18T00:04:06Z",
-      "last_success_at": "2026-10-18T00:04:06Z",
+      "checked_at": "2026-10-18T04:37:23Z",
+      "last_success_at": "2026-10-18T04:37:23Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -828,7 +821,7 @@
       "backfill_complete": false,
       "forward_state": {
         "monitoring_since": "2026-10-16T23:48:48.000Z",
-        "watermark": "2026-10-17T00:04:06.665Z"
+        "watermark": "2026-10-17T04:37:23.877Z"
       }
     },
     "lesswrong": {
@@ -840,7 +833,7 @@
       "backfill_complete": false,
       "forward_state": {
         "monitoring_since": "2026-10-16T23:48:48.000Z",
-        "watermark": "2026-10-17T00:04:06.665Z"
+        "watermark": "2026-10-17T04:37:23.877Z"
       }
     },
     "openreview": {
@@ -3168,7 +3161,7 @@
           "https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/abs/parametric-resourcebounded-generalization-of-lobs-theorem-and-a-robust-cooperation-criterion-for-opensource-game-theory/16063EA7BFFEE89438631B141E556E79"
         ],
         "unknown_candidates": [],
-        "last_index_scan_at": "2026-10-18T00:04:06.665Z"
+        "last_index_scan_at": "2026-10-18T04:37:23.877Z"
       }
     },
     "transformer-circuits": {
@@ -3238,7 +3231,7 @@
           "https://transformer-circuits.pub/2026/workspace/index.html"
         ],
         "unknown_candidates": [],
-        "last_index_scan_at": "2026-10-18T00:04:06.665Z"
+        "last_index_scan_at": "2026-10-18T04:37:23.877Z"
       }
     },
     "arxiv": {
@@ -3908,24 +3901,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 24,
-    "accepted_items": 24,
-    "retained_items": 18,
-    "lifetime_accepted_items": 24,
-    "lifetime_retained_items": 6994,
+    "fetched_items": 30,
+    "accepted_items": 30,
+    "retained_items": 23,
+    "lifetime_accepted_items": 30,
+    "lifetime_retained_items": 6999,
     "successful_sources": 16,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
-    "suspicious_empty_sources": 1,
-    "duplicates_removed": 19,
-    "total_items": 23,
-    "relevant_items": 12,
-    "candidate_items": 11,
+    "suspicious_empty_sources": 0,
+    "duplicates_removed": 24,
+    "total_items": 29,
+    "relevant_items": 14,
+    "candidate_items": 15,
     "undated_items": 0,
     "year_only_items": 0,
-    "newest_publication": "2026-10-17T23:20:25Z",
-    "lifetime_total_items": 6999,
+    "newest_publication": "2026-10-18T04:00:37Z",
+    "lifetime_total_items": 7005,
     "excluded_legacy_items": 6976
   },
   "coverage_policy": {
@@ -3951,78 +3944,83 @@
     "review_policy": "Opinion, news, uncertain relevance, and newly discovered items with uncertain publication timing remain candidates for review."
   },
   "storage_format": "sharded-v1",
-  "items_count": 6999,
+  "items_count": 7005,
   "storage_chunks": [
     {
-      "path": "archive/records-2475c4a8929524eb.json",
+      "path": "archive/records-322a5054547f20ea.json",
       "count": 500,
-      "sha256": "2475c4a8929524ebe77c668d57384fe27973b1a23820cf2947db8d8b369ff8f3"
+      "sha256": "322a5054547f20eaed27095c602227221dad98bc0a8db6c21a53113c780c3a42"
     },
     {
-      "path": "archive/records-2f3d6917eb1433a2.json",
+      "path": "archive/records-04702be24fb45b37.json",
       "count": 500,
-      "sha256": "2f3d6917eb1433a2681389c281bae90705a1c2c44b12409f012d1db56be1592a"
+      "sha256": "04702be24fb45b372721e7def740100a920728ef6ba1b0f84ed621fdc1b0df7f"
     },
     {
-      "path": "archive/records-19b9a1967c2e8b00.json",
+      "path": "archive/records-5952918ceb59c61c.json",
       "count": 500,
-      "sha256": "19b9a1967c2e8b00a9ecc23202f3e2406ba4e730fd37fb451f1f283f79c9b4fa"
+      "sha256": "5952918ceb59c61cec1d698ebc7eaef996ef3bd10a4e228e4c0b0a4e91f2250c"
     },
     {
-      "path": "archive/records-61a85529cc3fd8d7.json",
+      "path": "archive/records-2a15439465b85a1e.json",
       "count": 500,
-      "sha256": "61a85529cc3fd8d708c4fbca67c3fe57fe30777fe8b58670670c9c23ea5bdb96"
+      "sha256": "2a15439465b85a1eb8d941a39d9c974f0844b2cc50396d63d0bb93a918a2fe9f"
     },
     {
-      "path": "archive/records-698e65c90e1382a6.json",
+      "path": "archive/records-af2b92472907d17f.json",
       "count": 500,
-      "sha256": "698e65c90e1382a67dbce2a44e5277c1f3cc83904ac958074bd3e78af16489b4"
+      "sha256": "af2b92472907d17fa3b081415493836e173012f6f3f1a19136a4d92b9cf8d283"
     },
     {
-      "path": "archive/records-c2ab7d1701387b0c.json",
+      "path": "archive/records-bec44fd88d9bf751.json",
       "count": 500,
-      "sha256": "c2ab7d1701387b0c7d3e3d2265561d303b9bde119082266575ab33e994dabdb9"
+      "sha256": "bec44fd88d9bf7510ccf069000427de4565164ef117dd004329edc987b1b3fce"
     },
     {
-      "path": "archive/records-c37f780b183f2b1e.json",
+      "path": "archive/records-ab802385e081feca.json",
       "count": 500,
-      "sha256": "c37f780b183f2b1e9ce3e03c002256a1d3d0ffdfc591cd37db025eedd280b876"
+      "sha256": "ab802385e081feca94635fe8bdaa0b33106f79d825a1509fa5bceb6cb7a1bc84"
     },
     {
-      "path": "archive/records-7fd2107fdb76f68d.json",
+      "path": "archive/records-3e421711ef49e615.json",
       "count": 500,
-      "sha256": "7fd2107fdb76f68d6ff0daeeec4067d712bf5eebb334776d1920f4b9ffa318e1"
+      "sha256": "3e421711ef49e61504997b2b4b1f411a3856048012e2c81356318be998ca520f"
     },
     {
-      "path": "archive/records-fdd7ed622fdfbcbc.json",
+      "path": "archive/records-c9c7a6f94669c68a.json",
       "count": 500,
-      "sha256": "fdd7ed622fdfbcbc75ed62d3a150806f7eb514b8aafa925c2f3115820f6ff77a"
+      "sha256": "c9c7a6f94669c68a6bfc56db0f5324d554be2e45f18ff5dfef55b1f78b4d776e"
     },
     {
-      "path": "archive/records-881d652f64b87aa6.json",
+      "path": "archive/records-8ef6a217b2425f4e.json",
       "count": 500,
-      "sha256": "881d652f64b87aa6597c84b191b5917d67c82fff8e41697cbae225624ff42395"
+      "sha256": "8ef6a217b2425f4e997fd86df4c82545f6dc35150a130885e4eab5c8992f1a3e"
     },
     {
-      "path": "archive/records-cc53a0e578ff5ede.json",
+      "path": "archive/records-1273fd7638bd61d6.json",
       "count": 500,
-      "sha256": "cc53a0e578ff5ededf18614aadf401562c68be8d8267c8f4338cd717e7f942ae"
+      "sha256": "1273fd7638bd61d6fd24e47f25b93213e6f3387d64d6672588214d3ef5ecde21"
     },
     {
-      "path": "archive/records-69402e64c9a2a58d.json",
+      "path": "archive/records-afee95b7789d8087.json",
       "count": 500,
-      "sha256": "69402e64c9a2a58d5010b25281564092ae8c521bb64be0d7934a6e251a8d2d7a"
+      "sha256": "afee95b7789d8087efb41e16ed9048400e0828633138022579e0389c143d2c55"
     },
     {
-      "path": "archive/records-135110b39f2d1dd9.json",
+      "path": "archive/records-bc3999daa4155bfb.json",
       "count": 500,
-      "sha256": "135110b39f2d1dd97316ba9d5565d9e8c3451613a4a298d6ba70883116bcc444"
+      "sha256": "bc3999daa4155bfb768de385ca14865348bc7d5c59bc6e78577f2ae5f199a086"
     },
     {
-      "path": "archive/records-c455b2b636a040af.json",
-      "count": 499,
-      "sha256": "c455b2b636a040af19967cc6cb32bac40a1dcafaa850478c7b0edf7c5641c749"
+      "path": "archive/records-675f11782c98a518.json",
+      "count": 500,
+      "sha256": "675f11782c98a518c25afb1629becd5194e603d1fa41ac0ee60b9583d5b30165"
+    },
+    {
+      "path": "archive/records-a5193e7e649989b5.json",
+      "count": 5,
+      "sha256": "a5193e7e649989b5b15bb027ba2a651fd5716690a8220443e6f5fc37f70d8ba9"
     }
   ],
-  "storage_generation": "archive/manifest-b66fbfb3de9a0aec.json"
+  "storage_generation": "archive/manifest-47e5b283ba0f00f8.json"
 }
