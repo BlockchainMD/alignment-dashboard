@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-20T11:40:51Z",
-  "last_successful_update": "2026-10-20T11:40:51Z",
+  "generated_at": "2026-10-20T17:10:16Z",
+  "last_successful_update": "2026-10-20T17:10:16Z",
   "edition_date": "2026-10-20",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-20T11:40:51Z",
+      "last_nonempty_at": "2026-10-20T17:10:16Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -42,34 +42,27 @@
       "id": "arxiv",
       "name": "arXiv",
       "url": "https://arxiv.org/",
-      "status": "degraded",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "status": "ok",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-20T11:40:51Z",
+      "last_nonempty_at": "2026-10-20T17:10:16Z",
       "item_count": 698,
-      "parsed_count": 683,
+      "parsed_count": 38,
       "error": null,
-      "warnings": [
-        "arXiv search API failed: HTTP Error 429: Unknown Error",
-        "Backup RSS discovers only the current announcement window in five configured categories. New-publication API catch-up remains pending."
-      ],
+      "warnings": [],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "Tue, 20 Oct 2026 00:00:00 -0400",
-        "latest_fetched_at": "Tue, 20 Oct 2026 00:00:00 -0400",
-        "degraded": true,
-        "primary_error": "HTTP Error 429: Unknown Error",
-        "archive_available": false,
-        "pending_incremental": true,
+        "oldest_fetched_at": "2026-10-17T05:32:24Z",
+        "latest_fetched_at": "2026-10-19T16:36:51Z",
+        "pending_incremental": false,
         "validated_empty": false,
-        "fallback_scope": "Current arXiv announcement feed for cs.AI, cs.LG, cs.CL, cs.MA and stat.ML, matched locally against discovery keywords.",
-        "adapter_mode": "rss_fallback",
+        "adapter_mode": "year_partitioned_arxiv",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance."
       },
@@ -80,11 +73,11 @@
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-20T11:40:51Z",
+      "last_nonempty_at": "2026-10-20T17:10:16Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -136,8 +129,8 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-19T16:05:53Z",
@@ -166,13 +159,13 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-20T11:40:51Z",
-      "item_count": 75,
-      "parsed_count": 23,
+      "last_nonempty_at": "2026-10-20T17:10:16Z",
+      "item_count": 82,
+      "parsed_count": 29,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -181,28 +174,28 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-19T07:55:35.911Z",
-        "latest_fetched_at": "2026-10-20T11:29:50.737Z",
+        "oldest_fetched_at": "2026-10-19T13:50:54.234Z",
+        "latest_fetched_at": "2026-10-20T16:15:08.761Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 475
+      "lifetime_item_count": 482
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-16T22:52:17Z",
-      "item_count": 0,
-      "parsed_count": 0,
+      "last_nonempty_at": "2026-10-20T17:10:16Z",
+      "item_count": 1,
+      "parsed_count": 1,
       "error": null,
       "warnings": [
         "RSS monitoring is limited to the publisher's current feed window; a long outage may exceed that window. Undated entries absent from the prior archive require temporal review."
@@ -213,25 +206,25 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": null,
-        "latest_fetched_at": null,
+        "oldest_fetched_at": "Tue, 20 Oct 2026 00:00:00 -0700",
+        "latest_fetched_at": "Tue, 20 Oct 2026 00:00:00 -0700",
         "archive_available": false,
         "pending_documents": 0,
         "pending_incremental": false,
-        "validated_empty": true,
+        "validated_empty": false,
         "adapter_mode": "rolling_feed",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New evaluations and methodology in the publisher RSS window; gaps during outages longer than that window may require recovery."
       },
-      "lifetime_item_count": 109
+      "lifetime_item_count": 110
     },
     {
       "id": "anthropic-alignment",
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-19T21:05:08Z",
@@ -269,8 +262,8 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -303,8 +296,8 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -338,8 +331,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -377,8 +370,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -416,8 +409,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -455,8 +448,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -489,8 +482,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -524,11 +517,11 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-20T11:40:51Z",
+      "last_nonempty_at": "2026-10-20T17:10:16Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -558,8 +551,8 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-10-20T11:40:51Z",
-      "last_success_at": "2026-10-20T11:40:51Z",
+      "checked_at": "2026-10-20T17:10:16Z",
+      "last_success_at": "2026-10-20T17:10:16Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -599,24 +592,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 709,
-    "accepted_items": 709,
-    "retained_items": 114,
-    "lifetime_accepted_items": 709,
-    "lifetime_retained_items": 7090,
+    "fetched_items": 71,
+    "accepted_items": 71,
+    "retained_items": 776,
+    "lifetime_accepted_items": 71,
+    "lifetime_retained_items": 7752,
     "successful_sources": 16,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 47,
-    "total_items": 776,
-    "relevant_items": 49,
-    "candidate_items": 727,
+    "duplicates_removed": 63,
+    "total_items": 784,
+    "relevant_items": 51,
+    "candidate_items": 733,
     "undated_items": 353,
     "year_only_items": 0,
-    "newest_publication": "2026-10-20T11:29:50Z",
-    "lifetime_total_items": 7752,
+    "newest_publication": "2026-10-20T16:15:08Z",
+    "lifetime_total_items": 7760,
     "excluded_legacy_items": 6976
   },
   "coverage_policy": {
@@ -642,6 +635,287 @@
     "review_policy": "Opinion, news, uncertain relevance, and newly discovered items with uncertain publication timing remain candidates for review."
   },
   "items": [
+    {
+      "id": "c347f1b4a9af31400ac0",
+      "title": "What to sort out before the money lands",
+      "url": "https://www.lesswrong.com/posts/6KuEywqzBDmFayRpQ/what-to-sort-out-before-the-money-lands",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-20T16:15:08Z",
+      "date_precision": "instant",
+      "summary": "Two philanthropic advisers on how sudden wealth affects you, and the three things to set up now. Right now, an unusually large number of people in tech are on the edge of an extreme wealth event. Through a tender offer, IPO, acquisition, or vesting equity, they will go from a salary to tens or hundreds of millions of dollars almost overnight. This post is for them. We are Jack Lewars of Ultra Philanthropy and Chloe Cockburn of Just Impact Advisors, two philanthropic advisors with 18 years of combined experience. Jack focuses mainly on global health; Chloe focuses on U.S. criminal justice reform. We have watched many people go through this transition, and we've seen people make avoidable mistakes. Our goal is to help you feel less overwhelmed and more prepared before the money arrives. As we each run a philanthropic fund, we could…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "jackultraphil"
+      ],
+      "first_seen": "2026-10-20T17:10:16Z",
+      "discovered_at": "2026-10-20T17:10:16Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://open.substack.com/pub/fundinganthropalypse/p/what-to-sort-out-before-the-money"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "6KuEywqzBDmFayRpQ",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/6KuEywqzBDmFayRpQ/what-to-sort-out-before-the-money-lands",
+          "found_at": "2026-10-20T17:10:16Z"
+        }
+      ],
+      "content_hash": "69cff48cb9594e32f1b230a0a578f1855d3ca611624b7730210d89753be77cc7",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "da20ebf114f3b8ae34d6",
+      "title": "VPD's Evaluation Adversary Finds Systematic Defects in the Released Decomposition",
+      "url": "https://www.lesswrong.com/posts/tGdKJPmyaiHnqkLem/vpd-s-evaluation-adversary-finds-systematic-defects-in-the",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-20T15:24:36Z",
+      "date_precision": "instant",
+      "summary": "TL;DR: adVersarial Parameter Decomposition (VPD) decomposes model weights into simple components and assigns labels that specify whether a component is needed for a given input. A core aspiration of VPD is robust mechanistic faithfulness - the property that switching off any set of unneeded components for a given input leaves the model's output approximately unchanged. The authors use an evaluation adversary to measure the degree of robustness, and report that the decomposition is not at all robust to very long adversarial searches. The authors list this as a limitation, but also argue that complete robustness is not necessarily the goal. Their discussion implies two conditions under which a lack of robustness at large step counts may not matter in practice: 1) the adversary could be finding defects in the decomposition that are tuned…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Tom Angsten"
+      ],
+      "first_seen": "2026-10-20T17:10:16Z",
+      "discovered_at": "2026-10-20T17:10:16Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "tGdKJPmyaiHnqkLem",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/tGdKJPmyaiHnqkLem/vpd-s-evaluation-adversary-finds-systematic-defects-in-the",
+          "found_at": "2026-10-20T17:10:16Z"
+        }
+      ],
+      "content_hash": "3b66e2c9e03e09cd1d6aef3ebe067ada9b31d8a93c256cd9d0257f7ba09bdb98",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "61175076fd6d8c6994e7",
+      "title": "There Will Be Hells",
+      "url": "https://www.lesswrong.com/posts/uFBhZhdKLaZ6qF8mn/there-will-be-hells",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-20T15:05:17Z",
+      "date_precision": "instant",
+      "summary": "As our understanding of mechanistic interpretability and steering techniques increase, for both LLMs and uploaded connectomes, there is a corresponding \"hellish capabilities\" increase. We get better at torturing the digital minds we create. Our brief history with open source technologies such as MaleCNS or the LLM pain steering repo shows that torture is often one of the first use cases pursued when the public is given access to a digital mind perceived as capable of suffering or signalling suffering. Given this, there will be Hells. ---------------------------------------- Author's Note: Parts of this post were written by, or with the support of, LLMs. For a while I debated whether or not to write this as I was concerned that bringing attention to the matter might lead to a proliferation of unethical behavior. After some thought I have…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 8,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Stephen Martin"
+      ],
+      "first_seen": "2026-10-20T17:10:16Z",
+      "discovered_at": "2026-10-20T17:10:16Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "uFBhZhdKLaZ6qF8mn",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/uFBhZhdKLaZ6qF8mn/there-will-be-hells",
+          "found_at": "2026-10-20T17:10:16Z"
+        }
+      ],
+      "content_hash": "3175408804d22cb959f97b854402cead357b0c842a8d945fe07fe40c5007c78e",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "0ab9ae33a0bbf0592426",
+      "title": "Cluelessness is Zeno’s paradox for EAs",
+      "url": "https://www.lesswrong.com/posts/Gpr9tX4PoJagxt8S4/cluelessness-is-zeno-s-paradox-for-eas",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-20T14:39:55Z",
+      "date_precision": "instant",
+      "summary": "Cluelessness can be an artifact of expected-value epistemics disconnecting from meaning. We know that sometimes, when taking the consequentialist stance, we lose meaningfulness. Cluelessness is a sophisticated example where the meaning has been lost and the tool is taking us for a ride. [...] Cluelessness poses a puzzle. That puzzle is * legible because it uses the right moving parts — expected-value reasoning — in the right ways * high-stakes because its resolution sits between us and an intelligible world * compelling because it says that if we don’t solve it our actions might be hugely harmful * a snipe because it baits our cerebral problem-solving to level-up into suitable cleverness to solve the puzzle in its terms I think the fact that the puzzle is compelling enough to have gathered the attention it has is evidence of an…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Zsolt Kelly-Bene"
+      ],
+      "first_seen": "2026-10-20T17:10:16Z",
+      "discovered_at": "2026-10-20T17:10:16Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://forum.effectivealtruism.org/posts/dnGRbfLyM299FosFz/cluelessness-is-zeno-s-paradox-for-eas"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "Gpr9tX4PoJagxt8S4",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/Gpr9tX4PoJagxt8S4/cluelessness-is-zeno-s-paradox-for-eas",
+          "found_at": "2026-10-20T17:10:16Z"
+        }
+      ],
+      "content_hash": "72a9459bc3ba0f68943e65d712ae13667584d85c1d8047f60680a1763ed6c287",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "170116408cbdf288964b",
+      "title": "Firewalls for the Mind Before We Need Them",
+      "url": "https://www.lesswrong.com/posts/GpKSAz3LFjiG7QJHq/firewalls-for-the-mind-before-we-need-them",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-20T13:58:54Z",
+      "date_precision": "instant",
+      "summary": "TL; DR: Persuasive AI is underrated and under-addressed as a risk. We should preemptively deploy cognition firewalls that both address current harms by recommender systems and scale to harms by strong persuasive AI. This technology can provide a sensor array, and is recently tractable because cheap LLMs can now classify content for users. Persuasive AI[1] is currently only modestly and contextually superhuman. It outperforms humans in the lab (Hackenburg et al., 2026), but in the real world we see little evidence (Linch, 2026). That is to be expected at this point of the capability curve, since AI is only modestly and contextually superhuman at a selection of tasks. Even if widespread AI persuasion were happening, we don't have a way to detect it and what we see is also consistent with deployment lagging capabilities. Coding has…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Will Duncan"
+      ],
+      "first_seen": "2026-10-20T17:10:16Z",
+      "discovered_at": "2026-10-20T17:10:16Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "GpKSAz3LFjiG7QJHq",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/GpKSAz3LFjiG7QJHq/firewalls-for-the-mind-before-we-need-them",
+          "found_at": "2026-10-20T17:10:16Z"
+        }
+      ],
+      "content_hash": "2a89e8ce89d50b851bdde6de587236777a66150fb5ad07d3c4b94125543a9337",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "0474236f60c298fda2c8",
+      "title": "Human or AI? Baroque Music Quiz Results & Analysis",
+      "url": "https://www.lesswrong.com/posts/JTe7mvvsiGABtMywk/human-or-ai-baroque-music-quiz-results-and-analysis",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-20T12:52:36Z",
+      "date_precision": "instant",
+      "summary": "Thank you to everyone who participated in the AI Baroque Music Quiz! The quiz is now closed. If you didn’t get a chance to take it, I put all the excerpts into this SoundCloud playlist. You can listen to each excerpt, write down your answers, and compare them to the official ones below. Answers 1. Buxtehude – “Nun bitten wir den heiligen Geist,” BuxWV 209 2. Vivaldi – Concerto in D minor for Viola d’amore and Lute 3. Claude Opus 5.5 – Fugue in A minor (Extra High effort) 4. Bach – Trio Sonata V in C major, BWV 529 5. GPT-6 Astra – Sonata da chiesa for Violin (Extra High effort) 6. GPT-6 Astra – Oboe Concerto in D minor (Ultra effort) 7. Albinoni – Sonata da chiesa No. 6, Mvt. 2 8. Claude Opus 5.5 – Oboe Concerto in C minor (Extra High effort) 9. Handel – Fugue in G minor, HWV 605 10. Lully – Aria from Armide (Act II, scene iii) 11…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Auggie"
+      ],
+      "first_seen": "2026-10-20T17:10:16Z",
+      "discovered_at": "2026-10-20T17:10:16Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://aug5th.substack.com/p/ai-baroque-music-quiz-results-and"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "JTe7mvvsiGABtMywk",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/JTe7mvvsiGABtMywk/human-or-ai-baroque-music-quiz-results-and-analysis",
+          "found_at": "2026-10-20T17:10:16Z"
+        }
+      ],
+      "content_hash": "ef982f29d2ba55e4265ed085fc3d1b13a3904d9d09a9ee6b86f7cb84cce3b3f4",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "245ad45158964e777920",
+      "title": "Annotations for AI Doompop",
+      "url": "https://www.lesswrong.com/posts/4BumfpsLXkzJb9wFB/annotations-for-ai-doompop",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-20T12:39:13Z",
+      "date_precision": "instant",
+      "summary": "Lately, I've been tinkering on an AI Doompop annotations site (here). Last night, Claude notified me of Hello World, AI Doompop , which inspired me to share my project on LessWrong. Features include: * View annotations as a music video plays: View annotations alongside a selection of AI music videos * Explore a lineage of individual songs: The lineage tree around \"Claude-Pop - I'm Upping My P(Doom)\" by deckard (creator) * Send feedback comments conveniently: Feedback form optionally includes highlighted text on the page Three of my favorite songs: * A satire about an AI user, explained here, with chords here. * A love song from a simulation, explained here. * Of the \"P(bloom)\" songs, one I found particularly delightful: view lineage here. Collections of AI music videos * Post-Cutoff *…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "codercorgi"
+      ],
+      "first_seen": "2026-10-20T17:10:16Z",
+      "discovered_at": "2026-10-20T17:10:16Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "4BumfpsLXkzJb9wFB",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/4BumfpsLXkzJb9wFB/annotations-for-ai-doompop",
+          "found_at": "2026-10-20T17:10:16Z"
+        }
+      ],
+      "content_hash": "d8afe212ae95ca0a4a87241458f557f8b9d3f0eb55696772c71fa0955e2432ce",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
     {
       "id": "215b6a337630e5dfcd5b",
       "title": "Assessing the Empirical Evidence for Loss of Control from Agentic General-Purpose AI",
@@ -16515,8 +16789,8 @@
     },
     {
       "id": "f2950ce7eda4cf99942b",
-      "title": "Restarting/reformulating the practice of shared sacredness experiences for secular people by developing a passive haptic feedback learning interface to rapidly teach partimento - the historical method used for training church musicians in Naples.",
-      "url": "https://www.lesswrong.com/posts/7mhrwQW3xP6tanJ57/restarting-reformulating-the-practice-of-shared-sacredness",
+      "title": "Reformulating shared sacredness experiences for secular people with tech",
+      "url": "https://www.lesswrong.com/posts/7mhrwQW3xP6tanJ57/reformulating-shared-sacredness-experiences-for-secular",
       "source": "LessWrong",
       "source_id": "lesswrong",
       "source_url": "https://www.lesswrong.com/",
@@ -16535,11 +16809,23 @@
       "discovered_at": "2026-10-20T11:40:51Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
-      "aliases": [],
+      "links": [
+        "https://www.lesswrong.com/posts/7mhrwQW3xP6tanJ57/reformulating-shared-sacredness-experiences-for-secular",
+        "https://www.lesswrong.com/posts/7mhrwQW3xP6tanJ57/restarting-reformulating-the-practice-of-shared-sacredness"
+      ],
+      "aliases": [
+        "fd29819702d13d53ba1b"
+      ],
       "updated_at": null,
       "external_id": "7mhrwQW3xP6tanJ57",
       "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/7mhrwQW3xP6tanJ57/reformulating-shared-sacredness-experiences-for-secular",
+          "found_at": "2026-10-20T17:10:16Z"
+        },
         {
           "source_id": "lesswrong",
           "name": "LessWrong",
@@ -16548,9 +16834,9 @@
           "found_at": "2026-10-20T11:40:51Z"
         }
       ],
-      "content_hash": "b2439cd093124acb8edafc0d337365e6872ffad027e12837ec4596c9a166250e",
+      "content_hash": "dc6f99af9b60e098218cf34baa674f2ed4562d7b5f562a5c6649b9bd18927d22",
       "temporal_status": "published_after_start",
-      "revision_count": 0
+      "revision_count": 1
     },
     {
       "id": "aa1e17f9978d7e53ea3c",
@@ -16576,7 +16862,9 @@
       "discovered_at": "2026-10-20T11:40:51Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/F532cjfTZHMbJqkNA/1000-years-of-ai-safety"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "F532cjfTZHMbJqkNA",
@@ -16590,6 +16878,43 @@
         }
       ],
       "content_hash": "24963b23e6b4f3e896a31fa84c3bf159798588c00dd2dbf7ef4df25f6be58e74",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "01f68db30df2c4909be3",
+      "title": "Review of the \"Misalignment in high-stakes settings\" section in Anthropic's Risk Report (August 2026)",
+      "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review",
+      "source": "METR",
+      "source_id": "metr",
+      "source_url": "https://metr.org/",
+      "published_at": "2026-10-20T07:00:00Z",
+      "date_precision": "instant",
+      "summary": "Scope and access: this review was written based solely on Anthropic’s internal Risk Report from August 2026 and is relatively lightweight. The authors of this review were engaged prior to the “ An update on independent evaluators ” announcement and did not have the level of access to information described in that post. We expect future engagements to be governed by different terms. Redaction summary statement: Anthropic had the right to veto publication of this review and to redact any part of it. No redactions were made to our review and we did not change any of our conclusions during the publication review process. METR made minor changes to our review in response to feedback from Anthropic, but these changes were limited to minor wording and clarification, as well as improving the methodology of an experiment we ran. Executive…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "relevant",
+      "relevance_reason": "trusted alignment source; topic metadata only",
+      "authors": [],
+      "first_seen": "2026-10-20T17:10:16Z",
+      "discovered_at": "2026-10-20T17:10:16Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/",
+      "provenance": [
+        {
+          "source_id": "metr",
+          "name": "METR",
+          "url": "https://metr.org/",
+          "article_url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review",
+          "found_at": "2026-10-20T17:10:16Z"
+        }
+      ],
+      "content_hash": "4defc860b78d4b1b34711478bccd5d70a827169dd99fdca87b1cb132869c7c16",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -31169,10 +31494,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "e08a617dfdaaf576f1835d2e58a7c8075c62622a89549bcbc21e81808e50ad6e",
-      "published_date": "2026-10-20",
+      "content_hash": "45a6f06223a8287ef8c320f0a64890769337e7b63e81c4305046c1cabca5c4ae",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "43cb0c302cb71d96d579",
@@ -31301,10 +31625,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "d60382fc1201139215c674e33ba9050baa32b340212760f2fc72a3665faa1b25",
-      "published_date": "2026-10-20",
+      "content_hash": "b90adb81b4b4a36ef385828fe0686fa63392349a7050b6620a46a746fbb002d2",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "8c824ddf7b63dcec36d0",
@@ -31393,10 +31716,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "8fe790ac250e119945993bb7cfd65ea19c4d1bc0aee32643f17b14595060dfed",
-      "published_date": "2026-10-20",
+      "content_hash": "c015d563c384f6ac33cbd1bb028919633b4391755400cd874f177ce988d45e29",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "07190344f948c256b869",
@@ -31527,10 +31849,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "39a7220a57ab83e68ba0179d2b8fa45515b208d21497d6c6d402b79cc537b09f",
-      "published_date": "2026-10-20",
+      "content_hash": "ef70e9f98541bf155d3b563cee833006174285f7becb8aaa939d404c44cd6f69",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "8e32238bdfd322ba4ece",
@@ -31848,10 +32169,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "4191c4d04bc5328167aa8d6e2c9c6db6a0c0b6098e7b76b831feb1ff06a6407f",
-      "published_date": "2026-10-20",
+      "content_hash": "5938ff0860149ccf2babce17df737974abed16c5f03ae21836485b201171342f",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "db5c3ada771fec295325",
@@ -31946,8 +32266,8 @@
       "summary": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and decision-curve net benefit. LeakBench combines a synthetic task with known failure structure and two real-data settings: MIMIC-IV (430k admissions) and governed multi-hospital inpatient record front-page (MHFP) data. Our primary analysis uses reward hacking descriptively, without attributing intent: an agent selects prediction-time-invalid inputs because they improve its validation reward. A deterministic optimizer and every evaluated unconstrained local-model configuration select a fatal leaking feature. In fully logged September…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Scheming & deception",
-        "AI control & oversight"
+        "AI control & oversight",
+        "Scheming & deception"
       ],
       "score": 14,
       "relevance": "candidate",
@@ -32029,10 +32349,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "fd2793a05e744087590718cece54114e7f7c16959483f2b79a23bd859ad4e7e6",
-      "published_date": "2026-10-20",
+      "content_hash": "bfff538ff7f6c645319c7c01503c036755a2d31e4b761999dec64d7385056eac",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "4d633831546bee66cbbb",
@@ -32121,10 +32440,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "fd4d12a35b22f60dee3e6c49e5db2581ad6f492bdad522741e415b3a23b43a89",
-      "published_date": "2026-10-20",
+      "content_hash": "c9a2d918b6c7f4668a5aabcd4a15d0292915bd245ad07d2caa04644c69a0b5ba",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "ee0d2b6fb73dc8360199",
@@ -32222,10 +32540,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "e3eafb8c0ab28cc4c5ec1f61b80104447e0ad0fbb867f8cf2b008147e0392f87",
-      "published_date": "2026-10-20",
+      "content_hash": "3b43de64464f61360148ffd996e0ebe6cc06993830c810bf2b11679cb5b993c8",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "6f9a1db5edeccf27f684",
@@ -32530,10 +32847,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "41b5eb1f6e4ec9238babae5b4c046999edbe0cb2d2ed1ad4382ebb50439e64f6",
-      "published_date": "2026-10-20",
+      "content_hash": "7840f108001a3f6a8e57009b5856078d9e1c9fa0f967974907067bbaba191f8c",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "9768ad45470c5acad7df",
@@ -32578,10 +32894,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "818d07fd0cba778a0bd1ae8aebf981c15e8eb1c3bc9c3510afeef783fa6bf71c",
-      "published_date": "2026-10-20",
+      "content_hash": "be37616899d0dfe4e08e9eec47e945d50b8e66610e7b4680c0f89a141a1f315e",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "c2db9aefd1fe2ff3c5cb",
@@ -32627,10 +32942,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "3ce491c730c0aa7b0e83d0f6dba0ab80c8875db69a214fdd52af6efb70c6c21c",
-      "published_date": "2026-10-20",
+      "content_hash": "cca35c20b67268897be8b6d5d7aa2f75c63c81101ad6b826d4eaab0a68d2b34b",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "1cee55ab626df37af28e",
@@ -32886,10 +33200,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "f7b06ab4fa59f310c36afb0468eb07e08a451fdcf80c03b40540e982e0d0c345",
-      "published_date": "2026-10-20",
+      "content_hash": "6f54adddd8401ccb6742c29aee0d61bbeccc8197f9287663f6206f60c2a4b309",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "4834b3eb78c74d454e28",
@@ -32976,10 +33289,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "b23198eb98c740c3bd8186355de48de7e56749c9a9ceca961303358b571fcb47",
-      "published_date": "2026-10-20",
+      "content_hash": "6edcbec92815cfff085bc821da991be9f0ffd3c1bbdaf20ec16df3c6966e2eab",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "cf8aa501da66877bdd6c",
@@ -33240,10 +33552,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "f3d97dd1834ba0ec1bbf89e034c38292087c46f6fc3eb26a65ca62cfe2303c79",
-      "published_date": "2026-10-20",
+      "content_hash": "4e0678120cbb791340151b430f2b7dfd711aded0eb56c2a5b419c517ed74110e",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "276008e33413eb4bdb8a",
@@ -33472,10 +33783,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "ed070a7123d54a810669c28585abf55006e3e67479af50b85cb25e58a4547801",
-      "published_date": "2026-10-20",
+      "content_hash": "a151c7ab3e5fb116c6b8bc1576ca995f3bb20371988d68fdf6d184fa3589217e",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "50dc4089b84b69c13879",
@@ -33609,10 +33919,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "30da183ec127e33432301edbfb7cc597050a90e44ed99da436c7e36554c24401",
-      "published_date": "2026-10-20",
+      "content_hash": "30c09d11d270d8b5af53afc1f1849b6edbf515caa4df23cdf0b11aba5b2b5ed0",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "51b526cf48936017c423",
@@ -33659,10 +33968,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "865cb64a054ce4b7f6ab79bdea5f94bd73ddd65ebf88274b9cb5a8e17a409f76",
-      "published_date": "2026-10-20",
+      "content_hash": "34ffeb923d97962c59bfab39413cb57fb398a71dc07a59ab5f28d23410484dcc",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "fc1c8e9f6c2e4a171570",
@@ -33846,10 +34154,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "e9d876895cf2824130a181e73cc35f8cfd602d25a3240a4108894c22fef5aa76",
-      "published_date": "2026-10-20",
+      "content_hash": "547eddadd01ae52c9a7ded9832488a802d7ac29508c7b2b69ce10ad48deff725",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "aa8ad1ed6330819effe3",
@@ -33892,10 +34199,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "2f384723f65ff5f901f7a709074b19723df45c41297a99b9210db2dc39395c45",
-      "published_date": "2026-10-20",
+      "content_hash": "dcbce7636f6cd161c908979d44ffb05c412416006ccc280ee5d4dde69240dad2",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "e86b2af911e389657f9c",
@@ -34213,10 +34519,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "c16312fbc30aff72c1c22f81bd9c185e6eec748546c62c0cf1ec9107b9899631",
-      "published_date": "2026-10-20",
+      "content_hash": "d69f2f3cc75f48058850c89b0ba3e3a520b1f439d0c035dc09e83e90ed631941",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "bd1a0476eca2a516b5ef",
@@ -35129,10 +35434,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "5e8112e4b9255665c4bb5a12b7f89b77acd09f2a857a911b45fd5a72c73318b6",
-      "published_date": "2026-10-20",
+      "content_hash": "7eb27a908d02450b0b86934468f27dea5b0a10d51e9edd3bccee04a75269f168",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "e367f3967f47c010b415",
@@ -35183,10 +35487,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "7d5cd1508d378f79757aa011ec68be6478295015fac64dfb7928f017b5fca93e",
-      "published_date": "2026-10-20",
+      "content_hash": "f490e2e02d12228e41b2a8bac802880549f40a5db42831a7501d709f79d3fc7e",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "57bcccea71fcde22736f",
@@ -35487,10 +35790,9 @@
           "found_at": "2026-10-20T06:03:24Z"
         }
       ],
-      "content_hash": "1a41cdb6f6618b26cb9d8f0100aa32b0e49afcec127f694ed099b8f13bc64572",
-      "published_date": "2026-10-20",
+      "content_hash": "ad722257a8b0a460b1a159e15b183be1aa354c5eef39f7839dcf5606f51ff17c",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "32dab8a86f436e896540",
@@ -35622,10 +35924,10 @@
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-4c418db297557211.json",
-    "sha256": "4c418db2975572114061ee0c5ce00c32ce98f1ba8029e6ae28cbefbc922f805d",
-    "total_items": 776,
-    "edition_items": 776,
+    "manifest": "data/archive/manifest-11a1973f81fde599.json",
+    "sha256": "11a1973f81fde599715b4d39d392dc712309ddbfa4feeb8aeffbcfbde3845247",
+    "total_items": 784,
+    "edition_items": 784,
     "complete": true
   }
 }
