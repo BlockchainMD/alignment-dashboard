@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-25T22:34:58Z",
-  "last_successful_update": "2026-10-25T22:34:58Z",
+  "generated_at": "2026-10-26T01:12:56Z",
+  "last_successful_update": "2026-10-26T01:12:56Z",
   "edition_date": "2026-10-25",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-25T22:34:58Z",
+      "last_nonempty_at": "2026-10-26T01:12:56Z",
       "item_count": 3,
       "parsed_count": 3,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-10-19T12:31:37Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-18T19:39:23.750Z",
+        "incremental_window_start": "2026-10-18T22:34:58.010Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -43,13 +43,13 @@
       "name": "arXiv",
       "url": "https://arxiv.org/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-25T22:34:58Z",
-      "item_count": 1065,
-      "parsed_count": 105,
+      "last_nonempty_at": "2026-10-26T01:12:56Z",
+      "item_count": 1080,
+      "parsed_count": 118,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -58,26 +58,26 @@
         "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-18T19:59:40Z",
-        "latest_fetched_at": "2026-10-22T17:59:51Z",
+        "oldest_fetched_at": "2026-10-18T23:36:39Z",
+        "latest_fetched_at": "2026-10-23T13:42:34Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "year_partitioned_arxiv",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance."
       },
-      "lifetime_item_count": 1706
+      "lifetime_item_count": 1721
     },
     {
       "id": "openreview",
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-25T22:34:58Z",
+      "last_nonempty_at": "2026-10-26T01:12:56Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -105,7 +105,7 @@
           "AI safety": 2110,
           "mechanistic interpretability": 2838,
           "scalable oversight": 178,
-          "reward hacking": 999,
+          "reward hacking": 1000,
           "deceptive alignment": 28,
           "AI control": 134,
           "scheming": 52,
@@ -129,11 +129,11 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-25T22:34:58Z",
+      "last_nonempty_at": "2026-10-26T01:12:56Z",
       "item_count": 5,
       "parsed_count": 1,
       "error": null,
@@ -159,13 +159,13 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-25T22:34:58Z",
-      "item_count": 172,
-      "parsed_count": 13,
+      "last_nonempty_at": "2026-10-26T01:12:56Z",
+      "item_count": 174,
+      "parsed_count": 14,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -174,26 +174,26 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-24T20:52:56.930Z",
-        "latest_fetched_at": "2026-10-25T21:28:53.593Z",
+        "oldest_fetched_at": "2026-10-24T23:10:01.940Z",
+        "latest_fetched_at": "2026-10-26T01:10:56.370Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 572
+      "lifetime_item_count": 574
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-25T22:34:58Z",
+      "last_nonempty_at": "2026-10-26T01:12:56Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -223,8 +223,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-19T21:05:08Z",
@@ -262,11 +262,11 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-25T22:34:58Z",
+      "last_nonempty_at": "2026-10-26T01:12:56Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -283,7 +283,7 @@
         "latest_fetched_at": "2026-10-23T22:13:20.372Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-18T19:39:23.750Z",
+        "incremental_window_start": "2026-10-18T22:34:58.010Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public Substack publications, with bounded forward catch-up pagination when necessary. Historical archive crawling is disabled."
@@ -295,8 +295,8 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -330,8 +330,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -369,8 +369,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -408,8 +408,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -447,8 +447,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -481,8 +481,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -516,11 +516,11 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-25T22:34:58Z",
+      "last_nonempty_at": "2026-10-26T01:12:56Z",
       "item_count": 19,
       "parsed_count": 19,
       "error": null,
@@ -550,11 +550,11 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-10-25T22:34:58Z",
-      "last_success_at": "2026-10-25T22:34:58Z",
+      "checked_at": "2026-10-26T01:12:56Z",
+      "last_success_at": "2026-10-26T01:12:56Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-25T22:34:58Z",
+      "last_nonempty_at": "2026-10-26T01:12:56Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -591,24 +591,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 148,
-    "accepted_items": 148,
-    "retained_items": 1262,
-    "lifetime_accepted_items": 148,
-    "lifetime_retained_items": 8238,
+    "fetched_items": 162,
+    "accepted_items": 162,
+    "retained_items": 1266,
+    "lifetime_accepted_items": 162,
+    "lifetime_retained_items": 8242,
     "successful_sources": 16,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 144,
-    "total_items": 1266,
-    "relevant_items": 112,
-    "candidate_items": 1154,
+    "duplicates_removed": 145,
+    "total_items": 1283,
+    "relevant_items": 114,
+    "candidate_items": 1169,
     "undated_items": 509,
     "year_only_items": 0,
-    "newest_publication": "2026-10-25T21:28:53Z",
-    "lifetime_total_items": 8242,
+    "newest_publication": "2026-10-26T01:10:56Z",
+    "lifetime_total_items": 8259,
     "excluded_legacy_items": 6976
   },
   "coverage_policy": {
@@ -635,6 +635,84 @@
   },
   "items": [
     {
+      "id": "0e4ea1a2988e048735cc",
+      "title": "Making a Custom Mixer Interface for the 1818VSL",
+      "url": "https://www.lesswrong.com/posts/3Bh5gzAjGgHoMGjxZ/making-a-custom-mixer-interface-for-the-1818vsl",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-26T01:10:56Z",
+      "date_precision": "instant",
+      "summary": "Now that LLMs have made many kinds of coding a matter of saying what you're looking for, there are a lot of programs that now make sense. This weekend it was audio mixing software, customized for my use case (live sound for contra dancing) and hardware (a specific obsolete audio interface). In 2011 PreSonus released the 1818VSL, an 8-channel audio interface, with low-latency mixing software. I wrote: [...] At the time I did worry about how long I could expect it to be supported: [...] This was indeed a problem: in order to get the latency down, PreSonus had written a custom kernel driver. This integrated very deeply with the laptop's operating system, so that it could mix and apply effects as quickly as possible. In 2015-09, when Apple released OS X 10.11, they made a ton of changes, including completely rewriting the USB driver system…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "jefftk"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "3Bh5gzAjGgHoMGjxZ",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/3Bh5gzAjGgHoMGjxZ/making-a-custom-mixer-interface-for-the-1818vsl",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "50d560b7710e3246aa9bbb47b58da9a788a0d2fb0024963bce6fdef68a26f4cd",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "ad2795a64b7aeeba94e4",
+      "title": "Can you Trust Your AI Agent? A Case for AI Loyalty",
+      "url": "https://www.lesswrong.com/posts/77QEhHYeE6RbLqRnc/can-you-trust-your-ai-agent-a-case-for-ai-loyalty",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-26T00:06:10Z",
+      "date_precision": "instant",
+      "summary": "As AI agents become more capable, and as individuals, companies, institutions, and governments come to rely on them for an ever wider range of tasks, the question of whether these agents can be trusted will become increasingly important. There are two distinct components of agent trustworthiness that are useful to distinguish. The first, which we label loyalty, concerns whether an agent is genuinely attempting to carry out the user's instructions and act in accordance with their interests. The second, which we label reliability, concerns whether an agent is capable enough to accomplish the tasks that we assign to it. An example of the latter failure (unreliability) would be an agent tasked with maintaining an application accidentally deleting a critical database. Although potentially catastrophic, this failure would stem from an agent's…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Ephraiem Sarabamoun"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "77QEhHYeE6RbLqRnc",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/77QEhHYeE6RbLqRnc/can-you-trust-your-ai-agent-a-case-for-ai-loyalty",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "da08bcc2f1093a9521f22f56f25bd5789f78e9baf81b15f3e01c2416e2cb52dc",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "603a027bab280fa2a481",
       "title": "The AI buildout is the largest bet in the history of capitalism.",
       "url": "https://www.lesswrong.com/posts/qjsdvaaPC624Eropw/the-ai-buildout-is-the-largest-bet-in-the-history-of",
@@ -643,7 +721,7 @@
       "source_url": "https://www.lesswrong.com/",
       "published_at": "2026-10-25T21:28:53Z",
       "date_precision": "instant",
-      "summary": "This is part linkpost, and an expansion on a previous shortform posted on LW. I believe a massively undermade point in favour of the belief that AI will be a very big deal is that the AI buildout over the past four years is the largest bet in the history of capitalism. A titanic peacetime industrial effort is underway which has not had a comparison since the nineteenth century. The size of the effort and the scale of the spend signal that key decision makers and capital allocators believe very poweful AI will be achieved in the next few years. Many of us are vaguely aware that large sums are being spent, but the scale of the undertaking is astonishing: * The six largest spenders this year are spending more on Capital expenditures this year than the Russian government, governing 11 timezones and 143 million people, fighting a war on…",
+      "summary": "This is part linkpost, and an expansion on a previous shortform posted on LW. I believe a massively undermade point in favour of the belief that AI will be a very big deal is that the AI buildout over the past four years is the largest bet in the history of capitalism. A peacetime industrial effort is underway which has not had a comparison since the nineteenth century. The size of the effort and the scale of the spend signal that key decision makers and capital allocators believe that very powerful AI will be achieved in the next few years. Many of us are vaguely aware that large sums are being spent, but the scale of the undertaking is astonishing: * The six largest spenders this year are spending more on capital expenditures this year than the Russian government, governing 11 timezones and 143 million people, fighting a war on which…",
       "summary_kind": "publisher excerpt",
       "topics": [],
       "score": 1,
@@ -656,7 +734,9 @@
       "discovered_at": "2026-10-25T22:34:58Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/qjsdvaaPC624Eropw/the-ai-buildout-is-the-largest-bet-in-the-history-of"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "qjsdvaaPC624Eropw",
@@ -669,9 +749,9 @@
           "found_at": "2026-10-25T22:34:58Z"
         }
       ],
-      "content_hash": "4ab020f5e96101f50de5d01b7c47ac6d3ef55e082edeaab8e2739b1fc98e7946",
+      "content_hash": "e22057b88709b4ab7e5eb30015a6edf6ed85a2f36e5588857467cc11c13151c9",
       "temporal_status": "published_after_start",
-      "revision_count": 0
+      "revision_count": 1
     },
     {
       "id": "48279d5547d5e6566911",
@@ -695,7 +775,9 @@
       "discovered_at": "2026-10-25T22:34:58Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/dbBeff68R4toeegyw/different-eval-awareness-may-track-different-graders"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "dbBeff68R4toeegyw",
@@ -735,6 +817,7 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
+        "https://www.lesswrong.com/posts/Y3G26fHXYM3SKYEHh/san-francisco-state-university-in-twilight",
         "https://zackmdavis.net/blog/2026/Oct/san-francisco-state-university-in-twilight"
       ],
       "aliases": [],
@@ -776,7 +859,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://lambheart.substack.com/p/a-study-of-china-does-not-personal"
+        "https://lambheart.substack.com/p/a-study-of-china-does-not-personal",
+        "https://www.lesswrong.com/posts/rgwJjfKHGmArnqZsv/personal-experience-does-not-a-study-of-china-make"
       ],
       "aliases": [],
       "updated_at": null,
@@ -2067,6 +2151,52 @@
       "revision_count": 0
     },
     {
+      "id": "27a39d75b711767a8cae",
+      "title": "Interpretable Singing Emotion Recognition Using Acoustic and Vocal Technique Features",
+      "url": "https://arxiv.org/abs/2610.32629",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T13:42:34Z",
+      "date_precision": "instant",
+      "summary": "Singing emotion recognition relies predominantly on deep learning models that achieve strong performance but offer limited insight into the vocal characteristics driving emotion, of- ten overlooking the singing voice as a distinct signal. We propose an interpretable singing emotion recognition framework using a compact set of singing-specific descriptors across prosody, spec- tral features, phonetics, and vocal technique. To decode model decisions and link predictions to measurable acoustic phenomena, we employ SHAP and apply GRAD-CAM to qualitatively assess the learned representations of vocal techniques. Evaluations show that singing-specific features reduce cross-singer variability, while vocal technique descriptors provide interpretable insights into singing expression. Furthermore, out-of-domain evaluation on VocalSet reveals…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Fotini Kiriakopoulou",
+        "Vassilis Lyberatos",
+        "Spyridon Kantarelis",
+        "Athanasios Voulodimos",
+        "Giorgos Stamou"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32629",
+      "links": [
+        "https://arxiv.org/abs/2610.32629"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T13:42:34Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32629v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32629",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "f4dc6153a6d674901cc8fd5980a074f473d754c54268814b84ff8e8e2b362631",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "a80035f9382b6219481a",
       "title": "Why Governments Might Race to Build ASI Even If It Could Kill Us All",
       "url": "https://www.lesswrong.com/posts/tqxj7wsHEY6JkAReW/why-governments-might-race-to-build-asi-even-if-it-could",
@@ -2104,6 +2234,96 @@
         }
       ],
       "content_hash": "64d3362b80c583272660922ac61354fd3c86c3168ec0d018a57ed3320fdcb7f4",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "627c91dd5b8e26bd9bed",
+      "title": "An Arbitrary-Order Augmented Lagrangian Discrete De Rham Scheme for Contact Mechanics with Tresca Friction",
+      "url": "https://arxiv.org/abs/2610.32471",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T10:40:48Z",
+      "date_precision": "instant",
+      "summary": "We design and analyse an arbitrary-order augmented Lagrangian Discrete de Rham polytopal scheme for contact mechanics in fractured media. The fractures are represented as objects of codimension one in the matrix, a linear elastic medium, and a Tresca friction model is adopted when contact between fracture walls occurs. Both the normal Signorini-type/traction constraint and the Tresca friction law are recast as projection identities, and are combined into a single augmented Lagrangian bilinear form. The displacement is discretised by a DDR space of arbitrary polynomial degree $k\\ge 0,$ enriched on the fracture faces by bubble degrees of freedom that ensure stability via the existence of a discrete lifting between the Lagrange multiplier space and the discrete jump of the displacement along the fracture. We establish an abstract error…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Jérôme Droniou",
+        "Raman Kumar",
+        "Roland Masson"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32471",
+      "links": [
+        "https://arxiv.org/abs/2610.32471"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T10:40:48Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32471v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32471",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "33c137813ca43233ca9b60538bb25ffadf00a5bd9466f7d4e411ba854382ea1c",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "a1680480ac71fdd455be",
+      "title": "Reading Between the Layers: Cross-Modal Alignment and Representational Hierarchy in Vision Transformers",
+      "url": "https://arxiv.org/abs/2610.32463",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T10:30:51Z",
+      "date_precision": "instant",
+      "summary": "While large vision-language models excel at optical character recognition, it remains unclear how their underlying vision encoders process text and its meaning, and whether they support anything resembling reading comprehension. We systematically study transformer-based vision encoders, using cross-modal alignment between rendered text and visual concepts together with probing and retrieval-based analyses as a controlled window into these broader capabilities. Our layer-wise analyses span orthographic, grammatical, and semantic organization, and reveal that strong cross-modal mapping emerges only in the deepest layers, after unimodal object and text recognition have already developed, coinciding with a progression from surface-level to semantic representations. Although this hierarchy is strongest in contrastively trained models, larger…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Sugam Karki",
+        "Raúl Vázquez",
+        "Yova Kementchedjhieva"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32463",
+      "links": [
+        "https://arxiv.org/abs/2610.32463"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T10:30:51Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32463v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32463",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "1d22a5e3c819aad44417c1bb49d7b1998f8156c181bdc986bbd157cf5d3e6d95",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -2188,6 +2408,196 @@
         }
       ],
       "content_hash": "69f8e29d258db156b057deb16f53a0003cb6dc3053b2baa755ae74f78056f82d",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "bac7f46f70789e848c30",
+      "title": "Quantum theory of laser noise in coherent-scattering levitated optomechanics",
+      "url": "https://arxiv.org/abs/2610.32368",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T08:57:53Z",
+      "date_precision": "instant",
+      "summary": "State purity is a key resource for experimental tests of quantum mechanics with massive objects. Cavity cooling of a levitated nanoparticle via coherent scattering stands out as a strategy to prepare highly pure states of its roto-translational motion. In several cases, though, the performance of cooling by coherent scattering is limited by the classical fluctuations of the laser field. Here we present a quantum theory of coherent-scattering experiments which includes the effect of the laser amplitude and phase noise. We derive a master equation for the noise-averaged particle's dynamics, valid for both center-of-mass and rotational degrees of freedom, and quantify the cooling performance for different levels of noise in state-of-the-art experiments. We compute approximate analytical expressions for the laser-noise-induced heating rates…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Davide Candoli",
+        "Andreu Riera-Campeny",
+        "Lorenzo Dania",
+        "Oscar Schmitt Kremer",
+        "Johannes Piotrowski",
+        "Jayadev Vijayan",
+        "Lukas Novotny",
+        "Martin Frimmer",
+        "Oriol Romero-Isart",
+        "Carlos Gonzalez-Ballestero"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32368",
+      "links": [
+        "https://arxiv.org/abs/2610.32368"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T08:57:53Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32368v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32368",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "a869e28370549131088b6ccc26b3f7d308cb77e1f4ae9a4850f497b6566b4ae3",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "0ee43b0f5ac1ca1caf72",
+      "title": "Tokamak-SI: Interpreting Tokamak Discharges with Labeled Catalogs",
+      "url": "https://arxiv.org/abs/2610.32264",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T07:22:41Z",
+      "date_precision": "instant",
+      "summary": "Finding which phenomena occur in a tokamak discharge, and when, is often a manual task. Previous efforts at labeling events have been task-specific, each with its own corpus of data. We introduce Tokamak-SI, which combines the labels and labeling methods of many earlier studies into a single scalable, time-aligned, and categorical dataset covering observations from confinement, detachment, alfven eigenmodes (AE), edge localized modes (ELM), sawtooth, tearing modes (TM), and resistive wall modes in DIII-D tokamak. Models based on this, which can extend the labels to new shots, match or beat earlier detectors on its labels, including for AE, ELM, and TM detection. Tokamak-SI is intended to enable task-specific benchmarking, physics-searchable archives, and direct identification of key events during an experiment.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Nathaniel Chen",
+        "Alvin Garcia",
+        "Ricardo Shousha",
+        "Jalal Butt",
+        "Azarakhsh Jalalvand",
+        "Egemen Kolemen"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32264",
+      "links": [
+        "https://arxiv.org/abs/2610.32264"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T07:22:41Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32264v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32264",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "ca695decfd574f1bf8fbfcd06f351d707e68a4c251ef4dee66f71f565eeaad19",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "8d8d468f86f905c2a5f6",
+      "title": "Anti-coherence Regularized Absolute Scaling for Out-of-Distribution Detection",
+      "url": "https://arxiv.org/abs/2610.32255",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T07:09:51Z",
+      "date_precision": "instant",
+      "summary": "Out-of-distribution (OOD) detection is recognized as a critical problem in AI safety. SCALE is an effective post-hoc OOD detection method in the activation-shaping family that requires no training data and rescales penultimate activations using a percentile-based magnitude ratio. However, this ratio is ill-defined when negative activations are present, since positive and negative contributions cancel within the underlying sum, causing SCALE to degenerate on backbones such as ViT. We address this with an Absolute Fix that computes the ratio over absolute-valued activations rather than discarding negative activations through ReLU. Building on this corrected scale, we propose Anti-coherence regularization, which penalizes the scaling factor by the fraction of a sample's max-logit contributions to the max logit that are sign-mismatched and…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Donghwan Kim",
+        "Youngwoong Jin",
+        "Hyunsoo Yoon"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32255",
+      "links": [
+        "https://arxiv.org/abs/2610.32255"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T07:09:51Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32255v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32255",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "4a9f725ab686323cce36cecc04dd5647e45af4828c9302eb13813d6f8403953a",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "1a7225f8b9e89f7d19c9",
+      "title": "Do VLAs Know They Will Fail? Interpretable Success and Failure Patterns in Physical AI Systems",
+      "url": "https://arxiv.org/abs/2610.32208",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T06:02:12Z",
+      "date_precision": "instant",
+      "summary": "Vision-Language-Action (VLA) models have emerged as powerful general-purpose robot policies, but their successes and failures remain difficult to diagnose and understand. In this work, we show that sparse autoencoder (SAE) representations of OpenVLA activations contain outcome-predictive information and can be used to predict task failure before the robot reaches an unrecoverable state. Moreover, to provide insights into what common behaviors may contribute to these outcomes, we identify individual SAE features whose strong activations are associated with specific stages of success or failure, and uncover recurring behavioral patterns by localizing temporal intervals where these features exhibit significant activation changes. We further develop a VLM-based interpretation pipeline to generate behavioral descriptions of these patterns…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 8,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Christian A. Rogers",
+        "Qian Lin",
+        "Daniel S. Brown"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32208",
+      "links": [
+        "https://arxiv.org/abs/2610.32208"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T06:02:12Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32208v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32208",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "a0c2521e46be56c4cced85feddac595f8c2617bdf7b1e76cfc78c0ec14ff3a35",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -9046,6 +9456,51 @@
       "revision_count": 0
     },
     {
+      "id": "458c2d83d9d1a9c2263e",
+      "title": "MG-REPA: Multi-Granularity Representation Alignment for Generative Target Speaker Extraction",
+      "url": "https://arxiv.org/abs/2610.32161",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T04:51:51Z",
+      "date_precision": "instant",
+      "summary": "Generative target speaker extraction (TSE) models achieve high-quality extraction, but suffer from considerably slow training convergence. Representation Alignment (REPA) accelerates diffusion transformer training by aligning hidden states with a pre-trained Self-Supervised Learning (SSL) teacher. However, existing alignment in the speech and audio domain operates at a single granularity. For TSE, frame-level alignment leaves the global, time-invariant characteristics of the target speech implicit, whereas utterance-level alignment leaves the time-varying content implicit, even though extracting the target requires both. We propose Multi-Granularity Representation Alignment (MG-REPA), aligning the hidden states with an SSL model at the frame level and a speaker verification model at the utterance level. We further apply temporal…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Dohwan Kim",
+        "Jung-Woo Choi"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32161",
+      "links": [
+        "https://arxiv.org/abs/2610.32161"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T04:51:51Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32161v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32161",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "98d3c38b660877a0e4c1baffa7ed559ee8d2ee617db8e42f8f27671f0aa90317",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "9140d719bea2a9c19ffa",
       "title": "Instrumental convergence is incoherent",
       "url": "https://www.lesswrong.com/posts/oxZfMvQS9NxcNTozL/instrumental-convergence-is-incoherent",
@@ -9097,6 +9552,60 @@
       "content_hash": "17b23eb7b41974d7f1942640e063ad584df67221dd1dcaf749448dfdbd27a02e",
       "temporal_status": "published_after_start",
       "revision_count": 1
+    },
+    {
+      "id": "45e8726035a34606db1a",
+      "title": "Separating Angular Alignment from Radial Ordering in Hyperbolic Vision-Language Models",
+      "url": "https://arxiv.org/abs/2610.32146",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T04:25:17Z",
+      "date_precision": "instant",
+      "summary": "Hyperbolic vision-language models are well suited to modeling the hierarchical structure of multimodal data, because hyperbolic volume grows exponentially with radius, enabling low-distortion representations of tree-like taxonomies from general to specific concepts. However, existing pretraining objectives for hyperbolic vision-language models entangle semantic alignment with entailment modeling, forcing radial coordinates to simultaneously encode semantic matching and hierarchical structure, leading to conflicting geometric constraints. In this paper, we introduce AURORA, a hyperbolic vision-language framework that decouples the objectives through angular alignment and a novel Radial-Angular Order Cone (RAOC) for entailment modeling. Angular alignment captures semantic similarity while preserving the radial structure for representing…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Mingyang Gao",
+        "Yuwei Wu",
+        "Shiyu Luo",
+        "Wei Wu",
+        "Xiaomeng Fan",
+        "Qihao Lv",
+        "Haoyu Zhang",
+        "Rui Gao",
+        "Bingzhen Liu",
+        "Zhi Gao",
+        "Che Sun"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32146",
+      "links": [
+        "https://arxiv.org/abs/2610.32146"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T04:25:17Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32146v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32146",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "6478367d3001758987222a706dc62d767ab534fbf2df9798b19e4dedd8368b74",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
     },
     {
       "id": "2862182c1a6489d93c42",
@@ -14709,6 +15218,53 @@
       "revision_count": 0
     },
     {
+      "id": "13ae4ffd49ba3a1da8bb",
+      "title": "Tampered ML: Evaluating LLM Judgment of Machine Learning Research",
+      "url": "https://arxiv.org/abs/2610.32114",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T03:32:38Z",
+      "date_precision": "instant",
+      "summary": "One approach to accelerating progress on AI alignment is to automate parts of alignment research itself. Doing so requires systems that can perform reliably on hard-to-supervise research tasks, including identifying flaws in research proposals and evaluating whether a proposed experiment supports its intended claim. To evaluate this capability, we introduce Tampered ML, a benchmark of 1,858 item-pairs, each consisting of an experiment proposal reconstructed from a published machine learning paper and a minimally edited counterfactual that introduces a targeted methodological flaw. Models must identify the more methodologically sound proposal in both presentation orders. A human validation study on a stratified sample estimates that 86% of items are valid (95% CI: 81-91%). Frontier models perform above chance but remain far from reliable…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Soroush Ebadian",
+        "Parand A. Alamdari",
+        "Joe Benton",
+        "Hailey Joren"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32114",
+      "links": [
+        "https://arxiv.org/abs/2610.32114"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T03:32:38Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32114v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32114",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "539aa38e7b5930ad064558c86774890cf24991ff4cb3a0f4909981127cfc4ff1",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "ad9eb577395328b8c628",
       "title": "Highlights from Garrison Lovely's \"Obsolete\"",
       "url": "https://www.lesswrong.com/posts/osoJLzXycDhjm3tqv/highlights-from-garrison-lovely-s-obsolete",
@@ -14748,6 +15304,48 @@
         }
       ],
       "content_hash": "1a548486b64b8a465fcc11908a4bf4784cc2ab4c5413d3e81f910d5f26e51ad3",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "0afca0eb063af7fe45d3",
+      "title": "Tropical cohomology for band schemes over the tropical hyperfield",
+      "url": "https://arxiv.org/abs/2610.32016",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-23T00:33:02Z",
+      "date_precision": "instant",
+      "summary": "We define tropical band varieties as $\\mathbf{T}$-reductions of separated finitely presented $\\mathbf{T}$-band schemes. We construct a faithful functor from the category of tropical band varieties to the category of extended polyhedral spaces in the sense of Gross--Shokrieh. As a byproduct, we show that tropical cohomology can be defined functorially on tropical band varieties.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Seungkyu Lee"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.32016",
+      "links": [
+        "https://arxiv.org/abs/2610.32016"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-23T00:33:02Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.32016v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.32016",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "50f03c3368871702322b6d43d353e02b0e9f31aa7d05bc5d29f8dce76b74d37b",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -14793,6 +15391,52 @@
       "revision_count": 0
     },
     {
+      "id": "4c95a0869c900b4e5f61",
+      "title": "Reproducible Evaluation as the Substrate for Safe Prompt Compression in Production Agents",
+      "url": "https://arxiv.org/abs/2610.31972",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-22T22:24:35Z",
+      "date_precision": "instant",
+      "summary": "Evaluating conversational agents that act on live, mutable enterprise data is hard: replayed sessions drift as backend state changes, and a benchmark built today can silently go stale as the data it describes moves on. We present an offline evaluation harness for a production conversational agent that stays reproducible despite the live data it operates on changing, and that can be regenerated on demand once it goes stale. We then use this harness as the fitness function for GEPA-based prompt optimization under a correctness gate that guards against reward hacking. Applied to a production merchant-facing agent, correctness-gated compression shrinks the agent's full prompt surface by 3.5-7.6% without regressing held-out task correctness, consistently across three independent subject-model families, and for one, correctness measurably…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception"
+      ],
+      "score": 6,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Prabal Vashisht",
+        "Zheng Hu",
+        "Ying Yang"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.31972",
+      "links": [
+        "https://arxiv.org/abs/2610.31972"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-22T22:24:35Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.31972v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.31972",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "cc5f385379b61478d70257e5e5bf7490e9e21c252acd3cec7640597d84ccdd11",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "f1019b2937a0854d3a63",
       "title": "Is social policing of unusual norm violations hard to learn?",
       "url": "https://www.lesswrong.com/posts/m8gZSi9pwmciHjqpk/is-social-policing-of-unusual-norm-violations-hard-to-learn",
@@ -14831,6 +15475,60 @@
         }
       ],
       "content_hash": "ffaf8a335375751438b4234ec80d5ec3c014b03440459e50bff9f78e67472fd4",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "2e7fdd41f572d1c23eee",
+      "title": "FSVL: Taxonomic Fast-Slow Vision-to-Language Collaborative Framework for Interpretable Confusable Fish Species Identification and Knowledge Generation in the Middle Yangtze River",
+      "url": "https://arxiv.org/abs/2610.31880",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-22T20:22:31Z",
+      "date_precision": "instant",
+      "summary": "The Yangtze River Basin is a critical region for freshwater biodiversity conservation. The implementation of the Yangtze River Ten-Year Fishing Ban has increased the importance of effective aquatic biodiversity monitoring and species-level identification. However, fine-grained identification of closely related freshwater fish species remains challenging due to subtle morphological differences. Existing deep learning methods often struggle to balance classification accuracy and inference efficiency, while LLMs may generate unsupported information when producing specialized biological knowledge. To address these challenges, this study proposes FSVL, a fast-slow dual-pathway framework integrating visual recognition with LLM-based Retrieval-Augmented Generation (RAG). A lightweight ResNet50 fast path performs preliminary classification…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI control & oversight"
+      ],
+      "score": 5,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Meng Liang",
+        "Fucheng Wang",
+        "Lang Zhao",
+        "Jun Chen",
+        "Ziying Li",
+        "Yuxiang Zhao",
+        "Haozhuang Chi",
+        "Wenkai Fang",
+        "Qiong Zhou",
+        "Junlin Yang",
+        "Jinming Wu"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.31880",
+      "links": [
+        "https://arxiv.org/abs/2610.31880"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-22T20:22:31Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.31880v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.31880",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "49ee49cfcb4597f8247a5da8c542a44f94cb888a43f79596667c9275652c14d2",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -14961,6 +15659,59 @@
       "revision_count": 0
     },
     {
+      "id": "47946f27c290c1367afe",
+      "title": "Aligning Large Language Models with Human Feedback: Mathematical Foundations and Algorithm Design",
+      "url": "https://arxiv.org/abs/2610.31862",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-22T19:50:27Z",
+      "date_precision": "instant",
+      "summary": "This article provides an introduction to the mathematical foundations and algorithmic frameworks used to align Large Language Models (LLMs) with human intentions, preferences, and values. We discuss standard alignment techniques, such as fine-tuning (SFT), reinforcement learning with human feedback (RLHF), and direct preference optimization (DPO). We also explore the theoretical underpinnings of learning from human preferences, drawing connections to inverse reinforcement learning (IRL) and discrete choice models. We present state-of-the-art algorithms in a tutorial style, discuss their advantages and limitations, and offer insights into practical implementation. Our exposition is intended to serve as a comprehensive resource for researchers and practitioners, providing both a foundational understanding of alignment methodologies and a…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Siliang Zeng",
+        "Luca Viano",
+        "Chenliang Li",
+        "Jiaxiang Li",
+        "Volkan Cevher",
+        "Markus Wulfmeier",
+        "Stefano Ermon",
+        "Alfredo Garcia",
+        "Mingyi Hong"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": "10.1109/msp.2026.3666824",
+      "arxiv_id": "2610.31862",
+      "links": [
+        "https://arxiv.org/abs/2610.31862",
+        "https://doi.org/10.1109/MSP.2026.3666824"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-22T19:50:27Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.31862v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.31862",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "89b636b4295d4720e9e69d4a29aab27eac3bd93b170e9cf2c3a9c1c831af40b7",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "891b7e0bbf66f86d27b7",
       "title": "Build more responsive apps with the Decisions API",
       "url": "https://openai.com/index/decisions-api",
@@ -15008,7 +15759,7 @@
       "source_url": "https://arxiv.org/",
       "published_at": "2026-10-22T17:59:51Z",
       "date_precision": "instant",
-      "summary": "Robotic foundation models are typically evaluated through costly closed-loop rollouts, which motivates cheap offline proxies for model capability. The Platonic Representation Hypothesis (PRH) suggests that as representations improve, different modalities such as vision and language converge toward a shared statistical model of reality. We ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? To examine this, we propose Sensorimotor Alignment ($S^2$), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. We find that $S^2$ correlates positively with downstream robot task success across embodied model families, making it a low-cost…",
+      "summary": "Robot foundation models are typically evaluated through costly closed-loop rollouts, motivating low-cost offline proxies for model capability. The Platonic Representation Hypothesis (PRH) suggests that as representations improve, modalities such as vision and language converge toward a shared statistical model of reality. We ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? To test this, we propose Sensorimotor Alignment ($S^2$), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. We find that $S^2$ correlates positively with downstream robot task success across model families, making it a low-cost offline proxy for…",
       "summary_kind": "publisher excerpt",
       "topics": [
         "Alignment methods"
@@ -15031,9 +15782,9 @@
         "https://arxiv.org/abs/2610.31670"
       ],
       "aliases": [],
-      "updated_at": "2026-10-22T17:59:51Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.31670v1",
+      "updated_at": "2026-10-23T05:34:10Z",
+      "version": "2",
+      "external_id": "http://arxiv.org/abs/2610.31670v2",
       "provenance": [
         {
           "source_id": "arxiv",
@@ -15043,9 +15794,9 @@
           "found_at": "2026-10-23T04:53:05Z"
         }
       ],
-      "content_hash": "506357622428b2577c549ae5499f65d942420b3cdf0c330753a0954686df2b58",
+      "content_hash": "ad948b4b8d232c8eb8daee12bf3cd8315309806405c9266001e44f1ce0e7ca98",
       "temporal_status": "published_after_start",
-      "revision_count": 1
+      "revision_count": 2
     },
     {
       "id": "cd2ccfc71a9e76def7c0",
@@ -15136,6 +15887,53 @@
       "content_hash": "1e3c6805b0d35d4ab90e9aab43598bf5561c3332c5557d2aea04eb48cb2e515f",
       "temporal_status": "published_after_start",
       "revision_count": 1
+    },
+    {
+      "id": "8e05e2ba4797591af84a",
+      "title": "Learning to Be Monitored: Causal Bounds and Intervention-Aware Post-Training Recipes for Chain-of-Thought Monitorability",
+      "url": "https://arxiv.org/abs/2610.31733",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-22T16:00:17Z",
+      "date_precision": "instant",
+      "summary": "Chain-of-thought (CoT) monitoring aims to detect potentially harmful behaviors in large language models (LLMs) from their CoTs. Intervention-based evaluations measure this property by asking whether a monitor can detect the role of an intervention from the CoT when the targeted behavior occurs, typically using minimal-criterion sensitivity ($\\mathsf{TPR_{mc}}$) proposed by~\\citep{guan2025monitoring}. However, a target behavior observed under intervention is not necessarily caused by it, and we show that this metric can overestimate how often a monitor detects target behaviors actually caused by the intervention. Specifically, we establish $\\mathsf{TPR_{mc}}$ as an upper bound on this causal detection rate and derive a complementary lower bound, which provides a tighter evaluation framework for CoT monitorability. With this framework, we…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI control & oversight"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Qiang Fu",
+        "Xinyue Li",
+        "Andre Wibisono",
+        "Arman Cohan"
+      ],
+      "first_seen": "2026-10-26T01:12:56Z",
+      "discovered_at": "2026-10-26T01:12:56Z",
+      "doi": null,
+      "arxiv_id": "2610.31733",
+      "links": [
+        "https://arxiv.org/abs/2610.31733"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-22T16:00:17Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.31733v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.31733",
+          "found_at": "2026-10-26T01:12:56Z"
+        }
+      ],
+      "content_hash": "3e913db8719e7c9087b09159eec5a46d1c58ef8d80adf861699ce0f11cc8961d",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
     },
     {
       "id": "f2a78e42cc3b072bc411",
@@ -15884,9 +16682,9 @@
         "https://arxiv.org/abs/2610.31005"
       ],
       "aliases": [],
-      "updated_at": "2026-10-22T09:44:57Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.31005v1",
+      "updated_at": "2026-10-23T09:09:44Z",
+      "version": "2",
+      "external_id": "http://arxiv.org/abs/2610.31005v2",
       "provenance": [
         {
           "source_id": "arxiv",
@@ -15896,9 +16694,9 @@
           "found_at": "2026-10-23T04:53:05Z"
         }
       ],
-      "content_hash": "f8b3e55ae55b7b0ed34ba7fff98fdc564412e175798d00f3dd95ef4c18abbc4f",
+      "content_hash": "2d755a7326c81f42648ee9c6cfbf913f89623c7e200e7a70b5c1a90d573778ff",
       "temporal_status": "published_after_start",
-      "revision_count": 1
+      "revision_count": 2
     },
     {
       "id": "0bdc068b401f043d26c8",
@@ -16676,9 +17474,9 @@
         "https://arxiv.org/abs/2610.30474"
       ],
       "aliases": [],
-      "updated_at": "2026-10-21T21:47:27Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.30474v1",
+      "updated_at": "2026-10-23T03:47:24Z",
+      "version": "2",
+      "external_id": "http://arxiv.org/abs/2610.30474v2",
       "provenance": [
         {
           "source_id": "arxiv",
@@ -16688,9 +17486,9 @@
           "found_at": "2026-10-23T10:06:13Z"
         }
       ],
-      "content_hash": "2755d8fd1bd90631b1c897203047b08c8779f4c00fb8c3d2f72edd78417021fa",
+      "content_hash": "01e98343bcf107024ed632af607c2fe7e9d8a285ac4e2608d186bb474a713f8c",
       "temporal_status": "published_after_start",
-      "revision_count": 0
+      "revision_count": 1
     },
     {
       "id": "8b2116a3f2347caa183e",
@@ -57268,10 +58066,10 @@
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-6e6bca3b728c3a77.json",
-    "sha256": "6e6bca3b728c3a77e0b3bf37a55f71f8be48fa88823fb18e797232b3a9b76e28",
-    "total_items": 1266,
-    "edition_items": 1266,
+    "manifest": "data/archive/manifest-298cd22bdac382f5.json",
+    "sha256": "298cd22bdac382f5318aec5774ad78d9d0ca75e837a910bb07242269a160cfdf",
+    "total_items": 1283,
+    "edition_items": 1283,
     "complete": true
   }
 }
