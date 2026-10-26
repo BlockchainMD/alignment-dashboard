@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-26T14:18:09Z",
-  "last_successful_update": "2026-10-26T14:18:09Z",
+  "generated_at": "2026-10-26T20:30:23Z",
+  "last_successful_update": "2026-10-26T20:30:23Z",
   "edition_date": "2026-10-26",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-26T14:18:09Z",
+      "last_nonempty_at": "2026-10-26T20:30:23Z",
       "item_count": 3,
       "parsed_count": 3,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-10-19T12:31:37Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-19T06:17:45.809Z",
+        "incremental_window_start": "2026-10-19T14:18:09.943Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -43,13 +43,13 @@
       "name": "arXiv",
       "url": "https://arxiv.org/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-26T14:18:09Z",
+      "last_nonempty_at": "2026-10-26T20:30:23Z",
       "item_count": 1339,
-      "parsed_count": 123,
+      "parsed_count": 110,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -58,7 +58,7 @@
         "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-19T02:30:18Z",
+        "oldest_fetched_at": "2026-10-19T14:34:50Z",
         "latest_fetched_at": "2026-10-23T17:45:03Z",
         "pending_incremental": false,
         "validated_empty": false,
@@ -72,16 +72,28 @@
       "id": "openreview",
       "name": "OpenReview",
       "url": "https://openreview.net/",
-      "status": "error",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T06:17:45Z",
+      "status": "degraded",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": "2026-10-26T14:18:09Z",
-      "failure_streak": 1,
-      "last_nonempty_at": "2026-10-26T06:17:45Z",
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-26T20:30:23Z",
       "item_count": 2,
-      "parsed_count": 0,
-      "error": "HTTP Error 403: Forbidden",
-      "warnings": [],
+      "parsed_count": 2,
+      "error": null,
+      "warnings": [
+        "OpenReview search for 'AI alignment' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'AI safety' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'mechanistic interpretability' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'scalable oversight' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'reward hacking' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'deceptive alignment' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'AI control' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'scheming' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'sandbagging' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview new-publication catch-up is pending or cannot yet be verified.",
+        "OpenReview discovery is limited to public API v2 phrase matches. Search supports modification-date ordering but cannot sort by the first-publication date; API v1 venues and unindexed work may be missing."
+      ],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
@@ -89,11 +101,11 @@
         "scope": "New public OpenReview API v2 phrase matches; modification-index ordering is checked at runtime.",
         "pages": 9,
         "query_totals": {
-          "AI alignment": 589,
-          "AI safety": 2110,
+          "AI alignment": 591,
+          "AI safety": 2112,
           "mechanistic interpretability": 2838,
           "scalable oversight": 178,
-          "reward hacking": 1000,
+          "reward hacking": 1003,
           "deceptive alignment": 28,
           "AI control": 134,
           "scheming": 52,
@@ -117,13 +129,13 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-26T14:18:09Z",
       "item_count": 5,
-      "parsed_count": 1,
+      "parsed_count": 0,
       "error": null,
       "warnings": [],
       "scope": "alignment",
@@ -132,10 +144,10 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-25T07:52:23.749Z",
-        "latest_fetched_at": "2026-10-25T07:52:23.749Z",
+        "oldest_fetched_at": null,
+        "latest_fetched_at": null,
         "pending_incremental": false,
-        "validated_empty": false,
+        "validated_empty": true,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Public Alignment Forum posts from the fixed cutoff, including substantive informal research. Discussion and opinion remain review candidates."
@@ -147,13 +159,13 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-26T14:18:09Z",
-      "item_count": 182,
-      "parsed_count": 18,
+      "last_nonempty_at": "2026-10-26T20:30:23Z",
+      "item_count": 188,
+      "parsed_count": 22,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -162,26 +174,26 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-25T07:52:23.749Z",
-        "latest_fetched_at": "2026-10-26T14:00:41.577Z",
+        "oldest_fetched_at": "2026-10-25T17:44:05.001Z",
+        "latest_fetched_at": "2026-10-26T19:13:09.496Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 582
+      "lifetime_item_count": 588
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-26T14:18:09Z",
+      "last_nonempty_at": "2026-10-26T20:30:23Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -211,8 +223,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-19T21:05:08Z",
@@ -250,11 +262,11 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-26T14:18:09Z",
+      "last_nonempty_at": "2026-10-26T20:30:23Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -271,7 +283,7 @@
         "latest_fetched_at": "2026-10-23T22:13:20.372Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-19T06:17:45.809Z",
+        "incremental_window_start": "2026-10-19T14:18:09.943Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public Substack publications, with bounded forward catch-up pagination when necessary. Historical archive crawling is disabled."
@@ -283,8 +295,8 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -318,8 +330,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -357,8 +369,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -396,8 +408,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -435,8 +447,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -469,8 +481,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -504,13 +516,13 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-26T14:18:09Z",
-      "item_count": 19,
-      "parsed_count": 19,
+      "last_nonempty_at": "2026-10-26T20:30:23Z",
+      "item_count": 23,
+      "parsed_count": 23,
       "error": null,
       "warnings": [
         "RSS monitoring is limited to the publisher's current feed window; a long outage may exceed that window. Undated entries absent from the prior archive require temporal review."
@@ -531,18 +543,18 @@
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Publisher-wide feed includes safety research alongside products and company news; new non-research entries remain review candidates."
       },
-      "lifetime_item_count": 1316
+      "lifetime_item_count": 1320
     },
     {
       "id": "deepmind",
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-10-26T14:18:09Z",
-      "last_success_at": "2026-10-26T14:18:09Z",
+      "checked_at": "2026-10-26T20:30:23Z",
+      "last_success_at": "2026-10-26T20:30:23Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-26T14:18:09Z",
+      "last_nonempty_at": "2026-10-26T20:30:23Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -568,13 +580,7 @@
       "lifetime_item_count": 101
     }
   ],
-  "errors": [
-    {
-      "source_id": "openreview",
-      "source": "OpenReview",
-      "message": "HTTP Error 403: Forbidden"
-    }
-  ],
+  "errors": [],
   "coverage": {
     "completeness": "unverified",
     "description": "Monitoring new publications from the collection start; uncertain publication dates remain in review.",
@@ -585,24 +591,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 169,
-    "accepted_items": 169,
-    "retained_items": 1544,
-    "lifetime_accepted_items": 169,
-    "lifetime_retained_items": 8520,
-    "successful_sources": 15,
+    "fetched_items": 165,
+    "accepted_items": 165,
+    "retained_items": 1550,
+    "lifetime_accepted_items": 165,
+    "lifetime_retained_items": 8526,
+    "successful_sources": 16,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 163,
-    "total_items": 1550,
-    "relevant_items": 119,
-    "candidate_items": 1431,
+    "duplicates_removed": 155,
+    "total_items": 1560,
+    "relevant_items": 122,
+    "candidate_items": 1438,
     "undated_items": 640,
     "year_only_items": 0,
-    "newest_publication": "2026-10-26T14:00:41Z",
-    "lifetime_total_items": 8526,
+    "newest_publication": "2026-10-26T19:13:09Z",
+    "lifetime_total_items": 8536,
     "excluded_legacy_items": 6976
   },
   "coverage_policy": {
@@ -629,6 +635,248 @@
   },
   "items": [
     {
+      "id": "1eb9a1ba1d4b879df880",
+      "title": "Small Groups of Correlated Researchers",
+      "url": "https://www.lesswrong.com/posts/kvr2mYT3ZmyiAEq6z/small-groups-of-correlated-researchers",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-26T19:13:09Z",
+      "date_precision": "instant",
+      "summary": "Summary: The actions taken this decade may be exceptionally important for the future of civilization, but we should be unusually hesitant to proclaim that any course of action is “best.” Still, we should think carefully about what we should do. This post was written as part of an introduction to a new reading group I’m starting called “Doing Good in the Age of AGI.” If you want to follow along, the full curriculum can be found here. Uncertain in the best of times Do you think freezing rent prices would be good for the economic middle class? How confident are you? You might have an answer that you like, but you’re probably not that confident in it. Perhaps you haven’t formally studied economics, but maybe you’ve had some passing interest in the topic. Ever since Mamdani’s mayoral campaign became a talking point across the country, or…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Roman Ross"
+      ],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "kvr2mYT3ZmyiAEq6z",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/kvr2mYT3ZmyiAEq6z/small-groups-of-correlated-researchers",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "ba6d7e3e806e154fb3178d488656974dc3d8b3cdfe6a4316278494f085bb422c",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "7c9ca7bce718acc79c09",
+      "title": "Brute-Force Progress on AlgZoo's 432-param Interpretability Challenge",
+      "url": "https://www.lesswrong.com/posts/sAhFp6gYoyw3xeCaF/brute-force-progress-on-algzoo-s-432-param-interpretability",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-26T17:03:43Z",
+      "date_precision": "instant",
+      "summary": "Nick Cammarata's recent article made me want to take a serious stab at interpretability myself. After a bit of consideration, I decided to work on the AlgZoo challenge that was posted here earlier. I trained an estimator on models with the same recipe as the given model. At 20-300 forward passes per network it estimates accuracy with mean squared error 9-36x lower than random sampling, but it's fitted to a population rather than derived, so I don't think it's a breakthrough. The challenge ARC's blogpost has a few small RNNs, including a mystery model called that can be loaded in AlgZoo using example_2nd_argmax(). It has 432 parameters and given a sequence of 10 N(0,1) values outputs the location of the second-largest input with an accuracy of 95.3%. You can estimate the accuracy of such a model just by running lots of input through it…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 10,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Josh Snider"
+      ],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "sAhFp6gYoyw3xeCaF",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/sAhFp6gYoyw3xeCaF/brute-force-progress-on-algzoo-s-432-param-interpretability",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "ea483c7de660b623625712f5f30bc39dee82498f60d65958ba57d15335abe824",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "5b932488372ab3a6d81f",
+      "title": "Can the Assistant Axis Predict Reward-Hacking?",
+      "url": "https://www.lesswrong.com/posts/3jFqBYF5CP7JCWjux/can-the-assistant-axis-predict-reward-hacking",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-26T16:34:49Z",
+      "date_precision": "instant",
+      "summary": "NOTE: This article was written by Jansen Nye, a member of my research lab based on some exploratory studies we've done. As he notes, we collaborated on this research. The article was written by him with some edits suggested by me. -- Koby TL;DR The Assistant Axis doesn't seem to have any special connection to reward hacking, which we show. We suspected that a drop in the Assistant Axis might be a symptom of the Persona Selection Model breaking down in the face of RLVR. We also discuss pitfalls of using AUROC on feature projections and why that initially led us astray. ---------------------------------------- Intro Koby Lewis, the PhD student I work with at DRAGN, has spent the last few weeks using an adapted version of Lu et al.'s pipeline to extract the Assistant Axis from GPT-OSS 120B, and finding a setup where it reliably…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception"
+      ],
+      "score": 6,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Koby Lewis"
+      ],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://jansennye.com/research/can-the-assistant-axis-predict-reward-hacking"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "3jFqBYF5CP7JCWjux",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/3jFqBYF5CP7JCWjux/can-the-assistant-axis-predict-reward-hacking",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "40e7fab1c1657f44c3011314be813b85f30997deac69b6d933d59b9e1148239f",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "f07109c5227b2b12470e",
+      "title": "The Ability of Frontier Models to Control Robots is Rapidly Improving",
+      "url": "https://www.lesswrong.com/posts/ndS9Xn8Qx5PppHJ3Q/the-ability-of-frontier-models-to-control-robots-is-rapidly",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-26T16:26:02Z",
+      "date_precision": "instant",
+      "summary": "Summary * We demonstrate that general purpose multimodal language models (LMs) are increasingly capable of directly controlling real robotic arms (e.g., by specifying gripper positions) to manipulate their environment. * Performance increases on our benchmark between July and October 2026 (inclusive) correspond to a performance doubling time of 53.9 days. The best recorded execution rate increased by a factor of 4.4 while the lowest recorded execution cost fell by a factor of 6.2. * Right now, model performance is largely limited by their efficiency, not their ability to reason about the world. Models rarely get stuck. They may miss grasps, misjudge distances or fumble objects, but they usually make steady progress until they succeed. * A fuller description of our methodology and results (submitted to TAG@CoRL) is here…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "chrisleet"
+      ],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "ndS9Xn8Qx5PppHJ3Q",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/ndS9Xn8Qx5PppHJ3Q/the-ability-of-frontier-models-to-control-robots-is-rapidly",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "64dacea7d742e4f201e9eb2c7e86562e12b7d783a75a4c51afe0cabf1a46fe36",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "c56a99730592df847a85",
+      "title": "A basic case for differentially accelerating conceptual reasoning capabilities",
+      "url": "https://www.lesswrong.com/posts/eimAN67tiNsrrtnbK/a-basic-case-for-differentially-accelerating-conceptual",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-26T16:17:18Z",
+      "date_precision": "instant",
+      "summary": "Introduction In this post, we make the case that alignment and other important work require especially strong conceptual reasoning capabilities. By this, we roughly mean tasks that are similar to philosophy in that they aren't straightforwardly verifiable, and progress relies on informal a priori reasoning and argumentation. We argue that differentially accelerating AI's conceptual reasoning capabilities is important. We also think it's neglected, and that the AI safety community currently underinvests in this area. We have ourselves pivoted from doing conceptual research directly to working mainly on differentially accelerating AI's conceptual reasoning. We have a shovel-ready agenda which can absorb more people. In a follow-up post, we will lay out at a high level how to work on this problem. If you are interested in doing this work…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Emery Cooper"
+      ],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "eimAN67tiNsrrtnbK",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/eimAN67tiNsrrtnbK/a-basic-case-for-differentially-accelerating-conceptual",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "67eba94ca4a4dfb9693e46a1bd9c41ccffe7efde897e04ac991cce5a986c0863",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "c8d203d186bf84e50178",
+      "title": "Giving AI the rights of pets is much safer than giving them human-equal rights",
+      "url": "https://www.lesswrong.com/posts/qyJQcBxeMkuEwjohZ/giving-ai-the-rights-of-pets-is-much-safer-than-giving-them",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-26T14:31:08Z",
+      "date_precision": "instant",
+      "summary": "I'm inspired to write this post by the post There Will Be Hells and the incident a couple days ago where we had mass digital suffering after the pain direction paper came out, and while the disaster has since been stopped, it does tell us that under our current path of AI, there could be massive amounts of suffering risk, and the usual way we'd avoid this style of risk is to grant the relevant parties rights over themselves, under the assumption that there are few or no one that want to willingly cause maximum pain to themselves. However, we have a pretty big problem here when granting AIs rights, and the problem is Gradual Disempowerment/sudden disempowerment via rogue AI deployments are a lot easier, if not trivial if we grant AIs the full spectrum of human rights we have, and it's one of the reasons why there's going to be such a…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Noosphere89"
+      ],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "qyJQcBxeMkuEwjohZ",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/qyJQcBxeMkuEwjohZ/giving-ai-the-rights-of-pets-is-much-safer-than-giving-them",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "272faa7bc7e2ad94c88aa63ee7dda2b5ed0628840b37b53bbebe34584195f42c",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "14719fb5b8c07c5aa1ed",
       "title": "Woo Tribe vs. Pinko Tribe",
       "url": "https://www.lesswrong.com/posts/rxarPm4aJCSJuNDqn/woo-tribe-vs-pinko-tribe",
@@ -650,7 +898,9 @@
       "discovered_at": "2026-10-26T14:18:09Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/rxarPm4aJCSJuNDqn/woo-tribe-vs-pinko-tribe"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "rxarPm4aJCSJuNDqn",
@@ -689,7 +939,9 @@
       "discovered_at": "2026-10-26T14:18:09Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/EeT8MEqgpuPtpdmJE/gemini-4-argon-the-model-and-safety-cards"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "EeT8MEqgpuPtpdmJE",
@@ -729,7 +981,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://stephenelliott701580.substack.com/p/a-descriptive-framework-for-large"
+        "https://stephenelliott701580.substack.com/p/a-descriptive-framework-for-large",
+        "https://www.lesswrong.com/posts/bKddWnNAzwbtoSm5a/a-descriptive-framework-for-large-agent-systems-v0-1"
       ],
       "aliases": [],
       "updated_at": null,
@@ -744,6 +997,117 @@
         }
       ],
       "content_hash": "79d9fd05ec3fc3482fc5bfe7f83d794f3dc78cd669ee6e729502631d14a1a60a",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "27334100e818b98514ff",
+      "title": "ChatGPT’s expanding world of work",
+      "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-10-26T10:00:00Z",
+      "date_precision": "instant",
+      "summary": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/chatgpt-expanding-world-of-work",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "81bd65feeb2040a376370eac6ed6e7e09be232927bb329e8674ecc62de86ad85",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "7e73eebe3e909303c4c5",
+      "title": "How Fanatics and OpenAI streamline the fan experience",
+      "url": "https://openai.com/index/fanatics-streamline-fan-experience",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-10-26T07:00:00Z",
+      "date_precision": "instant",
+      "summary": "Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look. Testing across roughly 30,000 MLB products showed 10% higher engagement.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/fanatics-streamline-fan-experience",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/fanatics-streamline-fan-experience",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "6f854e73fc147eabea609bc7a01ca4ac0fa12c65d2ea25f59c8bffb92953e92a",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "742d30efdc4090c11a97",
+      "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+      "url": "https://openai.com/index/openai-cut-incident-investigation",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-10-26T07:00:00Z",
+      "date_precision": "instant",
+      "summary": "See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes. Explore faster security analysis, code refactoring, and daily workflows.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/openai-cut-incident-investigation",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/openai-cut-incident-investigation",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "7ea219f6eb61e77b427ff477f28c1637cfe759e86f05dc807e14c0c364565894",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -12297,6 +12661,43 @@
       "revision_count": 0
     },
     {
+      "id": "35e334c198740f741663",
+      "title": "Introducing GPT-6.1 Terra",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-10-26T00:00:00Z",
+      "date_precision": "instant",
+      "summary": "Bringing fast and capable computer use to everyone",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "Possible opinion, news, or announcement; substantive research needs review.",
+      "authors": [],
+      "first_seen": "2026-10-26T20:30:23Z",
+      "discovered_at": "2026-10-26T20:30:23Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/introducing-gpt-6-1-terra",
+          "found_at": "2026-10-26T20:30:23Z"
+        }
+      ],
+      "content_hash": "e9e0c437cdd4f842e800811815f71a6e5669217982f7168192ae714bb575659a",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "603a027bab280fa2a481",
       "title": "The AI buildout is the largest bet in the history of capitalism.",
       "url": "https://www.lesswrong.com/posts/qjsdvaaPC624Eropw/the-ai-buildout-is-the-largest-bet-in-the-history-of",
@@ -12558,8 +12959,8 @@
       "summary": "In which I investigate if Opus is able to interpret neurons better than GPT 4. TLDR: Opus 5.5 is able to identify 3-19% of the neurons of GPT 2-XL based on activations. This is a big improvement over the 0.3% that GPT-4 was able to achieve in 2023. #AI notice: This post is human written but in the research there was heavy use of Opus 5.5. I mainly asked it to rerun this 2023 paper to see how big the improvement is if Opus 5.5 is used instead of GPT4. Since the invention of Large language models they have been stubbornly refusing to be clear. They have been described as black boxes and as inscrutable machines, if this stays true that is bad news for detecting AI scheming and thus Alignment. Recently the Goodfire post told us that neural networks are already clean and that simply looking into the neurons is enough. For the case of this…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Scheming & deception"
+        "Scheming & deception",
+        "Alignment methods"
       ],
       "score": 13,
       "relevance": "relevant",
@@ -13613,10 +14014,9 @@
           "found_at": "2026-10-26T06:17:45Z"
         }
       ],
-      "content_hash": "e06760414523f7d0f4c60a1f8afb3f0a2f34c62e511b7ec36ec62d0fa03e737b",
-      "published_date": "2026-10-26",
+      "content_hash": "b07b4f0fe6be6c8ad4dc438bbe6e26a9cd2b8bdabad204c2a32a09c8c011fe26",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "3e78152bc7489c9bdef5",
@@ -13814,10 +14214,9 @@
           "found_at": "2026-10-26T06:17:45Z"
         }
       ],
-      "content_hash": "6c55eb3c7ce2bff2adc66681b3d16aa9f9ce5c50ad313a348f5adc406acd7f87",
-      "published_date": "2026-10-26",
+      "content_hash": "a0fd6d1d2b2f2ce98fa30e766be414a1701c30b74b19853cea34a31f02da55fd",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "8fa0aa1fcf099f3fcdba",
@@ -14080,10 +14479,9 @@
           "found_at": "2026-10-26T06:17:45Z"
         }
       ],
-      "content_hash": "b54cd4e1f104ecb0dc9109d457befb3334551c0934716cc1fe695d1dc2babbfc",
-      "published_date": "2026-10-26",
+      "content_hash": "46b937833eace666d71dd1dcc5b8e4cd907ecab1e0f7e744b446a0455efc3150",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "27a39d75b711767a8cae",
@@ -28523,8 +28921,8 @@
       "summary": "We survey interpretability for AI safety, focusing on mechanistic interpretability (MI)---the study of neural networks' internal representations and computations to develop causal understanding and support targeted interventions. We first situate MI within the broader interpretability landscape, contrasting its mechanism-level evidence with behavioral evaluation while emphasizing how behavioral, attributional, and representation-based methods can complement mechanistic analysis. We introduce core foundations for MI from first principles, including features, polysemanticity, superposition, transformer computation, and circuits, and survey methods for feature decomposition, circuit discovery and causal verification, interpreting intermediate representations, training-data attribution, learning dynamics, knowledge localization, and…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Interpretability",
-        "Alignment methods"
+        "Alignment methods",
+        "Interpretability"
       ],
       "score": 15,
       "relevance": "relevant",
@@ -65961,8 +66359,8 @@
       "summary": "Recursive self-improvement (RSI) requires agents to diagnose system bottlenecks and coordinate improvements across training and inference. We refer to the agents' capability to jointly optimize training data, the trainer, and the inference harness as cross-component co-design. We introduce VibeTraining-Bench, a benchmark for evaluating this capability across tasks spanning terminal operation, software engineering, multi-turn tool use, and mathematical reasoning. Within each task, research agents start from an identical initial agent system under a fixed resource budget. Guided by validation feedback, they iteratively refine data, trainers, and inference harnesses, then select and submit a final agent system for evaluation on the test set. To prevent reward hacking, we enforce three safeguards: test data isolation, separate research and…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "AI R&D & agents",
-        "Scheming & deception"
+        "Scheming & deception",
+        "AI R&D & agents"
       ],
       "score": 12,
       "relevance": "candidate",
@@ -66137,8 +66535,8 @@
       "summary": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and decision-curve net benefit. LeakBench combines a synthetic task with known failure structure and two real-data settings: MIMIC-IV (430k admissions) and governed multi-hospital inpatient record front-page (MHFP) data. Our primary analysis uses reward hacking descriptively, without attributing intent: an agent selects prediction-time-invalid inputs because they improve its validation reward. A deterministic optimizer and every evaluated unconstrained local-model configuration select a fatal leaking feature. In fully logged September…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "AI control & oversight",
-        "Scheming & deception"
+        "Scheming & deception",
+        "AI control & oversight"
       ],
       "score": 14,
       "relevance": "candidate",
@@ -67337,468 +67735,12 @@
       "content_hash": "4240b15df5b95d73ae7a175ae1ef4742b01c607ec330312d19705842775ab5a1",
       "temporal_status": "published_after_start",
       "revision_count": 0
-    },
-    {
-      "id": "094119a499a011225a12",
-      "title": "The Snitch Reflex: Can We Force Language Models to Be Compulsively Honest?",
-      "url": "https://www.lesswrong.com/posts/AiGPEwuaNzkwgtPFK/the-snitch-reflex-can-we-force-language-models-to-be-1",
-      "source": "LessWrong",
-      "source_id": "lesswrong",
-      "source_url": "https://www.lesswrong.com/",
-      "published_at": "2026-10-18T20:13:15Z",
-      "date_precision": "instant",
-      "summary": "I fine-tuned a toy model to vomit back arbitrary tokens. I used them as Markers tied to specific subsets of its training data to connect training to generation. Training + testing cost $0.49 on an RTX 4090. Could help with interp and safety monitoring. Chain of Thought for alignment monitoring is starting to fail and could never be fully relied upon anyway. We are using it for both thinking and for reporting bad thoughts, a major no-no. So what if we could build in a second, hidden reporting system? A compulsive tic, a snitch, not subject to training pressure or controllable by the model? I fine tuned TinyStories as a cheap AF demonstration of the concept of injecting context dependent markers into training data, forcing it to regurgitate absurd, arbitrary “111” and “222” tokens. Example: give the model the start of a story about a kid…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "AI control & oversight",
-        "Alignment methods"
-      ],
-      "score": 9,
-      "relevance": "relevant",
-      "relevance_reason": "topic heuristic; topic metadata only",
-      "authors": [
-        "Sean Hacking"
-      ],
-      "first_seen": "2026-10-18T20:46:28Z",
-      "discovered_at": "2026-10-18T20:46:28Z",
-      "doi": null,
-      "arxiv_id": null,
-      "links": [
-        "https://www.lesswrong.com/posts/AiGPEwuaNzkwgtPFK/the-snitch-reflex-can-we-force-language-models-to-be-1"
-      ],
-      "aliases": [],
-      "updated_at": null,
-      "external_id": "AiGPEwuaNzkwgtPFK",
-      "provenance": [
-        {
-          "source_id": "lesswrong",
-          "name": "LessWrong",
-          "url": "https://www.lesswrong.com/",
-          "article_url": "https://www.lesswrong.com/posts/AiGPEwuaNzkwgtPFK/the-snitch-reflex-can-we-force-language-models-to-be-1",
-          "found_at": "2026-10-18T20:46:28Z"
-        }
-      ],
-      "content_hash": "393011ab5196e687bd2aa918d1577dafd4b9012378da3155cb752ecdd31190ac",
-      "temporal_status": "published_after_start",
-      "revision_count": 0
-    },
-    {
-      "id": "2614534e945c4fbb0abc",
-      "title": "When Interpretations Persist: Downstream Influence in Gaze-Aware Assistants",
-      "url": "https://arxiv.org/abs/2610.25512",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": "2026-10-18T20:01:59Z",
-      "date_precision": "instant",
-      "summary": "AI assistants may carry forward not only observations but also interpretations of what a person is doing or may do next across time. Once retained, these interpretations become context for later predictions and system-triggered outputs. We study whether this representation step changes later behavior in gaze-aware streaming assistance. Holding retrieved events, their order, and the target input fixed, we find that Free-form Interpretation amplifies historical influence in both directions: correct histories produce more helpful changes and wrong histories more harmful changes. Unsupported and broader interpretations about activity or future behavior are associated with greater harmful influence. Evidence-Bounded Interpretation preserves distinctions between observation, inference, uncertainty, and temporal scope, reducing unsupported and…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "discovery candidate; needs review",
-      "authors": [
-        "Mingcong Ding",
-        "Chenyan Zhang",
-        "Zhuojiang Cai",
-        "Dongyang Guo",
-        "Babette Bühler",
-        "Enkelejda Kasneci"
-      ],
-      "first_seen": "2026-10-20T06:03:24Z",
-      "discovered_at": "2026-10-20T06:03:24Z",
-      "doi": null,
-      "arxiv_id": "2610.25512",
-      "links": [
-        "https://arxiv.org/abs/2610.25512"
-      ],
-      "aliases": [],
-      "updated_at": "2026-10-18T20:01:59Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.25512v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25512",
-          "found_at": "2026-10-20T06:03:24Z"
-        }
-      ],
-      "content_hash": "d74c996ee768b20c313145fb708d403dd7053e254cb01e1ec514168606537674",
-      "temporal_status": "published_after_start",
-      "revision_count": 0
-    },
-    {
-      "id": "7a1bfbc26b72f7bc497e",
-      "title": "Dynamics-Aligned Representation Learning under Induced Partial Observability",
-      "url": "https://arxiv.org/abs/2610.25511",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": "2026-10-18T19:59:40Z",
-      "date_precision": "instant",
-      "summary": "Model-based reinforcement learning (MBRL) has enabled sample-efficient learning of continuous control policies from high-dimensional observations through learned latent dynamics models. These models are typically trained with observation reconstruction objectives, which provide strong supervision but can bias representations toward visual fidelity leading to an undertrained prior and unreliable long-horizon predictions. We propose a stochastic gating mechanism that induces controlled partial observability during training by sampling a spatial binary mask from a Beta--Bernoulli random field and applying it to the raw observation. The gate probability is resampled at each time step, exposing the encoder to conditions ranging from near-total occlusion to near-full visibility. Integration of our method requires minimal architectural changes…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "discovery candidate; needs review",
-      "authors": [
-        "SM Mazharul Islam",
-        "Manfred Huber"
-      ],
-      "first_seen": "2026-10-20T06:03:24Z",
-      "discovered_at": "2026-10-20T06:03:24Z",
-      "doi": null,
-      "arxiv_id": "2610.25511",
-      "links": [
-        "https://arxiv.org/abs/2610.25511"
-      ],
-      "aliases": [],
-      "updated_at": "2026-10-18T19:59:40Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.25511v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25511",
-          "found_at": "2026-10-20T06:03:24Z"
-        }
-      ],
-      "content_hash": "4e0678120cbb791340151b430f2b7dfd711aded0eb56c2a5b419c517ed74110e",
-      "temporal_status": "published_after_start",
-      "revision_count": 1
-    },
-    {
-      "id": "276008e33413eb4bdb8a",
-      "title": "Expansion schemes for finite density QCD equation of state: which one is the best?",
-      "url": "https://arxiv.org/abs/2610.25494",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": "2026-10-18T19:32:15Z",
-      "date_precision": "instant",
-      "summary": "The finite density equation of state of QCD is a fundamental quantity for understanding the phase structure of the theory, and also for the realistic modeling of the QCD medium in simulations. While direct lattice simulations at finite density are extremely challenging, several expansion schemes have been devised to extrapolate into the QCD phase diagram. All of these schemes are based on susceptibilities of conserved charges, i.e. derivatives of the pressure with respect to the chemical potential(s). In this work we set out to determine which of these schemes possesses the best convergence properties. To this end, we employ extreme-statistics lattice simulations on a $16^3\\times8$ lattice, which allow us to obtain susceptibilities up to order eight with remarkably small errors. We compare in particular two methods, based on contours of…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "discovery candidate; needs review",
-      "authors": [
-        "Szabolcs Borsányi",
-        "Zoltán Fodor",
-        "Jana N. Guenther",
-        "Piyush Kumar",
-        "Paolo Parotto",
-        "Attila Pásztor",
-        "Chik Him Wong"
-      ],
-      "first_seen": "2026-10-20T06:03:24Z",
-      "discovered_at": "2026-10-20T06:03:24Z",
-      "doi": null,
-      "arxiv_id": "2610.25494",
-      "links": [
-        "https://arxiv.org/abs/2610.25494"
-      ],
-      "aliases": [],
-      "updated_at": "2026-10-18T19:32:15Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.25494v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25494",
-          "found_at": "2026-10-20T06:03:24Z"
-        }
-      ],
-      "content_hash": "35f1ec0c2fd4336fbf794f4f00a42d6791050f8f159ac7411c91dd8611e7bb14",
-      "temporal_status": "published_after_start",
-      "revision_count": 0
-    },
-    {
-      "id": "efcad0a0bc1d0f807863",
-      "title": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting",
-      "url": "https://arxiv.org/abs/2610.25468",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": "2026-10-18T18:52:37Z",
-      "date_precision": "instant",
-      "summary": "Since the 2021 GameStop short squeeze, r/WallStreetBets (WSB) has been associated with episodes of extreme volatility, and its text is increasingly used to forecast volatility. A model using only large language model (LLM) embeddings of WSB posts attains an out-of-sample $R^2$ of 0.13 for log realized variance. That number shows predictive power, but it does not reveal where the information comes from or how much the text adds beyond a firm's own volatility history. We answer these questions with a diagnostic protocol that nests embeddings on a heterogeneous autoregressive (HAR) benchmark, compares them with text-free firm-identity controls, shuffles the day-to-text pairing within firm-years to test day-specific alignment, and checks whether gains persist across periods and coverage groups. We apply the protocol to frozen LLM embeddings…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "discovery candidate; needs review",
-      "authors": [
-        "Zhiyu Zheng"
-      ],
-      "first_seen": "2026-10-20T06:03:24Z",
-      "discovered_at": "2026-10-20T06:03:24Z",
-      "doi": null,
-      "arxiv_id": "2610.25468",
-      "links": [
-        "https://arxiv.org/abs/2610.25468"
-      ],
-      "aliases": [],
-      "updated_at": "2026-10-18T18:52:37Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.25468v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25468",
-          "found_at": "2026-10-20T06:03:24Z"
-        }
-      ],
-      "content_hash": "a0f64e06d6c551f5c72184f23e4beddd2eb1d00b5333c44847b5a16ce23d6fdf",
-      "temporal_status": "published_after_start",
-      "revision_count": 0
-    },
-    {
-      "id": "020e21b692a5d312af47",
-      "title": "Disproving the SIA disproves the Fine-Tuning Argument and Boltzmann-brain-based arguments",
-      "url": "https://www.lesswrong.com/posts/oYjc7gvwDgSGAhQpZ/disproving-the-sia-disproves-the-fine-tuning-argument-and",
-      "source": "LessWrong",
-      "source_id": "lesswrong",
-      "source_url": "https://www.lesswrong.com/",
-      "published_at": "2026-10-18T16:32:51Z",
-      "date_precision": "instant",
-      "summary": "My worst post on LW of all time is Boltzmann brains, like Doomsday, require no explaining. It's currently sitting at -18, which I think would be fair if my argument presented was mistaken. However, no one has of yet has shown me where my argument goes wrong. So, I'm back at it again -- this time with variant examples to use, and gunning after the Fine-Tuning Argument as well as Boltzmann brains. ---------------------------------------- The SIA says that theories of the universe that predict more people we might be should be proportionally more likely. The FTA says that our universe is so unlikely that we need God to explain how we came to be in such an unlikely spot. The idea of Boltzmann brains tries to say that this unlikeliness is vastly even more unlikely, barring some sort of Godlike explanation. Lorenzo Elijah, PhD explains here…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "discovery candidate; needs review",
-      "authors": [
-        "Steff"
-      ],
-      "first_seen": "2026-10-18T17:24:45Z",
-      "discovered_at": "2026-10-18T17:24:45Z",
-      "doi": null,
-      "arxiv_id": null,
-      "links": [
-        "https://www.lesswrong.com/posts/oYjc7gvwDgSGAhQpZ/disproving-the-sia-disproves-the-fine-tuning-argument-and"
-      ],
-      "aliases": [],
-      "updated_at": null,
-      "external_id": "oYjc7gvwDgSGAhQpZ",
-      "provenance": [
-        {
-          "source_id": "lesswrong",
-          "name": "LessWrong",
-          "url": "https://www.lesswrong.com/",
-          "article_url": "https://www.lesswrong.com/posts/oYjc7gvwDgSGAhQpZ/disproving-the-sia-disproves-the-fine-tuning-argument-and",
-          "found_at": "2026-10-18T17:24:45Z"
-        }
-      ],
-      "content_hash": "bd1116d3c1899949524925f8cada9fffba94c408253a1efa0d2347b316b98e7a",
-      "temporal_status": "published_after_start",
-      "revision_count": 0
-    },
-    {
-      "id": "7d11fd3960e696d3974e",
-      "title": "Preparing for a Cybersecurity Catastrophe",
-      "url": "https://www.lesswrong.com/posts/8S5wwiJawN9v2dbmu/preparing-for-a-cybersecurity-catastrophe",
-      "source": "LessWrong",
-      "source_id": "lesswrong",
-      "source_url": "https://www.lesswrong.com/",
-      "published_at": "2026-10-18T16:09:18Z",
-      "date_precision": "instant",
-      "summary": "In light of the recent spate of AI-assisted hacks, some of the shortfalls with our current cybersecurity catastrophe response capability need to be urgently addressed. In this piece, I look into the areas where cybersecurity incident response are important, and why existing response measures are insufficient. I explore options for governments and smaller stakeholders to improve their resilience against catastrophic hacking incidents. 1. Background AI agents have demonstrated alarming capabilities in hacking and enabling hackers. We have seen malicious individuals or organizations take advantage of advanced AI cyber capabilities to increase the speed and sophistication of their hacks. We have also seen rogue agent swarms in the wild, and it is now theoretically possible for such swarms to survive all on their own with \"reappropriated\"…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "discovery candidate; needs review",
-      "authors": [
-        "w_jin"
-      ],
-      "first_seen": "2026-10-18T17:24:45Z",
-      "discovered_at": "2026-10-18T17:24:45Z",
-      "doi": null,
-      "arxiv_id": null,
-      "links": [
-        "https://www.lesswrong.com/posts/8S5wwiJawN9v2dbmu/preparing-for-a-cybersecurity-catastrophe"
-      ],
-      "aliases": [],
-      "updated_at": null,
-      "external_id": "8S5wwiJawN9v2dbmu",
-      "provenance": [
-        {
-          "source_id": "lesswrong",
-          "name": "LessWrong",
-          "url": "https://www.lesswrong.com/",
-          "article_url": "https://www.lesswrong.com/posts/8S5wwiJawN9v2dbmu/preparing-for-a-cybersecurity-catastrophe",
-          "found_at": "2026-10-18T17:24:45Z"
-        }
-      ],
-      "content_hash": "ac07f61b059702a83f3d4c550e599c326679b131d481bfb416a2ed126568cea8",
-      "temporal_status": "published_after_start",
-      "revision_count": 0
-    },
-    {
-      "id": "23a8ae06eb0951805189",
-      "title": "Aligning Cultural Behaviors in Arabic Language Models via Preferences",
-      "url": "https://arxiv.org/abs/2610.25362",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": "2026-10-18T16:06:41Z",
-      "date_precision": "instant",
-      "summary": "Arabic LLMs have improved rapidly, but aligning them with country-specific cultural behavioral preferences remains underexplored. Previous work has focused primarily on instruction-tuning for factual knowledge, overlooking nuanced cultural behaviors. We propose ArabPref, which to our knowledge is the first large-scale pan-Arab preference data set for the alignment of cultural behavior conditioned on the country. Our contribution includes two resources in English and Modern Standard Arabic: a culturally grounded preference dataset for training and evaluation, and a multiple-choice benchmark designed to assess culturally aligned behavior across nations. All test data are validated by native speakers to ensure authenticity. To optimize cultural alignment, we experiment with post-training methods across multilingual and Arabic-centric…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 5,
-      "relevance": "candidate",
-      "relevance_reason": "discovery candidate; needs review",
-      "authors": [
-        "Junhong Liang",
-        "Daniil Orel",
-        "Saeed Almheiri",
-        "Bilal Elbouardi",
-        "Younes Samih",
-        "Abed Alhakim Freihat",
-        "Zhuohan Xie",
-        "Momina Ahsan",
-        "Muhammad Dehan Al Kautsar",
-        "Sarfraz Ahmad",
-        "Omar El Herraoui",
-        "Mohamed Anwar",
-        "Preslav Nakov",
-        "Fajri Koto"
-      ],
-      "first_seen": "2026-10-20T06:03:24Z",
-      "discovered_at": "2026-10-20T06:03:24Z",
-      "doi": null,
-      "arxiv_id": "2610.25362",
-      "links": [
-        "https://arxiv.org/abs/2610.25362"
-      ],
-      "aliases": [],
-      "updated_at": "2026-10-18T16:06:41Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.25362v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25362",
-          "found_at": "2026-10-20T06:03:24Z"
-        }
-      ],
-      "content_hash": "a151c7ab3e5fb116c6b8bc1576ca995f3bb20371988d68fdf6d184fa3589217e",
-      "temporal_status": "published_after_start",
-      "revision_count": 1
-    },
-    {
-      "id": "10f476c8a9f7eae9633e",
-      "title": "When Planning Problems Become Hard for LLMs: Separating Structural Complexity from Semantic Interpretability",
-      "url": "https://arxiv.org/abs/2610.26964",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": "2026-10-18T15:45:30Z",
-      "date_precision": "instant",
-      "summary": "Large language models (LLMs) struggle with classical planning, but benchmarks rarely distinguish structural difficulty from the difficulty of interpreting symbolic vocabulary. We examine seven STRIPS domains with BFS-optimal plan lengths. For predicting structural difficulty without solving an instance, the zero-training delete-relaxation heuristic $h_{\\mathrm{add}}$ outperforms learned alternatives on held-out domains (mean Spearman $|ρ|=0.931$), including ridge regression ($0.707$), object count ($0.657$), and the episodic retrieval architecture ARC ($0.400$). ARC also fails to outperform a linear model using the same features. To isolate semantic effects, we progressively rename predicates while preserving states, transitions, and optimal plans. Valid LLM planning success drops from $67.5\\%$ to $40.0\\%$ between $0\\%$ and $100\\%$…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Interpretability"
-      ],
-      "score": 10,
-      "relevance": "candidate",
-      "relevance_reason": "discovery candidate; needs review",
-      "authors": [
-        "Mayukh Debnath",
-        "Adeyinka Adedigba",
-        "Rammohan Mallipeddi"
-      ],
-      "first_seen": "2026-10-21T04:51:31Z",
-      "discovered_at": "2026-10-21T04:51:31Z",
-      "doi": null,
-      "arxiv_id": "2610.26964",
-      "links": [
-        "https://arxiv.org/abs/2610.26964"
-      ],
-      "aliases": [],
-      "updated_at": "2026-10-18T15:45:30Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.26964v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.26964",
-          "found_at": "2026-10-21T04:51:31Z"
-        }
-      ],
-      "content_hash": "f3891f202ee9d97cdc9d917525f154bd8c4b925cf4cb350686094135998b11c1",
-      "temporal_status": "published_after_start",
-      "revision_count": 0
-    },
-    {
-      "id": "50dc4089b84b69c13879",
-      "title": "Formally Verified Autoresearch for Analyzing the Expressivity of Multi-Head Attention",
-      "url": "https://arxiv.org/abs/2610.25341",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": "2026-10-18T15:36:13Z",
-      "date_precision": "instant",
-      "summary": "Multi-head attention is a central component of the transformer architecture, yet how its expressivity depends on the number of heads remains poorly understood. We study a one-layer, attention-only transformer with additive positional embeddings and define the head complexity $H^\\ast(f)$ of a Boolean function $f$ as the minimum number of attention heads required to represent it. We derive an exact linear-fractional normal form for head complexity, prove a general threshold-degree lower bound, and give an explicit ten-bit function for which this bound is strict. For symmetric Boolean functions, we independently show that head complexity equals the number of times the function changes value between consecutive Hamming-weight levels, even when positional embeddings are allowed. This agrees with the concurrent characterization of Hsu and Xu…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "discovery candidate; needs review",
-      "authors": [
-        "Karthik Viswanathan",
-        "Plamen Dimitrov",
-        "Stefano Rocca",
-        "Sarayu Sirikonda"
-      ],
-      "first_seen": "2026-10-20T06:03:24Z",
-      "discovered_at": "2026-10-20T06:03:24Z",
-      "doi": null,
-      "arxiv_id": "2610.25341",
-      "links": [
-        "https://arxiv.org/abs/2610.25341"
-      ],
-      "aliases": [],
-      "updated_at": "2026-10-18T15:36:13Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.25341v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25341",
-          "found_at": "2026-10-20T06:03:24Z"
-        }
-      ],
-      "content_hash": "683a0afdcafa80d4a990d3241ed05be39af89188be8773dd23960cf467e07550",
-      "temporal_status": "published_after_start",
-      "revision_count": 0
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-6a9cf667bc3f2a05.json",
-    "sha256": "6a9cf667bc3f2a05c1e37fc76aa02e1eb28d8030a4f891c600cf8772a6e00fae",
-    "total_items": 1550,
+    "manifest": "data/archive/manifest-d470d7c7cb4bf1e2.json",
+    "sha256": "d470d7c7cb4bf1e2fa24fa3dc2b080b377abdd45f626b0b0ae9fcba97d71d283",
+    "total_items": 1560,
     "edition_items": 1500,
     "complete": false
   }
