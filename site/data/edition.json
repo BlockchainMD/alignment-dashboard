@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-27T18:43:12Z",
-  "last_successful_update": "2026-10-27T18:43:12Z",
+  "generated_at": "2026-10-27T22:57:29Z",
+  "last_successful_update": "2026-10-27T22:57:29Z",
   "edition_date": "2026-10-27",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T18:43:12Z",
+      "last_nonempty_at": "2026-10-27T22:57:29Z",
       "item_count": 4,
       "parsed_count": 4,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-10-26T12:31:52Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-20T13:13:53.349Z",
+        "incremental_window_start": "2026-10-20T18:43:12.909Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -42,34 +42,27 @@
       "id": "arxiv",
       "name": "arXiv",
       "url": "https://arxiv.org/",
-      "status": "degraded",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "status": "ok",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T18:43:12Z",
+      "last_nonempty_at": "2026-10-27T22:57:29Z",
       "item_count": 1948,
-      "parsed_count": 593,
+      "parsed_count": 118,
       "error": null,
-      "warnings": [
-        "arXiv search API failed: The read operation timed out",
-        "Backup RSS discovers only the current announcement window in five configured categories. New-publication API catch-up remains pending."
-      ],
+      "warnings": [],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
-        "pages": 1,
+        "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "Tue, 27 Oct 2026 00:00:00 -0400",
-        "latest_fetched_at": "Tue, 27 Oct 2026 00:00:00 -0400",
-        "degraded": true,
-        "primary_error": "The read operation timed out",
-        "archive_available": false,
-        "pending_incremental": true,
+        "oldest_fetched_at": "2026-10-20T13:16:17Z",
+        "latest_fetched_at": "2026-10-26T17:59:33Z",
+        "pending_incremental": false,
         "validated_empty": false,
-        "fallback_scope": "Current arXiv announcement feed for cs.AI, cs.LG, cs.CL, cs.MA and stat.ML, matched locally against discovery keywords.",
-        "adapter_mode": "rss_fallback",
+        "adapter_mode": "year_partitioned_arxiv",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance."
       },
@@ -80,13 +73,13 @@
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": "2026-10-26T14:18:09Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T18:43:12Z",
+      "last_nonempty_at": "2026-10-27T22:57:29Z",
       "item_count": 2,
-      "parsed_count": 2,
+      "parsed_count": 3,
       "error": null,
       "warnings": [
         "OpenReview search for 'AI alignment' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
@@ -136,13 +129,13 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-26T14:18:09Z",
-      "item_count": 5,
-      "parsed_count": 0,
+      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "item_count": 6,
+      "parsed_count": 1,
       "error": null,
       "warnings": [],
       "scope": "alignment",
@@ -151,28 +144,28 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": null,
-        "latest_fetched_at": null,
+        "oldest_fetched_at": "2026-10-27T19:11:32.330Z",
+        "latest_fetched_at": "2026-10-27T19:11:32.330Z",
         "pending_incremental": false,
-        "validated_empty": true,
+        "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Public Alignment Forum posts from the fixed cutoff, including substantive informal research. Discussion and opinion remain review candidates."
       },
-      "lifetime_item_count": 405
+      "lifetime_item_count": 406
     },
     {
       "id": "lesswrong",
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T18:43:12Z",
-      "item_count": 208,
-      "parsed_count": 27,
+      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "item_count": 215,
+      "parsed_count": 28,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -181,26 +174,26 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-26T14:00:41.577Z",
-        "latest_fetched_at": "2026-10-27T17:48:59.830Z",
+        "oldest_fetched_at": "2026-10-26T19:13:09.496Z",
+        "latest_fetched_at": "2026-10-27T22:39:42.445Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 608
+      "lifetime_item_count": 615
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T18:43:12Z",
+      "last_nonempty_at": "2026-10-27T22:57:29Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -230,8 +223,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-19T21:05:08Z",
@@ -269,11 +262,11 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T18:43:12Z",
+      "last_nonempty_at": "2026-10-27T22:57:29Z",
       "item_count": 3,
       "parsed_count": 3,
       "error": null,
@@ -290,7 +283,7 @@
         "latest_fetched_at": "2026-10-27T04:24:19.401Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-20T13:13:53.349Z",
+        "incremental_window_start": "2026-10-20T18:43:12.909Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public Substack publications, with bounded forward catch-up pagination when necessary. Historical archive crawling is disabled."
@@ -302,8 +295,8 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -337,8 +330,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -376,8 +369,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -415,8 +408,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -454,8 +447,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -488,8 +481,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -523,13 +516,13 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T18:43:12Z",
-      "item_count": 28,
-      "parsed_count": 28,
+      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "item_count": 30,
+      "parsed_count": 30,
       "error": null,
       "warnings": [
         "RSS monitoring is limited to the publisher's current feed window; a long outage may exceed that window. Undated entries absent from the prior archive require temporal review."
@@ -550,18 +543,18 @@
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Publisher-wide feed includes safety research alongside products and company news; new non-research entries remain review candidates."
       },
-      "lifetime_item_count": 1325
+      "lifetime_item_count": 1326
     },
     {
       "id": "deepmind",
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-10-27T18:43:12Z",
-      "last_success_at": "2026-10-27T18:43:12Z",
+      "checked_at": "2026-10-27T22:57:29Z",
+      "last_success_at": "2026-10-27T22:57:29Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T18:43:12Z",
+      "last_nonempty_at": "2026-10-27T22:57:29Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -598,25 +591,25 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 661,
-    "accepted_items": 661,
-    "retained_items": 1620,
-    "lifetime_accepted_items": 661,
-    "lifetime_retained_items": 8596,
+    "fetched_items": 191,
+    "accepted_items": 190,
+    "retained_items": 2197,
+    "lifetime_accepted_items": 191,
+    "lifetime_retained_items": 9173,
     "successful_sources": 16,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 84,
-    "total_items": 2197,
-    "relevant_items": 151,
-    "candidate_items": 2046,
+    "duplicates_removed": 183,
+    "total_items": 2206,
+    "relevant_items": 154,
+    "candidate_items": 2052,
     "undated_items": 962,
     "year_only_items": 0,
-    "newest_publication": "2026-10-27T17:48:59Z",
-    "lifetime_total_items": 9173,
-    "excluded_legacy_items": 6976
+    "newest_publication": "2026-10-27T22:39:42Z",
+    "lifetime_total_items": 9181,
+    "excluded_legacy_items": 6975
   },
   "coverage_policy": {
     "objective": "Broad, auditable discovery of newly published public AI alignment research, preserving uncertain candidates for review.",
@@ -641,6 +634,302 @@
     "review_policy": "Opinion, news, uncertain relevance, and newly discovered items with uncertain publication timing remain candidates for review."
   },
   "items": [
+    {
+      "id": "ee514b23a4dd288ec7a6",
+      "title": "Against Girardian mimesis",
+      "url": "https://www.lesswrong.com/posts/tzuArKci3JpN7Zye4/against-girardian-mimesis",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-27T22:39:42Z",
+      "date_precision": "instant",
+      "summary": "Wikipedia summarizes René Girard's mimetic theory like this: [...] In other words, you think you want something for your own internal reasons, but the actual reason you want it is that someone else wants it, and that makes you desire the thing and compete for it. The \"someone else\" whose desires you copy is someone you care about. It could be a friend, a sibling, or a colleague. It could also be a famous person, or even a fictional character. (Not a stranger you don't care about.) This creates unnecessary social conflict, as people gradually converge on wanting the same thing, people start seeing each other as rivals, this attitude gets copied too, then people start hating each other, but who hates whom gets copied too, until everyone synchronizes at hating one specific person... and then they typically murder the person, and everyone…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Viliam"
+      ],
+      "first_seen": "2026-10-27T22:57:29Z",
+      "discovered_at": "2026-10-27T22:57:29Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "tzuArKci3JpN7Zye4",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/tzuArKci3JpN7Zye4/against-girardian-mimesis",
+          "found_at": "2026-10-27T22:57:29Z"
+        }
+      ],
+      "content_hash": "aed5a0dc56f54b619f67f2779528691ca1787c6287a644947a2d1d85e56830b7",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "8bd924ef86c5657fd04c",
+      "title": "Does the \"automated grader\" direction suppress expressed distress in Qwen3.6-27B?",
+      "url": "https://www.lesswrong.com/posts/DfKDcvGWgAD4BiEHK/does-the-automated-grader-direction-suppress-expressed",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-27T21:47:32Z",
+      "date_precision": "instant",
+      "summary": "TLDR: This is a preregistration for an experiment intended to examine the impact of steering towards \"automated-grading\" on welfare-relevant indicators of frustration, self-deprecation, and tone as well as use of a tool which can abort the conversation. Confirmatory data will be published in a follow-up post after collection is done. The numbers reported here are for calibration only. Goals Previous Work This post describes the design for the fourth study in a series where I explore the relationship between welfare-relevant indicators and other language model properties, mainly the precision used for inference. I am particularly interested in the way that welfare-relevant indicators may change under circumstances where capability metrics (perplexity) stay flat while alignment-adjacent behavior has been reported to shift[1]. An early…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "ashesfall"
+      ],
+      "first_seen": "2026-10-27T22:57:29Z",
+      "discovered_at": "2026-10-27T22:57:29Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "DfKDcvGWgAD4BiEHK",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/DfKDcvGWgAD4BiEHK/does-the-automated-grader-direction-suppress-expressed",
+          "found_at": "2026-10-27T22:57:29Z"
+        }
+      ],
+      "content_hash": "5e1bc2af19bb44b4fef6c4a26513bcdd8180341312c693b3afb2aa42a12a36b6",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "fe55c00e6ddb32b88057",
+      "title": "Poll: Biosecurity Community Pulse & Perspective 2026",
+      "url": "https://www.lesswrong.com/posts/MrpL6iJKPSTscTEui/poll-biosecurity-community-pulse-and-perspective-2026",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-27T20:43:11Z",
+      "date_precision": "instant",
+      "summary": "Hi! We are Ana and Carolina and are writing a collaborative piece hoping to analyze and tackle some biosecurity field-related questions and perceived problems. We want to see how one's experiences as a working person in the community align with general trends and reports of different organisations, governments, and policymakers. This form should take less than 5 minutes. We are mindful of people's time so please don't stress grammar or response length! We'd love to get as many responses as possible. Thanks in advance!",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Ana Leonescu"
+      ],
+      "first_seen": "2026-10-27T22:57:29Z",
+      "discovered_at": "2026-10-27T22:57:29Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "MrpL6iJKPSTscTEui",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/MrpL6iJKPSTscTEui/poll-biosecurity-community-pulse-and-perspective-2026",
+          "found_at": "2026-10-27T22:57:29Z"
+        }
+      ],
+      "content_hash": "b98f2d2ee0c62fb1c213ca9e75ef5b23c83ca69ab926e593afd1cc7a73d3b7c2",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "674115caa9dc785fb4d3",
+      "title": "How to find a philanthropic advisor who cares about cost-effectiveness",
+      "url": "https://www.lesswrong.com/posts/HMcwm4zRx9faeFfBX/how-to-find-a-philanthropic-advisor-who-cares-about-cost",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-27T19:56:31Z",
+      "date_precision": "instant",
+      "summary": "As we see the details of Anthropic’s IPO for the first time, we are launching a free advisor-matching tool to help you find an evidence-first advisor. Anthropic published its S-1 yesterday, October 26th, giving the first public view of its IPO filing. If it lists in mid-November, Anthropic staff could start to go from being rich on paper to having real money to give. If I put myself in their shoes, I imagine this is quite a destabilising moment. Theoretical money just became a lot more real. If they were getting 20 emails a week before, that number may soon surge. I think, and have thought for a while, that this will be when many of them think: “I really should find a philanthropic advisor.” Many people avoid thinking about becoming extraordinarily rich. It’s even easier when you’re working flat out. But actual money starting to arrive…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "jackultraphil"
+      ],
+      "first_seen": "2026-10-27T22:57:29Z",
+      "discovered_at": "2026-10-27T22:57:29Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://fundinganthropalypse.com/p/philanthropic-advisor-matching-tool"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "HMcwm4zRx9faeFfBX",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/HMcwm4zRx9faeFfBX/how-to-find-a-philanthropic-advisor-who-cares-about-cost",
+          "found_at": "2026-10-27T22:57:29Z"
+        }
+      ],
+      "content_hash": "208d8ec9021358903025c72d897526f015540dc7e35e91829b72283c9bbec08e",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "1059be7a9be9b4470a04",
+      "title": "Comments on the BlueDot Strategy Course",
+      "url": "https://www.lesswrong.com/posts/6s8qmrSWi8DYqJ62X/comments-on-the-bluedot-strategy-course",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-27T19:32:54Z",
+      "date_precision": "instant",
+      "summary": "I originally posted this as a quick take, but I just discovered that I needed to make it a post in order to include it in a sequence. This is a brief comment on an old version of the strategy course (August 2026). I created this note to share with students in the technical and governance courses as many students went through the strategy course first. * Bluedot uses power concentration rather idiosyncratically by including rogue AI as part of this pathway (I expect they made this choice so as to avoid needing a fifth pathway; also they included a video where Richard Ngo makes an fascinating argument for analysing risks in this way, though as far as I can tell, this seems to be a pretty idiosyncratic position). The term “power concentration” generally isn’t used this way within the broader community, so I thought I’d mention this to…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Chris_Leong"
+      ],
+      "first_seen": "2026-10-27T22:57:29Z",
+      "discovered_at": "2026-10-27T22:57:29Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://substack.com/home/post/p-222241698"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "6s8qmrSWi8DYqJ62X",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/6s8qmrSWi8DYqJ62X/comments-on-the-bluedot-strategy-course",
+          "found_at": "2026-10-27T22:57:29Z"
+        }
+      ],
+      "content_hash": "4fc563a24b368d6b9457e1a32af18664d5324e10779534b677b9b35db0e18de0",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "1bc491869752d583ee7c",
+      "title": "Notes on “We’re in Triage Mode for AI Safety” by Miles Brundage",
+      "url": "https://www.lesswrong.com/posts/BFyNkWgxucqy6Wcee/notes-on-we-re-in-triage-mode-for-ai-safety-by-miles",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-27T19:11:32Z",
+      "date_precision": "instant",
+      "summary": "This reading was previously included Day 2 of the BlueDot Governance course. In the newest version of the BlueDot Governance course, this reading is now optional. I was sad to see this reading removed because I think it’s a great provocation. However, since it’s no longer part of the core curriculum content, I’m publishing my notes separately from the rest of my day 2 notes. A short extract: Miles argues that: “At best, we’ll 80/20 it — mitigating 80% of the risks with 20% of the effort that we would have applied in a world with slower AI progress and an earlier start on serious governance… We will probably not be able to totally avoid all very bad but not quite worst-case scenarios (e.g., a very unjust economic transition that causes a lot of suffering and suicides, rampant AI psychosis and addiction, a poorly planned and rushed…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Chris_Leong"
+      ],
+      "first_seen": "2026-10-27T22:57:29Z",
+      "discovered_at": "2026-10-27T22:57:29Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://reflectionsonsafety.substack.com/p/notes-on-were-in-triage-mode-for",
+        "https://www.alignmentforum.org/posts/BFyNkWgxucqy6Wcee/notes-on-we-re-in-triage-mode-for-ai-safety-by-miles",
+        "https://www.lesswrong.com/posts/BFyNkWgxucqy6Wcee/notes-on-we-re-in-triage-mode-for-ai-safety-by-miles"
+      ],
+      "aliases": [
+        "4e54aa08157cde6f91f6"
+      ],
+      "updated_at": null,
+      "external_id": "BFyNkWgxucqy6Wcee",
+      "provenance": [
+        {
+          "source_id": "alignment-forum",
+          "name": "Alignment Forum",
+          "url": "https://www.alignmentforum.org/",
+          "article_url": "https://www.alignmentforum.org/posts/BFyNkWgxucqy6Wcee/notes-on-we-re-in-triage-mode-for-ai-safety-by-miles",
+          "found_at": "2026-10-27T22:57:29Z"
+        },
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/BFyNkWgxucqy6Wcee/notes-on-we-re-in-triage-mode-for-ai-safety-by-miles",
+          "found_at": "2026-10-27T22:57:29Z"
+        }
+      ],
+      "content_hash": "6e9bbabbe2bde2da4e11e53298620408c6093e592963fac12a9dfe67af7cb847",
+      "temporal_status": "published_after_start",
+      "revision_count": 1
+    },
+    {
+      "id": "8273369e52f6853dfc7e",
+      "title": "Sci.STEPS opens applications for mentors for the 2027 season",
+      "url": "https://www.lesswrong.com/posts/fxp9L8ADxJ9NSYBre/sci-steps-opens-applications-for-mentors-for-the-2027-season",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-27T18:51:17Z",
+      "date_precision": "instant",
+      "summary": "Sci.STEPS is now accepting mentor applications for a new season! (See this post for a description of the previous season.) Sci.STEPS is a free, volunteer-run online mentorship program for early-career researchers, with an AI Safety division alongside STEM fields. As in previous seasons, the season runs February–April 2027, and mentors commit to a minimum of 2 hours per month for 3 months. Every season, each mentor-mentee pair meets six times over three months. Mentors share their experience, guidance and support with early-career researchers facing a career decision or transition. It is also a chance to give back and to meet motivated people at the start of their careers. In addition, Sci.STEPS offers optional webinars on general career development topics such as CV writing, mental health, and coaching. Participants across all divisions…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Valentin2026"
+      ],
+      "first_seen": "2026-10-27T22:57:29Z",
+      "discovered_at": "2026-10-27T22:57:29Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "fxp9L8ADxJ9NSYBre",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/fxp9L8ADxJ9NSYBre/sci-steps-opens-applications-for-mentors-for-the-2027-season",
+          "found_at": "2026-10-27T22:57:29Z"
+        }
+      ],
+      "content_hash": "e6815d6e7ee98231fefc7ec9abaf1e5c8ce3bc5be87b8c1df4258c76757d775e",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
     {
       "id": "fdc922caeac8944ad4e2",
       "title": "Markovian Circuit Tracing: Ground-Truth Tests of Transformer State Abstractions",
@@ -15005,7 +15294,9 @@
       "discovered_at": "2026-10-27T18:43:12Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/events/XfDAgdJGtpFuiqiui/xenobiology-could-life-have-evolved-via-an-alternative-route"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "XfDAgdJGtpFuiqiui",
@@ -15034,8 +15325,8 @@
       "summary": "TL;DR: Labs are accelerating due to automated AI research and development. As an upper bound, in March 2026, Anthropic researchers self-reported producing 4x more output with AI tools than without them. We lack public evidence on how this may differentially impact safety versus capabilities. As a first measurement of automated safety-specific research uplift, we surveyed 52 third-party AI safety professionals from 20+ orgs and found a median reported speedup of 1.58x. We think it is important to develop standardized methods for tracking safety-specific uplift, as these will facilitate a better understanding of the differential impacts of RSI. *This work was done by Arcadia Impact’s alignment team.* – AI R&D may not accelerate safety and capabilities equally Frontier AI companies are currently automating their AI R&D efforts. OpenAI…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "AI R&D & agents"
+        "AI R&D & agents",
+        "Alignment methods"
       ],
       "score": 11,
       "relevance": "relevant",
@@ -15047,7 +15338,9 @@
       "discovered_at": "2026-10-27T18:43:12Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/ea9fGFKxJhh2bF9rp/ai-speeds-up-3rd-party-safety-researchers-by-1-6x-via-self"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "ea9fGFKxJhh2bF9rp",
@@ -15086,7 +15379,9 @@
       "discovered_at": "2026-10-27T18:43:12Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/WfSEZBsgwYWJa8abs/how-to-manage-a-small-custom-model-with-limited-data-at"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "WfSEZBsgwYWJa8abs",
@@ -15123,7 +15418,9 @@
       "discovered_at": "2026-10-27T18:43:12Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
@@ -15164,7 +15461,9 @@
       "discovered_at": "2026-10-27T18:43:12Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/BENeZyRyLQKnAueMD/time-for-automated-decision-forecasting"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "BENeZyRyLQKnAueMD",
@@ -15180,6 +15479,45 @@
       "content_hash": "545ca8def4bc136fbd933c1baea700cd28e3a14357fe8b452e9801c55b3b8f9c",
       "temporal_status": "published_after_start",
       "revision_count": 0
+    },
+    {
+      "id": "1e3ebf94e41ebe19793b",
+      "title": "Retell uses OpenAI models to help power 100M monthly calls",
+      "url": "https://openai.com/index/retell-ai",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-10-27T15:00:00Z",
+      "date_precision": "instant",
+      "summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-10-16T19:26:59Z",
+      "discovered_at": "2026-10-16T19:26:59Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openai.com/index/retell-ai"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/retell-ai",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/retell-ai",
+          "found_at": "2026-10-16T19:26:59Z"
+        }
+      ],
+      "content_hash": "6996eb3de2f7b653429d726cd8f2c1b04ce6bcaf422fdf2e3e6839875148bc71",
+      "temporal_status": "published_after_start",
+      "revision_count": 1
     },
     {
       "id": "9008d43a821bb0cea411",
@@ -15203,7 +15541,9 @@
       "discovered_at": "2026-10-27T18:43:12Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/JmobrcgWcuuzWdXJf/solving-for-the-necessity-of-phenomenal-consciousness"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "JmobrcgWcuuzWdXJf",
@@ -15451,7 +15791,9 @@
       "discovered_at": "2026-10-27T18:43:12Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://openai.com/index/oracle-apps-in-chatgpt"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "https://openai.com/index/oracle-apps-in-chatgpt",
@@ -26915,6 +27257,43 @@
       "revision_count": 0
     },
     {
+      "id": "c44dc9ed271ff418b14a",
+      "title": "How Check Point accelerates vulnerability research with Daybreak",
+      "url": "https://openai.com/index/check-point-daybreak",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-10-27T00:00:00Z",
+      "date_precision": "instant",
+      "summary": "With OpenAI Daybreak, Check Point speeds up the research behind new security protections, enabling its analysts to turn vulnerability intelligence into customer defenses faster.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-10-27T22:57:29Z",
+      "discovered_at": "2026-10-27T22:57:29Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/check-point-daybreak",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/check-point-daybreak",
+          "found_at": "2026-10-27T22:57:29Z"
+        }
+      ],
+      "content_hash": "52b0fcfcb96935a507cccd2eb04df07584c8ba809839e36f95e04b28929d1829",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "2d7b3cc423277614cadf",
       "title": "Towards an Architecture-Agnostic Definition of \"Attention\"",
       "url": "https://www.lesswrong.com/posts/LFFpT5oev3jRgxZ9D/towards-an-architecture-agnostic-definition-of-attention",
@@ -27300,10 +27679,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "2c9de0febecc7d97227b2e70c4b937a96ac20c2c673c0f2cc0b1a7756c2fee8c",
-      "published_date": "2026-10-27",
+      "content_hash": "d2dabd8fe923f183ef427e35d926a496025e81d11830080a8c936dcb5f35764a",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "5b932488372ab3a6d81f",
@@ -27490,10 +27868,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "061e13307cf5e669193411c05d689f11cf41de39a711273b90d3133c4f695aaf",
-      "published_date": "2026-10-27",
+      "content_hash": "b6cdd470e2af2000a09a7a1c2b9051e3fd7ce7c505f10d8fc9cf25e9f6ee32f6",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "f445136cf973936e3a30",
@@ -27661,10 +28038,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "97a423920e20e86d62a4c6310c45a485725d0fe3120d3617db342ce9d42cad20",
-      "published_date": "2026-10-27",
+      "content_hash": "e4c4b492ef012c0dcc123596cb20d276bfdc35b292880db26b059669cf53a5ef",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "8358a2f9bb8ba167244f",
@@ -27709,10 +28085,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "4d5c0d249a0ea0eb6af6a47cd6c90c4e72c262d9ec4924c4fb4a231dc00657af",
-      "published_date": "2026-10-27",
+      "content_hash": "3f9a5670cc3ce9f5c71e65dc5708551f8f5c00450a52ea83240de7f1dc2c25fd",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "53377bc6077f60f6f911",
@@ -34036,10 +34411,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "f4fdc4e04facc669b02eeeffc58ce547bd7af8eb5916dc701e4fdbeeb99f450e",
-      "published_date": "2026-10-27",
+      "content_hash": "eb9f6b2bfe7cf42a848c6c4c0795cac87d048981ca9f674a179de9fc31a2cf53",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "91cf854eaca603b328ec",
@@ -34165,10 +34539,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "204dcf4a0a1c68341265087f8c7d69b8e3fc8759eab5d82309080be246269b19",
-      "published_date": "2026-10-27",
+      "content_hash": "e2693857169ea3e8946fdfd513726b0bd4c57b5b5d3b2d0a4ce30f9c4741684b",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "a14e792ab2fceaeadbb6",
@@ -34214,10 +34587,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "6e6393d2a12bde4cbb521278a88c23bd34b70460a896909a729a4737370000a9",
-      "published_date": "2026-10-27",
+      "content_hash": "09b7bd60ad78dcaa28e4ef5032e63c285086dee03992efd17bc33647c59ca42c",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "a01d3e3b353d1706963a",
@@ -39790,10 +40162,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "212d5341658fb73d2310117095dade1020fbe693440c21e756c69c261847db85",
-      "published_date": "2026-10-27",
+      "content_hash": "b26072efb93e39eb8cc39f63ac8ecbf7b9994103659849d4eca8aa1bbb92aad2",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "0540709e630f056fd0b7",
@@ -40381,10 +40752,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "47a29e57f519d360b4342729e12c5d60b27bfc2369a14e416a202210554ecfb3",
-      "published_date": "2026-10-27",
+      "content_hash": "8272e975b356e5e4d38c5eab09edb96076e5da03d292c720a7fc485a80ad48e5",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "0d3803b73aeb14f529a3",
@@ -40859,10 +41229,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "e00c1a1fc7247ed8653457d32c496915022596ec1f495d8c23206a7f8bb45faf",
-      "published_date": "2026-10-27",
+      "content_hash": "dfe9bbb703272ec881a02188784f04c8f0366fd146e77d76755e6103b5422c31",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "24711f5313569fae1400",
@@ -41167,10 +41536,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "6308cda6a43b92a2d0c87551fce96a053070b0996b4c96be06e7ea3707e55a08",
-      "published_date": "2026-10-27",
+      "content_hash": "3e434f1fb94e92836fec4246e33f0c6bb2eed1a0a48754cb60f9c7ac2379bb5f",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "0996459f0e835ad08379",
@@ -41347,10 +41715,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "ac1b828b1b79571fa6d06220efa065c2da766c378a35f3dd43d453b1b83e8167",
-      "published_date": "2026-10-27",
+      "content_hash": "7b6b3c59df5e1a8f585d3273db7d3c9ed03024861fd963786af59efea8d862f0",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "9409e3a35f367a6c6a8c",
@@ -41613,10 +41980,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "f3cb88430a0692511c4e1ef1a1f11052d87f021e540f1e1320e6ee267d6ad386",
-      "published_date": "2026-10-27",
+      "content_hash": "95a71ae4dc83a400b86d35c0684b2de3763310cb2824339ea907605c85da1326",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "d37d8b23c9d7a5a28f03",
@@ -41702,10 +42068,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "95f8849d239d67786ad0d10e1a0131e4667b8205da67d6846a9ff7f10ad4dc86",
-      "published_date": "2026-10-27",
+      "content_hash": "abc7a39135cdcf68f9aff4be76962350a55e88b5b1c93500088808341a4e2ed9",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "a6295eb2f84e91fbb4de",
@@ -41749,10 +42114,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "99e56397b99f0e76e434d61c7c648a5191ce34e74e68a27c6c4b8e046f2e58d1",
-      "published_date": "2026-10-27",
+      "content_hash": "2765d819e4efaf88a2474f887f5b954f310417cb16e678aabdc46fd1be5bbf82",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "edb34cde19f3791f51c3",
@@ -42134,10 +42498,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "428d61c67c1f4fe859479c9d5ee508c1ffd502188d255b0daddf857fe28e6250",
-      "published_date": "2026-10-27",
+      "content_hash": "3580b46955b4ad028429c3ef78abc770268a38d17379ded1391c8c54a548e0cc",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "d8d97eb4d4025bf643f6",
@@ -42316,10 +42679,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "e427fee90c8b6c074f762d95ad9b114b7fbcfc0d77ae3ec020d277022afa5ff1",
-      "published_date": "2026-10-27",
+      "content_hash": "86b57b6b5b5df4a5c8b2ff3e9e5f0c9e745ef8a69ffb905f7d2fd48a3aa45cdb",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "a172acbb6c774f45cb0c",
@@ -56114,7 +56476,9 @@
       "discovered_at": "2026-10-27T18:43:12Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://openai.com/index/anima"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "https://openai.com/index/anima",
@@ -57356,8 +57720,8 @@
       "summary": "Text-to-music alignment is commonly evaluated by the global similarity between text and audio embeddings, which collapses all described attributes into a single score and obscures which ones are missing. We instead introduce MQAScore, which verifies each atomic musical concept along five clip-level dimensions (genre, instrument, mood/theme, vocal, and usage) by the probability that a large audio language model (LALM) answers affirmatively to a binary question. To assess evaluator reliability, we construct verification labels from presence/absence annotations and LLM-guided concept substitutions, and propose the Sensitivity-Invariance Ratio, which measures how selectively an evaluator responds to meaning-changing substitutions. Experiments show that concept-level scoring improves both question-answering and similarity-based evaluators…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Evaluations & risk",
-        "Alignment methods"
+        "Alignment methods",
+        "Evaluations & risk"
       ],
       "score": 15,
       "relevance": "candidate",
@@ -61856,9 +62220,9 @@
       "summary": "Monitoring the chain-of-thought (CoT) of language models (LMs) is a key strategy for detecting and preventing misbehaviors for AI safety. As such, it is critical to identify reinforcement learning (RL) practices that lead to unmonitorable chain-of-thought. One such practice may be unavoidable: reward misspecification. As RL environments become more complex, it is infeasible to have perfect verification, and models are rewarded for behaviors that are different from the true task intent. We show that reward misspecification alone already degrades monitorability. We create a testbed with pairs of true reward aligned with task intent and misspecified rewards that favor a different behavior, so that reward hacking can be induced by training and labeled verifiably. Across three models and three tasks, CoT monitorability remains low as models'…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Scheming & deception",
         "AI control & oversight",
-        "Alignment methods"
+        "Alignment methods",
+        "Scheming & deception"
       ],
       "score": 16,
       "relevance": "relevant",
@@ -67234,414 +67598,12 @@
       "content_hash": "068a89996fa32568030bd0a94e9d189c1acbae4f0487558e255a728bf9d5eea3",
       "temporal_status": "publication_date_unverified",
       "revision_count": 0
-    },
-    {
-      "id": "df5403c67f627e64a839",
-      "title": "SafeWall: A Risk-Aware Job Walltime Recommendation for HPC Scheduling",
-      "url": "https://arxiv.org/abs/2610.26577",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.26577v1 Announce Type: cross Abstract: In high-performance computing (HPC), users must submit resource requirements for their jobs, with user-supplied walltime being a critical parameter. However, these estimates are notoriously inaccurate, as users tend to overestimate walltime to prevent the scheduler from terminating their jobs prematurely. While existing work on learning-based walltime prediction primarily focuses on maximizing prediction accuracy, such predictions are inherently risky for walltime recommendations. Specifically, underestimation leads to job termination before completion, resulting in lost progress and wasted resources. In this study, we present SafeWall, a novel recommendation method that adjusts walltime predictions by incorporating an explicit, nonnegative safety buffer to mitigate underestimation risk…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Kanglin Xu",
-        "Michael Papka",
-        "Zhiling Lan"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.26577",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.26577v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.26577",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "f43dc8e43fda03e9ab0c9b7f5ac24889e7d515e3f4f82ff5b4d7f860507d8bc6",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "dde2c662b6e2b955cead",
-      "title": "OpenCollab: A Multi-Agent Coding Framework with Programmable Collaboration and Controllable Runtime",
-      "url": "https://arxiv.org/abs/2609.38345",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2609.38345v3 Announce Type: replace-cross Abstract: Multi-agent coding systems are designed to tackle complex software engineering tasks through collaboration. However, existing evaluations typically assume configured organizations are followed faithfully, whereas reality differs. This behavioral gap, combined with differences in underlying system components, prevents clear attribution of observed gains. To this end, we introduce OpenCollab, a multi-agent coding framework that provides a unified infrastructure for programmable collaboration and controllable runtime. Specifically, OpenCollab unifies organization design, enforces experimental control on a shared runtime, and tracks execution through fine-grained event streams. On this basis, we define Adherence to quantify whether the declared organization is actually realized. Our…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Chun-Wah Hsu",
-        "Kai Gong",
-        "Yu Wu",
-        "Xianhe Chen",
-        "Mengyang Liu",
-        "Jie Li",
-        "Hanyu Li",
-        "Zhixuan Liu",
-        "Naisheng Tang",
-        "Jiaying Chi",
-        "Ziheng Fan",
-        "Xuning He",
-        "Xiaokang Yang",
-        "Xue Jiang",
-        "Yihong Dong"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2609.38345",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2609.38345v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2609.38345",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "fbbd165baf8c508e29605354a0d5e765642b7c73a6fc5d2303e1af00fbe165c8",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "dcf83c73837b861a7276",
-      "title": "Modaliff: A Unified Token Diffusion Model for Any-to-Any Generation",
-      "url": "https://arxiv.org/abs/2610.25533",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.25533v1 Announce Type: cross Abstract: Any-to-any generation seeks a single model that translates flexibly among text, image, and audio, yet existing approaches either require fully aligned multimodal tuples or a shared representation that suppresses modality-specific structure. We introduce Modaliff, a novel token-based diffusion model that learns from widely available bimodal pairs while preserving each modality in its native latent sequence. Modaliff assembles conditions and targets into a unified token sequence, with per-token attributes to disambiguate token identities and role-based positional embedding to preserve each modality's internal structure across sequence layouts. This design enables a single denoiser to support diverse generation tasks without task-specific architectural changes or a shared cross-modal latent…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Duc Kieu",
-        "Kien Do",
-        "Minh Khoa Le",
-        "Tung Kieu",
-        "Dang Nguyen",
-        "Thin Nguyen"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.25533",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.25533v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25533",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "d44041f4189cc2224bdeb083422a13667b5944d2030c260ccd06496c16c52c59",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "dc4e40f5b9b2a29774d9",
-      "title": "Sleep Stage Classification across Heterogeneous EEG/EOG Channels with Multi-Channel Differential Transformer",
-      "url": "https://arxiv.org/abs/2508.15215",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2508.15215v4 Announce Type: replace Abstract: Classification of sleep stages is essential for assessing sleep quality and diagnosing sleep disorders. However, manual inspection of EEG characteristics for each stage is time-consuming and prone to human error. Although machine learning and deep learning methods have been actively developed, they continue to face challenges arising from the non-stationarity and variability of electroencephalography (EEG) and electrooculography (EOG) signals across diverse clinical configurations, often resulting in poor generalization. In this work, we propose SleepDIFFormer, a multi-channel differential transformer framework for heterogeneous EEG-EOG representation learning. SleepDIFFormer is trained across multiple sleep staging datasets, each treated as a source domain, with the goal of…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Benjamin Wei Hao Chin",
-        "Yuin Torng Yew",
-        "Jia Hong Puah",
-        "Haocheng Wu",
-        "Lanxin Liang",
-        "Chow Khuen Chan",
-        "Norita Mohd Zain",
-        "Siti Balqis Samdin",
-        "Sim Kuan Goh"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2508.15215",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2508.15215v4",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2508.15215",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "b2d66331eb8afa275b81d544aab700aeb630249845b85d8826eaf3faa974af79",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "db15ffb7a496bdbeea0e",
-      "title": "Residential Construction Image Dataset Using CSI Divisions for Deep Learning-based Object Detection",
-      "url": "https://arxiv.org/abs/2610.25535",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.25535v1 Announce Type: cross Abstract: Accurate recognition of construction site elements is essential for the application of deep learning (DL) in the construction industry. Despite rapid advances in computer vision, the adoption of DL in construction has been limited by the lack of structured, publicly available datasets aligned with established industry standards. To address this gap, we introduce the Residential Construction Dataset Using CSI Divisions (ResCD-CSI) image dataset, a manually labeled image benchmark organized according to the divisional structure defined by the Construction Specifications Institute (CSI). The dataset comprises high-resolution images collected from active residential construction sites across the United States, capturing diverse building components, materials, and equipment under real-world…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Fahad Iqbal",
-        "Shayan Mirzabeigi"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.25535",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.25535v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25535",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "df6aa5f21ba2e790bbf7d9dffd4fbd483e3c446c0db3e81f4b8de48b049b18dc",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "d9d31bd66fb19c090eb6",
-      "title": "InJePA: Intention-First Latent Planning with Coupled JEPA World Models for Visual Navigation",
-      "url": "https://arxiv.org/abs/2610.23896",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.23896v1 Announce Type: cross Abstract: Visual navigation requires goal directed planning informed by predictions of environment dynamics. Representative navigation world model methods propose complete action candidates before predicting consequences for selection or search updates. For each candidate, predictions primarily evaluate proposed actions rather than guide its stepwise construction. To this end, we propose InJepa, an intention first planning paradigm centered on latent states. A goal conditioned JEPA proposes latent intentions, and an action conditioned JEPA continually predicts future latent states. Both operate in a shared latent space to align their predictive representations. Within each candidate, predicted consequences feed into the next intention proposal and action inference, forming a closed loop of…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Siming Zhou",
-        "Bowen Ma",
-        "Ruiran Du",
-        "Pengcheng Zheng",
-        "Sheng Zheng",
-        "Dongshen Han",
-        "Zhijie Li",
-        "Wei Dong",
-        "Fan Mo",
-        "Chaoning Zhang"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.23896",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.23896v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.23896",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "40474345056b5dce4ddb6c59b87f23bafaf0aa1a62eb4aee1174a5e0f9b7de7b",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "d8b0cc4723d09c234a6a",
-      "title": "Controllable GNN Explanations via Multi-Metric Preference Selection",
-      "url": "https://arxiv.org/abs/2609.32436",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2609.32436v2 Announce Type: replace Abstract: Mechanisms for generating GNN explanations are crucial for building trust and mitigating biases in Graph Neural Networks (GNNs), especially in high-stakes scenarios. Most current methods optimize only for fidelity under the sparsity constraint. However, this discounts the need for interpretable explanations (those that consist of familiar motif patterns) and stable explanations (those that remain unchanged under structural perturbations). We propose a novel approach that optimizes GNN explanations across these metrics, exposing their relative weighing as a control. Experiments on various real-world datasets, including MUTAG, BA-2Motif, BAMultiShapes, and PROTEINS, suggest that our method produces higher-fidelity explanations than a state-of-the-art baseline on MUTAG and PROTEINS across…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Rachit Verma",
-        "Yashraj J. Deshmukh",
-        "Anirban Dasgupta"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2609.32436",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2609.32436v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2609.32436",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "2982ca21332dd59416ae928be43380e7e57188f885788267f2c5cb4810123eb4",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "d89ed85e2195d90455ca",
-      "title": "MAPS: A Multi-Agent Personalized Script-Driven Video Advertising System Enhanced by Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2610.25748",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.25748v1 Announce Type: cross Abstract: With the rapid growth of online video consumption, video advertising has become a dominant component of digital advertising. Most personalized video advertising systems follow a retrieval-based paradigm, which matches ad content with user preferences in a feature space and recommends the most similar candidates. However, since the candidate creatives are pre-produced, this paradigm limits the granularity of personalization and leads to performance disparities across diverse user groups. To address this limitation, we propose a multi-agent personalized script-driven video advertising system (MAPS). We design four collaborative agents that form a closed-loop pipeline of user profile modeling, script generation, video synthesis, and feedback-driven iterative refinement. To train the…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Zhongyu Wang",
-        "Chen Zuo",
-        "Qingxuan Sun",
-        "Jiayang Qiao",
-        "Qiuhao Qian",
-        "Songyan Cui",
-        "Guocheng Chen"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.25748",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.25748v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25748",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "4deed2c4251d0da166bd49fe3b4a04d4d00b5867de892fb83624bdd1084137fd",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "d853e96c8724c8fccf4a",
-      "title": "Can It Actually Work? Synthesizing Functional CAD Mechanisms",
-      "url": "https://arxiv.org/abs/2610.26861",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.26861v1 Announce Type: cross Abstract: While LLM agents can generate visually plausible CAD assemblies, these designs often fail to fulfill their intended physical functions. We study functional CAD design, a setting where agents interpret underspecified requests to construct and iteratively revise mechanisms that satisfy functional requirements in physical simulation. Verifying these requirements is nontrivial: different candidate mechanisms may realize the same function through entirely different components, controls, and operating sequences. To bridge this gap, we propose FunCAD-Harness, a framework that translates abstract requirements into candidate-specific physical tests and uses simulation feedback to guide design revisions. To systematically evaluate this capability, we introduce FunCADBench, a benchmark spanning 46…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Wenqian Zhang",
-        "Yangyi Huang",
-        "Zigeng Xu",
-        "Weiyang Liu",
-        "Zhen Liu"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.26861",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.26861v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.26861",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "d54389364bf825a96960c6f7cf76c3dc8ff4a418367c89925477f12b45397a90",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-7bdf4a06d9c28141.json",
-    "sha256": "7bdf4a06d9c281417d2c0d61f4611db71eab113c4fb94ae484311232eca77b32",
-    "total_items": 2197,
+    "manifest": "data/archive/manifest-6a3e6beefd07c664.json",
+    "sha256": "6a3e6beefd07c664d19f73eda32d2e4e9d68e906b9722a7f08ceb9aaeeb49c72",
+    "total_items": 2206,
     "edition_items": 1500,
     "complete": false
   }
