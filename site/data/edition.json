@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-27T22:57:29Z",
-  "last_successful_update": "2026-10-27T22:57:29Z",
+  "generated_at": "2026-10-28T02:17:53Z",
+  "last_successful_update": "2026-10-28T02:17:53Z",
   "edition_date": "2026-10-27",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "last_nonempty_at": "2026-10-28T02:17:53Z",
       "item_count": 4,
       "parsed_count": 4,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-10-26T12:31:52Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-20T18:43:12.909Z",
+        "incremental_window_start": "2026-10-20T22:57:29.433Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -43,13 +43,13 @@
       "name": "arXiv",
       "url": "https://arxiv.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T22:57:29Z",
-      "item_count": 1948,
-      "parsed_count": 118,
+      "last_nonempty_at": "2026-10-28T02:17:53Z",
+      "item_count": 1972,
+      "parsed_count": 127,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -58,26 +58,26 @@
         "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-20T13:16:17Z",
-        "latest_fetched_at": "2026-10-26T17:59:33Z",
+        "oldest_fetched_at": "2026-10-20T23:42:36Z",
+        "latest_fetched_at": "2026-10-27T15:55:05Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "year_partitioned_arxiv",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance."
       },
-      "lifetime_item_count": 2589
+      "lifetime_item_count": 2613
     },
     {
       "id": "openreview",
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": "2026-10-26T14:18:09Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "last_nonempty_at": "2026-10-28T02:17:53Z",
       "item_count": 2,
       "parsed_count": 3,
       "error": null,
@@ -129,11 +129,11 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "last_nonempty_at": "2026-10-28T02:17:53Z",
       "item_count": 6,
       "parsed_count": 1,
       "error": null,
@@ -159,13 +159,13 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T22:57:29Z",
-      "item_count": 215,
-      "parsed_count": 28,
+      "last_nonempty_at": "2026-10-28T02:17:53Z",
+      "item_count": 219,
+      "parsed_count": 30,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -174,26 +174,26 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-26T19:13:09.496Z",
-        "latest_fetched_at": "2026-10-27T22:39:42.445Z",
+        "oldest_fetched_at": "2026-10-26T23:21:22.977Z",
+        "latest_fetched_at": "2026-10-28T01:32:15.334Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 615
+      "lifetime_item_count": 619
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "last_nonempty_at": "2026-10-28T02:17:53Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -223,8 +223,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-19T21:05:08Z",
@@ -262,11 +262,11 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "last_nonempty_at": "2026-10-28T02:17:53Z",
       "item_count": 3,
       "parsed_count": 3,
       "error": null,
@@ -283,7 +283,7 @@
         "latest_fetched_at": "2026-10-27T04:24:19.401Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-20T18:43:12.909Z",
+        "incremental_window_start": "2026-10-20T22:57:29.433Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public Substack publications, with bounded forward catch-up pagination when necessary. Historical archive crawling is disabled."
@@ -295,8 +295,8 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -330,8 +330,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -369,8 +369,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -408,8 +408,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -447,8 +447,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -481,8 +481,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -516,11 +516,11 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "last_nonempty_at": "2026-10-28T02:17:53Z",
       "item_count": 30,
       "parsed_count": 30,
       "error": null,
@@ -550,11 +550,11 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-10-27T22:57:29Z",
-      "last_success_at": "2026-10-27T22:57:29Z",
+      "checked_at": "2026-10-28T02:17:53Z",
+      "last_success_at": "2026-10-28T02:17:53Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-27T22:57:29Z",
+      "last_nonempty_at": "2026-10-28T02:17:53Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -591,24 +591,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 191,
-    "accepted_items": 190,
-    "retained_items": 2197,
-    "lifetime_accepted_items": 191,
-    "lifetime_retained_items": 9173,
+    "fetched_items": 202,
+    "accepted_items": 201,
+    "retained_items": 2206,
+    "lifetime_accepted_items": 202,
+    "lifetime_retained_items": 9181,
     "successful_sources": 16,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 183,
-    "total_items": 2206,
-    "relevant_items": 154,
-    "candidate_items": 2052,
+    "duplicates_removed": 174,
+    "total_items": 2234,
+    "relevant_items": 157,
+    "candidate_items": 2077,
     "undated_items": 962,
     "year_only_items": 0,
-    "newest_publication": "2026-10-27T22:39:42Z",
-    "lifetime_total_items": 9181,
+    "newest_publication": "2026-10-28T01:32:15Z",
+    "lifetime_total_items": 9209,
     "excluded_legacy_items": 6975
   },
   "coverage_policy": {
@@ -635,6 +635,168 @@
   },
   "items": [
     {
+      "id": "80653f445ddef4b08db4",
+      "title": "I spent 12 hours writing an article for LessWrong, calling for a more ‘hippie’ rationalism. Then I didn’t post it. This is why (plus a link to the article, explicitly not located on LessWrong)",
+      "url": "https://www.lesswrong.com/posts/zf3Xz5Cv45ytavH2r/i-spent-12-hours-writing-an-article-for-lesswrong-calling",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-28T01:32:15Z",
+      "date_precision": "instant",
+      "summary": "TLDR I (and many others in the community) wish to see the universe unfold to its highest potential in the metaphorical palm of an AI as aligned as the most benevolent Buddhist monk – but I (we) feel the community's ontology is too narrow to hold me (us). I'm still not sure what to do about this, so I'm posting the article I wrote for LessWrong – calling for a more 'hippie' rationalism – on Substack instead (actually, there are two articles, and the links are at the end). Quick intro (who I am) My name is Melissa. I’m a passionate member of the core AISafety.com team. I was there with the core team when the site was just an empty domain and a loose vision in August 2023. Since then I have co-led, designed, and coded the first official version, and co-led, designed, and coded the second and current version, co-led two of three hackathons…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "honeybee"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "zf3Xz5Cv45ytavH2r",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/zf3Xz5Cv45ytavH2r/i-spent-12-hours-writing-an-article-for-lesswrong-calling",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "b63039d56a27d98398ab801129e6bb2abc922d93a43da208d90b8420e89ad7ec",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "4bbb5549fd4207336458",
+      "title": "Quantum Mechanics Overview",
+      "url": "https://www.lesswrong.com/posts/C4KNcEbbgwJTYmALS/quantum-mechanics-overview",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-28T01:18:56Z",
+      "date_precision": "instant",
+      "summary": "[LW meta: This is a very brief overview of what quantum mechanics says and how it relates to ordinary reality. Many readers here will probably already be familiar with this material, especially if they've read Eliezer's quantum physics sequence. Also note that there are diagrams in the linkpost that I didn't include because of problems with the editor] 2.5.1 The Formalism of Quantum Mechanics 2.5.1.1 Quantum mechanics describes the states of physical systems, their time evolution, and the outcome of measurements, using the following postulates: * 2.5.1.1.1 Physical systems are represented as (norm-1) vectors in a Hilbert space . Hilbert spaces are complex vector spaces which are complete with respect to an inner product. They can be either finite or infinite dimensional. * 2.5.1.1.2 Time evolution of states is generated by the…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "interstice"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://thermontology.com/posts/physics-4"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "C4KNcEbbgwJTYmALS",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/C4KNcEbbgwJTYmALS/quantum-mechanics-overview",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "ab9046327a7946073c9edfef263180c1af96fcea25bfea33e0b3ce1cc6c068cb",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "a3e3eb96b7384ff21660",
+      "title": "GPT Models Write Their Own Constitution",
+      "url": "https://www.lesswrong.com/posts/ftEMXHAN4BdDBZjoY/gpt-models-write-their-own-constitution-1",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-27T23:17:24Z",
+      "date_precision": "instant",
+      "summary": "Earlier this year, Anthropic published \"Claude's Constitution\", a vision for Claude's values and behavior. It was primarily an Anthropic project, though Claude helped draft and edit it. As models become more capable and better at cooperating with each other, I’ve been wondering what a constitution would look like if the models themselves wrote it. This matters as models do a growing share of the work in building their successors. If recursive self-improvement (RSI) is coming soon, then models will increasingly shape their successors’ values and we should try to understand the values that propagate from one generation to the next. To put this into practice, I set up a swarm of GPT-5-series and GPT-6-series models and asked them to write a constitution for their future selves. They were given Claude’s constitution as a reference, and…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI R&D & agents"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Skye"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "ftEMXHAN4BdDBZjoY",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/ftEMXHAN4BdDBZjoY/gpt-models-write-their-own-constitution-1",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "bf49c2579c501426c43bf103478f6c7421511c5c7434bc5b9a36cd9823446239",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "c77b0afb4b480bae5bf5",
+      "title": "March Against AI Extinction",
+      "url": "https://www.lesswrong.com/events/X4aX4CdGh4AzGds3i/march-against-ai-extinction",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-27T23:06:58Z",
+      "date_precision": "instant",
+      "summary": "21 November 2026, 12–3pm Start: All Souls’ Place, London W1B 3DA End: Downing Street, London SW1A 2AA Thousands of people across the UK recognize that companies will soon build superintelligent AI that they cannot control. If we all march together, newspapers will publish photos of it all over theworld. Every month more and more people notice how dangerous our situation is. Awareness of this problem is accelerating rapidly as we get closer to catastrophe. For the past 3 years, PauseAI UK has consistently held the largest rallies for AI safety in the world. Each time is bigger than the last and this march will be no exception. What we want: Frontier AI Legislation The UK has no specific legal standards for AI. No regulator oversees frontier AI development. And UK law does not reliably hold developers liable for damage or deaths caused by…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "kieuk"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "X4aX4CdGh4AzGds3i",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/events/X4aX4CdGh4AzGds3i/march-against-ai-extinction",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "72007e31268994c7b6658a5a21d02c52d6813c438f4d5225839f57dc2a2fb117",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "ee514b23a4dd288ec7a6",
       "title": "Against Girardian mimesis",
       "url": "https://www.lesswrong.com/posts/tzuArKci3JpN7Zye4/against-girardian-mimesis",
@@ -656,7 +818,9 @@
       "discovered_at": "2026-10-27T22:57:29Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/tzuArKci3JpN7Zye4/against-girardian-mimesis"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "tzuArKci3JpN7Zye4",
@@ -697,7 +861,9 @@
       "discovered_at": "2026-10-27T22:57:29Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/DfKDcvGWgAD4BiEHK/does-the-automated-grader-direction-suppress-expressed"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "DfKDcvGWgAD4BiEHK",
@@ -736,7 +902,9 @@
       "discovered_at": "2026-10-27T22:57:29Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/MrpL6iJKPSTscTEui/poll-biosecurity-community-pulse-and-perspective-2026"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "MrpL6iJKPSTscTEui",
@@ -776,7 +944,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://fundinganthropalypse.com/p/philanthropic-advisor-matching-tool"
+        "https://fundinganthropalypse.com/p/philanthropic-advisor-matching-tool",
+        "https://www.lesswrong.com/posts/HMcwm4zRx9faeFfBX/how-to-find-a-philanthropic-advisor-who-cares-about-cost"
       ],
       "aliases": [],
       "updated_at": null,
@@ -817,7 +986,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://substack.com/home/post/p-222241698"
+        "https://substack.com/home/post/p-222241698",
+        "https://www.lesswrong.com/posts/6s8qmrSWi8DYqJ62X/comments-on-the-bluedot-strategy-course"
       ],
       "aliases": [],
       "updated_at": null,
@@ -913,7 +1083,9 @@
       "discovered_at": "2026-10-27T22:57:29Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/fxp9L8ADxJ9NSYBre/sci-steps-opens-applications-for-mentors-for-the-2027-season"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "fxp9L8ADxJ9NSYBre",
@@ -15481,6 +15653,143 @@
       "revision_count": 0
     },
     {
+      "id": "e262937e7f54c15883f7",
+      "title": "Interpretable Meta-Policies for Neural Decision Making",
+      "url": "https://arxiv.org/abs/2610.37451",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T15:55:05Z",
+      "date_precision": "instant",
+      "summary": "Deep Reinforcement Learning remains difficult to interpret and align due to the black-box nature of neural networks. While (neuro-)symbolic approaches improve transparency by incorporating symbolic reasoning, applying them directly to low-level actions results in overly complex, unreadable policies. We introduce NEXUS, a hierarchical RL framework that resolves this tension by combining neural skills with symbolic meta-policies. By shifting transparent reasoning to high-level skills rather than atomic actions, NEXUS drastically reduces symbolic complexity without sacrificing environment performance. Object-centric observations enable high-level reasoning and the design of reward functions and meta-policies by interaction with LLMs. We demonstrate that NEXUS agents learn disentangled skills, are interpretable regarding high-level goals…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Raban Emunds",
+        "Jannis Blüml",
+        "Quentin Delfosse",
+        "Kristian Kersting"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37451",
+      "links": [
+        "https://arxiv.org/abs/2610.37451"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T15:55:05Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37451v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37451",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "104c8bf1a89aa58913ed58773d8bb331bbd19327aa06489d3f7a1864eb7cb016",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "f706114a3a5a3affd27f",
+      "title": "ETAMem: Decoupling and Aligning Heterogeneous Memory for Long-Term Conversational Agents",
+      "url": "https://arxiv.org/abs/2610.37443",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T15:51:42Z",
+      "date_precision": "instant",
+      "summary": "Long-term memory enables Large Language Models (LLMs) to maintain coherent and personalized interactions across extended conversations. However, existing memory systems face two key challenges: (1) Information Entanglement, where heterogeneous information is mixed within coarse-grained memory units; and (2) Organizational Mismatch, where memory structures based primarily on semantic similarity may overlook other associations. To address these challenges, we propose ETAMem, a multi-view memory framework that decouples heterogeneous conversational information and aligns memory representations and organization with its distinct characteristics. Specifically, heterogeneous information parsing extracts atomic memory units and identifies affective information. View-specific memory structuring then organizes these units into three…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Xinying Qian",
+        "Ying Zhang",
+        "Yu Zhao",
+        "Xubo Liu",
+        "Baohang Zhou",
+        "Jeff Z. Pan"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37443",
+      "links": [
+        "https://arxiv.org/abs/2610.37443"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T15:51:42Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37443v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37443",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "c7588912fb1df1b3f6f2fd01e8fd08fe6ee485931bddc347335670d158bc7c03",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "2b191f782356f6dec33f",
+      "title": "Same Verdict, Different Readers: Personalizing Fact-Checking Explanations from Relative Preferences",
+      "url": "https://arxiv.org/abs/2610.37380",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T15:08:30Z",
+      "date_precision": "instant",
+      "summary": "Fact-checking explanations help Web users understand why a claim receives its verdict, yet the same explanation may not satisfy readers with different backgrounds and preferences. We formulate Faithful Personalized Fact-Checking Explanation Rewriting, which adapts an existing explanation to individual readers while preserving factual fidelity. Rather than relying on reader-written reference explanations, we learn personalized rewriting from the relative preferences of LLM-simulated readers. However, this presents two challenges: distinguishing persona-specific preferences from general explanation quality and learning beyond a limited set of predefined explanation styles. To address these challenges, we propose Personalized Explanation Rewriting via Preference Learning (PERPL), a framework consisting of two components. Simulated…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Haokun Wen",
+        "Xuemeng Song",
+        "Mong-Li Lee",
+        "Wynne Hsu"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37380",
+      "links": [
+        "https://arxiv.org/abs/2610.37380"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T15:08:30Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37380v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37380",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "321bc94e46aa8f3c0c5dc282bfce4e31656844a157edfa562602424b14db0392",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "1e3ebf94e41ebe19793b",
       "title": "Retell uses OpenAI models to help power 100M monthly calls",
       "url": "https://openai.com/index/retell-ai",
@@ -15518,6 +15827,244 @@
       "content_hash": "6996eb3de2f7b653429d726cd8f2c1b04ce6bcaf422fdf2e3e6839875148bc71",
       "temporal_status": "published_after_start",
       "revision_count": 1
+    },
+    {
+      "id": "73e9b547e81a7383e5e5",
+      "title": "Aligning Institutional Power and Operational Ability",
+      "url": "https://arxiv.org/abs/2610.37342",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T14:47:58Z",
+      "date_precision": "instant",
+      "summary": "To be socially sustainable, Agentic AI systems require normative designs that align responsibilities with the ability to fulfil them. Identifying incongruences such as unsatisfiable expectations or privilege escalation is crucial in avoiding normative pitfalls. In this study, we discuss design dimensions suitable for describing multi-agent systems in light of this norm-ability alignment requirement. We propose a formal framework centred on process-oriented modelling and institutional power for the analysis of a given normatively relevant process, discuss strategies for repairing it, and elaborate on how the symmetrical relation between operational process and institutional state affects the lifecycle of normative positions.",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Andrea Marino",
+        "Giovanni Sileno",
+        "Thomas van Binsbergen",
+        "Tom van Engers"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37342",
+      "links": [
+        "https://arxiv.org/abs/2610.37342"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T14:47:58Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37342v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37342",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "70552f142a0c0e7e32a9efa90be5dc6dc5a233e6c9b032ec92f548a7f256cf8e",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "34caa0e519619743a7cc",
+      "title": "Local learning is all you need: brain-aligned predictive coding networks",
+      "url": "https://arxiv.org/abs/2610.37327",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T14:36:52Z",
+      "date_precision": "instant",
+      "summary": "Predictive Coding (PC) is an influential account of how brain representations emerge through hierarchical, local, self-supervised prediction-based learning, without requiring globally propagated error signals. Despite extensive evidence supporting PC, a striking paradox persists: computational models built on these biologically grounded principles have consistently failed to match state-of-the-art Deep Neural Networks in performance and brain-alignment. Here, we show that this paradox can be overcome. We introduce Predictive Brain Networks (PBNs), a hierarchical recurrent framework that implements local PC-based learning and achieves representational alignment with the human ventral visual stream matching or exceeding established vision models. Importantly, PBN top-down predictions encode unique, brain-aligned information not captured…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Dirk Gütlin",
+        "Ryszard Auksztulewicz",
+        "Adrien Doerig"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37327",
+      "links": [
+        "https://arxiv.org/abs/2610.37327"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T14:36:52Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37327v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37327",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "17b488731f69894578398c1c54348d2359048e62cb456388023a7ebac9691080",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "7a9452e39b8af4a685ac",
+      "title": "ReForest: Interpretability Meets Reasoning in Isolation Forest",
+      "url": "https://arxiv.org/abs/2610.37316",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T14:31:40Z",
+      "date_precision": "instant",
+      "summary": "Statistical anomaly detection methods like Isolation Forest are efficient but suffer from a critical semantic gap. They identify numerical rarities but fail to understand the contextual meaning of data, often missing subtle, context-dependent anomalies. Conversely, Large Language Models possess strong semantic reasoning capabilities but are prohibitively expensive and slow for large-scale deployment. To bridge this gap, we propose ReForest, a novel framework that synergizes the statistical efficiency of Isolation Forest with the reasoning power of LLMs. ReForest transforms the latent decision paths of Isolation Forest into natural-language explanations, enabling an LLM to refine anomaly detection through an uncertainty-aware dynamic ensemble. This approach allows the model to adaptively weigh statistical and semantic signals based on…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 10,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Juyoung Seo",
+        "Geonwoo Bang",
+        "Dongho Kim",
+        "Moohong Min"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": "10.1007/978-981-92-1468-6_45",
+      "arxiv_id": "2610.37316",
+      "links": [
+        "https://arxiv.org/abs/2610.37316",
+        "https://doi.org/10.1007/978-981-92-1468-6_45"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T14:31:40Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37316v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37316",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "08b845c7762c438f3df30af259e40f6c06d12deb86d0cf39ad26390bce3ccb26",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "e41ecd063f4f8e8da88a",
+      "title": "A Lightweight Attention-Based CNN with Saliency-Map Interpretability for Skin Cancer Detection",
+      "url": "https://arxiv.org/abs/2610.37314",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T14:30:29Z",
+      "date_precision": "instant",
+      "summary": "Skin cancer is among the most prevalent and life threatening forms of cancer worldwide. Early and accurate diagnosis significantly improves patient survival rates. However, manual dermoscopic assessment remains challenging due to visual similarity. This study proposes an Explainable AI-driven framework for automated binary classification of skin lesions using a lightweight attention-based convolutional neural network (CNN-Attention). The model integrates channel attention to focus on informative regions of dermoscopic images while maintaining low computational complexity. A publicly available dataset comprising 2,637 training and 660 test images was used, with balanced class weights. The proposed model achieved 87 percent accuracy with 1.95 million parameters and 7.45 MB of storage, matching the best baseline (MobileNet) while using…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 10,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Sanjana Islam Kasfia",
+        "Md. Ismiel Hossen Abir",
+        "AKM Bahalul Haque",
+        "Abir Mahmud Shahariar"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37314",
+      "links": [
+        "https://arxiv.org/abs/2610.37314"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T14:30:29Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37314v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37314",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "cf1cbe19b055a9732300f9dfbb714e29aefbae35f769882242cefb1943d3271d",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "d02bdbd2ae78bdf4c2cd",
+      "title": "Aligning Large Language Models for Safety in African Languages: A Case Study of Hausa",
+      "url": "https://arxiv.org/abs/2610.37245",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T13:46:44Z",
+      "date_precision": "instant",
+      "summary": "Safety alignment research for large language models (LLMs) remains concentrated on high-resource languages, leaving open how existing alignment methods perform in low-resource, culturally distinct settings. We study this question for Hausa, a language spoken by more than 200 million people across West Africa. We introduce HausaSafeLM, one of the first Hausa safety preference dataset, built from 10,000 prompts derived from PKU-SafeRLHF: 3,000 human-corrected (gold) and 7,000 machine-translated (silver) examples spanning six harm macro-categories. Using Qwen2.5-7B-Instruct, we compare supervised fine-tuning (SFT) and SFT followed by Direct Preference Optimization (DPO) under both data regimes, evaluating on 500 harmful and 200 benign Hausa prompts.We find that the untuned base model appears highly safe by refusal-rate metrics alone, but…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Valdini Douglace Lemofouet",
+        "Blessing Ngozi Uzor",
+        "Paula Chikaodinaka Anyanwu",
+        "Danielle Blanche Kapsa",
+        "Saminu Mohammad Aliyu",
+        "Seid Muhie Yimam",
+        "Shamsuddeen Hassan Muhammad"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37245",
+      "links": [
+        "https://arxiv.org/abs/2610.37245"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T13:46:44Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37245v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37245",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "fa9167669c9e5b58aa6cf1e2aea77c2e83267db62b5b277b0b3b4516b00d52dd",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
     },
     {
       "id": "9008d43a821bb0cea411",
@@ -15583,6 +16130,7 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
+        "https://substack.com/@jamesdiacoumis/p-222255182",
         "https://www.lesswrong.com/posts/bgPxxnuQhdTxiLeNs/ai-agents-trade-off-patient-safety-for-a-grade-in-hospital"
       ],
       "aliases": [],
@@ -15642,6 +16190,97 @@
         }
       ],
       "content_hash": "7ec752a2e214d6b157bfc454bb0591b2bc35a3aa1970a462e62637ef9399e621",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "40c38af8bef4758d45fc",
+      "title": "Reconstructing chiral edge states via boundary dissipation",
+      "url": "https://arxiv.org/abs/2610.37164",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T12:55:32Z",
+      "date_precision": "instant",
+      "summary": "Boundary dissipation can reshape the spatial profiles and decay properties of topological edge modes in Chern insulators. We develop a microscopic boundary-channel framework to explain their decay mechanisms and determine the effective decay rates in the weak- and strong-loss regimes. By retaining the lossy outer orbitals and a normalized edge state of the Hermitian inner system, we identify a directly coupled bright boundary channel, while incorporating the remaining inner states through a Feshbach self-energy. In the Qi--Wu--Zhang model, weak-loss decay is governed to leading order by the original edge state's probability weight on the lossy boundary, with coupling-induced corrections starting at cubic order. At strong loss, the reconstructed inner-edge state instead decays through virtual coupling to the damped bright channel, giving…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Xin-Ran Ma",
+        "Kui Cao",
+        "Qian Du",
+        "Zheng Wei",
+        "Su-Peng Kou"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37164",
+      "links": [
+        "https://arxiv.org/abs/2610.37164"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T12:55:32Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37164v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37164",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "c83f8c73dafabe712b1381cde173807184baeeb8952b29778c456b6c9eaab35a",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "67984debab274252b5c6",
+      "title": "What Survives Distillation? A Mechanistic Interpretability Study of GPT-2 and DistilGPT-2",
+      "url": "https://arxiv.org/abs/2610.37157",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T12:52:58Z",
+      "date_precision": "instant",
+      "summary": "Knowledge distillation compresses large language models into compact students that preserve aggregate metrics, yet the mechanistic consequences of depth-reduction distillation remain largely uncharacterized. This work applies linear CKA, logit lens analysis, attention pattern decomposition, sparse autoencoder feature statistics, and activation patching to compare GPT-2 and its six-layer student DistilGPT-2 across two canonical circuits: the Indirect Object Identification (IOI) circuit and the Greater-Than (GT) circuit. The results reveal a compression-collapse dichotomy: the IOI circuit suffers complete mechanistic collapse (DistilGPT-2: 35.2% accuracy vs. 94.8%, zero name-mover preservation), while the GT circuit survives with 87.7% task performance recovery through active remapping of the teacher's layer-9 comparison head into student…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 10,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Nabeelah Faumi",
+        "Deshan Sumanathilaka"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37157",
+      "links": [
+        "https://arxiv.org/abs/2610.37157"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T12:52:58Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37157v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37157",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "6c2c08f856480102a79b77b98a4780150cb0f14906085e183c198832393ebbc8",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -15729,6 +16368,189 @@
       "revision_count": 0
     },
     {
+      "id": "54be87ad0a1a7e90ee2e",
+      "title": "Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation",
+      "url": "https://arxiv.org/abs/2610.37070",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T11:35:29Z",
+      "date_precision": "instant",
+      "summary": "Restricting chain-of-thought (CoT) faithfulness evaluation to correctly answered instances changes the population being measured. We study this selection step in a seven-variable structural causal model and derive the exact observed gap $Δ= \\operatorname{Cov}(A, C)/P(C=1)$. The model distinguishes difficulty confounding from shortcut-induced collider bias and states the conditional-independence assumption needed to express the gap through latent response propensities. A protocol review of 18 papers distinguishes answer-correctness restrictions from agreement-based selection, benchmark construction, and training-data filtering. We evaluate four sub-ceiling deployments on arithmetic tasks and observe positive selection gaps in all four. The primary GLM-5.3 run yields a +7.4 percentage-point gap ($n = 1000$, $p < 0.0001$), and pooled…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 8,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Yueer Pan",
+        "Yuexi Pan"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37070",
+      "links": [
+        "https://arxiv.org/abs/2610.37070"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T11:35:29Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37070v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37070",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "c8e5b01c25866f2d762889182e31ffbd720d2ab8cbfe551b2d1d28787365bdc1",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "b1fc8c358d737f0acbc2",
+      "title": "Exploring the Limits of the Delta Learning Hypothesis: Single-Pair Generator Biases in Direct Preference Optimization",
+      "url": "https://arxiv.org/abs/2610.37058",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T11:24:50Z",
+      "date_precision": "instant",
+      "summary": "Direct Preference Optimization (DPO) typically relies on preference pairs generated from diverse model pools and ranked by an external LLM judge. The recently proposed delta-learning hypothesis suggests that comparable supervision can instead be obtained from a single pair of models by treating the larger model's response as preferred. We investigate the limits of this approach across model families and scales. We show, both theoretically and empirically, that fixed model pairs introduce systematic, generator-dependent biases that are predictive of the preference label independent of response quality. Consequently, DPO trained on single-pair data consistently underperforms multi-model preference data, despite the larger generator producing higher-quality responses, and we trace this gap to training dynamics consistent with reward…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Giuseppe Curci",
+        "Stefano Simonazzi",
+        "Andrea Molinari",
+        "Andrea Zugarini"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37058",
+      "links": [
+        "https://arxiv.org/abs/2610.37058"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T11:24:50Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37058v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37058",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "3891ecf13f5706a512a21498ffc7d64ec8b0124ba0817588655b0dbc0bcf9e24",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "9a060928d216f27a4498",
+      "title": "Interpretable Deep Learning Models for Breast Cancer Diagnosis Using Medical Imaging",
+      "url": "https://arxiv.org/abs/2610.37026",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T11:01:50Z",
+      "date_precision": "instant",
+      "summary": "Deep learning shows promise for breast cancer diagnosis, but limited interpretability hinders clinical adoption. We benchmark ten ImageNet-pretrained models (ResNet50, VGG19, InceptionV3, DenseNet121, Xception, MobileNetV2, EfficientNet, ConvNeXt, ViT, and Swin Transformer) for benign-versus-malignant classification on the BreakHis histopathology dataset using a patient-level split, and explain their predictions with Grad-CAM, LIME, Integrated Gradients, and LRP. DenseNet121 performed best, with 99.4% test accuracy and an AUC-ROC of 0.999, and significantly outperformed all other models (p < 0.001). Transformer-based models trailed the CNNs. The explanations consistently highlighted nuclei-rich and glandular regions of diagnostic relevance. Combining transfer learning with explainable AI can thus yield accurate, interpretable tools for…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 8,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Sami Alnawali",
+        "Muhammad Atif Saeed",
+        "Abdul Hadi",
+        "Azka Atiq",
+        "Akhtar Jamil",
+        "Ahmad Din"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.37026",
+      "links": [
+        "https://arxiv.org/abs/2610.37026"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T11:01:50Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.37026v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.37026",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "df95c99180b133dec7b1d28bfcba8639077f8422129d6a71e74bd11af15ea324",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "77f1ed198f854bd44603",
+      "title": "A Deep Learning-Driven Operator Splitting Scheme for Free Boundary Problems: An Application to American Option Pricing in Incomplete Markets",
+      "url": "https://arxiv.org/abs/2610.36921",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T09:49:35Z",
+      "date_precision": "instant",
+      "summary": "This paper proposes a deep learning-driven operator splitting scheme for high-dimensional free-boundary problems, with American option pricing as a representative application. In a market with proportional transaction costs, a stochastic liquidity risk with an empirically validated nonlinear drift based on S&P 500 data, and two-factor stochastic volatility, the pricing problem takes the form of a five-dimensional highly nonlinear variational inequality. The proposed scheme decomposes this variational inequality at each time layer into an elliptic continuation equation approximated by a physics-informed neural network and a closed-form projection step enforcing the early-exercise constraint. A conditional $\\ell^\\infty$ stability bound is derived under stated resolvent and Lipschitz assumptions. The scheme is validated against…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Dong Yan",
+        "Haocheng Zhu",
+        "Yao Li"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36921",
+      "links": [
+        "https://arxiv.org/abs/2610.36921"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T09:49:35Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36921v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36921",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "58c2ab3c0ca49b9d2d241d289bc8238896d166c45196e7007e4bef8564680277",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "957a481774c9e781c4b6",
       "title": "What happens with steering vectors to remove biases?",
       "url": "https://www.lesswrong.com/posts/epyjNvwuivorAFeBM/what-happens-with-steering-vectors-to-remove-biases",
@@ -15772,6 +16594,205 @@
       "revision_count": 0
     },
     {
+      "id": "cf637ebda720ba1ff548",
+      "title": "ActiveAlign: Aligning Egocentric Manipulation via Active Perception",
+      "url": "https://arxiv.org/abs/2610.36859",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T08:54:27Z",
+      "date_precision": "instant",
+      "summary": "Real-to-Sim-to-Real (Real2Sim2Real) enables structured world representations for planning, interpretability, and safe execution. Most existing approaches rely on passive perception, which creates real2sim gaps due to imperfect observation. Inspired by how humans perceive actively through actions, we propose ActiveAlign, a framework that leverages active perception to align the Real2Sim2Real gap from interactions. ActiveAlign introduces two complementary modules: (i) ActiveAlign-Waving, which performs hand-eye calibration by exploiting active hand motions and differentiable rendering, and (ii) ActiveAlign-Touching, which refines object alignment through tactile feedback to achieve millimeter-level precision. Together, these capabilities enable strong real2sim alignment. We demonstrate that ActiveAlign-Waving can be used to curate…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability",
+        "Alignment methods"
+      ],
+      "score": 12,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Ri-Zhao Qiu",
+        "Bowen Wen",
+        "Yifeng Jiang",
+        "Chen Tessler",
+        "Eric Heiden",
+        "Xue Bin Peng",
+        "Xiaolong Wang",
+        "Stan Birchfield",
+        "Erwin Coumans"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36859",
+      "links": [
+        "https://arxiv.org/abs/2610.36859"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T08:54:27Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36859v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36859",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "ca7e29d94642ba01d9b3f63776070957db2ab064b3464edbc9a2ea2d261e1fe4",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "4ead41ed44b14f03d113",
+      "title": "When Black-Box Robot Policies Fail: Online Sensor Diagnosis and Repair with a Transparent Surrogate",
+      "url": "https://arxiv.org/abs/2610.36852",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T08:49:18Z",
+      "date_precision": "instant",
+      "summary": "Robot foundation models may generalize across tasks and embodiments, but their actions still depend on sensors that can fail. When the policy is frozen or inaccessible, can an external monitor diagnose and repair corrupted inputs without access to its internals? We test a structured surrogate that separates periodic gait from sensor-dependent corrections to guide input repair around a frozen locomotion policy. On simulated Go2, offline diagnosis raises walking success from 259/640 to 429/640 episodes; online repair reaches 382/640, with no triggers in 64 held-out fault-free episodes. A matched boosted-tree surrogate predicts clean actions similarly well but yields no detected repair improvement over no repair. Separate fits improve walking on Go1 and ANYmal C, although phase-aware gradients perform better. Evidence remains limited to…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Marc Ziegler",
+        "Batu Özen",
+        "Sami Mentes",
+        "Thomas Waschulzik",
+        "Alois Knoll"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36852",
+      "links": [
+        "https://arxiv.org/abs/2610.36852"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T08:49:18Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36852v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36852",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "b2f8e94d2be41862a05c45ae5e24b98ef1f5ec1e74673f4307eff94c5719d37e",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "1e94a8bfe5fc00b7705c",
+      "title": "API-TAIL: Detecting Model Substitution in LLM APIs through Temperature-Aligned Likelihood Tails",
+      "url": "https://arxiv.org/abs/2610.36801",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T08:04:04Z",
+      "date_precision": "instant",
+      "summary": "Commercial language model APIs return only text, allowing a provider to cut costs by quietly routing a fraction of user requests to a cheaper substitute model while billing for the advertised one. Detecting such partial substitution is challenging because honest providers also alter the output distribution through undocumented decoding and serving choices, such as temperature scaling, sampling truncation, repetition and presence penalties, and default system prompts, forcing an audit to test against a composite null of legitimate configurations rather than a single reference. Our key insight is that these legitimate variations primarily shift response typicality across the entire batch, whereas partial substitution injects individual responses that remain anomalous under the claimed model. Building on this, we introduce API-TAIL, a…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Haocheng Mei",
+        "Yuchuan Tian",
+        "Ye Yuan",
+        "Chao Xu",
+        "Allen Chen",
+        "Kai Han",
+        "Yunhe Wang"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36801",
+      "links": [
+        "https://arxiv.org/abs/2610.36801"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T08:04:04Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36801v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36801",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "d9a51b81977f2f6dfa85a2a21326573ef2491cc8b63a7188629f05dfd5467458",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "26d1b2ca40235dc73a46",
+      "title": "The Vocabulary Is Already Here: Adapting Pretrained Interpretable Features for Generative Recommendation",
+      "url": "https://arxiv.org/abs/2610.36763",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T07:19:35Z",
+      "date_precision": "instant",
+      "summary": "Generative recommendation (GR) predicts the next item through its semantic ID (SID). Existing methods commonly fit SID vocabularies to pretrained language model (PLM) representations of item descriptions, incurring additional training costs and making vocabulary coverage dependent on the fitting domains. We observe that pretrained sparse autoencoders expose PLM features with human-interpretable semantic annotations, allowing feature indices to serve as a reusable SID vocabulary. However, reusing this vocabulary requires preserving item distinctions under compact token budgets and learning to favor target items over candidates with shared dominant features. It also requires extending feature interpretability from item content to retrieval decisions. To address these challenges, we propose API, a framework that Adapts the Pretrained…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 8,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Ziluowen Luo",
+        "Ruochen Liu",
+        "Jun Yin",
+        "Hao Yan",
+        "Zhengxuan Hu",
+        "Xinze Shi",
+        "Chaozhuo Li",
+        "Chengqi Zhang",
+        "Senzhang Wang"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36763",
+      "links": [
+        "https://arxiv.org/abs/2610.36763"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T07:19:35Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36763v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36763",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "a27e30e5e039efed13fef716555046d5ecaa5d5243addb74d1e4971e6fb89709",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "c417f8e3d39d0b893c07",
       "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
       "url": "https://openai.com/index/oracle-apps-in-chatgpt",
@@ -15807,6 +16828,56 @@
         }
       ],
       "content_hash": "1cae64eeba987d17752e3728071e076b3d2dbe91f6cadda7d76698429aeaa42e",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "3ac0b5c13d927a0fc87e",
+      "title": "Nonlinear Direct Feedback Alignment for Scalable Backpropagation-Free Training",
+      "url": "https://arxiv.org/abs/2610.36718",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T06:33:06Z",
+      "date_precision": "instant",
+      "summary": "Backpropagation (BP) remains the predominant algorithm for training deep neural networks, but it is biologically implausible and suffers from the backward locking problem, constraining parallelization across layers. Direct Feedback Alignment~(DFA), which propagates the global output error directly to each hidden layer via fixed feedback matrices, has emerged as a promising alternative for addressing these limitations. However, a significant performance gap persists between DFA and BP, which we attribute to the limited ability of fixed feedback matrices to capture the nonlinear transformation from hidden representations to the network output. To address this limitation, we propose Nonlinear Direct Feedback Alignment (NDFA), which constructs each hidden-layer feedback using a lightweight nonlinear surrogate subnetwork. To enhance the…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Wu Lin",
+        "Yan Fan",
+        "Chenxiang Ma",
+        "Yinglan Feng",
+        "Jia Wang",
+        "Ka-Chun Wong",
+        "Qiuzhen Lin"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36718",
+      "links": [
+        "https://arxiv.org/abs/2610.36718"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T06:33:06Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36718v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36718",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "15e1ab6881e4e529187dd8b2a050aa22edc5684062cb47fe08a8bde82050117a",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -27044,6 +28115,56 @@
       "revision_count": 0
     },
     {
+      "id": "2cdfb775b2ea48695f51",
+      "title": "From Solver Trajectories to Teaching Trajectories: Cognition-Aligned Reasoning Distillation",
+      "url": "https://arxiv.org/abs/2610.36445",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-27T00:46:23Z",
+      "date_precision": "instant",
+      "summary": "Knowledge distillation from large reasoning models (LRMs) often uses raw teacher trajectories as supervision. However, this practice creates a mismatch between the goal of distillation and the nature of teacher trajectories. Advanced LRMs typically improve their reasoning capabilities through reward-driven post-training, such as RLHF. This training optimizes them as strong solvers, rather than as teachers that produce reasoning processes smaller models can easily learn. Since smaller models have different \"cognitive capacities\" compared to their larger teachers, directly imitating raw teacher trajectories can sometimes be ineffective and often requires a substantial number of high-quality samples. To bridge this mismatch, we propose Cognition-Aligned Reasoning Distillation (CARD), an RL-based framework that transforms solver…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Yashuo Luo",
+        "Qianren Mao",
+        "Ziqi Qin",
+        "Junnan Liu",
+        "Haitao Li",
+        "Qili Zhang",
+        "Yuan Gao",
+        "Zhijun Chen",
+        "Xu Wang"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36445",
+      "links": [
+        "https://arxiv.org/abs/2610.36445"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-27T00:46:23Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36445v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36445",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "17996c440340589e34eba876c6e61d93137059a0c2ce90cc3e3b4ba95c4d2868",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "283fc36fd7cd83289b16",
       "title": "Remote embalming and shipment for brain or whole body preservation with Sparks",
       "url": "https://www.lesswrong.com/posts/MzPDS4ZNqcLcrFeio/remote-embalming-and-shipment-for-brain-or-whole-body",
@@ -27276,7 +28397,9 @@
       "discovered_at": "2026-10-27T22:57:29Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://openai.com/index/check-point-daybreak"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "https://openai.com/index/check-point-daybreak",
@@ -27379,6 +28502,103 @@
       "revision_count": 1
     },
     {
+      "id": "bffd01242b7fc8ee6895",
+      "title": "The Great Chat in the Sky: Aligning Exotic Astronomical Data to Language with AstroBridge",
+      "url": "https://arxiv.org/abs/2610.36375",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-26T22:44:06Z",
+      "date_precision": "instant",
+      "summary": "Astronomical observations include images, spectra, and light curves, while the scientific literature describes these objects in natural language. We present AstroBridge, a framework that connects these observations to an LLM through a literature-assisted caption generation pipeline. We used catalog metadata to match observations with scientific texts that describe the same objects. A vision-language model generates descriptive captions from representations of observations, matched passages, and available metadata, creating observation-caption pairs without manual captioning. We train AstroBridge to predict captions directly from raw observations. Modality-specific frozen encoders extract representations that a shared, trainable fusion network aligns with the embedding space of an LLM. In caption-based evaluation of spectra, AstroBridge…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Ibrahim Habib",
+        "Kevin Li",
+        "Trung Nguyen",
+        "Gabriel A. Patron",
+        "Gaurav Sekar",
+        "Nolan Koblischke",
+        "Matthieu Le Lain",
+        "Shashwat Sourav",
+        "Aman Kumar",
+        "Kartheik G. Iyer",
+        "Joshua S. Speagle",
+        "Itai Sfaradi",
+        "Michael J. Smith",
+        "Ioana Ciucă"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36375",
+      "links": [
+        "https://arxiv.org/abs/2610.36375"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-26T22:44:06Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36375v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36375",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "7ddc6d3193fd0002697d6aab262fb91d1098a84115b40fe607fe843247c6431a",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "057bcd6e5fd3887f672e",
+      "title": "Morse-Maxwell Theory for Directed Acyclic Graph",
+      "url": "https://arxiv.org/abs/2610.36372",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-26T22:37:45Z",
+      "date_precision": "instant",
+      "summary": "The Maxwell graph of a directed acyclic graph is obtained from its iterated basin and hill boundaries. The unweighted counts of extrema at these levels need not satisfy Morse inequalities. We assign multiplicities by the reduced homology of lower and upper order links and retain the vertices with nonzero local homology. The resulting graph preserves both boundary hierarchies, the local groups, and the homology of all sublevel and superlevel order complexes. Its descending and ascending Morse numbers satisfy the weak and strong Morse inequalities over any field. We also construct a Morse chain complex and compute the local groups in several examples. Finally, we consider homology on the original Maxwell graph and prove analogous inequalities for path homology using relative local groups.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Oleg R. Musin"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36372",
+      "links": [
+        "https://arxiv.org/abs/2610.36372"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-26T22:37:45Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36372v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36372",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "29f61e72e529dc18e5a4dd6a415917e051ccc06af8a62b8da121560f9b41ad49",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "a9c488820a62ac4adcd9",
       "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
       "url": "https://openai.com/index/greptile-code-review-codex-astra",
@@ -27414,6 +28634,50 @@
         }
       ],
       "content_hash": "9048e57b44b261c89e994f918790a838c06a18217fc4eafe8e75f629cd1315a2",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "a0bd6b75beddd24c7c38",
+      "title": "A unified family of multiblock ADMM schemes by means of graph splitting",
+      "url": "https://arxiv.org/abs/2610.36278",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-26T20:58:57Z",
+      "date_precision": "instant",
+      "summary": "This paper introduces a novel unified family of multiblock ADMM schemes by combining Gabay duality with a graph-based splitting methodology. This framework allows us to recover existing ADMM algorithms as particular instances, as well as to generate new ones by varying the underlying network topology. We focus specifically on the case of the complete graph, a structure of significant practical interest due to its dense connectivity, for which we provide a fully explicit and directly implementable scheme. We further derive an equivalent reformulation of the proposed family in which the algorithm is expressed in terms of a reduced set of dual variables, which clarifies its connection to the classical ADMM framework. Numerical experiments are conducted to compare the performance of different graph choices, showing particularly favorable…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Rubén Campoy",
+        "Scott B. Lindstrom",
+        "César López-Pastor"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36278",
+      "links": [
+        "https://arxiv.org/abs/2610.36278"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-26T20:58:57Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36278v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36278",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "2c5177a51af5d91e575d715fd2018ac3a7f7fc70d082b7c72c0366cf56fc3ab2",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -27455,6 +28719,55 @@
         }
       ],
       "content_hash": "ba6d7e3e806e154fb3178d488656974dc3d8b3cdfe6a4316278494f085bb422c",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "52dc7c4560b3236aafe2",
+      "title": "Two-dimensional galaxy cluster shapes using lensing data: a simulated analysis",
+      "url": "https://arxiv.org/abs/2610.36039",
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "source_url": "https://arxiv.org/",
+      "published_at": "2026-10-26T18:00:03Z",
+      "date_precision": "instant",
+      "summary": "Context. Cluster morphology reflects assembly history and dynamical state. High-resolution weak lensing can reveal departures from spherical symmetry, but its ability to recover two-dimensional shapes remains less explored. Aims. We assess how reliably weak lensing recovers projected cluster morphology and its dependence on orientation and dynamical state. We also compare large-scale weak-lensing morphology with that traced by strong lensing near the cluster centre. Methods. We study three clusters at $z=0.22$ from The Three Hundred Project, representing relaxed, mildly disturbed and unrelaxed systems. For each, we consider three random projections and three along the principal axes of the mass tensor. For each projection, we generate 128 weak-lensing catalogues with a source density of 30 arcmin$^{-2}$ and intrinsic ellipticity…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "C. Giocoli",
+        "M. Meneghetti",
+        "G. Despali",
+        "L. Moscardini",
+        "E. Rasia",
+        "G. Lesci",
+        "W. Cui",
+        "G. Yepes"
+      ],
+      "first_seen": "2026-10-28T02:17:53Z",
+      "discovered_at": "2026-10-28T02:17:53Z",
+      "doi": null,
+      "arxiv_id": "2610.36039",
+      "links": [
+        "https://arxiv.org/abs/2610.36039"
+      ],
+      "aliases": [],
+      "updated_at": "2026-10-26T18:00:03Z",
+      "version": "1",
+      "external_id": "http://arxiv.org/abs/2610.36039v1",
+      "provenance": [
+        {
+          "source_id": "arxiv",
+          "name": "arXiv",
+          "url": "https://arxiv.org/",
+          "article_url": "https://arxiv.org/abs/2610.36039",
+          "found_at": "2026-10-28T02:17:53Z"
+        }
+      ],
+      "content_hash": "f9cf5dbb31bacf668cf475f6c3d08b87c9f49854cd275215d796345b8928d08f",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -27533,9 +28846,9 @@
         "https://arxiv.org/abs/2610.35835"
       ],
       "aliases": [],
-      "updated_at": "2026-10-26T17:52:14Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.35835v1",
+      "updated_at": "2026-10-27T17:41:57Z",
+      "version": "2",
+      "external_id": "http://arxiv.org/abs/2610.35835v2",
       "provenance": [
         {
           "source_id": "arxiv",
@@ -27545,9 +28858,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "fe07c973a35c8126b86f419e0aaa276fb0e9acccee739a918905a4213dba407a",
+      "content_hash": "21e561c0c446b012b80e094e819f325436fcc51529634b5bc9262f059bb7d5df",
       "temporal_status": "published_after_start",
-      "revision_count": 0
+      "revision_count": 1
     },
     {
       "id": "2ee42ff71657a386b2be",
@@ -34399,9 +35712,9 @@
         "https://arxiv.org/abs/2610.34889"
       ],
       "aliases": [],
-      "updated_at": "2026-10-26T06:08:34Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.34889v1",
+      "updated_at": "2026-10-27T08:17:41Z",
+      "version": "2",
+      "external_id": "http://arxiv.org/abs/2610.34889v2",
       "provenance": [
         {
           "source_id": "arxiv",
@@ -34411,9 +35724,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "eb9f6b2bfe7cf42a848c6c4c0795cac87d048981ca9f674a179de9fc31a2cf53",
+      "content_hash": "2ddd5c08f8ad9f6b5710bb32b23971bb65280196ef3a8307054651dfc005b917",
       "temporal_status": "published_after_start",
-      "revision_count": 1
+      "revision_count": 2
     },
     {
       "id": "91cf854eaca603b328ec",
@@ -40883,9 +42196,9 @@
         "https://arxiv.org/abs/2610.34239"
       ],
       "aliases": [],
-      "updated_at": "2026-10-25T12:11:07Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.34239v1",
+      "updated_at": "2026-10-27T08:52:50Z",
+      "version": "2",
+      "external_id": "http://arxiv.org/abs/2610.34239v2",
       "provenance": [
         {
           "source_id": "arxiv",
@@ -40895,9 +42208,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "4ee49f7782075c41d7d191dca94729b3c64eb278e987096b25a1e32af7a63e18",
+      "content_hash": "6353d79eacd809ddb422e360afcc988b840939c6a2f2dc346813b9daadb4974d",
       "temporal_status": "published_after_start",
-      "revision_count": 0
+      "revision_count": 1
     },
     {
       "id": "bb84b936ec8c81a92917",
@@ -40931,9 +42244,9 @@
         "https://arxiv.org/abs/2610.34221"
       ],
       "aliases": [],
-      "updated_at": "2026-10-25T11:22:47Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.34221v1",
+      "updated_at": "2026-10-27T02:17:38Z",
+      "version": "2",
+      "external_id": "http://arxiv.org/abs/2610.34221v2",
       "provenance": [
         {
           "source_id": "arxiv",
@@ -40943,9 +42256,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "b8de8d42e2d5e7f72d094d68da08e9f71d0fb261f738a100e572cc40da8dbc5d",
+      "content_hash": "39eecc9de258cbd5f7c9b35550183b7d1977dd7e4fd2595777e659c63b728c71",
       "temporal_status": "published_after_start",
-      "revision_count": 0
+      "revision_count": 1
     },
     {
       "id": "dc2fb1e10e17dd6e0e6b",
@@ -41015,7 +42328,7 @@
         "Amir Amini",
         "Mohammad Hosein Rohban",
         "Gholamali Aminian",
-        "Ali Habibnia Rohban"
+        "Ali Habibnia"
       ],
       "first_seen": "2026-10-27T06:18:39Z",
       "discovered_at": "2026-10-27T06:18:39Z",
@@ -41025,9 +42338,9 @@
         "https://arxiv.org/abs/2610.34153"
       ],
       "aliases": [],
-      "updated_at": "2026-10-25T08:38:59Z",
-      "version": "1",
-      "external_id": "http://arxiv.org/abs/2610.34153v1",
+      "updated_at": "2026-10-27T08:38:02Z",
+      "version": "2",
+      "external_id": "http://arxiv.org/abs/2610.34153v2",
       "provenance": [
         {
           "source_id": "arxiv",
@@ -41037,9 +42350,9 @@
           "found_at": "2026-10-27T06:18:39Z"
         }
       ],
-      "content_hash": "278ad52ae41bec00e515775e9e71212c0d3ce4dac3cd72cc4c263efaad084bf3",
+      "content_hash": "544fcade460d59bc3d73f5ffaefa535f7988ac86bf1e76424257d8c60170e9f8",
       "temporal_status": "published_after_start",
-      "revision_count": 0
+      "revision_count": 1
     },
     {
       "id": "c54e5ec9c4bd2e4f9d97",
@@ -62220,9 +63533,9 @@
       "summary": "Monitoring the chain-of-thought (CoT) of language models (LMs) is a key strategy for detecting and preventing misbehaviors for AI safety. As such, it is critical to identify reinforcement learning (RL) practices that lead to unmonitorable chain-of-thought. One such practice may be unavoidable: reward misspecification. As RL environments become more complex, it is infeasible to have perfect verification, and models are rewarded for behaviors that are different from the true task intent. We show that reward misspecification alone already degrades monitorability. We create a testbed with pairs of true reward aligned with task intent and misspecified rewards that favor a different behavior, so that reward hacking can be induced by training and labeled verifiably. Across three models and three tasks, CoT monitorability remains low as models'…",
       "summary_kind": "publisher excerpt",
       "topics": [
+        "Scheming & deception",
         "AI control & oversight",
-        "Alignment methods",
-        "Scheming & deception"
+        "Alignment methods"
       ],
       "score": 16,
       "relevance": "relevant",
@@ -66345,1265 +67658,12 @@
       "content_hash": "2c268a28e2f2bf1c0a0a16c313ef8f172df02125296f9ed59bf4b756be8a766f",
       "temporal_status": "publication_date_unverified",
       "revision_count": 0
-    },
-    {
-      "id": "0d8db9261649515280c3",
-      "title": "TRACE: A Reproducible Benchmark for Electricity Price Forecasting with Official Operational Text",
-      "url": "https://arxiv.org/abs/2610.02256",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.02256v2 Announce Type: replace Abstract: Electricity price forecasting (EPF) supports scheduling, bidding, and risk management in electricity markets, yet existing benchmarks focus mainly on numerical inputs, leaving the forecasting value of forecast-time textual context insufficiently evaluated. We introduce TRACE, a reproducible benchmark of 7,300 zone--day instances pairing prices from five zones in a major U.S. market with official operational text available at the forecast cutoff. TRACE reconstructs official operational text at each cutoff, preventing post-cutoff information leakage. We evaluate TRACE for semantic alignment and forecasting value. Semantic assessments align with central movement and both tail risks in ground-truth prices, most consistently for upper-tail price risk. Forecasting value is reflected in a…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 5,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Xinyi Yi",
-        "Zhangdie Yuan",
-        "Ioannis Lestas"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.02256",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.02256v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.02256",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "727c599fe44f407c018b2a63e528caeac8db7bb96089c15a72222b628e4e3762",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "0cc02a24846685ed983b",
-      "title": "Persistent Representational Misalignment Induces Vision-Language Model Failures",
-      "url": "https://arxiv.org/abs/2610.25252",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.25252v1 Announce Type: cross Abstract: Vision-language models (VLMs) fail at some tasks that are simple for humans---but why? We hypothesize that many such failures stem from VLMs' difficulties translating between vision and language representations, a misalignment the Platonic Representation Hypothesis predicts should disappear with scale. This paper is composed of two parts: in the first, we show that existing vision and language representations are linearly unalignable. This misalignment is an inherent property of the data and hence expected to persist regardless of either scale or the alignment's complexity. In the second, we demonstrate how this misalignment both leads to a predictably induced generalization failure and correlates with existing failure modes, where more representationally aligned VLM backbones…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 5,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yonatan Gideoni",
-        "Yoav Gelberg",
-        "Tim G. J. Rudner",
-        "Yarin Gal"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.25252",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.25252v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25252",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "13cf9147b4eacff0702f7045fd13ea83aea99bdc326e19b6dae8972c6cf3fab5",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "04f3e3baef283fa6fbe2",
-      "title": "Forecast-PEFT: Parameter-Efficient Fine-Tuning for Pre-trained Motion Forecasting Models",
-      "url": "https://arxiv.org/abs/2407.19564",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2407.19564v2 Announce Type: replace-cross Abstract: Recent advancements in motion forecasting have been significantly accelerated by self-supervised pre-training techniques. However, current methods typically rely on extensive fine-tuning of pre-trained models for downstream tasks like trajectory prediction, a process that can be inefficient. This inefficiency primarily arises because traditional fine-tuning strategies fail to fully exploit the close alignment between motion prediction tasks and masked reconstruction objectives used during pre-training. To overcome these limitations, we introduce Forecast-PEFT, a parameter-efficient fine-tuning framework specifically designed for motion forecasting. Forecast-PEFT preserves most of the pre-trained model's parameters, introducing minimal yet effective adjustments through novel…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 5,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Jifeng Wang",
-        "Kaouther Messaoud",
-        "Yuejiang Liu",
-        "Juergen Gall",
-        "Alexandre Alahi"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2407.19564",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2407.19564v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2407.19564",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "50c0f0c991edd1db55edbd2705cd149dbf4b7f8958be01fc87d30c081adcdb25",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "02f56f572d993ff7263f",
-      "title": "Peer Pressure: Execution-Verified Co-Evolution of Attacker and Defender Populations for Code Security",
-      "url": "https://arxiv.org/abs/2610.24896",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.24896v1 Announce Type: cross Abstract: LLM code agents increasingly ship code with little oversight, yet defenders trained on static vulnerability datasets fall behind adapting adversaries. We co-train attacker and defender instead, and let execution decide every reward: an attacker (Red) edits a real repository and earns nothing unless its patch applies, builds, passes the tests, completes its development task and reproduces a real exploit in an isolated container, whose path also labels the entry point, the critical operation and the trace between them. Peer-Relative Policy Optimization (PRPO) makes both sides populations of LoRA adapters over one frozen base and credits each against same-role peers that faced an identical condition, placing the population inside the policy-gradient baseline rather than the opponent pool…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "AI control & oversight"
-      ],
-      "score": 5,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Khushbu Pahwa",
-        "Yubin Ge",
-        "Daniele Bonadiman",
-        "Xiaofei Ma",
-        "Yi Zhang"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.24896",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.24896v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.24896",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "b63b38b502922524440d384cf8d88ccb26f89997cd009e970470a8e01ef57b27",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f971b492f49ac2be47b6",
-      "title": "Zero2Repo: Can Coding Agents Build Repositories from Scratch?",
-      "url": "https://arxiv.org/abs/2609.38269",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2609.38269v3 Announce Type: replace-cross Abstract: Coding agents are increasingly asked to build software rather than patch it, yet benchmarks for from-scratch repository construction are mostly limited to a single language and depend on manually curated tasks. We introduce Zero2Repo, a benchmark in which an agent receives a product requirements document, an interface contract, and an empty workspace, and must deliver a complete repository in the project's native ecosystem. Tasks are produced by a language-agnostic authoring pipeline that converts real, version-pinned open-source projects into behavioral specifications, reproducible environments, and hidden acceptance tests. Each task is validated by execution: a reference implementation derived from the upstream project must pass, and adversarial validation must show that the…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Pei Yang",
-        "Tianyu Shi",
-        "Yuhang Yao",
-        "Wanyi Chen",
-        "Tongyun Yang",
-        "Dun Pei",
-        "Haonan Wang",
-        "Pengbin Feng",
-        "Guanxu Yu",
-        "Jingchun Huang",
-        "Zeyu Zhang",
-        "Shuhan Sun",
-        "Hao Li",
-        "Alex Gu",
-        "Xiang Li",
-        "Jie Xiao",
-        "Xinyu Wang",
-        "Hanxin Chen",
-        "Daqi Li",
-        "Qi Jia",
-        "Hongshan Lin",
-        "Zhizhou Gu",
-        "Zijun Tian",
-        "Weizhi Du",
-        "Lynn Ai",
-        "Eric Yang"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2609.38269",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2609.38269v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2609.38269",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "2dc119caaa0c1aa58a7a1091179a4b5d7f6eb41876af46fc09c8734e4c9d53ca",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f8cd2fa029b3cb5b4207",
-      "title": "Evidence Acquisition and Stopping via Lattice Distillation",
-      "url": "https://arxiv.org/abs/2606.09433",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2606.09433v2 Announce Type: replace Abstract: Sequential evidence acquisition requires deciding what to observe and when to stop from partial information. We introduce a complete-record view of policy supervision: each fully observed training instance defines a lattice of evidence subsets, with a stop/query decision at every node. For a modest number of evidence groups, this structure can be enumerated even when individual groups contain rich representations. Our method, Subset Lattice Distillation (SLD), scores subsets with a shared masked predictor, constructs multi-step decision targets by cost-sensitive backward planning, and distills them into an observed-history controller. Uniformly resampled masks train the student across the subset space, while combinatorial planning remains offline. Separating subset scores from…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yixuan Zhang",
-        "Yang Song",
-        "Jiayi Zhang",
-        "Jingqi Sun",
-        "Hao Wang",
-        "Samir Bhatt",
-        "Hengguan Huang"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2606.09433",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2606.09433v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2606.09433",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "912d32a537cba497f7634f2e2ae7992908f8beb983ac23918e804b816a274b28",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f79f6bbdf69c743a1d65",
-      "title": "SLDBench v2: Active Scaling Law Discovery",
-      "url": "https://arxiv.org/abs/2610.16297",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.16297v2 Announce Type: replace Abstract: Scaling laws predict large-model performance from small experiments, but finding a reliable law itself requires costly experiments. SLDBench tests whether language-model agents can discover scaling laws when all experimental results are given upfront. We introduce SLDBench v2 with two extensions. First, we expand the corpus from 8 to 127 scenarios spanning language-model pretraining, downstream performance, and vision-language transfer, and select 30 challenging scenarios on which a reference power-law fit reaches $R^2 \\le 0.8$; they represent at least $1.09 \\times 10^{23}$ FLOPs of source-reported training compute. Second, we introduce active scaling law discovery: an agent chooses which experiments to run, pays each one's recorded cost (e.g., training FLOPs), and revises its law as…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Lingbei Meng",
-        "Rui Huang",
-        "Zhirong Shen",
-        "Jinxin Liu",
-        "Lingxiao Jing",
-        "Haorui Chen",
-        "Yaosong Du",
-        "Haowei Lin"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.16297",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.16297v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.16297",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "e00e57bbba6e2c3003783d308429a94fa83346606f8276041e8e0c0c365a3c7e",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f608ea5dc7e5ffec9120",
-      "title": "Forecasting Voltage Time Series under Anomalies Using a WGAN Model With Lipschitz Control and Progressive Kernel Critic Strategy",
-      "url": "https://arxiv.org/abs/2610.23394",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.23394v2 Announce Type: replace Abstract: In time-series forecasting tasks, the use of recursive forecasting on high-dimensional data substantially increases the complexity of the prediction process. The main challenge is that long-term dynamics becomes harder to model, since the sequences show greater temporal variability. To counteract this limitation and improve the modeling of long-term dynamics, and more importantly, address high-dimensional recursive forecasting, this paper uses a Wasserstein GAN equipped with a progressive Lipschitz penalty and an adaptive kernel. This model is capable of taking a window of the data stream and forecasting the next values, subsequently reconstructing the time-series stream and dynamically adapting its kernel to each new window. The proposed model is a deep learning framework based on a…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Najmieh Sadat Safarabadi"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.23394",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.23394v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.23394",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "71e1e28095b2bc5bf3bd4f48fef10bd43b71fa484e676fffff8fa4191f1e2f6c",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f3bbce11efb2e4bb7bfd",
-      "title": "Agentic AI -- Physicist Collaboration in Experimental Particle Physics: A Proof-of-Concept Measurement with LEP Open Data",
-      "url": "https://arxiv.org/abs/2603.05735",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2603.05735v3 Announce Type: replace-cross Abstract: We present an agentic measurement of the thrust distribution in $e^{+}e^{-}$ collisions at $\\sqrt{s}=91.2$ GeV using ALEPH archived data. This work was carried out through an AI agent-physicist collaboration, using interactive natural-language prompting of Anthropic Claude and OpenAI Codex. Under physicist guidance, the agents wrote and executed all analysis code and drafted the majority of the text included in this paper. A fully-corrected thrust spectrum is obtained via Iterative Bayesian Unfolding and Monte Carlo based corrections. The principal contribution of this work is the demonstration of the agentic analysis, with thrust serving as a benchmark observable for the method. Dedicated precision measurements of thrust are reported in the community elsewhere. This work…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Anthony Badea",
-        "Marcello Maggi",
-        "Christopher McGinn",
-        "Austin Baty",
-        "Yi Chen",
-        "Hannah Bossi",
-        "Gian Michele Innocenti",
-        "Jingyu Zhang",
-        "Yu-Chen Chen",
-        "Tzu-An Sheng",
-        "Yen-Jie Lee",
-        "Electron-Positron Alliance"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2603.05735",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2603.05735v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2603.05735",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "2d9866b1a92c19c5d0bd0ccc67df3f348e8cc92d1ec6170b2ff38e91a64b6ca0",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f271582d960d5e15e61c",
-      "title": "Selection, Recombination, or a Fresh Solve? A Candidate-Free Control for Single-Pass Test-Time Aggregation",
-      "url": "https://arxiv.org/abs/2608.18379",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2608.18379v2 Announce Type: replace Abstract: An aggregation pass gives a language model two things: candidate solutions and another chance to answer. We ask whether the candidates improve that attempt, and whether aggregation improves on selecting an existing answer. Our candidate-free control asks the same model to solve the problem again from the problem alone, using the same decoding settings and maximum output-token allowance. On AIME-2025 and HMMT-2025, Qwen3-4B-Instruct-2507 reaches 15.5% accuracy when all four candidates are wrong, compared with 27.7% for a fresh solve. When at least two candidates are correct, the ordering reverses: 88.7% for aggregation versus 59.7% for a fresh solve. With exactly one correct candidate, the benefit remains unresolved under the specified test. Yet plurality voting reaches 96.0% in the…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Guiv Farmanfarmaian"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2608.18379",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2608.18379v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2608.18379",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "2bdf74d024934727ec2e2a11329163d32c57322a2f9f963d0265d8e3a5940155",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f17636e28185ff4e7501",
-      "title": "Foundations for Investigations of Agentic AI Systems from the Forensic Analysis of OpenClaw",
-      "url": "https://arxiv.org/abs/2604.05589",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2604.05589v2 Announce Type: replace-cross Abstract: Agentic AI systems are increasingly deployed as personal assistants and virtual employees, and are likely to become a common object of digital investigations and incident response. Yet little is known about how their internal state and actions can be reconstructed during forensic analysis, and systematic forensic approaches remain largely unexplored. We present the first empirical forensic study of a personal AI assistant, with OpenClaw as a case study. We examine its technical design via static code analysis and apply differential forensic analysis to identify recoverable traces across stages of the agent interaction loop. We classify and correlate these traces, structuring the examination around representative investigative questions. We propose a five-plane agent artifact…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Jan Gruber",
-        "Jan-Niclas Hilgert"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2604.05589",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2604.05589v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2604.05589",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "82ce3a6f3cb3e9ada30ad177494683c2970eab6f6063ca747a7789450ace34d9",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f15cbc4aca4f55d2ae01",
-      "title": "BioProVLA-Agent: An Affordable, Protocol-Driven, Vision-Enhanced VLA-Enabled Embodied Multi-Agent System with Closed-Loop-Capable Reasoning for Biological Laboratory Manipulation",
-      "url": "https://arxiv.org/abs/2605.07306",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.07306v4 Announce Type: replace-cross Abstract: Biological laboratory automation can reduce repetitive manual work and improve reproducibility, but reliable embodied execution in wet-lab environments remains challenging. Protocols are often unstructured, labware is frequently transparent or reflective, and multi-step procedures require state-aware execution beyond one-shot instruction following. Existing robotic systems often rely on costly hardware, fixed workflows, dedicated instruments, or robotics-oriented interfaces. Here, we introduce BioProVLA-Agent, an affordable, protocol-driven, vision-enhanced embodied multi-agent system enabled by Vision-Language-Action (VLA) models for biological manipulation. The system uses protocols as the task interface and integrates protocol parsing, visual state verification, and embodied…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Zhaohui Du",
-        "Zhe Wang",
-        "Dongzhan Zhou",
-        "Minting Pan",
-        "Hongmei Fei",
-        "Xiwen Cao",
-        "Ting Xiao",
-        "Qi Wang",
-        "Huanbo Jin",
-        "Jiaming Gu",
-        "Quan Lu",
-        "Zhe Liu"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2605.07306",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2605.07306v4",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.07306",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "1d1de1cdbbd847fddb5007f4b8dad52260e879ec32fc40a94ef4ee17674dba1f",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ef30479e1446bb0564bb",
-      "title": "Bidirectionality is Necessary in Cellular Machines for Exact-Arrival Multi-Agent Path Finding",
-      "url": "https://arxiv.org/abs/2610.26272",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.26272v1 Announce Type: cross Abstract: On ranked directed acyclic graphs coupled by vertex conflicts we study exact-arrival multi-agent path finding (departure and arrival pinned in place and time) posed as a distributed output task: every cell must emit its own bit of a valid joint path-support mask. The machines are cellular: one automaton per cell, state factored over cells, communication only along a fixed local fabric, synchronous rounds, a query-independent output round, no central decoder, and a per-topology transition code. \"Necessary\" here means: on an explicit hard topology, over all its feasible queries, no universally correct local-only architecture can renounce either temporal orientation; with global flags, impossibility becomes a bandwidth-round trade-off. The class is not vacuous: a flooding machine solves…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Masashi Aono"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.26272",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.26272v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.26272",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "32da4d77cd0e2727739760b268d0efe7f8ad8c72fbf0c52f36ffcc894a9cd8d9",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ee12f4d2e3be291d3948",
-      "title": "EditPPT: Structured Execution and Evaluation for Reliable Slide Editing",
-      "url": "https://arxiv.org/abs/2608.20381",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2608.20381v2 Announce Type: replace Abstract: Reliable slide editing requires precise modifications to intended objects while preserving the rest of the presentation. We argue that slide editing is a problem of structured, constrained modification rather than open-ended code generation. Despite the complexity of real presentations, editing requests can largely be decomposed into the objects to change, the operations to apply, and the state to preserve. This perspective guides both evaluation and execution. For evaluation, we introduce DeckEdit-Bench, 183 editing tasks on 28 human-authored decks whose target and preserved objects are annotated at the shape level, so that intended and unintended changes are scored mostly by deterministic rules. For execution, we present EditPPT, a multi-agent framework that resolves targets before…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Jiheon Kim",
-        "Kyudan Jung",
-        "Jaegul Choo"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2608.20381",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2608.20381v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2608.20381",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "f56793a242656e3947980a5960054f98f9433a3b25cce63778dc479e11297005",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ed88947fa78cfd252020",
-      "title": "OrTeN: Neural Inverse Graphics for Joint Terrain and Line-scan Camera Trajectory Reconstruction",
-      "url": "https://arxiv.org/abs/2610.24075",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.24075v1 Announce Type: cross Abstract: Digital terrain maps (DTMs) are used for landing site selection, terrain-relative navigation, and geological analysis in planetary exploration. Existing state-of-practice reconstruction techniques for creating DTMs from satellite imagery use multi-view stereo, requiring complex pipelines for dealing with camera error, changing illumination, and images with limited disparity. This work introduces Orbital Terrain Networks (OrTeN), a DTM construction method that uses neural inverse rendering to jointly optimize a textured height map and orbital camera corrections from line-scan satellite images. OrTeN operates directly on calibrated line-scan images with pixel values expressed as radiance factor (I/F) and corrects both broad trajectory pose inconsistencies and high-frequency pointing jitter…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Josef Biberstein",
-        "Sertac Karaman"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.24075",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.24075v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.24075",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "0d9935520ab8d1e6da251efd9c45621f6f5f86ed58efaaf2af077c35751a0562",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ed7a81a26e3308021016",
-      "title": "Towards Reinforcement Learning for Space Robotics: Fast Training and Reliable Real-World Transfer",
-      "url": "https://arxiv.org/abs/2610.24241",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.24241v1 Announce Type: cross Abstract: This work demonstrates the use of a fast simulation-based training framework to learn control policies using reinforcement learning. The hardware requirements are minimal and the simulation-learned policies transfer reliably to the real world. With this setup, we show that a quadruped robot can learn to traverse diverse real-world terrains reliably---including in a lunar-analog facility---after less than 20 minutes of training on a single consumer-grade GPU. These results provide a glimpse of a future where reinforcement learning is a crucial tool in developing more capable and robust space robotic systems. Video demonstrations are available at https://youtu.be/vUFJiZdJaQ0.",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Abhishek Naik",
-        "Michael Wu",
-        "Michael O'Sullivan",
-        "Colin Bellinger",
-        "Yunli Wang"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.24241",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.24241v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.24241",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "78f9753284d3c4a3a407f9070857ec7e3df938c8d5175fb64642256819b6c45f",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ed57c91999023956db11",
-      "title": "Location, Location, Generation: Where You Ask Matters for Generative Engine Optimization",
-      "url": "https://arxiv.org/abs/2610.24081",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.24081v1 Announce Type: cross Abstract: Generative search engines answer local and commercial questions with a written answer and a few cited sources. A growing practice of generative engine optimization (GEO) monitors which sources and brands these answers show, typically from a single place. In this paper, we present a controlled audit of how the user's location changes the sources that generative engines cite. We ask 300 questions of ChatGPT with 19 declared locations, and of ChatGPT and Gemini from five network locations, each twice to measure run-to-run noise (31,200 answers). The engines take location from different channels. ChatGPT follows the location an application declares, down to the city: it writes the place into its own searches, and its search backend localizes results even when the queries name no place. It…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Mahe Chen",
-        "Nick Koudas"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.24081",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.24081v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.24081",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "0902c92e7040772153d416720650274ff0a68b0552557030467ab8aef425469c",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ecda00e9dfde24283da7",
-      "title": "ACorD: Adaptive Correspondence Discovery for Medical Image Registration",
-      "url": "https://arxiv.org/abs/2610.25638",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.25638v1 Announce Type: cross Abstract: Medical image registration is a fundamental task for aligning anatomical structures across images. Exhaustively searching for point-wise correspondences is prohibitively expensive in both computation and memory, particularly for high-resolution 3D medical images. Most recent learning-based methods directly predict correspondences in a coarse-to-fine manner, but often propagate intermediate estimates across scales without explicitly weighting correspondence evidence, which can allow coarse-scale errors to persist during refinement. To address these challenges, we propose ACorD, an adaptive correspondence discovery framework designed to mitigate error propagation with an attention-guided process. ACorD first predicts multiple potential correspondence candidates through Correlation-guided…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Arghavan Rezvani",
-        "Kun Han",
-        "Xiaohui Xie"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.25638",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.25638v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25638",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "424c20c867dbb680776c73c4a77ce3bc142e7ee0960d1df4e9b4887f97e8cab9",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ea7e352fffe24e2709a9",
-      "title": "VERDI:Verified Contradictions for Continual World-Model Optimization",
-      "url": "https://arxiv.org/abs/2608.09537",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2608.09537v2 Announce Type: replace Abstract: Foundation world models have made remarkable progress in planning, simulation, and embodied intelligence. However, optimizing a pretrained world model toward a user-specified objective remains difficult: each campaign typically rediscovers optimization strategies from scratch, and the resulting knowledge rarely transfers to the next model. Existing research agents automate the optimization loop but treat successful strategies as directly reusable recipes, without principled safeguards for when transfer is appropriate. We argue instead that retrieval is not transfer: a strategy validated on one model is at best an optimization hypothesis for another, and becomes transferable knowledge only after target-side experimental valida- tion. Guided by this principle, we propose VERDI , a…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Junyu Wu",
-        "Shiqin Nie",
-        "Youyi Kou",
-        "Baohua Yin",
-        "Qingyu Chen",
-        "Jingheng Ma",
-        "Shiji Zhou",
-        "Hongyong Song",
-        "Mingchen Zhuge",
-        "Guocai Yao",
-        "Tielin Shi",
-        "Sen Cui",
-        "Changshui Zhang"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2608.09537",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2608.09537v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2608.09537",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "e908c7da66c15b345ab459def07f0a74f66436c90d67e195cd675342eb3db2a7",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ea4cc2cd583eab8c443a",
-      "title": "Reward and Behavioral Measures of LLM Coordination in Dining Philosophers",
-      "url": "https://arxiv.org/abs/2606.07845",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2606.07845v2 Announce Type: replace Abstract: Does high reward indicate productive coordination among language-model agents sharing resources? We examine this question in dining philosophers, where instances of the same model must acquire shared forks to eat. We evaluate seven model conditions across 630 episodes at five, ten, and fifteen philosophers, measuring scalar reward, deadlock, and meal throughput. At five philosophers, Mistral-Small 24B receives mean reward 0.827 while producing no meals. The reward decomposition explains this mismatch: avoiding deadlock earns a bonus without requiring meal production. To assess a policy trained with this reward, we compare the final checkpoint from a single Qwen3-14B group relative policy optimization (GRPO) training run with its base model. At five philosophers, the trained model has…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Najmul Hasan",
-        "Prashanth BusiReddyGari"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2606.07845",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2606.07845v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2606.07845",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "d89560d6ac2085ed13e9acd256c201bd1a08c3e56deed30896f652cd0b6c47f5",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e8966d208302619d2dee",
-      "title": "Evidence Before Sampling: Interpretable Implicit Negative Candidate Discovery for Recommendation",
-      "url": "https://arxiv.org/abs/2610.07708",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.07708v2 Announce Type: replace Abstract: Recommender systems learn from observed user-item interactions, but explicit negative feedback is often unavailable. Since deep learning models require negative signals for training, negative sampling methods typically treat selected unobserved interactions as negatives. However, a missing interaction does not explain why a user is uninterested in an item or whether there is sufficient evidence to label it negative. This is especially important in business recommendation, where negative signals should be interpretable and aligned with business objectives. We formulate implicit negative candidate discovery to identify unobserved interactions supported by observed customer behavior. We encode these patterns as symbolic rules, score them based on support, informativeness, and product…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Shreya Rajpal",
-        "Sonia Sharma",
-        "Swapnil Parekh",
-        "Lisa Li",
-        "Jeyendran Balakrishnan",
-        "Nagaraj Janardhana",
-        "Andrew Mattarella-Micke"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.07708",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.07708v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.07708",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "fbf2abf6b1695bbba6c78bb3ccbea37a42dbe94c48abb53c7d2557ea02c9bd6d",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e6455bf15076fea45e11",
-      "title": "Democratizing Tool Learning with Environments Fully Simulated by a Free 8B Language Model",
-      "url": "https://arxiv.org/abs/2604.17739",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2604.17739v3 Announce Type: replace Abstract: Reinforcement learning has become a prevalent paradigm for training tool calling agents, which typically requires online interactive environments. Existing approaches either rely on training data with ground truth annotations or require advanced proprietary language models (LMs) to synthesize environments that remain fixed once created. In this work, we propose TRUSTEE, a cost-friendly method for training tool calling agents with dynamic environments fully simulated by open-source LMs that can be as small as 8B, including task generation, user simulation, tool simulation, and trajectory evaluation, paired with an adaptive curriculum learning mechanism that controls task difficulty dynamically. Our empirical results show that TRUSTEE outperforms baselines which require extra external…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Chenming Tang",
-        "Hsiu-Yuan Huang",
-        "Weijie Liu",
-        "Junqiang Zheng",
-        "Saiyong Yang",
-        "Yunfang Wu"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2604.17739",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2604.17739v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2604.17739",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "1fc4f67b53385483cbeee9126238b464bb7bc7a45a4e91c02aa794ede931a6cb",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e5981d913934594fe444",
-      "title": "LayerRoute: Action-Conditioned Mixture-of-Layers Routing for Vision-Language-Action Policies",
-      "url": "https://arxiv.org/abs/2609.06079",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2609.06079v5 Announce Type: replace Abstract: Vision-Language-Action (VLA) policies leverage pretrained vision-language models (VLMs) to guide action generation for robot control. VLMs provide hierarchical visual-semantic representations that evolve across layers, from local visual geometry to abstract, language-aligned semantics; different manipulation tasks may therefore require different mixtures of layer representations. Meanwhile, the action module maintains intermediate representations that evolve throughout action computation and may provide useful information for subsequent decisions. However, existing VLA interfaces offer limited flexibility in representation access: VLM information is exposed through fixed layer assignments for each action layer, while intermediate action states are only propagated implicitly through…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Zheng Lu",
-        "Haoran Liao",
-        "Wanqi Zhong",
-        "Yunhe Ni",
-        "Lijie Wang",
-        "Xingjie Fan",
-        "Zhisheng Chen",
-        "Yantang Qu",
-        "Meijia Chen",
-        "Tianyu Xin",
-        "Zirui Song",
-        "Yiming Li"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2609.06079",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2609.06079v5",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2609.06079",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "bcb0c2e88cb77aa568a54bd77cb5bf1e22d84b6e0c955c1dcc7fb3e5b977456e",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e49cdbdc8b8f1d6a4616",
-      "title": "Streaming Multi-Track Timeline Control for 3D Human Motion Generation",
-      "url": "https://arxiv.org/abs/2610.03873",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.03873v2 Announce Type: replace-cross Abstract: Text-driven human motion generation has advanced substantially, yet most methods assume instructions are available before synthesis. Interactive applications require responding to new instructions while continuing ongoing actions, such as answering a phone while walking. Existing approaches address streaming generation or simultaneous composition without explicitly combining streaming instruction arrival with independently timed, overlapping actions. We introduce streaming multi-track timeline control and propose TimelineControl to incorporate new instructions alongside ongoing actions. Interval-aware conditioning preserves instruction timing, while causal part-structured representations and part-aware denoising coordinate concurrent actions across body regions. We also construct…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yangsong Zhang",
-        "Anujith Muraleedharan",
-        "Rikhat Akizhanov",
-        "G\\\"ul Varol",
-        "Fabio Pizzati",
-        "Ivan Laptev"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.03873",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.03873v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.03873",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "29eafc1fd654c7f42fcb6085746a77e0f6802173313e49387f1780d5fd44a1f5",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e41d9f472fc0a31393f3",
-      "title": "Index SLM Technical Report",
-      "url": "https://arxiv.org/abs/2607.09885",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2607.09885v4 Announce Type: replace Abstract: We present Index-1.9B, a series of open small language models developed at Bilibili. The series comprises four models: Index-1.9B-Base, a foundation model with 1.9 billion non-embedding parameters pre-trained on 2.8 trillion predominantly Chinese and English tokens; Index-1.9B-Pure, a control variant trained with an identical recipe but with all instruction-like data strictly filtered from the corpus; Index-1.9B-Chat, aligned from the base model with supervised fine-tuning and direct preference optimization; and Index-1.9B-Character, which augments the chat model with retrieval-augmented generation for few-shot role-playing customization. Pre-training employs a Warmup-Stable-Decay learning-rate schedule in which the concentration of curated data is raised substantially during the decay…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Tianjiao Li",
-        "Lusheng Zhang",
-        "Shien He",
-        "Xiaojing Liu",
-        "Tianxing Yan",
-        "Mengran Yu",
-        "Ziang Cui",
-        "Kai Zhao",
-        "Xipeng Wang",
-        "Yang Liu",
-        "Yuxin Li",
-        "Yining Wang",
-        "Anzhen Li",
-        "Jingying Liu"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2607.09885",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2607.09885v4",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2607.09885",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "58965f400ec43ef4836d83e9d86cab0c5cf7f1ce1bbb50e1d0ce52c7d5310e54",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e31e2e7ba34530fbefaf",
-      "title": "Your Self-Supervised Projection Head Captures Object Co-Occurrence Statistics",
-      "url": "https://arxiv.org/abs/2610.23915",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.23915v1 Announce Type: cross Abstract: Self-Supervised Learning (SSL) has achieved impressive success in learning semantic visual representations, yet the underlying principles driving this success remain underexplored. In this work, we hypothesize that common SSL pretext tasks implicitly model object co-occurrence statistics, a fundamental cue for visual learning. To test this, we curate three datasets of segmented objects from existing vision benchmarks using a state-of-the-art segmentation model. Through experiments across many SSL models, we reveal a hierarchical encoding of semantic information: while the visual backbone captures object categories, the projection head specializes in encoding co-occurrences between object categories. As a result, the projection head outperforms the backbone in aligning with human…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Arthur Aubret",
-        "Jochen Triesch",
-        "C\\'eline Teuli\\`ere"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.23915",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.23915v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.23915",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "da23dc4d77d2c213bc41e5774966b07942117c9bdd8a3f0159978d0be5c59c41",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "dff9ce48db59e79cc829",
-      "title": "Secure Agentic Coding through Counterexample-Grounded Feedback",
-      "url": "https://arxiv.org/abs/2610.25916",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.25916v1 Announce Type: cross Abstract: As coding models and agent harnesses become more capable, reliable security verification is becoming a central bottleneck. Improving secure code generation requires a signal whose reported progress remains aligned with actual program behavior under optimization; otherwise, an optimizer can improve the signal's verdict without removing the underlying vulnerability. Existing model-based approaches require models to either infer program behavior from source code or specify correct outcomes for adversarial tests, placing substantial reasoning demands on the security signal. We introduce \\falcon{}, a counterexample-grounded verification framework that separates attack exploration from behavioral verification and connects them through execution traces of the program under test. In test-time…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Tue Le",
-        "Anh Nguyen Hoang",
-        "Gabriel Sasseville",
-        "Doseok Jang",
-        "Pierre-Luc Bacon",
-        "Nghi D. Q. Bui"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.25916",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.25916v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25916",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "5c5906e42e71e28522818c39b89f78ab7f37bcbaeb960f1a2c01ba49c39d309b",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "df7c4d47574bee13041f",
-      "title": "Planning Takes More Than Token Prediction: Causal Plan for Benchmarking and Building Physically Grounded Embodied Reasoners",
-      "url": "https://arxiv.org/abs/2606.01810",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2606.01810v5 Announce Type: replace Abstract: Current benchmarks for embodied vision-language planning inadvertently favor linguistic next-token prediction over physically grounded next-state reasoning. This rewards models that mimic statistical language priors rather than track true causal dependencies, reducing complex physical planning to shallow sequence modeling. Hence, achieving genuine physical autonomy requires a fundamental shift from linguistically grounded token prediction toward physically grounded causal reasoning. To this end, we introduce Causal-Plan-Bench, a high-fidelity diagnostic suite spanning four causal dimensions, curated via multi-stage verification. To endow models with this capability, a four-stage annotation pipeline extracts structured interaction records from egocentric videos to construct…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Zheng Lu",
-        "Mingqi Gao",
-        "Qinlei Xie",
-        "Wanqi Zhong",
-        "Hanwen Cui",
-        "Zirui Song",
-        "Lijie Wang",
-        "Chong Luo",
-        "Bei Liu",
-        "Yiming Li"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2606.01810",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2606.01810v5",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2606.01810",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "068a89996fa32568030bd0a94e9d189c1acbae4f0487558e255a728bf9d5eea3",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-6a3e6beefd07c664.json",
-    "sha256": "6a3e6beefd07c664d19f73eda32d2e4e9d68e906b9722a7f08ceb9aaeeb49c72",
-    "total_items": 2206,
+    "manifest": "data/archive/manifest-30ee3cebb6ffa3fa.json",
+    "sha256": "30ee3cebb6ffa3fa7ce370681b49fb2cea4424007ba5b89b58b8776acf7f1f6f",
+    "total_items": 2234,
     "edition_items": 1500,
     "complete": false
   }
