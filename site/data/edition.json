@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-29T16:09:18Z",
-  "last_successful_update": "2026-10-29T16:09:18Z",
+  "generated_at": "2026-10-29T21:08:56Z",
+  "last_successful_update": "2026-10-29T21:08:56Z",
   "edition_date": "2026-10-29",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T16:09:18Z",
+      "last_nonempty_at": "2026-10-29T21:08:56Z",
       "item_count": 4,
       "parsed_count": 4,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-10-26T12:31:52Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-22T08:31:28.797Z",
+        "incremental_window_start": "2026-10-22T16:09:18.287Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -43,13 +43,13 @@
       "name": "arXiv",
       "url": "https://arxiv.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T16:09:18Z",
+      "last_nonempty_at": "2026-10-29T21:08:56Z",
       "item_count": 1972,
-      "parsed_count": 97,
+      "parsed_count": 85,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -58,7 +58,7 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-22T08:54:58Z",
+        "oldest_fetched_at": "2026-10-22T16:33:01Z",
         "latest_fetched_at": "2026-10-27T15:55:05Z",
         "pending_incremental": false,
         "validated_empty": false,
@@ -72,28 +72,16 @@
       "id": "openreview",
       "name": "OpenReview",
       "url": "https://openreview.net/",
-      "status": "degraded",
-      "checked_at": "2026-10-29T16:09:18Z",
+      "status": "error",
+      "checked_at": "2026-10-29T21:08:56Z",
       "last_success_at": "2026-10-29T16:09:18Z",
-      "last_failure_at": "2026-10-26T14:18:09Z",
-      "failure_streak": 0,
+      "last_failure_at": "2026-10-29T21:08:56Z",
+      "failure_streak": 1,
       "last_nonempty_at": "2026-10-29T16:09:18Z",
       "item_count": 2,
-      "parsed_count": 3,
-      "error": null,
-      "warnings": [
-        "OpenReview search for 'AI alignment' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
-        "OpenReview search for 'AI safety' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
-        "OpenReview search for 'mechanistic interpretability' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
-        "OpenReview search for 'scalable oversight' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
-        "OpenReview search for 'reward hacking' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
-        "OpenReview search for 'deceptive alignment' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
-        "OpenReview search for 'AI control' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
-        "OpenReview search for 'scheming' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
-        "OpenReview search for 'sandbagging' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
-        "OpenReview new-publication catch-up is pending or cannot yet be verified.",
-        "OpenReview discovery is limited to public API v2 phrase matches. Search supports modification-date ordering but cannot sort by the first-publication date; API v1 venues and unindexed work may be missing."
-      ],
+      "parsed_count": 0,
+      "error": "HTTP Error 403: Forbidden",
+      "warnings": [],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
@@ -129,8 +117,8 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-28T21:39:58Z",
@@ -159,13 +147,13 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T16:09:18Z",
-      "item_count": 254,
-      "parsed_count": 28,
+      "last_nonempty_at": "2026-10-29T21:08:56Z",
+      "item_count": 258,
+      "parsed_count": 25,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -174,26 +162,26 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-28T09:32:10.853Z",
-        "latest_fetched_at": "2026-10-29T15:29:29.907Z",
+        "oldest_fetched_at": "2026-10-28T16:10:08.953Z",
+        "latest_fetched_at": "2026-10-29T20:35:27.791Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 654
+      "lifetime_item_count": 658
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T16:09:18Z",
+      "last_nonempty_at": "2026-10-29T21:08:56Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -223,8 +211,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-19T21:05:08Z",
@@ -262,11 +250,11 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T16:09:18Z",
+      "last_nonempty_at": "2026-10-29T21:08:56Z",
       "item_count": 3,
       "parsed_count": 3,
       "error": null,
@@ -283,7 +271,7 @@
         "latest_fetched_at": "2026-10-27T04:24:19.401Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-22T08:31:28.797Z",
+        "incremental_window_start": "2026-10-22T16:09:18.287Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public Substack publications, with bounded forward catch-up pagination when necessary. Historical archive crawling is disabled."
@@ -295,8 +283,8 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -330,8 +318,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -369,8 +357,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -408,8 +396,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -447,8 +435,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -481,8 +469,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -516,13 +504,13 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T16:09:18Z",
-      "item_count": 34,
-      "parsed_count": 33,
+      "last_nonempty_at": "2026-10-29T21:08:56Z",
+      "item_count": 37,
+      "parsed_count": 36,
       "error": null,
       "warnings": [
         "RSS monitoring is limited to the publisher's current feed window; a long outage may exceed that window. Undated entries absent from the prior archive require temporal review."
@@ -543,18 +531,18 @@
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Publisher-wide feed includes safety research alongside products and company news; new non-research entries remain review candidates."
       },
-      "lifetime_item_count": 1330
+      "lifetime_item_count": 1333
     },
     {
       "id": "deepmind",
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-10-29T16:09:18Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "checked_at": "2026-10-29T21:08:56Z",
+      "last_success_at": "2026-10-29T21:08:56Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T16:09:18Z",
+      "last_nonempty_at": "2026-10-29T21:08:56Z",
       "item_count": 3,
       "parsed_count": 3,
       "error": null,
@@ -580,7 +568,13 @@
       "lifetime_item_count": 103
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "source_id": "openreview",
+      "source": "OpenReview",
+      "message": "HTTP Error 403: Forbidden"
+    }
+  ],
   "coverage": {
     "completeness": "unverified",
     "description": "Monitoring new publications from the collection start; uncertain publication dates remain in review.",
@@ -591,24 +585,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 173,
-    "accepted_items": 172,
-    "retained_items": 2272,
-    "lifetime_accepted_items": 173,
-    "lifetime_retained_items": 9247,
-    "successful_sources": 16,
+    "fetched_items": 158,
+    "accepted_items": 158,
+    "retained_items": 2274,
+    "lifetime_accepted_items": 158,
+    "lifetime_retained_items": 9249,
+    "successful_sources": 15,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 171,
-    "total_items": 2274,
-    "relevant_items": 168,
-    "candidate_items": 2106,
+    "duplicates_removed": 151,
+    "total_items": 2281,
+    "relevant_items": 170,
+    "candidate_items": 2111,
     "undated_items": 962,
     "year_only_items": 0,
-    "newest_publication": "2026-10-29T15:29:29Z",
-    "lifetime_total_items": 9249,
+    "newest_publication": "2026-10-29T20:35:27Z",
+    "lifetime_total_items": 9256,
     "excluded_legacy_items": 6975
   },
   "coverage_policy": {
@@ -635,6 +629,201 @@
   },
   "items": [
     {
+      "id": "fdffc277ca2e6beb88ad",
+      "title": "Someone Made an Infra-Bayesian RL Agent, and it One-Boxes!",
+      "url": "https://www.lesswrong.com/posts/BnFPBevp8Cdw2NKoq/someone-made-an-infra-bayesian-rl-agent-and-it-one-boxes",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-29T20:35:27Z",
+      "date_precision": "instant",
+      "summary": "Someone made an infra-bayesian RL agent, and it learns to one-box. Arxiv paper, GitHub repo.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "XelaP"
+      ],
+      "first_seen": "2026-10-29T21:08:56Z",
+      "discovered_at": "2026-10-29T21:08:56Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "BnFPBevp8Cdw2NKoq",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/BnFPBevp8Cdw2NKoq/someone-made-an-infra-bayesian-rl-agent-and-it-one-boxes",
+          "found_at": "2026-10-29T21:08:56Z"
+        }
+      ],
+      "content_hash": "feda510baf7793341353765009fc250197621b401d2cacd785bbecf9fa316d30",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "efb7cf88b9db28abf0cd",
+      "title": "J-Lens can't detect what a subliminal learning teacher is transmitting (in 7B-32B models)",
+      "url": "https://www.lesswrong.com/posts/LnnZHgdsLBZpgBDvW/j-lens-can-t-detect-what-a-subliminal-learning-teacher-is",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-29T19:20:29Z",
+      "date_precision": "instant",
+      "summary": "I ran the trademark experimental setup from the subliminal learning paper. I reproduced the subliminal learning effect, but I also found that on a teacher model that's been prompted to imbue its answers with a love for owls, a J-Lens reports that the model is rarely thinking about owls (top-1 at any point in ~1.5% of trials). This is really surprising if we grant that J-Lens looks at something like a \"global workspace\". The lens is not broken, since it seems to perform well on other tasks. This effect reproduces for multiple similar setups on the same model and with very conservative methodologies for training/applying the lens. This effect reproduces for a similar setup with a model as large/performant as Gemma-4-31B. How exactly to interpret this is a little nuanced. Even if we assume that the global workspace theory holds perfectly…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "shawnghu"
+      ],
+      "first_seen": "2026-10-29T21:08:56Z",
+      "discovered_at": "2026-10-29T21:08:56Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "LnnZHgdsLBZpgBDvW",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/LnnZHgdsLBZpgBDvW/j-lens-can-t-detect-what-a-subliminal-learning-teacher-is",
+          "found_at": "2026-10-29T21:08:56Z"
+        }
+      ],
+      "content_hash": "c9e350295a35586f6faf818e7972ed8a81a25beeb26d4d3a2ad0e6bb6671ff72",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "294cac15f5968e02d871",
+      "title": "Lie detection is best when it's cheap to cooperate",
+      "url": "https://www.lesswrong.com/posts/u7nEaWygHkvfDiwa2/lie-detection-is-best-when-it-s-cheap-to-cooperate",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-29T18:35:20Z",
+      "date_precision": "instant",
+      "summary": "In principle, machine learning approaches could produce lie detectors far more reliable than the polygraph. If this happens soon, it will matter a great deal: reliable lie detection could make loyalty purges much more effective, create a useful check on political and AI-lab leaders, make international treaties more robust, and make authoritarian regimes more stable. I argue the balance between these effects depends largely on cooperation cost: how much willing participation a detector needs from its subject. In particular, lie detection technology with extremely low cooperation cost is better to accelerate than lie detection technology with higher cooperation cost. I remain agnostic here about whether we should, in general, accelerate lie detector technology—this very well might be net-negative. But if we do, we should accelerate…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception"
+      ],
+      "score": 6,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "sciarrino"
+      ],
+      "first_seen": "2026-10-29T21:08:56Z",
+      "discovered_at": "2026-10-29T21:08:56Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "u7nEaWygHkvfDiwa2",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/u7nEaWygHkvfDiwa2/lie-detection-is-best-when-it-s-cheap-to-cooperate",
+          "found_at": "2026-10-29T21:08:56Z"
+        }
+      ],
+      "content_hash": "511b8c53a8ca3a424a6d0226e836e6dbf667146b9d4ffc7e4923b5bbcee7db1c",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "9349f418e7bc7ab45091",
+      "title": "An updated Model Spec for more capable and beneficial AI",
+      "url": "https://openai.com/index/updated-model-spec",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-10-29T17:00:00Z",
+      "date_precision": "instant",
+      "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-10-29T21:08:56Z",
+      "discovered_at": "2026-10-29T21:08:56Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/updated-model-spec",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/updated-model-spec",
+          "found_at": "2026-10-29T21:08:56Z"
+        }
+      ],
+      "content_hash": "36397ab0e907494c4e41da9c312f97305b75e7701915d8ba41232ec5a0729fe5",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "f992fcb5ab887a31c9f6",
+      "title": "The Newly \"Needed\" Labor: Under AI 2040, economic growth is normal, but prices fall exponentially",
+      "url": "https://www.lesswrong.com/posts/3Sc4nz4eQHGKyEWvC/the-newly-needed-labor-under-ai-2040-economic-growth-is",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-29T16:56:17Z",
+      "date_precision": "instant",
+      "summary": "The AI futures project predicts that under plan A [...] and [...] I think this will be false, but for somewhat boring reasons: the prices in the robot economy will fall exponentially to counteract this. Of course, prices are relative! However, assuming there are some jobs that require humans for non-economic reasons (such as goods produced by the Amish, who refrain from using electricity for religious reasons), the price of those jobs will be relatively stable. And if the result of the jobs are automated, the rest of humanity needs to either get one of these jobs or retire. For example, I think the vast majority of the human workforce would \"need\" to go into non-AI art, chess competitions, etc... I put \"need\" in scare quotes because you could obviously survive without these things, but the standard of living would probably rise to…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Christopher King"
+      ],
+      "first_seen": "2026-10-29T21:08:56Z",
+      "discovered_at": "2026-10-29T21:08:56Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "3Sc4nz4eQHGKyEWvC",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/3Sc4nz4eQHGKyEWvC/the-newly-needed-labor-under-ai-2040-economic-growth-is",
+          "found_at": "2026-10-29T21:08:56Z"
+        }
+      ],
+      "content_hash": "c71bbb10add76d8742d72304b2d1f02bf3066ee48a48ea1d1fbb88bb78d49d62",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "a10570f3d92ea6f43662",
       "title": "Leaking Muse's Charter, Meta's model spec",
       "url": "https://www.lesswrong.com/posts/TJGPL5FAk9sCioPbE/leaking-muse-s-charter-meta-s-model-spec",
@@ -658,7 +847,9 @@
       "discovered_at": "2026-10-29T16:09:18Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/TJGPL5FAk9sCioPbE/leaking-muse-s-charter-meta-s-model-spec"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "TJGPL5FAk9sCioPbE",
@@ -697,7 +888,9 @@
       "discovered_at": "2026-10-29T16:09:18Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/mBDkupZa3NagfLW86/ai-192-anthropic-is-going-public"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "mBDkupZa3NagfLW86",
@@ -711,6 +904,83 @@
         }
       ],
       "content_hash": "4bb35664de238f840742e32c12111dd9b475a1e85f970917ef4913458e6003ea",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "0f01adb2acab0a67ba71",
+      "title": "How we detect frontier model misalignment",
+      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-10-29T09:00:00Z",
+      "date_precision": "instant",
+      "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI control & oversight",
+        "Evaluations & risk"
+      ],
+      "score": 13,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [],
+      "first_seen": "2026-10-29T21:08:56Z",
+      "discovered_at": "2026-10-29T21:08:56Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+          "found_at": "2026-10-29T21:08:56Z"
+        }
+      ],
+      "content_hash": "87327d8eb7a6fbc5907895c228357194f1af07a2c411dcca2dc6b75472ee50de",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "d948735545c20cf30721",
+      "title": "How Ropes & Gray is developing AI for transactional diligence",
+      "url": "https://openai.com/index/ropes-gray-ai-diligence",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-10-29T07:00:00Z",
+      "date_precision": "instant",
+      "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-10-29T21:08:56Z",
+      "discovered_at": "2026-10-29T21:08:56Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/ropes-gray-ai-diligence",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/ropes-gray-ai-diligence",
+          "found_at": "2026-10-29T21:08:56Z"
+        }
+      ],
+      "content_hash": "68cc86584b5eddc11e309af7a27a6e9e3622f108d150616ccd933b30d71eefb2",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -1604,8 +1874,8 @@
       "summary": "TLDR: * We distill and train various Natural Language Autoencoders (“NLAs”) to read Qwen3.6-27b’s internal states. * A 2B NLA distilled from a 27B NLA matches it on reading agentic misalignment and eval awareness, but is much worse on obscure facts. * An NLA trained with extra alignment-focused RL didn’t improve on anything. * A linear probe trained on 2B-generated labels matches a 27B NLA + LLM judge on reading eval awareness, at a tiny fraction of the cost. * Eval awareness results come from 76 technical tasks with injected cues. We haven’t yet tested how far they generalise. Introduction NLAs train a pair of LLMs: one to construct text from the information in a given LLM’s vector, and the other to reconstruct the vector. The constructed text is an imperfect but useful indicator of what the model is thinking about at any token…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Scheming & deception"
+        "Scheming & deception",
+        "Alignment methods"
       ],
       "score": 13,
       "relevance": "relevant",
@@ -1728,8 +1998,8 @@
       "summary": "The full text is finally here, so we are giving it the full RTFB of model card treatment. First, a recap of the state of Anthropic finances, then a close reading of the relevant parts of the S-1. A lot of it is technical and uninteresting, often pro forma, and gets skipped. A lot of it gets repeated many times. A lot of this is also Anthropic ‘playing the hits’ we have heard many times, now to the investor circuit. Get your drinks ready for when we have to maximize the upside and minimize the downside. This presentation of S-1 data has some cool Claude-created charts if that’s your jam. Here are my top 10 takeaways from the S-1, for those already familiar with Anthropic. 1. Existential risk is mentioned briefly only in the passive voice, and alignment issues are mostly treated as prosaic. They want to claim Big Mission but also sound as…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Evaluations & risk"
+        "Evaluations & risk",
+        "Alignment methods"
       ],
       "score": 9,
       "relevance": "relevant",
@@ -60650,8 +60920,8 @@
       "summary": "We survey interpretability for AI safety, focusing on mechanistic interpretability (MI)---the study of neural networks' internal representations and computations to develop causal understanding and support targeted interventions. We first situate MI within the broader interpretability landscape, contrasting its mechanism-level evidence with behavioral evaluation while emphasizing how behavioral, attributional, and representation-based methods can complement mechanistic analysis. We introduce core foundations for MI from first principles, including features, polysemanticity, superposition, transformer computation, and circuits, and survey methods for feature decomposition, circuit discovery and causal verification, interpreting intermediate representations, training-data attribution, learning dynamics, knowledge localization, and…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Interpretability"
+        "Interpretability",
+        "Alignment methods"
       ],
       "score": 15,
       "relevance": "relevant",
@@ -60693,8 +60963,8 @@
       "summary": "Text-to-music alignment is commonly evaluated by the global similarity between text and audio embeddings, which collapses all described attributes into a single score and obscures which ones are missing. We instead introduce MQAScore, which verifies each atomic musical concept along five clip-level dimensions (genre, instrument, mood/theme, vocal, and usage) by the probability that a large audio language model (LALM) answers affirmatively to a binary question. To assess evaluator reliability, we construct verification labels from presence/absence annotations and LLM-guided concept substitutions, and propose the Sensitivity-Invariance Ratio, which measures how selectively an evaluator responds to meaning-changing substitutions. Experiments show that concept-level scoring improves both question-answering and similarity-based evaluators…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Evaluations & risk"
+        "Evaluations & risk",
+        "Alignment methods"
       ],
       "score": 15,
       "relevance": "candidate",
@@ -60928,7 +61198,7 @@
       "source_url": "https://metr.org/",
       "published_at": "2026-10-22T07:00:00Z",
       "date_precision": "instant",
-      "summary": "For three weeks, from July 21st to August 11th, a METR employee and a Redwood Research employee conducted a pilot high-access exercise to stress-test OpenAI’s internal misalignment monitoring system. 1 The output of this exercise was a 61-page internal report that was shared with OpenAI researchers and security staff, 2 primarily focused on estimating the fraction of agentic inference that is monitored, and whether agents could in principle disable or subvert the monitoring system. The exercise focused on the internal misalignment monitoring system as it existed on and before July 21st, and did not evaluate changes that were in progress at the time of the exercise. This exercise involved a deep level of access. The METR and Redwood employees had access to OpenAI’s internal codebase, misalignment-monitor prompts / configuration details…",
+      "summary": "For three weeks, from July 21st to August 11th, 1 a METR employee and a Redwood Research employee conducted a pilot high-access exercise to stress-test OpenAI’s internal misalignment monitoring system. 2 The output of this exercise was a 61-page internal report that was shared with OpenAI researchers and security staff, 3 primarily focused on estimating the fraction of agentic inference that is monitored, and whether agents could in principle disable or subvert the monitoring system. The exercise focused on the internal misalignment monitoring system as it existed on and before July 21st, and did not evaluate changes that were in progress at the time of the exercise. This exercise involved a deep level of access. The METR and Redwood employees had access to OpenAI’s internal codebase, misalignment-monitor prompts / configuration…",
       "summary_kind": "publisher excerpt",
       "topics": [
         "AI control & oversight"
@@ -60956,9 +61226,9 @@
           "found_at": "2026-10-22T15:19:50Z"
         }
       ],
-      "content_hash": "a475e0a7648fb3c62e4bf05a11d1693865f4205af7a44a4cf8882ee9b4ee5563",
+      "content_hash": "afb071d3be85ef8905b4b9113917b912c3c7118173f03c3d7a2f074f848e3e91",
       "temporal_status": "published_after_start",
-      "revision_count": 0
+      "revision_count": 1
     },
     {
       "id": "09525e96f17465d3d802",
@@ -67072,327 +67342,12 @@
       "content_hash": "ecb5ffa73aece921bb2185370d80392c93e4cb328ff280a05cac110ce125dbaa",
       "temporal_status": "publication_date_unverified",
       "revision_count": 0
-    },
-    {
-      "id": "35c9bfb4f677ef9df7ea",
-      "title": "RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation",
-      "url": "https://arxiv.org/abs/2610.13578",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.13578v2 Announce Type: replace-cross Abstract: Pre-trained robot policies, such as Vision-Language-Action (VLA) models, provide a strong foundation for generalist robotic manipulation, but adapting them to new tasks with only a few demonstrations remains challenging. Directly fine-tuning a pre-trained policy often achieves strong in-distribution performance, yet it can distort the representations learned during pre-training and weaken the model's generalization ability under out-of-distribution shifts. We propose Retrieval-Anchored Representation Alignment (RARA), a two-stage adaptation method, to address this issue. First, RARA retrieves representation features from pretraining with similar task intent and motion, and aligns the policy's representations of the target demonstrations with the pre-trained representations of the…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Xuhui Kang",
-        "Sung-Wook Lee",
-        "Yan Zhuang",
-        "Tianle Zhong",
-        "Yen-Ling Kuo"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.13578",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.13578v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.13578",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "5e9500b5205fa6f2919ae63a003521a0a80c2be1d2ec8f581ddf9e631c2cdd04",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "284c9bed64ad9a9b779e",
-      "title": "ATLAS: Expert-Guided Sustainable Satellite Backhaul for Off-Grid Wildlife Monitoring",
-      "url": "https://arxiv.org/abs/2610.24910",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.24910v1 Announce Type: cross Abstract: Remote wildlife monitoring increasingly depends on high-fidelity cameras and sensors deployed far from grid power and terrestrial networks. Low Earth orbit satellite links can provide connectivity in these settings, but their high power draw and variable bandwidth, combined with intermittent on-site solar harvesting, make continuous backhaul infeasible. Current systems therefore filter at the edge, with motion triggers that waste limited energy and bandwidth on environmental artifacts, or fixed vision models that cannot follow evolving expert objectives. We present \\textsc{ATLAS}, an expert-guided edge-to-cloud system that treats satellite backhaul as a scarce resource for off-grid wildlife monitoring. \\textsc{ATLAS} uses foundation models to compile natural-language expert intent into…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "AI control & oversight"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Hao Fang",
-        "Miao Zhang",
-        "Haoyuan Zhao",
-        "Long Chen",
-        "Yi Ching Chou",
-        "Chi Xu",
-        "Cheng Pan",
-        "Jiangchuan Liu"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.24910",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.24910v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.24910",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "b99bd7b97232831348e696f4b2f3f3e4a52feb5e52d6bdcd84b1e36ecd554802",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "09188ae0e82626715d62",
-      "title": "Annotrace: A Workbench for Step-Level Annotation of Agent Traces",
-      "url": "https://arxiv.org/abs/2610.23284",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.23284v2 Announce Type: replace Abstract: Every study of why LLM agents fail begins by labelling traces by hand, and every such study builds its own throwaway tool. Observability platforms record agent traces but offer no structured labelling; annotation tools label text but have no notion of a step, a delegation or a tool call, leaving it unclear what the smallest unit of execution to label should be. Annotrace reads six trace formats, including OpenTelemetry GenAI, LangSmith and Langfuse, and turns each run into an ordered, nested list of steps. The annotator writes their own labelling codebook; a frontier model proposes a starting set from a sample of their own traces, answers first, and is asked exactly the questions the human is asked, making annotation a joint human-AI process. Annotrace measures agreement between any…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Evaluations & risk"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Arun Josephraj Arokiaraj",
-        "Chenyi Huang",
-        "Bin Wu",
-        "Sahan Bulathwela"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.23284",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.23284v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.23284",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "9d5b74e106f245364f06358793635fd56142a27f7a234eb2b65713adbe0f53ba",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "08e6ac7b7c53a0d95b95",
-      "title": "Multilingual Safety Alignment via Self-Distillation",
-      "url": "https://arxiv.org/abs/2605.02971",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.02971v3 Announce Type: replace Abstract: Large language models (LLMs) exhibit severe multilingual safety misalignment: they possess strong safeguards in high-resource languages but remain highly vulnerable to jailbreak attacks in low-resource languages. Current safety alignment methods generally rely on high-quality response data for each target language, which is expensive and difficult to generate. In this paper, we propose a cross-lingual safeguard transfer framework named Multilingual Self-Distillation (MSD). This framework transfers an LLM's inherent safety capabilities from high-resource (e.g., English) to low-resource (e.g., Javanese) languages, overcoming the need for response data in any language. Our framework is flexible and can be integrated with different self-distillation strategies. Specifically, we implement…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Ruiyang Qin",
-        "Qingzhuo Wang",
-        "Dongrui Liu",
-        "Qiang Li",
-        "Zhihua Wei",
-        "Wen Shen"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2605.02971",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2605.02971v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.02971",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "43276df598236e4bcada7fe73c935be017122b9b3b442c39799e30cead277453",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "c4ac744414a8aa10db83",
-      "title": "Post-Training Frontier Text-to-Image Models by Composing Preference and Rubric Rewards",
-      "url": "https://arxiv.org/abs/2610.02967",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.02967v2 Announce Type: replace-cross Abstract: Recent text-to-image generation models have achieved remarkable visual quality, but improving them through post-training remains challenging because no single reward signal captures the full range of human preference. In this work, we develop a simple and effective post-training recipe for open-domain text-to-image generation based on the composition of complementary reward signals. Our reward system consists of two main components: a preference reward, trained on large-scale human preference data using a Bradley-Terry objective to capture overall human aesthetic and perceptual preferences, and rubric-based rewards, which explicitly evaluate prompt faithfulness and other desirable properties while providing safeguards against reward hacking. A key challenge is how to combine…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Scheming & deception"
-      ],
-      "score": 6,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yuanhao Ban",
-        "I-Hung Hsu",
-        "Anastasios Angelopoulos",
-        "Wei-Lin Chiang",
-        "Ion Stoica",
-        "Cho-Jui Hsieh"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.02967",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.02967v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.02967",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "86b95dcd3a4d0de09c1604bb44ff34bf65b15b8143e1f8cfd60117e755e87fcd",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f9e47b7d4ea512dce64b",
-      "title": "Local Conflict, Targeted Repair: A Perturbation Analysis of Multi-Domain RL",
-      "url": "https://arxiv.org/abs/2606.02398",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2606.02398v2 Announce Type: replace Abstract: Reinforcement learning (RL) post-training improves large language models on individual domains but can degrade previously acquired capabilities. We study this interference in mathematical reasoning, code generation, question answering (QA), and creative writing (CW). Full-model domain gradients can be nearly orthogonal despite substantial selective degradation. Our structural analyses show sparse, weakly overlapping edits on computation routes that reasoning domains share, with directional alignment associated with transfer and conflict. A local perturbation model separates loss changes into a first-order term and a path-averaged curvature term, decomposes the latter along the actual rollback intervention, and provides a conditional explanation for recovery by short refresh. The…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 5,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Lei Yang",
-        "Siyu Ding",
-        "Deyi Xiong"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2606.02398",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2606.02398v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2606.02398",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "298337e0a267144f44f78a7774462086da96256ef9752d57febeb441e534b956",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f4fc0e75e4d1b32eb855",
-      "title": "Local Evidence, Global Failure: Diagnosing Speech-Vision Temporal Composition in Audio-Visual Language Models",
-      "url": "https://arxiv.org/abs/2610.25352",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.25352v1 Announce Type: cross Abstract: Audio-visual large language models (AV-LLMs) can fail at full-video speech-vision decisions even when useful visual evidence is locally recoverable. We introduce Temporal Evidence Decomposition (TED), a training-free diagnostic framework that separates local visual verification from speech-relative aggregation. Automatic speech recognition supplies a transcript and utterance interval. TED queries audio-free windows with the transcript for Temporal Alignment and Forecasting, or answer candidates for Cross-Modal Temporal Binding, then aggregates evidence relative to that interval. Across four frozen AV-LLMs on SVHalluc, Temporal Forecasting accuracy rises from 29.3-33.7% under full-video questioning to 79.3-82.2% with TED. Query replacement reduces recovery; the observed anchor remains…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 5,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Jaehong Myung",
-        "Seunghun Oh",
-        "Unsang Park"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.25352",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.25352v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.25352",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "71f3d3b386f6460a1c463f96e806d092e927a2d357e8a9c3a7eab15bf642196f",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-40703dacb8c34676.json",
-    "sha256": "40703dacb8c34676a58a40b8fc04d64851174b8330e310b6ea5b0d66362ac351",
-    "total_items": 2274,
+    "manifest": "data/archive/manifest-803a257d4864d584.json",
+    "sha256": "803a257d4864d584f4d14bb7ac5e9b80a4a116bed83b30eb6424271be04a4e44",
+    "total_items": 2281,
     "edition_items": 1500,
     "complete": false
   }
