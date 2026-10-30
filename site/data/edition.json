@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-29T21:08:56Z",
-  "last_successful_update": "2026-10-29T21:08:56Z",
+  "generated_at": "2026-10-30T01:02:06Z",
+  "last_successful_update": "2026-10-30T01:02:06Z",
   "edition_date": "2026-10-29",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T21:08:56Z",
+      "last_nonempty_at": "2026-10-30T01:02:06Z",
       "item_count": 4,
       "parsed_count": 4,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-10-26T12:31:52Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-22T16:09:18.287Z",
+        "incremental_window_start": "2026-10-22T21:08:56.862Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -42,16 +42,20 @@
       "id": "arxiv",
       "name": "arXiv",
       "url": "https://arxiv.org/",
-      "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "status": "degraded",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-29T21:08:56Z",
       "item_count": 1972,
-      "parsed_count": 85,
+      "parsed_count": 0,
       "error": null,
-      "warnings": [],
+      "warnings": [
+        "arXiv search API failed: HTTP Error 429: Unknown Error",
+        "Backup RSS discovers only the current announcement window in five configured categories. New-publication API catch-up remains pending.",
+        "No records parsed; source may be empty or its format may have changed. Checkpoint retained."
+      ],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
@@ -64,7 +68,10 @@
         "validated_empty": false,
         "adapter_mode": "year_partitioned_arxiv",
         "monitoring_since": "2026-10-16T23:48:48Z",
-        "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance."
+        "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance.",
+        "degraded": true,
+        "primary_error": "HTTP Error 429: Unknown Error",
+        "suspicious_empty": true
       },
       "lifetime_item_count": 2613
     },
@@ -72,16 +79,28 @@
       "id": "openreview",
       "name": "OpenReview",
       "url": "https://openreview.net/",
-      "status": "error",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T16:09:18Z",
+      "status": "degraded",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": "2026-10-29T21:08:56Z",
-      "failure_streak": 1,
-      "last_nonempty_at": "2026-10-29T16:09:18Z",
+      "failure_streak": 0,
+      "last_nonempty_at": "2026-10-30T01:02:06Z",
       "item_count": 2,
-      "parsed_count": 0,
-      "error": "HTTP Error 403: Forbidden",
-      "warnings": [],
+      "parsed_count": 3,
+      "error": null,
+      "warnings": [
+        "OpenReview search for 'AI alignment' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'AI safety' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'mechanistic interpretability' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'scalable oversight' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'reward hacking' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'deceptive alignment' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'AI control' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'scheming' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview search for 'sandbagging' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
+        "OpenReview new-publication catch-up is pending or cannot yet be verified.",
+        "OpenReview discovery is limited to public API v2 phrase matches. Search supports modification-date ordering but cannot sort by the first-publication date; API v1 venues and unindexed work may be missing."
+      ],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
@@ -117,8 +136,8 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-28T21:39:58Z",
@@ -147,13 +166,13 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T21:08:56Z",
-      "item_count": 258,
-      "parsed_count": 25,
+      "last_nonempty_at": "2026-10-30T01:02:06Z",
+      "item_count": 263,
+      "parsed_count": 21,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -162,26 +181,26 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-10-28T16:10:08.953Z",
-        "latest_fetched_at": "2026-10-29T20:35:27.791Z",
+        "oldest_fetched_at": "2026-10-28T21:24:48.978Z",
+        "latest_fetched_at": "2026-10-30T00:07:01.069Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 658
+      "lifetime_item_count": 663
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T21:08:56Z",
+      "last_nonempty_at": "2026-10-30T01:02:06Z",
       "item_count": 2,
       "parsed_count": 2,
       "error": null,
@@ -211,8 +230,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-19T21:05:08Z",
@@ -250,11 +269,11 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T21:08:56Z",
+      "last_nonempty_at": "2026-10-30T01:02:06Z",
       "item_count": 3,
       "parsed_count": 3,
       "error": null,
@@ -271,7 +290,7 @@
         "latest_fetched_at": "2026-10-27T04:24:19.401Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-10-22T16:09:18.287Z",
+        "incremental_window_start": "2026-10-22T21:08:56.862Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public Substack publications, with bounded forward catch-up pagination when necessary. Historical archive crawling is disabled."
@@ -283,13 +302,13 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-16T22:52:17Z",
-      "item_count": 0,
-      "parsed_count": 0,
+      "last_nonempty_at": "2026-10-30T01:02:06Z",
+      "item_count": 1,
+      "parsed_count": 1,
       "error": null,
       "warnings": [
         "Coverage is limited to the publisher's current index; publication dates are the explicit data-date attributes on its article cards."
@@ -300,10 +319,10 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": null,
-        "latest_fetched_at": null,
-        "discovered_urls": 0,
-        "validated_empty": true,
+        "oldest_fetched_at": "2026-10-29",
+        "latest_fetched_at": "2026-10-29",
+        "discovered_urls": 1,
+        "validated_empty": false,
         "scope": "Article cards linked by the publisher's current dated index.",
         "adapter_mode": "publisher_dated_index",
         "monitoring_since": "2026-10-16T23:48:48Z",
@@ -311,15 +330,15 @@
         "baseline_boundary_uncertain": true,
         "description": "Lightweight publisher index checked hourly; explicit publication dates determine which cards are new after the fixed cutoff."
       },
-      "lifetime_item_count": 56
+      "lifetime_item_count": 57
     },
     {
       "id": "far-ai",
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -357,8 +376,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -396,8 +415,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -435,8 +454,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -469,8 +488,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -504,11 +523,11 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T21:08:56Z",
+      "last_nonempty_at": "2026-10-30T01:02:06Z",
       "item_count": 37,
       "parsed_count": 36,
       "error": null,
@@ -538,11 +557,11 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-10-29T21:08:56Z",
-      "last_success_at": "2026-10-29T21:08:56Z",
+      "checked_at": "2026-10-30T01:02:06Z",
+      "last_success_at": "2026-10-30T01:02:06Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-10-29T21:08:56Z",
+      "last_nonempty_at": "2026-10-30T01:02:06Z",
       "item_count": 3,
       "parsed_count": 3,
       "error": null,
@@ -568,13 +587,7 @@
       "lifetime_item_count": 103
     }
   ],
-  "errors": [
-    {
-      "source_id": "openreview",
-      "source": "OpenReview",
-      "message": "HTTP Error 403: Forbidden"
-    }
-  ],
+  "errors": [],
   "coverage": {
     "completeness": "unverified",
     "description": "Monitoring new publications from the collection start; uncertain publication dates remain in review.",
@@ -585,24 +598,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 158,
-    "accepted_items": 158,
-    "retained_items": 2274,
-    "lifetime_accepted_items": 158,
-    "lifetime_retained_items": 9249,
-    "successful_sources": 15,
+    "fetched_items": 73,
+    "accepted_items": 72,
+    "retained_items": 2281,
+    "lifetime_accepted_items": 73,
+    "lifetime_retained_items": 9256,
+    "successful_sources": 16,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
-    "suspicious_empty_sources": 0,
-    "duplicates_removed": 151,
-    "total_items": 2281,
-    "relevant_items": 170,
-    "candidate_items": 2111,
+    "suspicious_empty_sources": 1,
+    "duplicates_removed": 68,
+    "total_items": 2286,
+    "relevant_items": 172,
+    "candidate_items": 2114,
     "undated_items": 962,
     "year_only_items": 0,
-    "newest_publication": "2026-10-29T20:35:27Z",
-    "lifetime_total_items": 9256,
+    "newest_publication": "2026-10-30T00:07:01Z",
+    "lifetime_total_items": 9261,
     "excluded_legacy_items": 6975
   },
   "coverage_policy": {
@@ -629,6 +642,166 @@
   },
   "items": [
     {
+      "id": "555756d66a8278eff601",
+      "title": "Formalising Newcomblike Problems",
+      "url": "https://www.lesswrong.com/posts/ziFazSwhnWzW78oew/formalising-newcomblike-problems",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-30T00:07:01Z",
+      "date_precision": "instant",
+      "summary": "This is the write-up of my MATS project so far, as a mentee of Abram Demski. Those who would prefer a more formal/academic/mathematical write-up should look at the AAMAS submission here. TL:DR, a formal framework for representing CDT, EDT and UDT on the majority of classical Newcomblike problems, plus some accompanying results about how CDT can be made to pay for ignorance. Introduction I present my framework for hosting classical decision theories (Causal, Evidential and Updtateless/Functional decision theories) in classical Newcomblike problems. The framework is intended to be faithful (the outputs of the framework regarding what theories act in which ways in which problems agree with the consenus), fair (each theory's intuitions about \"why this is rational behaviour\" can be expressed as formal properties of the framework, the…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Bicuspid Valve"
+      ],
+      "first_seen": "2026-10-30T01:02:06Z",
+      "discovered_at": "2026-10-30T01:02:06Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "ziFazSwhnWzW78oew",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/ziFazSwhnWzW78oew/formalising-newcomblike-problems",
+          "found_at": "2026-10-30T01:02:06Z"
+        }
+      ],
+      "content_hash": "cb5c03acfd49f1ac8c50973776845363896c1fd2add9f40503862e44f29165de",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "afb5becc63366d7edabf",
+      "title": "Formally Defining Wavefunction Branches",
+      "url": "https://www.lesswrong.com/posts/cZamk8LRKaeuTgepy/formally-defining-wavefunction-branches",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-29T23:03:53Z",
+      "date_precision": "instant",
+      "summary": "[LW Meta: This post is (a) about how wavefunction branching explains measurements and why chaotic dynamics don't cause the quantum state to become non-classical-looking (b) the mathematical problem of formally defining wavefunction branches. The former will be familiar to people who've read Eliezer's quantum sequence, but the latter is new to LW to my knowledge!] 2.5.4 The Emergence of Classicality 2.5.4.1 In 2.5.2 I left open two questions about quantum mechanics and seemingly-classical reality. Namely, (b) how does the world stay in a relatively-classical state, and (c) what happens when we take a measurement? It turns out the answer to both questions is the same, and it involves the information-proliferating dynamics discussed in section 2.4. 2.5.4.2 Let's examine the Stern-Gerlach experiment in more detail. In this experiment a…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "interstice"
+      ],
+      "first_seen": "2026-10-30T01:02:06Z",
+      "discovered_at": "2026-10-30T01:02:06Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://thermontology.com/posts/physics-5"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "cZamk8LRKaeuTgepy",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/cZamk8LRKaeuTgepy/formally-defining-wavefunction-branches",
+          "found_at": "2026-10-30T01:02:06Z"
+        }
+      ],
+      "content_hash": "6a57c84dff88b57cff17a837af88c6e6c37c8d62ccf9c26e913b9840c85c7cbe",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "503c8edcf96042f25352",
+      "title": "What is OpenAI's Mission Advisory Council?",
+      "url": "https://www.lesswrong.com/posts/KxbeqePFBooJteoeC/what-is-openai-s-mission-advisory-council-1",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-29T22:58:42Z",
+      "date_precision": "instant",
+      "summary": "In Mikita Balesni’s letter to OpenAI, three parties are addressed as holding “oversight responsibility for safety at OpenAI.” These are: * the Safety and Security Committee (SSC), * the Safety Advisory Group (SAG), and * the Mission Advisory Council (MAC) The Safety and Security Committee (SSC) is a part of the OpenAI Foundation which is tasked with populating the members of the OpenAI PBC board and has veto power/final say over safety decisions at the company, modulo a small set of the OpenAI C-suite. Paul Christiano joined the SSC in September 2026. The Safety Advisory Group (SAG) is an internal committee of OpenAI staff that reviews frontier-risk evidence and gives recommendations on what to do to OpenAI leadership/the SSC. It has no veto power and its charter is described somewhat in the Preparedness Framework. Understanding the…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI control & oversight"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "hersheys"
+      ],
+      "first_seen": "2026-10-30T01:02:06Z",
+      "discovered_at": "2026-10-30T01:02:06Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "KxbeqePFBooJteoeC",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/KxbeqePFBooJteoeC/what-is-openai-s-mission-advisory-council-1",
+          "found_at": "2026-10-30T01:02:06Z"
+        }
+      ],
+      "content_hash": "be1d66602da050b7f16e9c35c11387d81f9e80743948a533de5dfba6d499872e",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "ce9f401e27d4c60854a9",
+      "title": "Probability ranges are a cop-out with 90–93% probability",
+      "url": "https://www.lesswrong.com/posts/4oNHbN3mwmfktEPMx/probability-ranges-are-a-cop-out-with-90-93-probability",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-10-29T21:14:06Z",
+      "date_precision": "instant",
+      "summary": "It feels like this post on LessWrong should mostly be preaching to the choir, but I have seen enough rationalists post probability ranges (mainly elsewhere) that maybe it is worth writing. The probability of an event is not an objective fact about the world; it is a fact about your subjective uncertainty of it. Hence, if you're not sure what the probability of something is, this is not because the world has some secret information that you don't have access to (the fact that you're estimating the probability in the first place is because of that), but because you just can't be bothered to put together all the relevant info you have and properly estimate and/or calculate the probability based on it. In a sense, not knowing what you need to take into account or how to do the math are just factors that add uncertainty to your world model…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Awaclus"
+      ],
+      "first_seen": "2026-10-30T01:02:06Z",
+      "discovered_at": "2026-10-30T01:02:06Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "4oNHbN3mwmfktEPMx",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/4oNHbN3mwmfktEPMx/probability-ranges-are-a-cop-out-with-90-93-probability",
+          "found_at": "2026-10-30T01:02:06Z"
+        }
+      ],
+      "content_hash": "cd744113bc3291cfe91147be497609976e59734f2a19e6cf2f7f0f7cb607f81f",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "fdffc277ca2e6beb88ad",
       "title": "Someone Made an Infra-Bayesian RL Agent, and it One-Boxes!",
       "url": "https://www.lesswrong.com/posts/BnFPBevp8Cdw2NKoq/someone-made-an-infra-bayesian-rl-agent-and-it-one-boxes",
@@ -650,7 +823,9 @@
       "discovered_at": "2026-10-29T21:08:56Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/BnFPBevp8Cdw2NKoq/someone-made-an-infra-bayesian-rl-agent-and-it-one-boxes"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "BnFPBevp8Cdw2NKoq",
@@ -689,7 +864,9 @@
       "discovered_at": "2026-10-29T21:08:56Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/LnnZHgdsLBZpgBDvW/j-lens-can-t-detect-what-a-subliminal-learning-teacher-is"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "LnnZHgdsLBZpgBDvW",
@@ -767,7 +944,9 @@
       "discovered_at": "2026-10-29T21:08:56Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://openai.com/index/updated-model-spec"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "https://openai.com/index/updated-model-spec",
@@ -806,7 +985,9 @@
       "discovered_at": "2026-10-29T21:08:56Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/3Sc4nz4eQHGKyEWvC/the-newly-needed-labor-under-ai-2040-economic-growth-is"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "3Sc4nz4eQHGKyEWvC",
@@ -930,7 +1111,9 @@
       "discovered_at": "2026-10-29T21:08:56Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://openai.com/index/how-we-detect-frontier-model-misalignment"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
@@ -967,7 +1150,9 @@
       "discovered_at": "2026-10-29T21:08:56Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://openai.com/index/ropes-gray-ai-diligence"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "https://openai.com/index/ropes-gray-ai-diligence",
@@ -1314,6 +1499,44 @@
         }
       ],
       "content_hash": "b5eacbc3e5bd6270df62da7ac56860f703d87495bef54b1f5fb866619b0c6dc9",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "303c7f3dc85f3c3be420",
+      "title": "Circuits Updates — October 2026",
+      "url": "https://transformer-circuits.pub/2026/october-update/index.html",
+      "source": "Transformer Circuits",
+      "source_id": "transformer-circuits",
+      "source_url": "https://transformer-circuits.pub/",
+      "published_at": "2026-10-29T00:00:00Z",
+      "date_precision": "day",
+      "summary": "A short update on an extension to the Jacobian lens.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "relevant",
+      "relevance_reason": "trusted alignment source; topic metadata only",
+      "authors": [],
+      "first_seen": "2026-10-30T01:02:06Z",
+      "discovered_at": "2026-10-30T01:02:06Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "published_date": "2026-10-29",
+      "external_id": "https://transformer-circuits.pub/2026/october-update/index.html",
+      "provenance": [
+        {
+          "source_id": "transformer-circuits",
+          "name": "Transformer Circuits",
+          "url": "https://transformer-circuits.pub/",
+          "article_url": "https://transformer-circuits.pub/2026/october-update/index.html",
+          "found_at": "2026-10-30T01:02:06Z"
+        }
+      ],
+      "content_hash": "513baed16a6df579cdb5641060c05bd74adae1f49bf4b24bd1b19774423c375f",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -18535,8 +18758,8 @@
       "summary": "Real-to-Sim-to-Real (Real2Sim2Real) enables structured world representations for planning, interpretability, and safe execution. Most existing approaches rely on passive perception, which creates real2sim gaps due to imperfect observation. Inspired by how humans perceive actively through actions, we propose ActiveAlign, a framework that leverages active perception to align the Real2Sim2Real gap from interactions. ActiveAlign introduces two complementary modules: (i) ActiveAlign-Waving, which performs hand-eye calibration by exploiting active hand motions and differentiable rendering, and (ii) ActiveAlign-Touching, which refines object alignment through tactile feedback to achieve millimeter-level precision. Together, these capabilities enable strong real2sim alignment. We demonstrate that ActiveAlign-Waving can be used to curate…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Interpretability"
+        "Interpretability",
+        "Alignment methods"
       ],
       "score": 12,
       "relevance": "candidate",
@@ -30890,8 +31113,8 @@
       "summary": "Reinforcement learning with verifiable rewards trains on cheap checks, such as unit tests, that a policy can learn to game, while a stronger check is too expensive to run on every rollout. We study how to spend a limited strong-verifier budget in GRPO, separating which weakly passing rollouts to audit from what reward a caught hack receives. At a fixed policy state with centered advantages, the expected update depends on a design only through each rollout's marginal audit probability and correction; reflecting a caught hack's reward about the failure reward negates the advantages of an all-hack group; and auditing whole groups with the fewest weak passes first (low-pass budgeted audits, LB) minimizes the advantage mass left on hacks among pass-count designs with a fixed correction when a label's value falls with the pass count. We…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "AI control & oversight",
-        "Scheming & deception"
+        "Scheming & deception",
+        "AI control & oversight"
       ],
       "score": 12,
       "relevance": "relevant",
@@ -44923,8 +45146,8 @@
       "summary": "Research ideas are always proposed under resource constraints: a plan must fit the available compute, API credit, and time. Yet evaluations of research-ideation agents mostly score unconstrained novelty or overlap with a published paper, and their LLM judges are rarely checked against peer review. We introduce AlphaIdeaBench, a benchmark of 100 ideation tasks (50 workshop calls for papers and 50 open problems stated in surveys), each paired with an explicit resource budget and a shared proposal schema. An LLM judge scores each proposal on 12 dimensions covering validity, novelty, and feasibility. To validate the judge, we compare its scores on four novelty axes (problem, method, scenario, and insight) with scores derived from reviewer comments on 600 papers from ICLR 2026, NeurIPS 2025, and ICML 2025. For problem and method novelty…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "AI R&D & agents",
-        "Alignment methods"
+        "Alignment methods",
+        "AI R&D & agents"
       ],
       "score": 15,
       "relevance": "relevant",
@@ -45907,9 +46130,12 @@
       "doi": null,
       "arxiv_id": "2610.33180",
       "links": [
-        "https://arxiv.org/abs/2610.33180"
+        "https://arxiv.org/abs/2610.33180",
+        "https://www.lesswrong.com/posts/vDj9HZnBpBECLzshv/paper-propensities-please-exposing-alignment-faking-llms"
       ],
-      "aliases": [],
+      "aliases": [
+        "e2875d6a72a0cb64dbcd"
+      ],
       "updated_at": "2026-10-23T18:23:49Z",
       "version": "1",
       "external_id": "http://arxiv.org/abs/2610.33180v1",
@@ -45920,11 +46146,18 @@
           "url": "https://arxiv.org/",
           "article_url": "https://arxiv.org/abs/2610.33180",
           "found_at": "2026-10-27T06:18:39Z"
+        },
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/vDj9HZnBpBECLzshv/paper-propensities-please-exposing-alignment-faking-llms",
+          "found_at": "2026-10-30T01:02:06Z"
         }
       ],
       "content_hash": "86b57b6b5b5df4a5c8b2ff3e9e5f0c9e745ef8a69ffb905f7d2fd48a3aa45cdb",
       "temporal_status": "published_after_start",
-      "revision_count": 1
+      "revision_count": 2
     },
     {
       "id": "a172acbb6c774f45cb0c",
@@ -60920,8 +61153,8 @@
       "summary": "We survey interpretability for AI safety, focusing on mechanistic interpretability (MI)---the study of neural networks' internal representations and computations to develop causal understanding and support targeted interventions. We first situate MI within the broader interpretability landscape, contrasting its mechanism-level evidence with behavioral evaluation while emphasizing how behavioral, attributional, and representation-based methods can complement mechanistic analysis. We introduce core foundations for MI from first principles, including features, polysemanticity, superposition, transformer computation, and circuits, and survey methods for feature decomposition, circuit discovery and causal verification, interpreting intermediate representations, training-data attribution, learning dynamics, knowledge localization, and…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Interpretability",
-        "Alignment methods"
+        "Alignment methods",
+        "Interpretability"
       ],
       "score": 15,
       "relevance": "relevant",
@@ -67108,246 +67341,12 @@
       "content_hash": "1bac91c06d9073006136c603976ae75bd339d9c12060f4ca6e259c54af0eb556",
       "temporal_status": "publication_date_unverified",
       "revision_count": 0
-    },
-    {
-      "id": "957e9adad4ee1f305771",
-      "title": "GeoForward: Geometry-Guided Cross-View Alignment for Feedforward 3D Gaussian Splatting",
-      "url": "https://arxiv.org/abs/2610.23895",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.23895v1 Announce Type: cross Abstract: Feedforward 3D reconstruction has largely followed an {appearance-driven paradigm}: multi-view images are encoded into visual representations, cross-view correspondence is implicitly inferred from learned features, and 3D primitives are subsequently predicted from these representations. However, calibrated cameras and sparse metric measurements already provide explicit constraints on where the same physical point should appear across views. We propose a novel paradigm, \\textbf{Geometry-Conditioned Feedforward Reconstruction}, in which metric geometry establishes cross-view correspondence before the 3D representation is formed, while learned visual features refine rather than discover this correspondence. Based on this paradigm, we introduce \\textbf{GeoForward}. Sparse LiDAR points are…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yiming Shu",
-        "Peng Sun",
-        "Lang Zhang",
-        "Mingyue Feng",
-        "Yaonong Wang",
-        "Pei Liu",
-        "Chen Sun",
-        "Jun Ma"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.23895",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.23895v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.23895",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "3f80399193cd650415d53de78b37195b8bb74d37d6dbe88acab901ae11fd7c06",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "5771dba64b1eb1e6ea8c",
-      "title": "Enhancing Speech Large Language Models through Reinforced Behavior Alignment",
-      "url": "https://arxiv.org/abs/2509.03526",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2509.03526v3 Announce Type: replace Abstract: Speech large language models (SpeechLMs) can process spoken requests, yet still lag behind text-prompted large language models (LLMs) on instruction following and reasoning. We argue that this gap is not only an ASR or representation problem: the same semantic instruction can induce different response policies when spoken with different speakers, accents, noise conditions, prosody, or disfluencies. We propose Verifiable Invariant Reinforced Behavior Alignment (VIRBA), a reinforcement-learning framework for aligning SpeechLM behavior across acoustic realizations of the same semantic intent. VIRBA builds multi-view spoken instruction groups, scores sampled responses with semantic preference, rule-verifiable correctness, cross-acoustic invariance, and adaptive reasoning rewards, and…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yansong Liu",
-        "Yuan Liu"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2509.03526",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2509.03526v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2509.03526",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "9852c9856c4311ff2335cc22012ccfe104003c4f1c45b6d640b51d57bede2432",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "4f6e0f0aac76178e58d2",
-      "title": "Where is Physical RSI capability from? An Observational Scaling Law of LLM-as-policy",
-      "url": "https://arxiv.org/abs/2610.26848",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.26848v1 Announce Type: cross Abstract: In this paper, we systematically investigate the mechanisms, scaling behavior, and generalization of physical Recursive self-improvement. We introduce PhysRSI-eval to quantify physical RSI through a five-axis metric: First-Attempt Performance, Efficiency, Success, Budget and Improvement from failure. Different VLMs are evaluated on 18 manipulation tasks under a fixed interaction budget. The analysis of experimental results motivates the Physical Barrel Hypothesis: different capabilities may constrain different parts of improvement. The five-axis metrics also distinguish systems with close public benchmark averages and show that high scores need not come with early or efficient gains. We study observational scaling from two perspectives: predicting the relative performance of VLM agents…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "AI R&D & agents"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Zekai Li",
-        "Jiayi Yu",
-        "Jinlu Zhang",
-        "Luyang Niu",
-        "Zekun Qi",
-        "Jun Zheng",
-        "Xuchuan Chen",
-        "Dairu Liu",
-        "Yintianrun Zhang",
-        "He Wang",
-        "Li Yi"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2610.26848",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.26848v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.26848",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "18933ee2bb6433bb09e8d7c25364db37baad3206b3fb4e55020a0c1dd42d3933",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "48d80b5b1ee479b77776",
-      "title": "Gradient-Free Noise Optimization for Reward Alignment in Generative Models",
-      "url": "https://arxiv.org/abs/2605.11347",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.11347v3 Announce Type: replace Abstract: Existing reward alignment methods for diffusion and flow models rely on multi-step stochastic trajectories, making them difficult to extend to deterministic generators. A natural alternative is noise-space optimization, but existing approaches require backpropagation through the generator and reward pipeline, limiting applicability to differentiable settings. To address this, here we present ZeNO (Zeroth-order Noise Optimization), a gradient-free framework that formulates noise optimization as a path-integral control problem, estimable from zeroth-order reward evaluations. When instantiated with an Ornstein--Uhlenbeck reference process and a one-step receding horizon, the repeated update connects to Langevin dynamics targeting a reward-tilted distribution. ZeNO enables effective…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Jeongsol Kim",
-        "Hongeun Kim",
-        "Jian Wang",
-        "Jong Chul Ye"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2605.11347",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2605.11347v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.11347",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "41c8aca735929232ef4d44fa08e218b271a020200ddd5ae522a60fc1c696d794",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "396f50e437a755ad2282",
-      "title": "Eliciting Weak-to-Strong Generalization with On-Policy Reverse Distillation",
-      "url": "https://arxiv.org/abs/2609.08798",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2609.08798v2 Announce Type: replace Abstract: Weak-to-strong generalization asks whether stronger models can learn from weaker supervisors and surpass them. This is particularly important for successive model generations and multi-domain consolidation, where frontier-scale post-training from scratch can be prohibitively expensive. Yet conventional distillation treats the weak teacher as an optimization target, potentially imposing its capacity ceiling on the student. We introduce On-Policy Reverse Distillation (OPRD), which evaluates the teacher's policy shift relative to its reference policy on student rollouts and amplifies the component of the student's verifier-driven policy gradient along that direction. By rescaling only verifier-supported updates, OPRD preserves the stationary points of policy optimization while…",
-      "summary_kind": "publisher excerpt",
-      "topics": [
-        "Alignment methods"
-      ],
-      "score": 7,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Youngrok Park",
-        "Sangmin Bae",
-        "Hojung Jung",
-        "Jongwoo Ko",
-        "Yunseon Choi",
-        "Young Jin Kim",
-        "Pashmina Cameron",
-        "Aaron Courville",
-        "Se-Young Yun"
-      ],
-      "first_seen": "2026-10-20T11:40:51Z",
-      "discovered_at": "2026-10-20T11:40:51Z",
-      "doi": null,
-      "arxiv_id": "2609.08798",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-20T04:00:00Z",
-      "external_id": "oai:arXiv.org:2609.08798v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2609.08798",
-          "found_at": "2026-10-20T11:40:51Z"
-        }
-      ],
-      "content_hash": "ecb5ffa73aece921bb2185370d80392c93e4cb328ff280a05cac110ce125dbaa",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-803a257d4864d584.json",
-    "sha256": "803a257d4864d584f4d14bb7ac5e9b80a4a116bed83b30eb6424271be04a4e44",
-    "total_items": 2281,
+    "manifest": "data/archive/manifest-c2db1941c8c26640.json",
+    "sha256": "c2db1941c8c26640a9768f45b2602815bbaab142187544dd2b040bd980d48990",
+    "total_items": 2286,
     "edition_items": 1500,
     "complete": false
   }
