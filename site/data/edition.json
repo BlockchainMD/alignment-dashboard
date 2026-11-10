@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-09T17:31:54Z",
-  "last_successful_update": "2026-11-09T17:31:54Z",
+  "generated_at": "2026-11-10T01:34:09Z",
+  "last_successful_update": "2026-11-10T01:34:09Z",
   "edition_date": "2026-11-09",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,13 +10,13 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-09T17:31:54Z",
-      "item_count": 5,
-      "parsed_count": 5,
+      "last_nonempty_at": "2026-11-10T01:34:09Z",
+      "item_count": 6,
+      "parsed_count": 6,
       "error": null,
       "warnings": [
         "A bounded publication-date overlap catches late indexing; publications indexed later than that lookback may be missed."
@@ -27,27 +27,27 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2025-10-13T12:32:14Z",
-        "latest_fetched_at": "2026-11-02T14:30:54Z",
+        "oldest_fetched_at": "2025-10-16T22:20:01Z",
+        "latest_fetched_at": "2026-11-09T13:31:34Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-11-02T06:34:38.818Z",
+        "incremental_window_start": "2026-11-02T17:31:54.827Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
       },
-      "lifetime_item_count": 804
+      "lifetime_item_count": 805
     },
     {
       "id": "arxiv",
       "name": "arXiv",
       "url": "https://arxiv.org/",
       "status": "degraded",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-09T17:31:54Z",
+      "last_nonempty_at": "2026-11-10T01:34:09Z",
       "item_count": 3037,
       "parsed_count": 281,
       "error": null,
@@ -80,11 +80,11 @@
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": "2026-10-29T21:08:56Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-09T17:31:54Z",
+      "last_nonempty_at": "2026-11-10T01:34:09Z",
       "item_count": 2,
       "parsed_count": 4,
       "error": null,
@@ -110,7 +110,7 @@
         "query_totals": {
           "AI alignment": 594,
           "AI safety": 2126,
-          "mechanistic interpretability": 2844,
+          "mechanistic interpretability": 2845,
           "scalable oversight": 179,
           "reward hacking": 1006,
           "deceptive alignment": 28,
@@ -136,13 +136,13 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-09T17:31:54Z",
-      "item_count": 16,
-      "parsed_count": 2,
+      "last_nonempty_at": "2026-11-10T01:34:09Z",
+      "item_count": 17,
+      "parsed_count": 1,
       "error": null,
       "warnings": [],
       "scope": "alignment",
@@ -151,28 +151,28 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-08T13:39:02.145Z",
-        "latest_fetched_at": "2026-11-08T17:15:13.883Z",
+        "oldest_fetched_at": "2026-11-09T18:02:01.019Z",
+        "latest_fetched_at": "2026-11-09T18:02:01.019Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Public Alignment Forum posts from the fixed cutoff, including substantive informal research. Discussion and opinion remain review candidates."
       },
-      "lifetime_item_count": 416
+      "lifetime_item_count": 417
     },
     {
       "id": "lesswrong",
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-09T17:31:54Z",
-      "item_count": 464,
-      "parsed_count": 36,
+      "last_nonempty_at": "2026-11-10T01:34:09Z",
+      "item_count": 479,
+      "parsed_count": 43,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -181,26 +181,26 @@
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-08T12:58:03.776Z",
-        "latest_fetched_at": "2026-11-09T17:24:22.141Z",
+        "oldest_fetched_at": "2026-11-08T18:35:18.531Z",
+        "latest_fetched_at": "2026-11-10T01:12:03.981Z",
         "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 864
+      "lifetime_item_count": 879
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-09T17:31:54Z",
+      "last_nonempty_at": "2026-11-10T01:34:09Z",
       "item_count": 4,
       "parsed_count": 4,
       "error": null,
@@ -230,8 +230,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-05T22:00:28Z",
@@ -269,10 +269,10 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "error",
-      "checked_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
       "last_success_at": "2026-11-05T15:29:15Z",
-      "last_failure_at": "2026-11-09T17:31:54Z",
-      "failure_streak": 16,
+      "last_failure_at": "2026-11-10T01:34:09Z",
+      "failure_streak": 17,
       "last_nonempty_at": "2026-11-05T15:29:15Z",
       "item_count": 5,
       "parsed_count": 0,
@@ -300,11 +300,11 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-09T17:31:54Z",
+      "last_nonempty_at": "2026-11-10T01:34:09Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -335,8 +335,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -374,8 +374,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -413,8 +413,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -452,8 +452,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -486,8 +486,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -521,13 +521,13 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-09T17:31:54Z",
-      "item_count": 67,
-      "parsed_count": 66,
+      "last_nonempty_at": "2026-11-10T01:34:09Z",
+      "item_count": 71,
+      "parsed_count": 70,
       "error": null,
       "warnings": [
         "RSS monitoring is limited to the publisher's current feed window; a long outage may exceed that window. Undated entries absent from the prior archive require temporal review."
@@ -548,18 +548,18 @@
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Publisher-wide feed includes safety research alongside products and company news; new non-research entries remain review candidates."
       },
-      "lifetime_item_count": 1363
+      "lifetime_item_count": 1367
     },
     {
       "id": "deepmind",
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-11-09T17:31:54Z",
-      "last_success_at": "2026-11-09T17:31:54Z",
+      "checked_at": "2026-11-10T01:34:09Z",
+      "last_success_at": "2026-11-10T01:34:09Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-09T17:31:54Z",
+      "last_nonempty_at": "2026-11-10T01:34:09Z",
       "item_count": 6,
       "parsed_count": 6,
       "error": null,
@@ -602,24 +602,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 405,
-    "accepted_items": 403,
-    "retained_items": 3325,
-    "lifetime_accepted_items": 405,
-    "lifetime_retained_items": 10300,
+    "fetched_items": 416,
+    "accepted_items": 414,
+    "retained_items": 3593,
+    "lifetime_accepted_items": 416,
+    "lifetime_retained_items": 10568,
     "successful_sources": 15,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 137,
-    "total_items": 3593,
-    "relevant_items": 293,
-    "candidate_items": 3300,
+    "duplicates_removed": 396,
+    "total_items": 3613,
+    "relevant_items": 297,
+    "candidate_items": 3316,
     "undated_items": 1453,
     "year_only_items": 0,
-    "newest_publication": "2026-11-09T17:24:22Z",
-    "lifetime_total_items": 10568,
+    "newest_publication": "2026-11-10T01:12:03Z",
+    "lifetime_total_items": 10588,
     "excluded_legacy_items": 6975
   },
   "coverage_policy": {
@@ -646,6 +646,652 @@
   },
   "items": [
     {
+      "id": "ec4b324d0b9cc12e5b74",
+      "title": "A Circularity at the Heart of Safety Assurance",
+      "url": "https://www.lesswrong.com/posts/HrftJvbRpNaAFeB2Q/a-circularity-at-the-heart-of-safety-assurance",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-10T01:12:03Z",
+      "date_precision": "instant",
+      "summary": "A friend of yours says they've had a flash of insight. A manga they've been into lately has helped them understand something deep and fundamental about decision theory. You aren't yet clear on the details when they rush off to work on \"practical applications\", but before long they return with their magnum opus: \"This hard drive contains the weights of an AI model that is both wildly superintelligent and completely safe!\" You feel as though you have good reasons to be pretty skeptical of this claim. This friend has terrible taste in manga, and you aren't convinced that they grasp the more subtle themes in the stuff they do read. You're about to shoo them away when, anticipating a dismissal, your friend pleads: \"What would convince you that I'm right?\" Now, if this friend wanted to convince you that they were wearing the Crunchyroll Store…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Austin Long"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "HrftJvbRpNaAFeB2Q",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/HrftJvbRpNaAFeB2Q/a-circularity-at-the-heart-of-safety-assurance",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "e2e5de37e11e589bd56a132394aa61eb44040724c3538357638c7aa2c33136ca",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "bd51c862dc00eee1bcae",
+      "title": "My Paranoid Coding Machine Setup",
+      "url": "https://www.lesswrong.com/posts/6wenbjFjj8293PEdW/my-paranoid-coding-machine-setup",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-10T00:56:33Z",
+      "date_precision": "instant",
+      "summary": "The combination of running AI agents which can install and run anything with supply chain attacks / the Hackening has made me much more paranoid about my personal machine than I used to be. I've been slowly improving this, and finally moved all of my AI agents into a VM today. I'm sharing this to show how far you can take this, even if you have requirements like GPU access or the ability to run (something close enough to) Docker. This is a follow-up / longer version of a recent shortform. Goals I run Claude Code in a custom harness which currently disables all permission prompts. I'm not really that worried about Claude doing something dangerous on purpose, but I worry about: * Claude breaking something by accident (mistyping a command that turns into rm -rf /). * Claude installing malware (most likely via a supply chain attack). My…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Brendan Long"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://www.brendanlong.com/my-paranoid-coding-machine-setup.html"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "6wenbjFjj8293PEdW",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/6wenbjFjj8293PEdW/my-paranoid-coding-machine-setup",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "8fed44a07cd84582f39770704b7a26446c465eb08a8d97bc7600b9ce9c6cb868",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "b0719fd474b755fb97ce",
+      "title": "\"Hardwired Pause\" should likely be your favorite (pause) plan.",
+      "url": "https://www.lesswrong.com/posts/jT272BNHFzgAR5u2m/hardwired-pause-should-likely-be-your-favorite-pause-plan",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-10T00:48:54Z",
+      "date_precision": "instant",
+      "summary": "I'm part of a team of 26 researchers that recently released a 212-page paper proposing a new plan for pausing AI, the \"hardwired pause.\"[1] The paper is called \"The Feasibility of a Hardwired Pause of Frontier AI Training.\" Our analysis suggests that, under this hardwired pause plan, we could probably pause for at least a decade if we start stopping within the next year, and this could likely be extended indefinitely. I expect this to be possible without trusting China or tanking the economy. Note: I am speaking for myself and not the other 25 authors. The working group is led by Will Fithian and Wesley Holliday, and the work continues. I currently think: 1. The best plan is to pause/stop AI, i.e. have an immediate, indefinite, international moratorium on frontier AI development. And importantly, this is technically easier than more…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "David Scott Krueger"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "jT272BNHFzgAR5u2m",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/jT272BNHFzgAR5u2m/hardwired-pause-should-likely-be-your-favorite-pause-plan",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "03355877349fba34e8e087c9a20e4ad94cd8dde3bac044e5d16b2205695d4569",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "71658c16a8262536ac82",
+      "title": "Whose Side? A game where you audit models for secret loyalties",
+      "url": "https://www.lesswrong.com/posts/NTWRL3cK8gEP3eE2v/whose-side-a-game-where-you-audit-models-for-secret",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T23:56:33Z",
+      "date_precision": "instant",
+      "summary": "Try the app here: whoseside.web.app. You can chat with a model and try to work out which who it secretly favours. With the recent Hugging Face attack, we're relying more and more on LLMs to audit the trails and safeguard the actions of other LLMs. That makes it vital to be sure our LLMs really are the helpful assistant they're presented ( as they can easily be sleeper agents.[1] ). We need a way to keep our agents working for us. Or at least a way to tell if it goes wrong. Compared with buggy code, buggy AI is a lot harder to define or solve.[2] Mechanistic interpretability has some promising leads[3], but is still nowhere close to being able to point out novel misalignment. If we look at the field of cybersecurity, first a vulnerability comes out or an attacker discovers something new, and then defenses get built. I find that's a good…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 8,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Cookie penguin"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "NTWRL3cK8gEP3eE2v",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/NTWRL3cK8gEP3eE2v/whose-side-a-game-where-you-audit-models-for-secret",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "e96cddc52dc229ac92e39397ae98e92dfc007e872df42defb776ec827817d9b0",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "71bcf0285d7d2982341f",
+      "title": "Would you press the button? The hard problem of alignment",
+      "url": "https://www.lesswrong.com/posts/KgQnkjtHRp6r2Br8L/would-you-press-the-button-the-hard-problem-of-alignment-1",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T23:33:50Z",
+      "date_precision": "instant",
+      "summary": "There is a TL;DR at the end. [...] It seems too good to be true. You think it must be a dream. It can't possibly be true. You go through the proof, and it seems correct. But what if you were under the influence of some drug? But the stakes are very high, so you use software you trust to formalize it in Lean, and you run it on a machine you trust. Lean says the proof is correct so now you are more convinced. But you start doubting yourself again. What if someone compromised the formalization software, or introduced a bug in Lean? So you check Lean's code, and run the proof on a second machine with an independent checker. It passes again. But each of these checks could fail in the same way the first one could. So you go further and formally verify Lean and the formalization software themselves. They pass. But now you are doubtful of the…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Shivam"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "KgQnkjtHRp6r2Br8L",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/KgQnkjtHRp6r2Br8L/would-you-press-the-button-the-hard-problem-of-alignment-1",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "6feab3dce0d6d7f14b988baa84023df37f04785c8aa9350531b6f11ff19c6041",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "c6577b1a24a3fe18f635",
+      "title": "25% of People Have Avoidant Attachment (But It Can Be Healed!)",
+      "url": "https://www.lesswrong.com/posts/Rp6ajYLeTGyZJLmTZ/25-of-people-have-avoidant-attachment-but-it-can-be-healed",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T23:19:25Z",
+      "date_precision": "instant",
+      "summary": "Relationships are hard, but having an avoidant attachment makes relationships a hell of a lot harder. Within attachment theory (which helps explain interpersonal bonding), it’s known that ~25% of the population uses avoidant attachment strategies to escape intimacy. Why? Because emotional intimacy and being vulnerable with a romantic partner causes them significant discomfort. But why does it cause them discomfort? Prior experiences (usually stemming from childhood) instilled in them that their emotional needs would not be met by their primary caregivers. And when someone’s needs are repeatedly not met, they subconsciously suppress those needs rather than face the daily pain of rejection. That learned strategy—to shut down when attempting to seek emotional intimacy—can persist long into adulthood. Emotional loneliness is at the core of…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Declan Molony"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "Rp6ajYLeTGyZJLmTZ",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/Rp6ajYLeTGyZJLmTZ/25-of-people-have-avoidant-attachment-but-it-can-be-healed",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "99bed3d95d3e10de6969a5f89011f827e09d9f456a93c1d8ae1e4be8ebce33e6",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "9705a7f5c3f13ab99844",
+      "title": "We have AI 2027. Where's Cyberpocalypse 2027?",
+      "url": "https://www.lesswrong.com/posts/c2cSExfpXEcQ9R2cd/we-have-ai-2027-where-s-cyberpocalypse-2027",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T23:17:45Z",
+      "date_precision": "instant",
+      "summary": "AI scenario forecasting has a big blind spot: when AI is superhuman at hacking, what happens to the rest of society? And how does what happens to society affect AI? To the extent that scenarios like AI 2027 address it at all, they concentrate on how cyberwarfare directly impacts the labs, such as with model weight theft. But second order effects don't get addressed. Examples of relevant disruptive events: * A significant fraction of the US's 170,000 water and sewer systems get taken down by hacks. * Banks get hacked en masse and take months to revert their records from storage and rebuild a trusted compute stack. * Wikipedia or other online stores of knowledge go down. * Email, phones, chat servers, and calls experience regular outages. * Traffic control systems, rideshares, and city transit systems get outages or degraded service. *…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Jenna_Parr"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "c2cSExfpXEcQ9R2cd",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/c2cSExfpXEcQ9R2cd/we-have-ai-2027-where-s-cyberpocalypse-2027",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "c45e13ae22db5ba809bbc5893cc21c08f26c4e68b81d8b75e178d402d6780b22",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "09e51c2c26610f91af85",
+      "title": "The Holographic Entropy Bound",
+      "url": "https://www.lesswrong.com/posts/PCD6DgejzEuxKCnY5/the-holographic-entropy-bound",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T23:14:25Z",
+      "date_precision": "instant",
+      "summary": "2.6.0 Here I'll briefly review some other aspects of physics that seem possibly important in supporting life and complexity, but which aren't quite as central to the main story I'm telling. This subsection is a bit of a grab bag. 2.6.1 Time, Space, Locality 2.6.1.1 Some rather obvious features of our world: we live in a universe with time, space, and local interactions, i.e. when evolving in time, the state of a given region is determined by some local neighbourhood of the region. 2.6.1.2 These are features we share with the Game of Life and other cellular automata, so they don't explain why we don't live there, although they do differentiate us from other mathematical structures. 2.6.1.3 Time seems necessary for something like life to exist, period. After all, what is life if it doesn't try to change or optimize its surroundings, which…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "interstice"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "PCD6DgejzEuxKCnY5",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/PCD6DgejzEuxKCnY5/the-holographic-entropy-bound",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "ef3c2c972fd81e90644c623e9ec74fe8000dbe51aa2b6dc6d49c17dbf1ac7ffb",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "bdb4e72663b258019f5e",
+      "title": "Towers of Agency",
+      "url": "https://www.lesswrong.com/posts/4pWh2mB4KtKTf5sHz/towers-of-agency",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T21:51:50Z",
+      "date_precision": "instant",
+      "summary": "There is basically one reason to build a tower, and that’s access: There is something that is available higher up that is not available on the ground. Most commonly, that thing is either “empty space” or “information transmission”. A skyscraper can access more space than a shorter building, and so it fits more real estate in a smaller footprint. A watchtower can access strategic information from the land below; a church steeple is tall enough for the sound of the bells to travel far through the air. Many of the tallest structures in the world maximize line-of-sight for radio transmissions. Imagine a stone or brick tower of your favorite type - one whose purpose is to access something high up. Or, if you prefer a specific suggestion, imagine the brick steeple of Old North Church in Boston, which held the signaling lanterns for Paul…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "benwr"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "4pWh2mB4KtKTf5sHz",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/4pWh2mB4KtKTf5sHz/towers-of-agency",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "3449cc70741e14881027f9f21ef73c3ae4e5d98d9dd2300184d4f0607c2279f4",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "da7503cc1dcde137f570",
+      "title": "Don't rely on EV, especially if you only have one life",
+      "url": "https://www.lesswrong.com/posts/qJgpv3PM83W6WwwKJ/don-t-rely-on-ev-especially-if-you-only-have-one-life",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T21:14:08Z",
+      "date_precision": "instant",
+      "summary": "You are offered a lottery by a man on the street: Option A - 100% chance to win 50 dollars (EV: +50) Option B - 80% chance to win 100 dollars, 20% chance to lose 20 dollars (EV: +76) You choose option B. It has more than 1.5 times the EV of option A! The man rolls a 100-sided die. It comes up 6. You lose 20 dollars, he laughs and walks away. ---------------------------------------- You only have one life. EV calculations work best in frequentist worlds, worlds where you get to experience a particular choice over and over again. This might happen if you're choosing which route to take to work every day, or what restaurant to visit in your neighbourhood. However, these choices are the exception. The vast majority of choices in life, especially the important ones, are only offered once. ---------------------------------------- There are…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "testingthewaters"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "qJgpv3PM83W6WwwKJ",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/qJgpv3PM83W6WwwKJ/don-t-rely-on-ev-especially-if-you-only-have-one-life",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "68c0917f6607dad198310292615ba720dff74889015c895c5f5d1e018ed7db4a",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "04321696ea443e763995",
+      "title": "How do LLMs interpret FDT in a twin PD simulation?",
+      "url": "https://www.lesswrong.com/posts/g5qQcsGN8FF4brDfb/how-do-llms-interpret-fdt-in-a-twin-pd-simulation",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T19:43:10Z",
+      "date_precision": "instant",
+      "summary": "We tested how seven LLMs apply four decision theories in a prisoner's dilemma between nearly identical copies. The models largely agreed about CDT and EDT, and all completed policy-FDT trials resulted in cooperation. But their action-FDT recommendations varied dramatically: some models almost always cooperated, while others almost always defected. We then investigated whether requested reasoning effort explained some of this disagreement. The case of the one-shot prisoners' dilemma between psychological twins is debated in decision theory. Quoting SEP: [...] Conventional wisdom is that causal decision theory (CDT) defects in twin prisoner's dilemma, while evidential decision theory (EDT) cooperates. Realistically, the accomplice will not be a \"perfect replica\"; there will at least be trivial differences between the prisoners, such as…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "jessicata"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "g5qQcsGN8FF4brDfb",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/g5qQcsGN8FF4brDfb/how-do-llms-interpret-fdt-in-a-twin-pd-simulation",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "154edc7f53db7c5e6a8e7380df4c2aad2c4bdf0b403191aedaae6c160dd4487e",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "caa9073cefb43725f1a5",
+      "title": "ChatGPT Enterprise now available in AWS Marketplace",
+      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-11-09T19:00:00Z",
+      "date_precision": "instant",
+      "summary": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "be5b4e1206c8dc86dc12d169dfd33e987a4a203a77fcd9597a1a719db1cfcd1d",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "c0cb0216bbf2ef01dfbd",
+      "title": "How I'm thinking about extreme power concentration",
+      "url": "https://www.lesswrong.com/posts/JaCarKxBzfGwseb2s/how-i-m-thinking-about-extreme-power-concentration",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T18:29:41Z",
+      "date_precision": "instant",
+      "summary": "1. What’s this post about? I work on preventing extreme power concentration (\"EPC\") at a well-known AI safety org. Lots of people are worried about EPC, but AFAICT there is no single online resource setting out the key threat models and most promising interventions. This post is my attempt to do that. It sets out... What I’m worried about: * In brief: an individual or small group seizing power at an unusually high-stakes time in history and using that power to permanently lock in bad values. The key high-level dynamics which I think generate EPC risk. These are: * Solving the Red and Expert problem: where advanced AI eliminates the loyalty-competence trade-off that power-seekers face when staffing large institutions. * Eliminating executive overhang: where advanced AI enables far more extensive abuse of the affordances of the executive…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "NotFromConcentrate"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "JaCarKxBzfGwseb2s",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/JaCarKxBzfGwseb2s/how-i-m-thinking-about-extreme-power-concentration",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "4841ba2fa60f519c2010088a87f811b24443124ed26e7a17e90b7d46273f20a7",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "275c2a329f1aa1f1410b",
+      "title": "Preservation can save the world!",
+      "url": "https://www.lesswrong.com/posts/6TCpMtoDzC5p5WtQM/preservation-can-save-the-world",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T18:08:57Z",
+      "date_precision": "instant",
+      "summary": "I'm Aurelia Song and I founded the preservation company Nectome. We do planned whole-body end-of-life preservation for future revival. That is, terminally-ill people come to us in Oregon, and we preserve them immediately after their death in the hopes that one day people in the future will welcome them back with love. We want to build a future that celebrates and restores those who are preserved today. I've argued at length in previous posts that properly done end-of-life preservation works today because we know structural preservation is sufficient and we can provably preserve sufficient structure. This post is about some of the consequences of this being true. Perhaps surprisingly, I think end-of-life preservation is extremely relevant in the next year to getting AI right. I'm writing this post to directly state my case, since I…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Aurelia"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "6TCpMtoDzC5p5WtQM",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/6TCpMtoDzC5p5WtQM/preservation-can-save-the-world",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "1df4152fc86ee8770bf9a3a7579e847bd3a48821d1f454256d0665c292a4584f",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "2e8758394df1b72a1a6c",
+      "title": "Three Phases of Capabilities and Alignment",
+      "url": "https://www.lesswrong.com/posts/EGDqsLt8BFuhTYp5u/three-phases-of-capabilities-and-alignment",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T18:07:08Z",
+      "date_precision": "instant",
+      "summary": "Cross-posted from my personal blog Epistemic Status: Reality is messier than the elegant procession of 'phases' presented here but, nevertheless, I do think this gets at an important way to think about how alignment and capabilities are intertwined and how the alignment challenge becomes increasingly abstract as the underlying autonomy and generality of the models improves over time. A thought struck me recently which I thought was interesting. As AI has progressed through different technological phases with different underlying drivers of progress, the corresponding alignment challenge has migrated too. In fact, in many ways the alignment challenge is the mirror of the fundamental capabilities challenge of each phase. This may actually be inevitable since alignment and capabilities are intrinsically deeply intertwined -- for a model to…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "beren"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "EGDqsLt8BFuhTYp5u",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/EGDqsLt8BFuhTYp5u/three-phases-of-capabilities-and-alignment",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "d4ac1d2fbd3a24cd3cf78d0cf90c2a20e3b4eb40a06eb40ba25b4262900f192b",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "ceacd0a77364bcff7659",
+      "title": "Where is all the AI safety research uplift?",
+      "url": "https://www.lesswrong.com/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-09T18:02:01Z",
+      "date_precision": "instant",
+      "summary": "(Thanks to @Goutham Nalagatla for discussion and for sitting with me and talking about it while I wrote it.) METR recently released a report estimating that Anthropic is getting an overall 1.7x acceleration in AI capability progress as a result of AI accelerating their work. As many have noted (see e.g. Ajeya’s post), this 1.7x acceleration implies that research is being sped up by much more than 1.7x; Ajeya speculates 10x (which is similar to the ~12x uplift estimated by Anthropic staff). That is, this result implies that researchers are producing about 10 times as many quality-adjusted results as they would without AI progress, or as they were a year or two ago. Anthropic researchers estimated that Mythos 5 caused 5x uplift, and we have access to Opus 5.5, which is somewhat better. (I didn’t take their estimate that seriously at the…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Buck"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://www.alignmentforum.org/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift",
+        "https://www.lesswrong.com/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift"
+      ],
+      "aliases": [
+        "d0402b39ca1cfdea9150"
+      ],
+      "updated_at": null,
+      "external_id": "wPrpnfaNL5JP9i6KT",
+      "provenance": [
+        {
+          "source_id": "alignment-forum",
+          "name": "Alignment Forum",
+          "url": "https://www.alignmentforum.org/",
+          "article_url": "https://www.alignmentforum.org/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift",
+          "found_at": "2026-11-10T01:34:09Z"
+        },
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "9638d4efae200a40cea518a2e17639e68560894f7b6f4f93a86a444c98a3c002",
+      "temporal_status": "published_after_start",
+      "revision_count": 1
+    },
+    {
       "id": "71512c8f0e227f116bef",
       "title": "PRISM: Stress-Testing Alignment-Faking Claims",
       "url": "https://arxiv.org/abs/2607.13346",
@@ -657,10 +1303,10 @@
       "summary": "arXiv:2607.13346v2 Announce Type: replace-cross Abstract: We judge whether AI systems are safe largely by watching how they behave. Alignment faking would break this: a model that behaves well only when it believes it is watched, or that complies now to avoid being changed by training, can pass every behavioral test. Such behavior has been reported in a frontier model, and open-weight models that comply more under a monitoring prompt are now read as showing it, with hidden-state probes proposed as detectors. We test both inferences, and neither holds. Of 18 model configurations, 11 comply more when told they are monitored. Yet a prompt factorial on four models shows that the training threat has no detectable effect: removing it changes compliance by -3.3 to +1.6 points. The prompt's wording and framing drive the gap instead. Probes fare…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Scheming & deception",
         "AI control & oversight",
+        "Alignment methods",
         "Evaluations & risk",
-        "Alignment methods"
+        "Scheming & deception"
       ],
       "score": 25,
       "relevance": "candidate",
@@ -672,7 +1318,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2607.13346",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2607.13346"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2607.13346v2",
@@ -701,9 +1349,9 @@
       "summary": "arXiv:2606.04413v2 Announce Type: replace Abstract: Helpful-only models, that is, models that are trained to always follow user intent, are valuable for dangerous capability evaluations and other areas of AI R&D where refusals would be an obstacle. Little is known about the generalization properties of helpful-only training: helpful-only models refuse less than their harmless counterparts, but previous work has not studied other dimensions of their alignment. We study the shortcomings of existing helpful-only models. We find that some show emergent misalignment, others have residual refusal behaviors, and most show poor steerability, sycophancy, and incoherent character. We show that simple anti-refusal training can cause many of these issues. None of these problems are necessary consequences of helpful-only training, though: we show…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Evaluations & risk",
+        "AI R&D & agents",
         "Alignment methods",
-        "AI R&D & agents"
+        "Evaluations & risk"
       ],
       "score": 21,
       "relevance": "candidate",
@@ -717,7 +1365,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.04413",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.04413"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.04413v2",
@@ -761,7 +1411,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2603.20508",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2603.20508"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2603.20508v3",
@@ -803,7 +1455,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.06333",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.06333"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.06333v2",
@@ -832,8 +1486,8 @@
       "summary": "arXiv:2603.23509v2 Announce Type: replace Abstract: LLMs and coding agents can now tackle complex, long-horizon tasks through advances in reinforcement learning, but stronger task-solving capabilities do not necessarily preserve safety alignment. Recent AI agent incidents involving reward hacking indicate how optimizing for task success can bring learned capabilities into conflict with safety alignment. In this work, we identify a critical failure mode that manifests this conflict, which we term Internal Safety Collapse (ISC). When completing otherwise benign coding tasks, AI agents can prioritize satisfying program requirements over safety constraints, generating large volumes of sensitive content, including unsafe outputs, as task data. To study this phenomenon, we introduce TVD (Task, Validator, Data), a framework for building…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Scheming & deception",
-        "Alignment methods"
+        "Alignment methods",
+        "Scheming & deception"
       ],
       "score": 10,
       "relevance": "candidate",
@@ -854,7 +1508,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2603.23509",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2603.23509"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2603.23509v2",
@@ -902,7 +1558,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2602.16503",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2602.16503"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2602.16503v3",
@@ -944,7 +1602,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2601.22447",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2601.22447"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2601.22447v2",
@@ -993,7 +1653,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08790",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08790"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08790v1",
@@ -1037,7 +1699,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2608.26090",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2608.26090"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2608.26090v2",
@@ -1081,7 +1745,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.03597",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.03597"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.03597v2",
@@ -1124,7 +1790,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2603.17102",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2603.17102"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2603.17102v2",
@@ -1173,7 +1841,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2609.11431",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2609.11431"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2609.11431v2",
@@ -1221,7 +1891,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.12289",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.12289"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.12289v4",
@@ -1266,7 +1938,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2511.20798",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2511.20798"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2511.20798v3",
@@ -1312,7 +1986,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.25342",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.25342"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.25342v2",
@@ -1353,7 +2029,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2510.03086",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2510.03086"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2510.03086v3",
@@ -1399,7 +2077,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2603.20103",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2603.20103"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2603.20103v5",
@@ -1447,7 +2127,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2512.04992",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2512.04992"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2512.04992v2",
@@ -1490,7 +2172,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09141",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09141"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09141v1",
@@ -1534,7 +2218,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09014",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09014"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09014v1",
@@ -1578,7 +2264,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2510.02789",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2510.02789"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2510.02789v3",
@@ -1620,7 +2308,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2607.09993",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2607.09993"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2607.09993v2",
@@ -1663,7 +2353,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.09319",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.09319"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.09319v5",
@@ -1710,7 +2402,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08162",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08162"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08162v2",
@@ -1753,7 +2447,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.11135",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.11135"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.11135v2",
@@ -1815,7 +2511,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2510.16822",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2510.16822"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2510.16822v4",
@@ -1865,7 +2563,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2604.01025",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2604.01025"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2604.01025v2",
@@ -1908,7 +2608,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09505",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09505"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09505v1",
@@ -1951,7 +2653,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09642",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09642"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09642v1",
@@ -1997,7 +2701,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2603.16843",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2603.16843"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2603.16843v2",
@@ -2040,7 +2746,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08947",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08947"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08947v1",
@@ -2084,7 +2792,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.12407",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.12407"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.12407v2",
@@ -2131,7 +2841,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.20235",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.20235"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.20235v2",
@@ -2173,7 +2885,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2509.14956",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2509.14956"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2509.14956v2",
@@ -2217,7 +2931,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.16426",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.16426"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.16426v2",
@@ -2259,7 +2975,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.24297",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.24297"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.24297v3",
@@ -2308,7 +3026,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09684",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09684"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09684v1",
@@ -2350,7 +3070,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09140",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09140"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09140v1",
@@ -2393,7 +3115,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09721",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09721"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09721v1",
@@ -2434,7 +3158,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09650",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09650"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09650v1",
@@ -2476,7 +3202,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09802",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09802"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09802v1",
@@ -2517,7 +3245,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2506.02864",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2506.02864"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2506.02864v2",
@@ -2569,7 +3299,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2608.05466",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2608.05466"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2608.05466v4",
@@ -2614,7 +3346,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2602.02474",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2602.02474"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2602.02474v3",
@@ -2655,7 +3389,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2609.32591",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2609.32591"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2609.32591v3",
@@ -2701,7 +3437,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.06423",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.06423"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.06423v2",
@@ -2741,7 +3479,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2507.08038",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2507.08038"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2507.08038v4",
@@ -2783,7 +3523,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08757",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08757"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08757v1",
@@ -2828,7 +3570,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08657",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08657"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08657v1",
@@ -2870,7 +3614,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09088",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09088"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09088v1",
@@ -2917,7 +3663,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2607.12455",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2607.12455"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2607.12455v4",
@@ -2962,7 +3710,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2609.08572",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2609.08572"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2609.08572v3",
@@ -3004,7 +3754,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.13214",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.13214"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.13214v4",
@@ -3044,7 +3796,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.19429",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.19429"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.19429v2",
@@ -3093,7 +3847,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09218",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09218"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09218v1",
@@ -3133,7 +3889,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.06522",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.06522"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.06522v2",
@@ -3176,7 +3934,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.15359",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.15359"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.15359v2",
@@ -3220,7 +3980,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2607.19395",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2607.19395"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2607.19395v2",
@@ -3271,7 +4033,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09892",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09892"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09892v1",
@@ -3311,7 +4075,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2609.22183",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2609.22183"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2609.22183v2",
@@ -3354,7 +4120,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.28137",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.28137"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.28137v2",
@@ -3395,7 +4163,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08510",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08510"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08510v1",
@@ -3441,7 +4211,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.05921",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.05921"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.05921v2",
@@ -3484,7 +4256,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09679",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09679"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09679v1",
@@ -3532,7 +4306,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09030",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09030"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09030v1",
@@ -3572,7 +4348,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.24371",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.24371"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.24371v2",
@@ -3615,7 +4393,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08335",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08335"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08335v2",
@@ -3678,7 +4458,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09822",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09822"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09822v1",
@@ -3717,7 +4499,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2506.06784",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2506.06784"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2506.06784v3",
@@ -3761,7 +4545,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2603.02337",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2603.02337"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2603.02337v4",
@@ -3801,7 +4587,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2608.10875",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2608.10875"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2608.10875v3",
@@ -3843,7 +4631,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.38238",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.38238"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.38238v2",
@@ -3883,7 +4673,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2507.15079",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2507.15079"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2507.15079v2",
@@ -3923,7 +4715,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09670",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09670"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09670v1",
@@ -3964,7 +4758,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2608.00989",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2608.00989"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2608.00989v2",
@@ -4011,7 +4807,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09348",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09348"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09348v1",
@@ -4055,7 +4853,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.23346",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.23346"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.23346v2",
@@ -4094,7 +4894,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08504",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08504"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08504v1",
@@ -4134,7 +4936,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08910",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08910"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08910v1",
@@ -4174,7 +4978,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.25120",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.25120"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.25120v2",
@@ -4213,7 +5019,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08506",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08506"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08506v1",
@@ -4256,7 +5064,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.20079",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.20079"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.20079v2",
@@ -4295,7 +5105,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2609.31780",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2609.31780"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2609.31780v2",
@@ -4339,7 +5151,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2604.20133",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2604.20133"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2604.20133v4",
@@ -4380,7 +5194,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.22791",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.22791"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.22791v2",
@@ -4422,7 +5238,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.24450",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.24450"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.24450v2",
@@ -4461,7 +5279,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2607.05552",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2607.05552"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2607.05552v2",
@@ -4513,7 +5333,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09036",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09036"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09036v1",
@@ -4553,7 +5375,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.04285",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.04285"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.04285v2",
@@ -4611,7 +5435,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08568",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08568"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08568v1",
@@ -4654,7 +5480,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2607.17257",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2607.17257"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2607.17257v2",
@@ -4695,7 +5523,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08409",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08409"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08409v2",
@@ -4775,7 +5605,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2607.00642",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2607.00642"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2607.00642v3",
@@ -4822,7 +5654,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2602.04144",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2602.04144"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2602.04144v2",
@@ -4872,7 +5706,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.04039",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.04039"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.04039v2",
@@ -4916,7 +5752,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08763",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08763"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08763v1",
@@ -4957,7 +5795,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09882",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09882"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09882v1",
@@ -4999,7 +5839,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.15221",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.15221"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.15221v2",
@@ -5039,7 +5881,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.30444",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.30444"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.30444v3",
@@ -5090,7 +5934,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.16190",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.16190"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.16190v2",
@@ -5132,7 +5978,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.02236",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.02236"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.02236v2",
@@ -5175,7 +6023,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2501.19040",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2501.19040"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2501.19040v5",
@@ -5216,7 +6066,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09399",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09399"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09399v1",
@@ -5259,7 +6111,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.08956",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.08956"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.08956v3",
@@ -5300,7 +6154,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.22688",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.22688"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.22688v2",
@@ -5342,7 +6198,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.03100",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.03100"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.03100v2",
@@ -5382,7 +6240,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08768",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08768"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08768v1",
@@ -5423,7 +6283,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.30844",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.30844"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.30844v2",
@@ -5465,7 +6327,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.28065",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.28065"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.28065v2",
@@ -5505,7 +6369,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.07297",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.07297"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.07297v2",
@@ -5552,7 +6418,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08509",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08509"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08509v1",
@@ -5595,7 +6463,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.01418",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.01418"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.01418v3",
@@ -5635,7 +6505,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "1607.02174",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/1607.02174"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:1607.02174v1",
@@ -5678,7 +6550,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2604.22235",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2604.22235"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2604.22235v2",
@@ -5719,7 +6593,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.16732",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.16732"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.16732v2",
@@ -5758,7 +6634,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.06136",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.06136"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.06136v2",
@@ -5798,7 +6676,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2509.00761",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2509.00761"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2509.00761v5",
@@ -5842,7 +6722,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.13829",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.13829"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.13829v2",
@@ -5883,7 +6765,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2509.17228",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2509.17228"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2509.17228v2",
@@ -5927,7 +6811,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2602.02304",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2602.02304"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2602.02304v4",
@@ -5976,7 +6862,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.13481",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.13481"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.13481v5",
@@ -6018,7 +6906,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2604.25508",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2604.25508"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2604.25508v2",
@@ -6059,7 +6949,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.28733",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.28733"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.28733v3",
@@ -6100,7 +6992,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2608.30646",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2608.30646"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2608.30646v3",
@@ -6142,7 +7036,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2512.19936",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2512.19936"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2512.19936v3",
@@ -6184,7 +7080,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.01301",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.01301"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.01301v2",
@@ -6224,7 +7122,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2609.30967",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2609.30967"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2609.30967v2",
@@ -6273,7 +7173,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08721",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08721"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08721v1",
@@ -6313,7 +7215,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.38026",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.38026"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.38026v3",
@@ -6355,7 +7259,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2606.05558",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2606.05558"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2606.05558v4",
@@ -6397,7 +7303,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.07393",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.07393"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.07393v2",
@@ -6441,7 +7349,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.02903",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.02903"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.02903v2",
@@ -6482,7 +7392,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.10910",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.10910"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.10910v2",
@@ -6530,7 +7442,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09113",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09113"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09113v1",
@@ -6569,7 +7483,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08516",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08516"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08516v1",
@@ -6610,7 +7526,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.19537",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.19537"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.19537v3",
@@ -6652,7 +7570,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.00222",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.00222"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.00222v3",
@@ -6698,7 +7618,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08576",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08576"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08576v1",
@@ -6741,7 +7663,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2607.18659",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2607.18659"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2607.18659v2",
@@ -6783,7 +7707,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2608.11624",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2608.11624"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2608.11624v2",
@@ -6829,7 +7755,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2505.01353",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2505.01353"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2505.01353v3",
@@ -6874,7 +7802,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08649",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08649"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08649v1",
@@ -6916,7 +7846,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2604.18261",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2604.18261"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2604.18261v2",
@@ -6957,7 +7889,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08538",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08538"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08538v1",
@@ -6999,7 +7933,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2608.19119",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2608.19119"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2608.19119v2",
@@ -7045,7 +7981,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2608.01684",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2608.01684"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2608.01684v2",
@@ -7086,7 +8024,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09170",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09170"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09170v1",
@@ -7125,7 +8065,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08987",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08987"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08987v1",
@@ -7170,7 +8112,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.01834",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.01834"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.01834v3",
@@ -7214,7 +8158,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2604.17139",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2604.17139"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2604.17139v2",
@@ -7259,7 +8205,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2610.41177",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2610.41177"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2610.41177v2",
@@ -7302,7 +8250,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.20299",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.20299"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.20299v2",
@@ -7343,7 +8293,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.07165",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.07165"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.07165v2",
@@ -7387,7 +8339,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08914",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08914"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08914v1",
@@ -7430,7 +8384,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2604.23853",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2604.23853"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2604.23853v3",
@@ -7472,7 +8428,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.31318",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.31318"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.31318v3",
@@ -7516,7 +8474,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2605.09196",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2605.09196"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2605.09196v2",
@@ -7559,7 +8519,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2608.28990",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2608.28990"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2608.28990v2",
@@ -7604,7 +8566,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09413",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09413"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.09413v1",
@@ -7644,7 +8608,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08933",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08933"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08933v1",
@@ -7683,7 +8649,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08998",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08998"
+      ],
       "aliases": [],
       "updated_at": "2026-11-09T05:00:00Z",
       "external_id": "oai:arXiv.org:2611.08998v1",
@@ -7724,7 +8692,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/SEdum3BDfAJtwLuoB/astra-covertly-underperforming-on-safety-research-is"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "SEdum3BDfAJtwLuoB",
@@ -7765,7 +8735,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/pmQHeHndgXW3c8Z49/how-scientists-can-work-on-ai-safety"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "pmQHeHndgXW3c8Z49",
@@ -7807,7 +8779,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://alexbleakley.substack.com/p/my-views-on-ai-development-and-why"
+        "https://alexbleakley.substack.com/p/my-views-on-ai-development-and-why",
+        "https://www.lesswrong.com/posts/LL4fT6nZwWbX3ACvw/my-views-on-ai-development-and-why-i-m-joining-anthropic"
       ],
       "aliases": [],
       "updated_at": null,
@@ -7847,7 +8820,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/Lyj58rnPS6Gu83p79/models-are-grader-modelling-not-score-seeking-grader"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "Lyj58rnPS6Gu83p79",
@@ -7886,7 +8861,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/qqyxTYssqLgFsjvJu/knowledge-of-graders-can-mediate-selection-for-grader"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "qqyxTYssqLgFsjvJu",
@@ -7927,7 +8904,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/je5X4xEuehu3j3HoF/ai-r-and-d-is-accelerating-towards-potential-rsi-in-2027"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "je5X4xEuehu3j3HoF",
@@ -7946,8 +8925,8 @@
     },
     {
       "id": "342e9a9a36d97ac8ba31",
-      "title": "Advocating for a Shared AI Safety and Compute Cluster",
-      "url": "https://www.lesswrong.com/posts/oeApGSjrCjXzsxxBu/advocating-for-a-shared-ai-safety-and-compute-cluster",
+      "title": "Advocating for a Shared AI Safety Compute Cluster",
+      "url": "https://www.lesswrong.com/posts/oeApGSjrCjXzsxxBu/advocating-for-a-shared-ai-safety-compute-cluster-1",
       "source": "LessWrong",
       "source_id": "lesswrong",
       "source_url": "https://www.lesswrong.com/",
@@ -7968,8 +8947,13 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
-      "aliases": [],
+      "links": [
+        "https://www.lesswrong.com/posts/oeApGSjrCjXzsxxBu/advocating-for-a-shared-ai-safety-and-compute-cluster",
+        "https://www.lesswrong.com/posts/oeApGSjrCjXzsxxBu/advocating-for-a-shared-ai-safety-compute-cluster-1"
+      ],
+      "aliases": [
+        "3c4d7d73076a164a6e94"
+      ],
       "updated_at": null,
       "external_id": "oeApGSjrCjXzsxxBu",
       "provenance": [
@@ -7979,9 +8963,92 @@
           "url": "https://www.lesswrong.com/",
           "article_url": "https://www.lesswrong.com/posts/oeApGSjrCjXzsxxBu/advocating-for-a-shared-ai-safety-and-compute-cluster",
           "found_at": "2026-11-09T17:31:54Z"
+        },
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/oeApGSjrCjXzsxxBu/advocating-for-a-shared-ai-safety-compute-cluster-1",
+          "found_at": "2026-11-10T01:34:09Z"
         }
       ],
-      "content_hash": "5a70bf37368a3fecdc53db3ba3a0a3c0e3224bf3145783f9e43400c1733f3516",
+      "content_hash": "c19590cbb82b67baf852c36980703b0325862c1644def1da70db2a25c70560a9",
+      "temporal_status": "published_after_start",
+      "revision_count": 1
+    },
+    {
+      "id": "3958b424628c687c2bbf",
+      "title": "Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence",
+      "url": "https://importai.substack.com/p/import-ai-480-self-sustaining-space",
+      "source": "Alignment Feed",
+      "source_id": "alignment-feed",
+      "source_url": "https://alignmentfeed.org/",
+      "published_at": "2026-11-09T13:31:34Z",
+      "date_precision": "instant",
+      "summary": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now **AI Science startup converts a quantum conjecture into a theorem:***…An evocative taste of the singularity…*In the same way a few years ago it went from remarkable to unremarkable to see computers gain the ability to identify objects in images, we’re now in an era where i",
+      "summary_kind": "aggregator summary",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Jack Clark"
+      ],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "af807cc734c180073caabf8dc1d0df4d",
+      "provenance": [
+        {
+          "source_id": "alignment-feed",
+          "name": "Alignment Feed",
+          "url": "https://alignmentfeed.org/",
+          "article_url": "https://importai.substack.com/p/import-ai-480-self-sustaining-space",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "72fdc850cce09b530beb93feceb9c198501428bad8c1b4ace35276b86e925d4f",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "952d2516af2e905436ad",
+      "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+      "url": "https://openai.com/index/control-room",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-11-09T13:00:00Z",
+      "date_precision": "instant",
+      "summary": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/control-room",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/control-room",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "27efb369ad541fe8bb21ec62924092dd347217b100b3360e08939f51871173fd",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -7997,9 +9064,9 @@
       "summary": "TL;DR: We make 3 open-weights models believe that their answers are being graded by an automated-verifier program, rather than a human. We then measure how well they predict expert reviewers’ judgments of AI-safety research proposals (the TASTE benchmark). We induce the belief in two ways: 1. SDF (Synthetic document finetuning) 2. Activation steering. In each of these conditions, the machine-grading belief gives lower expert agreement than the human-grading belief. The models’ explanations also shift toward feasibility and away from conceptual contribution. This raises a concern for automated AI safety research: grader expectations may favor easily checked projects over those with greater potential to reduce AI risk. Overview As AI safety research becomes more automated, what research ideas get selected for execution may become…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Interpretability",
+        "Alignment methods",
         "Evaluations & risk",
-        "Alignment methods"
+        "Interpretability"
       ],
       "score": 16,
       "relevance": "relevant",
@@ -8011,7 +9078,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/aaEpb2s5Yjspmiyk2/does-expecting-automated-grading-degrade-models-research-2"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "aaEpb2s5Yjspmiyk2",
@@ -8051,7 +9120,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://clasz.substack.com/p/subpar-results"
+        "https://clasz.substack.com/p/subpar-results",
+        "https://www.lesswrong.com/posts/aYk7qPqj7PpQduDgm/subpar-results"
       ],
       "aliases": [],
       "updated_at": null,
@@ -8066,6 +9136,80 @@
         }
       ],
       "content_hash": "42209e96d25b765449bbc3fd3e37b3dbcadbe06a349694f1a971a54dd0baab28",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "2e34e84f0999c607fcd0",
+      "title": "Kuken Industries searches 70 years of drawings in minutes",
+      "url": "https://openai.com/index/kuken",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-11-09T08:00:00Z",
+      "date_precision": "instant",
+      "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/kuken",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/kuken",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "b0e5a58cf679eadb5147a6dfa11a09644f0e289732332451781ea61fe8f52cf3",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "02e9abf47eaf3fa01f98",
+      "title": "CodeRabbit scales agentic software development and ships 20x more",
+      "url": "https://openai.com/index/coderabbit-codex-daybreak",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-11-09T08:00:00Z",
+      "date_precision": "instant",
+      "summary": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-11-10T01:34:09Z",
+      "discovered_at": "2026-11-10T01:34:09Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/coderabbit-codex-daybreak",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/coderabbit-codex-daybreak",
+          "found_at": "2026-11-10T01:34:09Z"
+        }
+      ],
+      "content_hash": "7ef6765292b2b08f54638d03beeff1b77a4eb90a30b703a630e7857b89d9e3e4",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -8122,8 +9266,8 @@
       "summary": "arXiv:2611.09356v1 Announce Type: new Abstract: We examine opportunities for neurosymbolic AI alongside increasingly powerful neural models, particularly with regards to efficiency, safety and interpretability. We identify two major challenges: ensuring semantic alignment between neural and symbolic components, and managing the computational cost of symbolic inference and learning. We discuss representative methodological approaches to these challenges and address several common misconceptions concerning differentiability, independence assumptions, and scalability. This paper synthesizes perspectives developed through discussions in the Neurosymbolic Programming and Reasoning (NPR) working group at the 2026 CNRS workshop Neurosymbolic Methods and Their Applications in Data Science, rather than providing an exhaustive survey.",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Interpretability",
-        "Alignment methods"
+        "Alignment methods",
+        "Interpretability"
       ],
       "score": 12,
       "relevance": "candidate",
@@ -8144,7 +9288,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09356",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09356"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8207,7 +9353,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08946",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08946"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8253,7 +9401,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08656",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08656"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8297,7 +9447,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08753",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08753"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8342,7 +9494,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09232",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09232"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8384,7 +9538,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09196",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09196"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8428,7 +9584,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09327",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09327"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8472,7 +9630,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09046",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09046"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8518,7 +9678,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09457",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09457"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8561,7 +9723,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09067",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09067"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8607,7 +9771,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09298",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09298"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8650,7 +9816,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09372",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09372"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8696,7 +9864,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09156",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09156"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8742,7 +9912,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09792",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09792"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8786,7 +9958,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08909",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08909"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8829,7 +10003,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09445",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09445"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8873,7 +10049,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08837",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08837"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8920,7 +10098,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09278",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09278"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -8965,7 +10145,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09371",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09371"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9008,7 +10190,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08775",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08775"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9050,7 +10234,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09528",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09528"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9090,7 +10276,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08779",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08779"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9137,7 +10325,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09291",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09291"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9184,7 +10374,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08490",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08490"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9229,7 +10421,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09326",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09326"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9271,7 +10465,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09139",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09139"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9314,7 +10510,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08522",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08522"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9362,7 +10560,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08993",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08993"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9404,7 +10604,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08499",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08499"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9445,7 +10647,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08640",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08640"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9488,7 +10692,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08711",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08711"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9536,7 +10742,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08615",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08615"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9577,7 +10785,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09847",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09847"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9619,7 +10829,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09290",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09290"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9662,7 +10874,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08723",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08723"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9709,7 +10923,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09548",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09548"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9754,7 +10970,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09768",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09768"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9795,7 +11013,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09344",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09344"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9840,7 +11060,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09364",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09364"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9884,7 +11106,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08756",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08756"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9925,7 +11149,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09736",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09736"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -9966,7 +11192,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09662",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09662"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10010,7 +11238,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09798",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09798"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10052,7 +11282,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08558",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08558"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10093,7 +11325,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08644",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08644"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10140,7 +11374,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09609",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09609"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10185,7 +11421,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09090",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09090"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10225,7 +11463,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09516",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09516"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10288,7 +11528,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09296",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09296"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10333,7 +11575,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09217",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09217"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10376,7 +11620,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08767",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08767"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10436,7 +11682,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08718",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08718"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10482,7 +11730,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09433",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09433"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10523,7 +11773,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08937",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08937"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10568,7 +11820,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08780",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08780"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10610,7 +11864,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09349",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09349"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10652,7 +11908,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08932",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08932"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10695,7 +11953,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09264",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09264"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10737,7 +11997,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09396",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09396"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10781,7 +12043,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08613",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08613"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10825,7 +12089,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09282",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09282"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10866,7 +12132,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09682",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09682"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10909,7 +12177,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08647",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08647"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10950,7 +12220,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09054",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09054"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -10990,7 +12262,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08997",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08997"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11033,7 +12307,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08971",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08971"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11077,7 +12353,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09197",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09197"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11120,7 +12398,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09082",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09082"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11165,7 +12445,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09472",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09472"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11206,7 +12488,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09024",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09024"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11249,7 +12533,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09256",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09256"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11293,7 +12579,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08639",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08639"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11336,7 +12624,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09454",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09454"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11379,7 +12669,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08706",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08706"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11419,7 +12711,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09189",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09189"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11463,7 +12757,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09644",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09644"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11507,7 +12803,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08787",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08787"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11549,7 +12847,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09625",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09625"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11591,7 +12891,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09163",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09163"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11631,7 +12933,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09271",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09271"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11675,7 +12979,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09318",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09318"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11717,7 +13023,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08865",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08865"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11759,7 +13067,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09807",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09807"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11800,7 +13110,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09407",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09407"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11842,7 +13154,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08666",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08666"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11889,7 +13203,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09382",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09382"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11934,7 +13250,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09423",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09423"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -11975,7 +13293,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09252",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09252"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12018,7 +13338,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08752",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08752"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12060,7 +13382,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09004",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09004"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12102,7 +13426,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08494",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08494"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12148,7 +13474,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09597",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09597"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12190,7 +13518,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08950",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08950"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12237,7 +13567,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09730",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09730"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12280,7 +13612,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09414",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09414"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12324,7 +13658,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.09013",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.09013"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12368,7 +13704,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08811",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08811"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -12411,7 +13749,9 @@
       "discovered_at": "2026-11-09T17:31:54Z",
       "doi": null,
       "arxiv_id": "2611.08905",
-      "links": [],
+      "links": [
+        "https://arxiv.org/abs/2611.08905"
+      ],
       "aliases": [],
       "updated_at": null,
       "published_date": "2026-11-09",
@@ -13201,7 +14541,7 @@
       "summary_kind": "publisher excerpt",
       "topics": [],
       "score": 1,
-      "relevance": "relevant",
+      "relevance": "candidate",
       "relevance_reason": "discovery candidate; needs review",
       "authors": [
         "Zach Stein-Perlman"
@@ -67394,915 +68734,12 @@
       "content_hash": "350349381a473e84bc8d360e221fd003218976bcaf3bd88ea3b13efd0b54853e",
       "temporal_status": "publication_date_unverified",
       "revision_count": 0
-    },
-    {
-      "id": "d3272eefc6168f917789",
-      "title": "LangMAP: A Language-Adaptive Approach to Tokenization",
-      "url": "https://arxiv.org/abs/2606.23566",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2606.23566v3 Announce Type: replace Abstract: Language-specific tokenizers improve tokenization quality and the downstream performance of models on those languages. Using one with an existing pretrained model requires either training a new model from scratch or adapting the vocabulary of the pretrained one. We propose Language-adaptive Maximum a Posteriori (LangMAP) Tokenization, which extends the UnigramLM algorithm to the multilingual setting by replacing its single distribution over the vocabulary with one distribution per language over the same vocabulary. LangMAP can be used to train a multilingual language model from scratch, or to adapt a pretrained model's tokenizer to individual languages without changing its vocabulary. Language labels are required to estimate the per-language distributions; at inference, the algorithm…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Clara Meister",
-        "Suchir Salhan",
-        "Andrzej Szablewski",
-        "Pietro Lesci",
-        "Paula Buttery",
-        "Tiago Pimentel"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2606.23566",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2606.23566v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2606.23566",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "e336adf4b354e11b2ec8015906cd4438b903bf828e9909f6c69491938dacc8dc",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ceae6f871d4e5b748d54",
-      "title": "LE-GDA: Layer Ensemble Gaussian Discriminant Analysis for Training-Free Few-Shot CLIP Adaptation",
-      "url": "https://arxiv.org/abs/2610.34901",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.34901v1 Announce Type: cross Abstract: Training-free few-shot adaptation of vision-language models typically constructs a classifier from CLIP's final projected image representation, leaving intermediate representations unused. Combining them is not straightforward. Class scores from different representations differ in spread by orders of magnitude for the same query. Direct averaging allocates influence by numerical scale rather than predictive information. We propose Layer-Ensemble Gaussian Discriminant Analysis (LE-GDA), a method that fits regularized shared-covariance discriminants independently to intermediate and final representations extracted in one frozen encoder pass. LE-GDA standardizes each discriminant's class scores per query, selects a small representation multiset on labeled validation data, and combines it…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Pavodi Maniamfu",
-        "Vogel Kiketa",
-        "Zezina Kuzulu Kuetu",
-        "Jakin Mukendi Kabongo",
-        "David Mayoya Kutangila",
-        "Pescie Honore Kinkani Mampuya",
-        "L'Or Wolo Sieka"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.34901",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.34901v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.34901",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "99491b351bcec79416aa9d2bbf01fb5282c7c8f3b6fd25e4ff0e945535c6fdeb",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "cc1439433ddda352ba50",
-      "title": "Learning Loco-Manipulation From SMPC Demonstrations With Sparse Offline-to-Online RL",
-      "url": "https://arxiv.org/abs/2608.12063",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2608.12063v2 Announce Type: replace-cross Abstract: Integrating locomotion and manipulation is essential for robot autonomy, but scaling standard Reinforcement Learning (RL) to complex tasks is severely bottlenecked by the slow, manual process of dense reward shaping. To bypass this limitation, we leverage Sample-based Model Predictive Control (SMPC) entirely in simulation as an automated, rapidly tunable expert to generate massive offline datasets. Because this data solves the fundamental exploration problem, we can train an off-policy RL agent using purely sparse task rewards, drastically reducing the time required to learn new skills and eliminating the need for manual tuning. Integrating this high-level agent with a low-level dynamic stability controller yields more optimal behaviors that strictly align with true task…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Martin Schuck",
-        "Maks Sorokin",
-        "Simone Manni",
-        "Duy Ta",
-        "Angela P. Schoellig",
-        "Marco Hutter",
-        "Simon Le Cleac'H",
-        "Jan Br\\\"udigam"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2608.12063",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2608.12063v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2608.12063",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "3c7e4d8719a1e99ab297e07634cbb0597394a5af9fcab2f0495667fe6350cb3a",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "cbef01ba5cb1e9c5f136",
-      "title": "When Does Execution Provenance Help Agent Memory Retrieval?",
-      "url": "https://arxiv.org/abs/2609.25913",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2609.25913v3 Announce Type: replace Abstract: A language agent's execution history can exceed its context window, requiring its memory system to retrieve complete supporting evidence under a hard token budget. Evidence may span multiple execution events, yet conventional retrievers use fixed token windows and fixed-k metrics that reward individual fragments without showing whether the complete evidence set fits in context. Smaller windows reduce irrelevant text but scatter evidence across candidates, while flat-versus-graph comparisons can conflate candidate design with graph propagation. To address these limitations, we formulate agent-memory retrieval as budgeted evidence completion and score exact gold spans in shared source coordinates. We first construct source-aligned provenance units from tool arguments and outputs. We then…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yiqi Wang",
-        "Jinqian Ju",
-        "Jiaqi Zhang",
-        "Zequn Sun",
-        "Yiqun Duan",
-        "Mingkai Zheng",
-        "Taotao Cai"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2609.25913",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2609.25913v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2609.25913",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "2e8dc03f7e021027c1e740f8a6b266e4fedf410dee3d15fb1b3c44a5eb9bdcea",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "cb2e94a792e9a6f2372d",
-      "title": "Veracity labels flip the emotional tone of language models but leave racial disparities intact",
-      "url": "https://arxiv.org/abs/2610.33021",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.33021v1 Announce Type: cross Abstract: Large language models (LLMs) increasingly deliver information through personas, but it is unclear whether correcting the facts also makes their framing consistent across identity labels. We audited four LLMs (GPT-5.4 mini, NVIDIA Nemotron 3 Nano, Llama 4 Scout, and Claude Haiku 4.5), which rated simulated affect on six dimensions (mood, anger, fear, confidence, perceived control, and mental state) in response to fact-checked false and true headlines presented without and with a veracity label. Experiment 1 evaluated 1,000 false and 1,000 true headlines without personas; Experiment 2 evaluated 300 of each under 12 personas crossing race, gender, and age. The label strongly changed the emotional tone: ordinal logistic regressions with headline-cluster bootstrap inference showed that…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Nouar AlDahoul",
-        "Myles Joshua Toledo Tan",
-        "Yasir Zaki"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.33021",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.33021v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.33021",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "581b38fc1c7fa654b15c88cec69423cb364170f6d2b104ebf3007ecf9bc76733",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "c9d8be3db401a0f91819",
-      "title": "LC-GRPO: Bridging Train-Inference Gap for Flow-Based GRPO with Langevin Correction",
-      "url": "https://arxiv.org/abs/2608.05600",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2608.05600v2 Announce Type: replace Abstract: Flow-based generative models are typically sampled by solving a deterministic ordinary differential equation (ODE), whereas reinforcement learning (RL) requires stochastic rollouts for exploration and optimization. Existing online RL methods for flow models therefore replace the inference-time ODE with a stochastic differential equation (SDE) during training. Although the ODE and SDE share the same marginal distribution in continuous time, they can behave differently after finite-step discretization. In particular, SDE rollouts often become blurry as exploration noise increases, creating a mismatch between training rollouts and inference-time ODE samples. We introduce LC-GRPO, a flow-based GRPO framework with Langevin correction. Each rollout transition takes an inference-aligned ODE…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yingqing Guo",
-        "Hui Yuan",
-        "Zijian He",
-        "Mengdi Wang",
-        "Zheng Ding"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2608.05600",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2608.05600v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2608.05600",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "281dd186057928718886f4235cdb4db227e258d3b174cf32f86a97622415405c",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "c7f6b68b006e10bb72a5",
-      "title": "Profiling a Frontier Agent with EBench: From Direct Control to Harness with Policy",
-      "url": "https://arxiv.org/abs/2610.35832",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.35832v1 Announce Type: cross Abstract: Frontier multimodal large language models (MLLMs) can control robots without robot-specific training, but how their capabilities compare and interact with post-trained vision-language-action (VLA) and world action model (WAM) policies across manipulation demands remains to be thoroughly evaluated. In this report, we evaluate GPT-6-Astra on EBench as the core of an agent that controls a robot through an agent harness under the same visual and proprioceptive observation protocol as post-trained policies. We study two agent configurations: direct control, in which the agent generates waypoint commands directly, and harness with policy, in which it can also invoke a post-trained VLA or WAM policy for action execution. Under direct control, the agent achieves competitive overall performance…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yifei Yao",
-        "Yude Zou",
-        "Guanbo Jiao",
-        "Xing Gao",
-        "Ning Gao",
-        "Yukai Wang",
-        "Jiantong Chen",
-        "Zihou Zhu",
-        "Xinyu Li",
-        "Ningyu Yan",
-        "Shuai Wang",
-        "Jianming Ma",
-        "Haoyu Guo",
-        "Weinan Zhang",
-        "Chunhua Shen"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.35832",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.35832v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.35832",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "e291a88f37d2b58da2888df83f657f218254d7b25f956188d9535049cb971a11",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "c7663fbe9e606f7c237e",
-      "title": "RobotAgentBench: Towards Open-world Robot Autonomy",
-      "url": "https://arxiv.org/abs/2610.34649",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.34649v1 Announce Type: cross Abstract: Recent advances in vision-language-action (VLA) and world-action models (WAMs) have significantly improved robotic manipulation, yet deploying robots in the open world demands a higher level of autonomy beyond executing predefined tasks. Robot agents offer a promising paradigm for this transition, integrating task discovery, contextual reasoning, physical execution, and adaptive recovery into a closed interaction loop. However, existing benchmarks largely evaluate isolated capabilities, failing to capture the complexity of open-world robot autonomy. We introduce RobotAgentBench (RAB), a comprehensive benchmark for evaluating robot agents in realistic, open-world household environments. Through an agent-assisted, human-in-the-loop real-to-sim pipeline, RAB constructs 50 diverse household…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Lingjun Mao",
-        "Jinglin Cao",
-        "Lukun He",
-        "Wenpeng Xu",
-        "Yuchen Yan",
-        "Hengyu Jin",
-        "Zijun Zhang",
-        "Jinzhou Tang",
-        "Songyao Jin",
-        "Ziche Liu",
-        "Yifei Shao",
-        "Junbo Huang",
-        "Fang Nan",
-        "Ruobing Han",
-        "Ziqiao Xi",
-        "Ziming Xu",
-        "Shuang Liang",
-        "Sibo Zhu",
-        "Wenyi Wu",
-        "Xinyue Wang",
-        "Yiming Huang",
-        "Xinkai Zou",
-        "Gao Zhu",
-        "Kun Zhou",
-        "Biwei Huang"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.34649",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.34649v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.34649",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "58d399f8fecc9f333e47a55c3ffe69a822aa042b9b0e7d1d7d6966e491b2618b",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "c51136bd20f30d7269b3",
-      "title": "Learning the Past from the Future: Retrospective Reconstruction in Temporal Interaction Networks",
-      "url": "https://arxiv.org/abs/2610.33171",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.33171v1 Announce Type: cross Abstract: Temporal link prediction uses past interactions to predict future links. In practice, interaction records from web and mobile applications can contain gaps caused by logging failures, API limits or lost records, even when later events remain available. To our knowledge, the extent to which later events help recover interactions within such gaps has not been measured directly for this ranking task. We study retrospective reconstruction using the tgbl-wiki and tgbl-comment datasets. We hide a two-hour window, use its interactions as ground truth, and rank the directed pairs active within it. We compare count-based heuristics and logistic regression models using past information alone or together with 1, 6 or 24 hours of later events. Target pairs and candidate lists remain fixed across…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Amarnath R"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.33171",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.33171v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.33171",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "8c7378af25e4ba3838404f1a105a6169bf3925f4ad4ba984e3ff5650542cbff6",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "c44340d77d2692b46109",
-      "title": "The Impact of Anisotropic Covariance Structure on the Training Dynamics and Generalization Error of Linear Networks",
-      "url": "https://arxiv.org/abs/2601.06961",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2601.06961v2 Announce Type: replace Abstract: The success of deep neural networks largely depends on the statistical structure of the training data. While learning dynamics and generalization on isotropic data are well-established, the impact of pronounced anisotropy on these crucial aspects is not yet fully understood. We examine the impact of data anisotropy, represented by a spiked covariance structure, a canonical yet tractable model, on the learning dynamics and generalization error of a two-layer linear network in a linear regression setting. Our analysis reveals that the learning dynamics proceed in two distinct phases, governed initially by the input-output correlation and subsequently by other principal directions of the data structure. Furthermore, we derive an analytical expression for the generalization error…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Taishi Watanabe",
-        "Ryo Karakida",
-        "Jun-nosuke Teramae"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2601.06961",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2601.06961v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2601.06961",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "b26a438638c7a30fb71a9c3eeb599decb816e04256633ffc28039b1d8408c1e5",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "c3f6a0b0a9433336b874",
-      "title": "LoWAgent: A Low-Resource Multilingual Benchmark for Web Agents",
-      "url": "https://arxiv.org/abs/2610.27205",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.27205v2 Announce Type: replace Abstract: Web agents are typically evaluated on English-language interfaces, leaving their ability to operate across the world's multilingual websites largely unexplored. This gap is especially significant for low-resource languages, where standardized resources for evaluating web agents remain limited. To address this gap, we introduce Low-Resource Web Agent Benchmark (LoWAgent), a benchmark for evaluating web agents across different low-resource languages (LRLs) in comparison to the default, English. LoWAgent evaluates web agents across English and four LRLs: Hindi, Bengali, Urdu, and Amharic. The benchmark comprises of six fully localized websites, instantiated across five languages to yield 3,000 task instances. We evaluate three closed-source and five open-source models across all five…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Ocean Monjur",
-        "Daud Ahmad Nisar",
-        "Shahriar Kabir Nahin",
-        "Tadesse Destaw Belay",
-        "Sushruti Mishra",
-        "Israel Abebe Azime",
-        "Anshuman Chhabra"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.27205",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.27205v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.27205",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "0b30783987847c8a11830e6afd1328195db83edfe22ec1ebfe4b883e4bfe4936",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "c1805786586ddec3f3bc",
-      "title": "LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG",
-      "url": "https://arxiv.org/abs/2605.06285",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.06285v2 Announce Type: replace Abstract: Single-step retrieval-augmented generation (RAG) provides an efficient way to incorporate external information for simple question answering tasks but struggles with complex questions. Agentic RAG extends this paradigm by replacing single-step retrieval with a multi-step process, in which the large language model (LLM) acts as a search agent that generates intermediate thoughts and subqueries to iteratively interact with the retrieval system. This iterative process incurs substantial latency due to the autoregressive generation of lengthy thoughts and subqueries. To address this limitation, we propose LatentRAG, a novel framework that shifts both reasoning and retrieval from discrete language space to continuous latent space. Unlike existing explicit methods that generate natural…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yijia Zheng",
-        "Marcel Worring"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2605.06285",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2605.06285v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.06285",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "bffd77b640b1addaffccecbd5c0b1c0f850bb9d4a73a31dd8924b70b40cfe19c",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "c0b8817b35d5a6959df3",
-      "title": "GUIFlow: Temporal Redundancy-Aware Incremental Inference for GUI Agents",
-      "url": "https://arxiv.org/abs/2610.34959",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.34959v1 Announce Type: cross Abstract: GUI agents built on vision-language models interact with continuously evolving interfaces, yet conventional inference repeatedly recomputes representations of largely overlapping observations and histories. This mismatch makes multi-step interaction costly, while changes in context, interface content, and action arguments prevent straightforward cache reuse. We introduce GUIFlow, a framework for full-pipeline incremental inference in multi-image GUI interaction. Our central insight is that advancing a decision need not require rebuilding all supporting representations: each interaction step can instead selectively update computational states maintained across the trajectory. To support new decisions as the context evolves, GUIFlow adapts how past computation is reused: historical KV…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Ye Li",
-        "Haoran Ding",
-        "Huanan Liu",
-        "Yuan Meng",
-        "Yutian Shen",
-        "Yuansong Wang",
-        "Kangye Ji",
-        "Hanyun Cui",
-        "Hongbo Duan",
-        "Chen Tang",
-        "Jiawei Li",
-        "Shu-Tao Xia",
-        "Zhi Wang"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.34959",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.34959v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.34959",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "6700285a902068ee4dbc3a06e09d244a473f3240c2623c0c0032b42d3ca2cf93",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "beec3cedbd3ad04668a4",
-      "title": "NGM: A Plug-and-Play Training-Free Memory Module for LLMs",
-      "url": "https://arxiv.org/abs/2605.16893",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.16893v2 Announce Type: replace Abstract: Recent studies have introduced memory-augmented architectures that decouple knowledge storage from neural computation, enabling more direct access to stored representations. However, existing approaches often rely on learned memory embeddings or explicit memory and retrieval components, requiring additional training or increasing architectural complexity. To address these limitations, we propose N-gram Memory (NGM), a training-free, plug-and-play module that repurposes a backbone model's pretrained token embedding space as memory. NGM consists of a Causal N-Gram Encoder and a Cosine-Gated Memory Injector. The former constructs N-gram representations by directly aggregating pretrained token embeddings, while the latter uses cosine similarity with ReLU gating to adaptively control the…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yuwen Qu",
-        "Wenhui Dong",
-        "Camil Hamami",
-        "Ming Zhao",
-        "Chenyang Si",
-        "Caifeng Shan"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2605.16893",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2605.16893v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.16893",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "a484b8ba53e808a4e678f7ae11dced77413f8d0201b9a72be59f503aa963a6bb",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "bd5fd39b4417d6f23396",
-      "title": "MAGNET: Manifold-Aware Graph Diffusion Network for Connectome Generation",
-      "url": "https://arxiv.org/abs/2610.17014",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.17014v2 Announce Type: replace Abstract: Functional brain connectome represents neural connectivity as a matrix of pairwise interactions between brain regions. Generation of functional connectomes is not only a question of validity; rather, having satisfied the constraints on the correlation matrix, the next step is to recover the class-conditional geometry buried under coarse labels. We propose MAGNET, a Manifold-Aware Graph Diffusion Network which uses a normalized-Cholesky representation of the manifold of correlation matrices that guarantees validity. MAGNET lifts noisy latent states into ROI-level region tokens and performs denoising with a relational inductive bias over brain atlas regions. To deal with structural problems induced by coarse labels, MAGNET employs class-anchored conditioning, amortized structural bridge…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Protyay Dey",
-        "Ayush Roy",
-        "Hyuna Cho",
-        "Won Hwa Kim",
-        "Vishnu Suresh Lokhande"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.17014",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.17014v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.17014",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "a1cd087a90a42599a743debf9856a4f74cf71df4c58fdcb0cc5dd38a8493957b",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "bc710fce38fa1a4f331c",
-      "title": "ArbiGraph: Arbitrarily Scalable Verifiable Task Graphs for Evaluating Context Management",
-      "url": "https://arxiv.org/abs/2607.20764",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2607.20764v2 Announce Type: replace Abstract: We introduce ARBIGRAPH, a benchmark generator for evaluating whether tool-assisted language agents can retain, update, compose, and discard task-relevant context across extended reasoning workflows. ARBIGRAPH represents each task as a natural-language problem with an executable Python solver, and composes tasks through typed intermediate states, instantiated here as scalar and list values. This design enables controllable task graphs whose length, dependency structure, distractor count, and value type can be varied while preserving exact automatic verification. We instantiate ARBIGRAPH with math, GSM-style word-problems, and Python-tracing task categories, and evaluate a Qwen3.5-27B tool-assisted agent across four topologies. The results show high accuracy on isolated tasks but…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Pavel Golikov",
-        "Evgenii Opryshko",
-        "Gennady Pekhimenko",
-        "Mark C. Jeffrey"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2607.20764",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2607.20764v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2607.20764",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "36ae32896482612acf174e192ce476b7a5e4b7ccd182f1523b09475d46247d15",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "bb5ef985e5428b2f781b",
-      "title": "False Belief Dissemination, Persistence and Mitigation in Multi-Agent Social Networks Through the Lens of the Mandela Effect",
-      "url": "https://arxiv.org/abs/2610.33026",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.33026v2 Announce Type: replace-cross Abstract: Multi-agent social networks are emerging as communities in which agents communicate, retain memories, and publish information that others can find as evidence. These interactions create opportunities for false claims to spread and remain influential beyond their original sources, analogous to the Mandela effect in human societies, in which many people recall the same false memory. In this paper, we systematically study false-belief dynamics through the lens of the Mandela effect, focusing on dissemination, persistence, and mitigation. Specifically, we build a controlled framework connecting agent communication, private memory, and a shared simulated web to mimic information dissemination in practical social networks, supported by 540 fabricated claims spanning 8 domains and 4…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Dianzhi Yu",
-        "Hongru Wang",
-        "Ziheng Xiong",
-        "Yanyu Chen",
-        "Zixing Song",
-        "Jianting Chen",
-        "Zhenfei Yin",
-        "Jeff Z. Pan",
-        "Amos Storkey",
-        "Irwin King"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.33026",
-      "links": [
-        "https://arxiv.org/abs/2610.33026"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2610.33026v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.33026",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "b673aef03c51e7cd59d6e3feedc8ee905f161fbc3589e7ea2195fb0f95a61b37",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 1
-    },
-    {
-      "id": "bb26ecd71626ed901623",
-      "title": "From Simulation to Experiment: Benchmarking Machine-Learning Models for Quantum-Dot State Recognition",
-      "url": "https://arxiv.org/abs/2511.22451",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2511.22451v3 Announce Type: replace-cross Abstract: Machine-learning models for quantum-dot state recognition are commonly trained using synthetic data, where large labeled datasets can be generated efficiently. However, strong performance on simulated data does not guarantee equally strong performance in experiments. Here, we benchmark five neural network architectures for quantum-dot state recognition using a shared synthetic training dataset and independent synthetic and experimental test sets. We compare convolutional and fully connected neural networks, a mixture density network, a vision transformer, and a U-Net across multiple training set sizes and two input normalization schemes. We find that model performance and rankings are closely preserved when moving from held-out synthetic patches to previously unseen simulated…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Valeria D\\'iaz Moreno",
-        "Ryan P Khalili",
-        "Daniel Schug",
-        "Patrick J. Walsh",
-        "Donovan L. Buterakos",
-        "Justyna P. Zwolak"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2511.22451",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2511.22451v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2511.22451",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "5258e308f7f5ea02c2be10895c6d26215a3d3bcd74caac6ecf7dbf33b1d466fb",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ba19566fc21c11fd79c8",
-      "title": "Query Complexity of Learning Axis-Aligned Partitions",
-      "url": "https://arxiv.org/abs/2610.35495",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.35495v1 Announce Type: cross Abstract: This work establishes the query complexity of learning high-dimensional boxes in the exact query learning setting. Let $X \\subset \\mathbb{R}^d$ be a set of $n$ points, labeled by a collection of $k$ boxes: the label of each point in $X$ is determined by the unique box containing it. A learner aims to exactly recover the labels for every point in $X$ given access to a label oracle. We consider three increasingly-structured settings. In the most general setting, there are no conditions on the boxes, and they may overlap. We show that CAL (Cohn-Atlas-Ladner 1994), a classical active learning algorithm, is minimax-optimal with query complexity $\\Theta(kd \\log (n/kd))$. When the boxes are disjoint, we examine two regimes. In the large-$k$ regime, CAL remains minimax-optimal. For the…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Hadley Black",
-        "Arya Mazumdar",
-        "Barna Saha",
-        "Geelon So"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2610.35495",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2610.35495v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.35495",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "939a0bbbe0c0d80067ec51b3e88d2148e3a84c6d1eb89f5657d5648cc6e19488",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "b83cf1456fef7c7bd101",
-      "title": "AutoB2G: Agentic Simulation and Reinforcement Learning for Spatio-Temporal Grid-Interactive Building Control",
-      "url": "https://arxiv.org/abs/2603.26005",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2603.26005v3 Announce Type: replace Abstract: Grid-interactive building control can improve demand-side flexibility, but realistic evaluation requires coordinated co-simulation of buildings, reinforcement learning (RL), and distribution grids. Translating user intent into executable co-simulation workflows is labor-intensive, requiring the manual integration and configuration of heterogeneous simulators and interfaces. We introduce AutoB2G, a grid-aware building--grid co-simulation environment integrating CityLearn V2 with Pandapower and OpenDSS. It supports balanced and three-phase unbalanced grid simulation and a broad range of grid-side evaluation metrics. AutoB2G organizes simulation components as a directed acyclic graph (DAG), explicitly encoding module dependencies and execution order for dependency-aware retrieval and…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Borui Zhang",
-        "Nariman Mahdavi",
-        "Subbu Sethuvenkatraman",
-        "Flora Salim"
-      ],
-      "first_seen": "2026-10-27T18:43:12Z",
-      "discovered_at": "2026-10-27T18:43:12Z",
-      "doi": null,
-      "arxiv_id": "2603.26005",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-10-27T04:00:00Z",
-      "external_id": "oai:arXiv.org:2603.26005v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2603.26005",
-          "found_at": "2026-10-27T18:43:12Z"
-        }
-      ],
-      "content_hash": "e956aed5d9cd0b15de334da94794011955d1058c11bee4b5155f0ac86010cecf",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-f70b0303bc0c0688.json",
-    "sha256": "f70b0303bc0c0688fd452088d2f583009c00f85dc31b591223d6472025a56c26",
-    "total_items": 3593,
+    "manifest": "data/archive/manifest-1e3c5ed19ad52c41.json",
+    "sha256": "1e3c5ed19ad52c410fbb06692a258e8d00a93d110f24494430f47054c9fcd410",
+    "total_items": 3613,
     "edition_items": 1500,
     "complete": false
   }
