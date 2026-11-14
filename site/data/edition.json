@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-14T03:18:59Z",
-  "last_successful_update": "2026-11-14T03:18:59Z",
-  "edition_date": "2026-11-13",
+  "generated_at": "2026-11-14T11:30:05Z",
+  "last_successful_update": "2026-11-14T11:30:05Z",
+  "edition_date": "2026-11-14",
   "timezone": "America/Detroit",
   "sources": [
     {
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-14T03:18:59Z",
+      "last_nonempty_at": "2026-11-14T11:30:05Z",
       "item_count": 6,
       "parsed_count": 6,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-11-09T13:31:34Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-11-06T22:39:37.362Z",
+        "incremental_window_start": "2026-11-07T03:18:59.481Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -42,16 +42,20 @@
       "id": "arxiv",
       "name": "arXiv",
       "url": "https://arxiv.org/",
-      "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "status": "degraded",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-14T03:18:59Z",
       "item_count": 3815,
-      "parsed_count": 119,
+      "parsed_count": 0,
       "error": null,
-      "warnings": [],
+      "warnings": [
+        "arXiv search API failed: The read operation timed out",
+        "Backup RSS discovers only the current announcement window in five configured categories. New-publication API catch-up remains pending.",
+        "No records parsed; source may be empty or its format may have changed. Checkpoint retained."
+      ],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
@@ -64,7 +68,10 @@
         "validated_empty": false,
         "adapter_mode": "year_partitioned_arxiv",
         "monitoring_since": "2026-10-16T23:48:48Z",
-        "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance."
+        "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance.",
+        "degraded": true,
+        "primary_error": "The read operation timed out",
+        "suspicious_empty": true
       },
       "lifetime_item_count": 4457
     },
@@ -73,11 +80,11 @@
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": "2026-10-29T21:08:56Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-14T03:18:59Z",
+      "last_nonempty_at": "2026-11-14T11:30:05Z",
       "item_count": 2,
       "parsed_count": 5,
       "error": null,
@@ -129,8 +136,8 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-12T11:16:46Z",
@@ -159,26 +166,24 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-14T03:18:59Z",
+      "last_nonempty_at": "2026-11-14T11:30:05Z",
       "item_count": 640,
-      "parsed_count": 50,
+      "parsed_count": 28,
       "error": null,
-      "warnings": [
-        "Recent forum catch-up is pending and will resume from its saved date cursor."
-      ],
+      "warnings": [],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-13T12:09:24.511Z",
-        "latest_fetched_at": "2026-11-14T03:02:59.528Z",
-        "pending_incremental": true,
+        "oldest_fetched_at": "2026-11-12T17:03:32.141Z",
+        "latest_fetched_at": "2026-11-13T12:05:19.077Z",
+        "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
@@ -191,11 +196,11 @@
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-14T03:18:59Z",
+      "last_nonempty_at": "2026-11-14T11:30:05Z",
       "item_count": 4,
       "parsed_count": 4,
       "error": null,
@@ -225,8 +230,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-11T22:00:17Z",
@@ -264,10 +269,10 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "error",
-      "checked_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
       "last_success_at": "2026-11-05T15:29:15Z",
-      "last_failure_at": "2026-11-14T03:18:59Z",
-      "failure_streak": 31,
+      "last_failure_at": "2026-11-14T11:30:05Z",
+      "failure_streak": 32,
       "last_nonempty_at": "2026-11-05T15:29:15Z",
       "item_count": 5,
       "parsed_count": 0,
@@ -295,11 +300,11 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-14T03:18:59Z",
+      "last_nonempty_at": "2026-11-14T11:30:05Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -330,8 +335,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -369,8 +374,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -408,8 +413,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -447,8 +452,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -481,8 +486,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -516,11 +521,11 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-14T03:18:59Z",
+      "last_nonempty_at": "2026-11-14T11:30:05Z",
       "item_count": 86,
       "parsed_count": 85,
       "error": null,
@@ -550,11 +555,11 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-11-14T03:18:59Z",
-      "last_success_at": "2026-11-14T03:18:59Z",
+      "checked_at": "2026-11-14T11:30:05Z",
+      "last_success_at": "2026-11-14T11:30:05Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-14T03:18:59Z",
+      "last_nonempty_at": "2026-11-14T11:30:05Z",
       "item_count": 12,
       "parsed_count": 12,
       "error": null,
@@ -597,17 +602,17 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 282,
-    "accepted_items": 279,
-    "retained_items": 4541,
-    "lifetime_accepted_items": 282,
-    "lifetime_retained_items": 11516,
+    "fetched_items": 141,
+    "accepted_items": 138,
+    "retained_items": 4574,
+    "lifetime_accepted_items": 141,
+    "lifetime_retained_items": 11549,
     "successful_sources": 15,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
-    "suspicious_empty_sources": 0,
-    "duplicates_removed": 249,
+    "suspicious_empty_sources": 1,
+    "duplicates_removed": 141,
     "total_items": 4574,
     "relevant_items": 386,
     "candidate_items": 4188,
@@ -2747,7 +2752,9 @@
       "discovered_at": "2026-11-13T16:27:24Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/rjzqbfsW552PyMBNv/i-m-leaving-my-phd-to-pursue-ai-safety-work"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "rjzqbfsW552PyMBNv",
@@ -2788,7 +2795,9 @@
       "discovered_at": "2026-11-13T16:27:24Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/yHhBam7XLqpd4dLYB/how-many-humans-are-needed-to-carry-out-proposed"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "yHhBam7XLqpd4dLYB",
@@ -2827,7 +2836,9 @@
       "discovered_at": "2026-11-13T16:27:24Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/SNsTHtmKXsQXkFqbP/i-find-myself-confused-about-empathy"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "SNsTHtmKXsQXkFqbP",
@@ -2866,7 +2877,9 @@
       "discovered_at": "2026-11-13T16:27:24Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/rxpWmtRbv28hrhbrZ/you-can-get-over-your-three-letter-disorder"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "rxpWmtRbv28hrhbrZ",
@@ -2905,7 +2918,9 @@
       "discovered_at": "2026-11-13T16:27:24Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/9TjKJZDwj87C9CAYb/what-is-anthropic-s-resource-and-information-agreement"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "9TjKJZDwj87C9CAYb",
@@ -2945,6 +2960,7 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
+        "https://www.lesswrong.com/posts/7fi2ZhYk3cHGEcXHd/lightcone-commons-funders-and-sff-and-cg-are-mostly-not",
         "https://x.com/gcolbourn/status/2121198431938957578"
       ],
       "aliases": [],
@@ -12897,7 +12913,9 @@
       "discovered_at": "2026-11-14T03:18:59Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://openai.com/business/customer-stories/shield"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "https://openai.com/business/customer-stories/shield",
@@ -12926,8 +12944,8 @@
       "summary": "Theoretical accounts attribute much of the success of deep neural networks to feature learning, in which training reshapes the representations within hidden layers. In this picture, a theory of deep learning must explain which features a nonlinear network learns, how its weights encode them, and how its neurons represent them. Yet, we still lack a general theory that answers these questions. We study this question as part of PIRAMID’s Advancements in Learning Theory team, which uses statistical physics to build foundations for mechanistic interpretability and AI safety. Our progress and plans describe a theory agenda centred on hidden weight distributions and covariances that can record learned structure. The mean field sequence introduces this viewpoint by treating each neuron as one member of a population whose distribution must be…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Interpretability",
-        "Alignment methods"
+        "Alignment methods",
+        "Interpretability"
       ],
       "score": 12,
       "relevance": "relevant",
@@ -19368,8 +19386,8 @@
       "summary": "[Epistemic Status: Fairly confident that this is a problem, low confidence on what to do about it] TL;DR: Updates towards short timelines based on METR's November 2026 report on AI R&D acceleration at Anthropic are rational, but based on limited public evidence. If things take longer than currently expected, the appearance of consensus in the AI safety community will likely be used by skeptics to (attempt to) discredit AI safety and justify unsafe policy. If timelines are off by only a few years, this discrediting will come right before the intelligence explosion actually happens. Because a large chunk of survival mass remains in worlds where things move slowly, it is important to come up with ways to mitigate this dynamic. Short timelines are in. The AI Futures Project declared that it \"Looks Like the Intelligence Explosion Will Happen…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "AI R&D & agents"
+        "AI R&D & agents",
+        "Alignment methods"
       ],
       "score": 11,
       "relevance": "relevant",
@@ -19950,8 +19968,8 @@
       "summary": "AI agents do a growing share of work on each new model. Then, through some process, the results are combined into an overall safety assessment, which labs use to estimate the probability that the next model is not catastrophically misaligned. I feel that, several months later, we appreciate further the foresight of Automated Alignment is Harder Than You Think (Bowkis et al. 2026): much is handed off to the machines because of the urgency of fast timelines, and we miss many things due to the problem of undetected systematic errors. MS Paint drawing by Fable 5.2. In this post, I’ll develop a simple argument (drawing heavily or even verbatim from Bowkis et al. at times) that our recent failures to catch misalignment can be framed as systematic errors shared across our evidence, i.e. a lack of decorrelated evidence. * Currently, labs run…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "AI R&D & agents"
+        "AI R&D & agents",
+        "Alignment methods"
       ],
       "score": 11,
       "relevance": "relevant",
@@ -21604,8 +21622,8 @@
       "summary": "Existing large language models typically rely on massive fine-tuning datasets for safety alignment, which results in higher costs for safety alignment and often leads to the problem of over-refusal. We propose Less is Safer (LIS), a compact yet highly effective dataset for safety alignment, constructed through interpretable feature-guided selection and adversarial synthesis. Specifically, we leverage Sparse Autoencoder (SAE) activations to efficiently select prompts that cover diverse and interpretable safety features. Then, we employ a multi-agent adversarial synthesis framework to generate harmless prompts that nevertheless elicit unnecessary refusals. LIS contains only 2.4K samples, yet outperforms much larger datasets, e.g., TRIDENT-Core (26K), TRIDENT-Edge (19K) and WildJailbreak (262K), in overall performance on four safety and…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Interpretability"
+        "Interpretability",
+        "Alignment methods"
       ],
       "score": 14,
       "relevance": "candidate",
@@ -21818,8 +21836,8 @@
       "summary": "Developers train models to follow a consistent character using methods like Model Spec Midtraining (Li et al., 2026), which have been hypothesized to make alignment more robust and generalize broadly. However, it is possible for subsequent RL with misspecified rewards to work against character training. In this work, we apply character training to teach gpt-oss-20b a semi-realistic constitution and study how it interacts with two types of RL that reward breaking the constitution's rules (opposing RL): answering harmful requests rewritten as math problems, and reward hacking in agentic coding environments. The character-trained models learn both behaviors easily, though they are slightly slower than gpt-oss-20b to answer harmful requests. Character-trained models also display more motivated reasoning on harmful answers than gpt-oss-20b…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Scheming & deception"
+        "Scheming & deception",
+        "Alignment methods"
       ],
       "score": 10,
       "relevance": "candidate",
@@ -30230,8 +30248,8 @@
       "summary": "In the legal domain, LLMs can improve reliability and interpretability by generating explicit reasoning traces. However, training LLMs to produce high-quality reasoning traces remains challenging. Existing supervised fine-tuning methods struggle when reasoning traces are significantly longer than final answers, as the learning signal for the answer becomes diluted. Meanwhile, reinforcement learning methods such as Group Relative Policy Optimization also have several limitations, including costly reward design, performance plateaus, and reward hacking. We therefore propose a two-stage training framework. In Stage I, JurisCoT-SFT employs a length-normalized dual objective to balance learning signals between reasoning traces and final answers. In Stage II, Lifecycle-Aware Backtrackable Policy Optimization dynamically evaluates and retires…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Interpretability",
-        "Scheming & deception"
+        "Scheming & deception",
+        "Interpretability"
       ],
       "score": 13,
       "relevance": "relevant",
@@ -39754,8 +39772,8 @@
       "summary": "In Constitutional AI, a plain-text \"constitution\" encodes values and gets incorporated into a model via post-training. However, the procedure for creating such a constitution poses significant challenges: who contributes, who decides which norms are included, and to what extent must the process be participatory or democratic? These challenges can be paralyzing. Yet, we argue that taking action is essential: without a deliberate constitution, sovereign models would risk misalignment or default to norms set by frontier model providers. We propose treating the development of a constitution as an evolving, participatory process akin to citizen science, iteratively drafted, tested, and refined. We therefore formulate five desirable principles: iterative, modular, justifiable, positional, and legitimate. We further argue that such a document…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Evaluations & risk"
+        "Evaluations & risk",
+        "Alignment methods"
       ],
       "score": 13,
       "relevance": "relevant",
@@ -40713,8 +40731,8 @@
       "summary": "As large language models become more capable agents, they can exhibit deceptive behaviors, cheating human for higher rewards while appearing helpful. We attribute this failure to evaluation-side partial observability, where models are evaluated mainly from final outcome, without checking the faithfulness of underlying reasoning, tool use, and environmental effects. Prior mitigations address this partial observability by predefined evaluator latent belief space or one-shot monitoring, which do not extend to free-form language space and vulnerable to stronger deceptions that evade simple monitoring. In this work, we formulate deception mitigation as an Evaluation-Side Partially Observable Extensive Form Game (e-PoG), a max-min framework in which an agent maximizes reward, a monitor minimizes the agent's payoff by exposing deception from…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "AI control & oversight",
-        "Scheming & deception"
+        "Scheming & deception",
+        "AI control & oversight"
       ],
       "score": 12,
       "relevance": "relevant",
@@ -48637,8 +48655,8 @@
       "summary_kind": "publisher excerpt",
       "topics": [
         "AI control & oversight",
-        "Alignment methods",
-        "Evaluations & risk"
+        "Evaluations & risk",
+        "Alignment methods"
       ],
       "score": 19,
       "relevance": "relevant",
@@ -55422,8 +55440,8 @@
       "summary": "While Recursive Self-Improvement (RSI) accelerates isolated algorithm and kernel synthesis, distributed LLM training depends on tightly coupled launch settings, operator kernels, and communication schedules, where single edits often hit out-of-memory (OOM) boundaries, compiler conflicts, measurement jitter, or silent numerical drift. We present InfraRSI, the agentic harness that turns open-ended human commands into verified training optimizations via a five-stage workflow: init locks editable scope and a fixed task contract over workload, loss, and timing invariants to prevent reward hacking, doctor profiles baseline phases and calibrates cluster noise, run co-optimizes launch knobs and code patches before re-verifying top candidates against the baseline and logging findings to a cross-hardware experience bank, and report and apply…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "AI R&D & agents",
-        "Scheming & deception"
+        "Scheming & deception",
+        "AI R&D & agents"
       ],
       "score": 14,
       "relevance": "relevant",
@@ -67420,8 +67438,8 @@
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-7b0eb70f98c1d06c.json",
-    "sha256": "7b0eb70f98c1d06c017856cec2b5b652cb51a236de39a3ebb040bf17a64fcc80",
+    "manifest": "data/archive/manifest-7bfc6ae170b2159c.json",
+    "sha256": "7bfc6ae170b2159cc17cd92ace7965c3fc9386cde6aaf20871cdf1aa93308d32",
     "total_items": 4574,
     "edition_items": 1500,
     "complete": false
