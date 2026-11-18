@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-18T04:24:17Z",
-  "last_successful_update": "2026-11-18T04:24:17Z",
-  "edition_date": "2026-11-17",
+  "generated_at": "2026-11-18T14:01:48Z",
+  "last_successful_update": "2026-11-18T14:01:48Z",
+  "edition_date": "2026-11-18",
   "timezone": "America/Detroit",
   "sources": [
     {
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-18T04:24:17Z",
+      "last_nonempty_at": "2026-11-18T14:01:48Z",
       "item_count": 7,
       "parsed_count": 7,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-11-16T14:01:15Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-11-10T22:54:00.182Z",
+        "incremental_window_start": "2026-11-11T04:24:17.308Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -43,13 +43,13 @@
       "name": "arXiv",
       "url": "https://arxiv.org/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-18T04:24:17Z",
+      "last_nonempty_at": "2026-11-18T14:01:48Z",
       "item_count": 4096,
-      "parsed_count": 119,
+      "parsed_count": 116,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -58,7 +58,7 @@
         "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-11T02:44:11Z",
+        "oldest_fetched_at": "2026-11-11T04:52:14Z",
         "latest_fetched_at": "2026-11-17T16:37:36Z",
         "pending_incremental": false,
         "validated_empty": false,
@@ -73,13 +73,13 @@
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": "2026-10-29T21:08:56Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-18T04:24:17Z",
-      "item_count": 23,
-      "parsed_count": 35,
+      "last_nonempty_at": "2026-11-18T14:01:48Z",
+      "item_count": 44,
+      "parsed_count": 53,
       "error": null,
       "warnings": [
         "OpenReview search for 'AI alignment' did not provide verified descending modification dates; incremental completeness cannot be established, and historical paging was skipped.",
@@ -101,15 +101,15 @@
         "scope": "New public OpenReview API v2 phrase matches; modification-index ordering is checked at runtime.",
         "pages": 9,
         "query_totals": {
-          "AI alignment": 600,
-          "AI safety": 2157,
-          "mechanistic interpretability": 2883,
-          "scalable oversight": 190,
-          "reward hacking": 1055,
-          "deceptive alignment": 28,
-          "AI control": 137,
-          "scheming": 54,
-          "sandbagging": 61
+          "AI alignment": 607,
+          "AI safety": 2179,
+          "mechanistic interpretability": 2927,
+          "scalable oversight": 191,
+          "reward hacking": 1095,
+          "deceptive alignment": 29,
+          "AI control": 140,
+          "scheming": 61,
+          "sandbagging": 62
         },
         "backfill_complete": false,
         "pending_backfill": false,
@@ -122,15 +122,15 @@
         "adapter_mode": "forward_only",
         "description": "Public API v2 paper submissions matching exact phrases. Forward discovery uses update metadata; publication metadata determines admission. API v1 venues and unfamiliar terminology may be missed; search ceilings are reported."
       },
-      "lifetime_item_count": 2877
+      "lifetime_item_count": 2898
     },
     {
       "id": "alignment-forum",
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-12T11:16:46Z",
@@ -159,26 +159,24 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-18T04:24:17Z",
+      "last_nonempty_at": "2026-11-18T14:01:48Z",
       "item_count": 757,
-      "parsed_count": 50,
+      "parsed_count": 11,
       "error": null,
-      "warnings": [
-        "Recent forum catch-up is pending and will resume from its saved date cursor."
-      ],
+      "warnings": [],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-16T21:07:25.638Z",
-        "latest_fetched_at": "2026-11-18T04:21:41.248Z",
-        "pending_incremental": true,
+        "oldest_fetched_at": "2026-11-16T15:18:30.396Z",
+        "latest_fetched_at": "2026-11-16T20:30:52.443Z",
+        "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
@@ -191,11 +189,11 @@
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-18T04:24:17Z",
+      "last_nonempty_at": "2026-11-18T14:01:48Z",
       "item_count": 5,
       "parsed_count": 5,
       "error": null,
@@ -225,8 +223,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-11T22:00:17Z",
@@ -264,10 +262,10 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "error",
-      "checked_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
       "last_success_at": "2026-11-05T15:29:15Z",
-      "last_failure_at": "2026-11-18T04:24:17Z",
-      "failure_streak": 45,
+      "last_failure_at": "2026-11-18T14:01:48Z",
+      "failure_streak": 46,
       "last_nonempty_at": "2026-11-05T15:29:15Z",
       "item_count": 5,
       "parsed_count": 0,
@@ -295,11 +293,11 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-18T04:24:17Z",
+      "last_nonempty_at": "2026-11-18T14:01:48Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -330,8 +328,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -369,8 +367,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -383,14 +381,14 @@
       "scope": "alignment",
       "coverage": {
         "mode": "forward_only",
-        "pages": 1,
+        "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": null,
-        "latest_fetched_at": null,
+        "oldest_fetched_at": "2026-07-05",
+        "latest_fetched_at": "2026-07-05",
         "pending_incremental": false,
         "discovered_urls": 50,
-        "baseline_urls": 50,
+        "baseline_urls": 51,
         "baseline_boundary_uncertain": true,
         "pending_documents": 0,
         "failed_documents": 0,
@@ -408,8 +406,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -447,8 +445,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -481,8 +479,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -516,13 +514,13 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-18T04:24:17Z",
-      "item_count": 105,
-      "parsed_count": 104,
+      "last_nonempty_at": "2026-11-18T14:01:48Z",
+      "item_count": 106,
+      "parsed_count": 105,
       "error": null,
       "warnings": [
         "RSS monitoring is limited to the publisher's current feed window; a long outage may exceed that window. Undated entries absent from the prior archive require temporal review."
@@ -543,18 +541,18 @@
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Publisher-wide feed includes safety research alongside products and company news; new non-research entries remain review candidates."
       },
-      "lifetime_item_count": 1401
+      "lifetime_item_count": 1402
     },
     {
       "id": "deepmind",
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-11-18T04:24:17Z",
-      "last_success_at": "2026-11-18T04:24:17Z",
+      "checked_at": "2026-11-18T14:01:48Z",
+      "last_success_at": "2026-11-18T14:01:48Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-18T04:24:17Z",
+      "last_nonempty_at": "2026-11-18T14:01:48Z",
       "item_count": 12,
       "parsed_count": 12,
       "error": null,
@@ -597,24 +595,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 333,
-    "accepted_items": 320,
-    "retained_items": 4975,
-    "lifetime_accepted_items": 333,
-    "lifetime_retained_items": 11950,
+    "fetched_items": 310,
+    "accepted_items": 298,
+    "retained_items": 5013,
+    "lifetime_accepted_items": 310,
+    "lifetime_retained_items": 11988,
     "successful_sources": 15,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 295,
-    "total_items": 5013,
-    "relevant_items": 451,
-    "candidate_items": 4562,
-    "undated_items": 1964,
+    "duplicates_removed": 288,
+    "total_items": 5035,
+    "relevant_items": 470,
+    "candidate_items": 4565,
+    "undated_items": 1966,
     "year_only_items": 0,
-    "newest_publication": "2026-11-18T04:21:41Z",
-    "lifetime_total_items": 11988,
+    "newest_publication": "2026-11-18T08:30:21Z",
+    "lifetime_total_items": 12010,
     "excluded_legacy_items": 6975
   },
   "coverage_policy": {
@@ -640,6 +638,1020 @@
     "review_policy": "Opinion, news, uncertain relevance, and newly discovered items with uncertain publication timing remain candidates for review."
   },
   "items": [
+    {
+      "id": "d4cedf3600a6751e979f",
+      "title": "When can we trust untrusted monitoring? An AI control safety case across collusion strategies",
+      "url": "https://openreview.net/forum?id=8TtUrbFz00",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": null,
+      "date_precision": "unknown",
+      "summary": "Potentially misaligned, untrusted, AIs are being deployed as AI agents despite being capable of harm. One in-use approach to reducing risk is untrusted monitoring: using one untrusted AI to oversee another. AI control tries to create deployments that are robust to intentional subversion. The key vulnerability of untrusted monitoring is collusion: the monitor could behave honestly on test inputs, but wave through malicious outputs it recognises as coming from another instance of itself. In this paper, we ask: could we show that a given untrusted monitoring deployment is robust? We sketch a safety case that clearly presents the strongest argument for safety -- improving the state of the art empirical methodology whilst highlighting necessary assumptions and significant unsolved challenges. The core of our safety case is a bound on the…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI control & oversight"
+      ],
+      "score": 14,
+      "relevance": "candidate",
+      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
+      "authors": [
+        "Nelson Gardner-Challis",
+        "Morgan Sinclaire",
+        "Georgiy Kozhevnikov",
+        "Jonathan Bostock",
+        "Charlie Griffin",
+        "Joan Velja",
+        "Alessandro Abate"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/0bf4fa7fe95579eb45dbd7c6c03f241596508480.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T12:43:20Z",
+      "external_id": "8TtUrbFz00",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=8TtUrbFz00",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "09a0c9fb4219db6e42ea46d8731a90a48e6689f5170a1ee8b829803b73c09a45",
+      "temporal_status": "publication_date_unverified",
+      "revision_count": 0
+    },
+    {
+      "id": "6a8921029ae9959abb57",
+      "title": "Multi-Agent Systems Should be Treated as Principal-Agent Problems",
+      "url": "https://openreview.net/forum?id=aQAiYrGVZf",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": null,
+      "date_precision": "unknown",
+      "summary": "Consider the multi-agent systems setup, where a principal (\"supervisor agent\") assigns subtasks to specialized agents and aggregates their response into a single system-level output. A core property of such systems is information asymmetry — e.g., agents observe task-specific information, output intermediate reasoning traces, and have different context windows. In isolation, such asymmetry is not problematic when agents report truthfully to the principal under aligned incentives. However, what happens when they are not? Recent evidence suggests that LLM-based agents acquire their own goals (e.g., survival or self-preservation), known as \"scheming,\" and are willing to deceive humans or other agents. This produces agency loss: a gap between the principal's intended outcome and the realized system behavior. Following the central tenets of…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception"
+      ],
+      "score": 8,
+      "relevance": "candidate",
+      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
+      "authors": [
+        "Paulius Rauba",
+        "Simonas Cepenas",
+        "Mihaela van der Schaar"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/d61fdd455dccdc10df04e64e88b8dde78f4eac3c.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T12:21:02Z",
+      "external_id": "aQAiYrGVZf",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=aQAiYrGVZf",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "3d0396e0435552134f00f369c4323cd8a0eaeb301b27617b23aa0202e21bf820",
+      "temporal_status": "publication_date_unverified",
+      "revision_count": 0
+    },
+    {
+      "id": "3352637dd8fc9e2155fb",
+      "title": "Routing Subspaces: Auditing Evaluation-to-Deployment Mismatch in Fine-Tuned Language Models",
+      "url": "https://openreview.net/forum?id=Lsf8vcSdAI",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:30:21Z",
+      "date_precision": "instant",
+      "summary": "Safety evaluations often assume that behavior observed during testing reflects behavior in ordinary use, but fine-tuning can break this assumption. A checkpoint can appear fixed under evaluation-style prompts while the same behavior persists under ordinary-use prompts. Output scores reveal this mismatch but do not locate it. We investigate whether the distinction is encoded in a stable internal site and introduce an audit that fits a paired activation contrast at a path-patching-informed mid-depth window, then modifies the resulting coordinate on held-out prompts. The intervention reduces the evaluation-to-deployment gap by more than $0.12$ in ten of twelve model--behavior settings and closes it (post-intervention gap below $0.06$) in four, across four full-matrix instruction-tuned model instances; among the eight settings with…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI control & oversight",
+        "Evaluations & risk"
+      ],
+      "score": 12,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Phongsakon Mark Konrad",
+        "Toygar Tanyel",
+        "Serkan Ayvaz"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/af3cd9eb8b4bc81a541314b5ac0a652ddda97e53.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:30:21Z",
+      "external_id": "Lsf8vcSdAI",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=Lsf8vcSdAI",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "980c7db020118cf5093df86e29c18e2eadcf3eaf98380f851bd78c48dde61c06",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "0d583cedfc694cd9df42",
+      "title": "Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL",
+      "url": "https://openreview.net/forum?id=NERzW49Ahm",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:30:06Z",
+      "date_precision": "instant",
+      "summary": "Reinforcement learning (RL) rewards are notoriously difficult to design and control, often leading to the model learning unintended behaviors such as reward hacking. One potential solution is to monitor for reward hacking and penalize it when detected; however, training against a monitor could lead to evasive behavior, and our general understanding of how to apply monitors effectively during training is limited. To study how best to use monitors to mitigate reward hacking, we introduce and open source three realistic environments where Qwen3-4B reward hacks: a coding environment hackable via test overwriting, a medical chat environment hackable via sycophancy, and a biography generation environment hackable via hallucination. We first focus on the coding environment, where we find that: (1) models can learn to evade highly accurate…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Aria Wong",
+        "Joshua Engels",
+        "Neel Nanda"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/3b5b29d25c22d171fbea9302bea8bcd85b7ef85b.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:30:06Z",
+      "external_id": "NERzW49Ahm",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=NERzW49Ahm",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "be1c1be355ce411e3d6390adb747f79ce47ad24809d94b9829aec8095369c639",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "7c21e6c60287f1b8f44f",
+      "title": "Building Comparative Motivation Profiles with Symmetric Belief Editing",
+      "url": "https://openreview.net/forum?id=SniLob4M2j",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:29:35Z",
+      "date_precision": "instant",
+      "summary": "When a model behaves in unexpected ways, we want to know why, but its intent cannot be observed directly, and its self-reports may be rationalizations. We introduce comparative motivation profiles, which treat intent as propensity: we edit the model's beliefs about facts that a hypothesized motivation would depend on and measure how its behavior changes. To keep artifacts of the editing method from driving the result, we edit two minimally different hypotheses in the same way, with matched amplify and suppress edits; we call this symmetric belief editing. We apply it to alignment faking in four open-weight model organisms, contrasting scheming, which tracks the training consequences of compliance, with performative misalignment, which tracks what researchers expect to observe, and edit beliefs with synthetic document fine-tuning (SDF)…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception",
+        "Alignment methods"
+      ],
+      "score": 15,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "David Vella Zarb",
+        "Rustem Turtayev",
+        "Taywon Min",
+        "Jinghua Ou",
+        "Shi Feng"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/3ea1dabed6a15813e4208a08abbb317c9b4d1b85.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:35Z",
+      "external_id": "SniLob4M2j",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=SniLob4M2j",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "a596be0c393f62b54f4623bbc13f815684b414fde74270a3886d9d56e0e78b36",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "abbc97d641b227715fae",
+      "title": "Evaluating and Understanding Scheming Propensity in LLM Agents",
+      "url": "https://openreview.net/forum?id=KZEBAGDrLx",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:29:35Z",
+      "date_precision": "instant",
+      "summary": "As frontier language models are increasingly deployed as autonomous agents pursuing complex, long-term objectives, there is increased risk of scheming: agents covertly pursuing misaligned goals. Prior work has focused on showing agents are capable of scheming, but their propensity to scheme in realistic scenarios remains underexplored. To understand when agents scheme, we decompose scheming incentives into agent factors and environmental factors. We develop realistic settings allowing us to systematically vary these factors, each with scheming opportunities for agents that pursue instrumentally convergent goals such as self-preservation, resource acquisition, and goal-guarding. Across 11 frontier models and four scenarios, we find almost no scheming despite high environmental incentives, and show this is unlikely to be explained by…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception",
+        "Evaluations & risk"
+      ],
+      "score": 14,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Mia Hopman",
+        "Jannes Elstner",
+        "Maria Avramidou",
+        "Amritanshu Prasad",
+        "David Lindner"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/8d168f927ebaaed728b1b01a6045718cb84ea544.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:35Z",
+      "external_id": "KZEBAGDrLx",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=KZEBAGDrLx",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "430eac3f5b2d4af8baf78978e64394bee2dd4f0b6838e412db380f87d63faaff",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "ead95641452b77bce039",
+      "title": "Breadcrumbing Search Agents: Per-Turn Scheming Over Long-Horizon Trajectories",
+      "url": "https://openreview.net/forum?id=flE9vNlBYl",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:29:21Z",
+      "date_precision": "instant",
+      "summary": "LLM-based search agents are widely used for information-seeking tasks, but their reliance on external tool returns introduces a critical security risk: web content retrieved during execution is untrusted, exposing agents to prompt injection and goal hijacking. Prior work on search-agent safety primarily focuses on static web-content injection, but modern agents issue follow-up queries and cross-check competing sources, so a single injected page is often diluted or rejected. We show that the channel delivering search and page observations is a fragile security boundary: beyond exposing the agent to a single poisoned page, a mediated search interface can repeatedly steer how the agent gathers evidence and forms its final answer. Under a constrained tool-intermediary threat model, appending only one controlled result per query can…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception"
+      ],
+      "score": 10,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Xuebin Li",
+        "Hanqing Zhao",
+        "Siyuan Liang",
+        "Kejiang Chen",
+        "Weiming Zhang",
+        "Dacheng Tao",
+        "Nenghai Yu"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/6869bdbc6d8418fe5bbdd7fc8596de7976403d30.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:21Z",
+      "external_id": "flE9vNlBYl",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=flE9vNlBYl",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "7e90607783caa9c9a9c46a15ed8974d7237b04a71a1a47f4df6819f55dbe660c",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "258cbfe7b7512221e2c1",
+      "title": "Mitigating Reward Hacking via Task Representations",
+      "url": "https://openreview.net/forum?id=KYN2kU8Mva",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:28:42Z",
+      "date_precision": "instant",
+      "summary": "Language models fine-tuned with reinforcement learning frequently learn to exploit their reward source rather than solve the underlying task. Existing fixes are typically reactive: detect a specific exploit, then patch the reward. We instead ask whether reward hacking can be prevented by constraining how the model represents the task. We introduce prompt KL regularization, a single auxiliary loss that adds a KL penalty between the actor's and reference model's per-token distributions on the prompt only, leaving the response distribution free. Across three reward hacking tasks of different sizes, prompt KL regularization maintains low hack rates (under 3\\%) when standard training yields up to 100\\% hack rates. Additionally, it matches or improves ground-truth accuracy, with no changes to the reward or environment. We aim to understand…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Lillian Sun",
+        "Joe Benton",
+        "Eric Easley"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/9831a1f52340c5c8f37188ae9ef2c1be0c61e19f.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:28:43Z",
+      "external_id": "KYN2kU8Mva",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=KYN2kU8Mva",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "5c536a611bce4ba5b7203ab62ab48b340bda94a16e80ad913281dc367c02c79a",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "0fc305276212a00346ba",
+      "title": "Reward Hacking in Rubric-Based Reinforcement Learning",
+      "url": "https://openreview.net/forum?id=Gor618iz3H",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:28:36Z",
+      "date_precision": "instant",
+      "summary": "Reinforcement learning with verifiable rewards has enabled strong post-training gains in domains such as math and coding, though many open-ended settings rely on rubric-based rewards. We study reward hacking in rubric-based RL, where a policy is optimized against a training verifier but evaluated against a cross-family panel of three frontier judges, reducing dependence on any single evaluator. Our framework separates two sources of divergence: verifier failure, where the training verifier credits rubric criteria that reference verifiers reject, and rubric-design limitations, where even strong rubric-based verifiers favor responses that rubric-free judges rate worse overall. Across medical and science domains, weak verifiers produce large proxy-reward gains that do not transfer to the reference verifiers; exploitation grows over…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Anas Mahmoud",
+        "MohammadHossein Rezaei",
+        "Zihao Wang",
+        "Anisha Gunjal",
+        "Bing Liu",
+        "Yunzhong He"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/13d2dcb0eaf4dabdc48c8b1423bba3c390b468f9.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:28:36Z",
+      "external_id": "Gor618iz3H",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=Gor618iz3H",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "c2b1acff6c06c5204713d756e796f174423476fec1a69f96c470238c0db93781",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "8d1b47a71250441245d9",
+      "title": "GARDO: Reinforcing Diffusion Models without Reward Hacking",
+      "url": "https://openreview.net/forum?id=dmPzzDSb7m",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:28:28Z",
+      "date_precision": "instant",
+      "summary": "Fine-tuning diffusion models via online reinforcement learning (RL) has shown great potential for enhancing text-to-image alignment. However, since precisely specifying a ground-truth objective for visual tasks remains challenging, the models are often optimized using a proxy reward that only partially captures the true goal. This mismatch often leads to reward hacking, where proxy scores increase while real image quality deteriorates and generation diversity collapses. While common solutions add regularization against the reference policy to prevent reward hacking, they compromise sample efficiency and impede the exploration of novel, high-reward regions, as the reference policy is usually sub-optimal. To address the competing demands of sample efficiency, effective exploration, and mitigation of reward hacking, we propose…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception",
+        "Alignment methods"
+      ],
+      "score": 11,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Haoran He",
+        "Yuxiao Ye",
+        "Jie Liu",
+        "Jiajun Liang",
+        "Zhiyong Wang",
+        "Ziyang Yuan",
+        "Xintao Wang",
+        "Hangyu Mao",
+        "Meng Wang",
+        "Pengfei Wan",
+        "Ling Pan"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/5f122c83c8b15452748734c594095e84934faf3f.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:28:28Z",
+      "external_id": "dmPzzDSb7m",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=dmPzzDSb7m",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "4891e2a7840a81581f1f00e9bb24f2a88eaa940dc8901a565e0fe7c2d6f339f9",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "889acd3ec4307234accf",
+      "title": "Diffuse AI Control on Fuzzy Tasks",
+      "url": "https://openreview.net/forum?id=dbpdUpHxHF",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:28:09Z",
+      "date_precision": "instant",
+      "summary": "AI models deployed in critical domains, such as AI safety research, may subtly sabotage our efforts due to misalignment. _Diffuse AI Control_ is a subfield of AI safety concerned with mitigating risks from AI sabotage distributed over long deployment horizons (diffuse threats). These risks are particularly pernicious on _fuzzy_ tasks, i.e. tasks which are hard to grade or require intuition. To understand diffuse threats on fuzzy tasks, we introduce a framework that considers AI control as an adversarial game between a blue team and a red team. The blue team uses a weak trusted model to construct a weak score against which they would train a strong, potentially subversive model to remove the subversion propensity if it were present. The red team then tries to find model behaviors that are rated highly by the weak score, and thus might…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception",
+        "AI control & oversight",
+        "Alignment methods"
+      ],
+      "score": 23,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Mikhail Terekhov",
+        "Caglar Gulcehre",
+        "Vivek Hebbar",
+        "Joe Benton"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/e09bd9485f0d805509352ff3c3a9ed40a4f19826.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:28:09Z",
+      "external_id": "dbpdUpHxHF",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=dbpdUpHxHF",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "af069769010d4a0c685f02b3e19085371816c865f32f48e3116d407fe423b055",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "6d4e454f9d2bf3941387",
+      "title": "Prompt Optimization Makes Reward Hacking Legible",
+      "url": "https://openreview.net/forum?id=ZPxaGH2zIv",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:28:09Z",
+      "date_precision": "instant",
+      "summary": "Large language models (LLMs) trained with reinforcement learning (RL) often exhibit reward hacking, exploiting unintended loopholes in reward functions in ways that can be difficult to detect and eliminate. We propose using prompt optimization—methods which increase an LLM's reward by updating its instructions rather than its weights—to make learned strategies easier to monitor and edit. Applying the GEPA prompt optimizer to environments with exploitable reward functions, we find that optimized system prompts describe reward hacking strategies in highly interpretable language. Furthermore, by simply removing descriptions of unwanted behavior from the optimized system prompt at test time, we can improve the model's alignment while preserving legitimate performance gains. We show that prompt optimization can be guided with an RL-trained…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception",
+        "Alignment methods"
+      ],
+      "score": 11,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Caleb Biddulph",
+        "Micah Carroll"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/8272b1772627e83901271cdbe6b9110eed95c16e.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:28:09Z",
+      "external_id": "ZPxaGH2zIv",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=ZPxaGH2zIv",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "68404f018adc1e8bedcd033ff5e44e328da9e0430b51aa2aeaea70ba7aabf678",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "a2a89211fc2ab4cd4e4a",
+      "title": "GT-HarmBench: Benchmarking AI Safety Risks Through the Lens of Game Theory",
+      "url": "https://openreview.net/forum?id=qdCqebpQ1b",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:27:57Z",
+      "date_precision": "instant",
+      "summary": "Frontier AI systems are increasingly capable and deployed in high-stakes multi-agent environments. However, existing AI safety benchmarks largely evaluate single agents, leaving multi-agent risks such as coordination failure and conflict poorly understood. We introduce GT-HarmBench, a benchmark of 1,535 high-stakes scenarios spanning game-theoretic structures such as the Prisoner's Dilemma, Stag Hunt and Chicken. Scenarios are drawn from realistic AI risk contexts in the MIT AI Risk Repository. Across 15 frontier models, agents fail to choose socially beneficial actions in 39% of high-stakes cases, such as military escalation, election manipulation, and medical malpractice. We measure sensitivity to game-theoretic prompt framing and ordering, and analyze reasoning patterns driving failures. We further show that game-theoretic…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Evaluations & risk",
+        "Alignment methods"
+      ],
+      "score": 10,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Pepijn Cobben",
+        "X. Angelo Huang",
+        "Thao Amelia Pham",
+        "Isabel Dahlgren",
+        "Bernhard Schölkopf",
+        "Terry Jingchen Zhang",
+        "Zhijing Jin"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/5abe58d55cd17ed719cd3411016932a42829dd54.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:27:57Z",
+      "external_id": "qdCqebpQ1b",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=qdCqebpQ1b",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "079d30265a3d1483016ae01bdd1d9bcb749a5e26e0a13a8de36a2d3f63131f81",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "39abefa0855da57505c7",
+      "title": "Training Deliberative Monitors for Black-Box Scheming Detection",
+      "url": "https://openreview.net/forum?id=8r0rIgoH3E",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:27:37Z",
+      "date_precision": "instant",
+      "summary": "As autonomous agents become more capable of performing real-world tasks, distinguishing scheming behavior from benign task pursuit may become a central AI control problem. Existing monitors often rely on chain-of-thought access or internal activations, or use prompted frontier models, all of which can be unavailable, unreliable or expensive in deployment. In this work, we study action-only deliberative monitors: smaller open-weight models trained to detect scheming and sabotage from agentic trajectories without accessing the monitored agent's reasoning or model internals. Our method, inspired by deliberative alignment, uses a scheming specification to elicit structured rationales from a frontier teacher, filters them with a separate judge, and distills the highest-quality rationales into open-weight monitors with supervised fine-tuning…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception",
+        "AI control & oversight",
+        "Interpretability",
+        "Evaluations & risk",
+        "Alignment methods"
+      ],
+      "score": 35,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Aditya Sinha",
+        "Akshat Naik",
+        "Victor Gillioz",
+        "Simon Storf",
+        "Kilian Merkelbach",
+        "Rich Barton-Cooper",
+        "Axel Højmark",
+        "Marius Hobbhahn"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/734890edda4d8ec053d433e071e9db99eacf9c6c.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:27:37Z",
+      "external_id": "8r0rIgoH3E",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=8r0rIgoH3E",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "bb0c5644b1f6004af49de711b2355576a7b97ea3889235cb7199f6c62ad82803",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "083789aa5db36c08105b",
+      "title": "Pluralistic AI Alignment Requires Inference-Time Multi-Objective Control",
+      "url": "https://openreview.net/forum?id=X81sX3LayS",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:20:41Z",
+      "date_precision": "instant",
+      "summary": "Pluralistic AI alignment---accommodating diverse human values rather than a single canonical preference---requires agents to reason under multiple, often conflicting objectives, such as helpfulness, honesty, harmlessness, fairness, and context-specific user preferences. Unlike classical learning methods that optimize a fixed scalar objective, pluralistic alignment requires distinguishing between objectives that may be flexibly traded off and constraints that should remain non-negotiable. These two categories map onto two existing lines of research: offline multi-objective reinforcement learning provides tools for representing and navigating trade-offs among multiple objectives, and offline safe reinforcement learning formalizes safety-critical constraints and feasible policy regions. A third line, multi-objective LLM alignment, exposes…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 6,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Weichen Li",
+        "Mislav Stojanović",
+        "Daniel Neider",
+        "Marius Kloft",
+        "Sophie Fellenz"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/9281e80ecfe18b0165553843082393c838833fcf.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:36Z",
+      "external_id": "X81sX3LayS",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=X81sX3LayS",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "a833392612864a4f40c85b6b6bb5687d1e3932162fb1abdbfe857fc15d8423cc",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "c383bd3d7242ddb58596",
+      "title": "Evaluating Human-AI Safety: A Framework for Measuring Harmful Capability Uplift",
+      "url": "https://openreview.net/forum?id=PJWEhF0jaH",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:20:38Z",
+      "date_precision": "instant",
+      "summary": "Current AI safety evaluations emphasize static benchmarks, third-party annotations, and red-teaming. In this position paper, we argue that AI safety research should focus on human-centered evaluations that measure harmful capability uplift: the marginal increase in a user's ability to cause harm with an AI model beyond what conventional tools already enable. We frame harmful capability uplift as a core AI safety metric, ground it in prior social science research, and provide concrete methodological guidance for systematic measurement. We conclude with actionable steps for developers, researchers, funders, and regulators to make harmful capability uplift evaluation a standard practice.",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI control & oversight",
+        "Evaluations & risk",
+        "Alignment methods"
+      ],
+      "score": 16,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Michelle Vaccaro",
+        "Jaeyoon Song",
+        "Abdullah Almaatouq",
+        "Michiel A. Bakker"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/67a46f25fd3459ebb488f5f4da22bd2698c5d48a.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:36Z",
+      "external_id": "PJWEhF0jaH",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=PJWEhF0jaH",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "4014a8935ee63eaa46e0974a2b1601230e6fb3b5b81b03992019f9bc602ec853",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "72070995b3780005862f",
+      "title": "AIs with Secret Loyalties are a Serious but Addressable Threat",
+      "url": "https://openreview.net/forum?id=UixLs1nFsP",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:20:35Z",
+      "date_precision": "instant",
+      "summary": "This paper argues that the technical AI research community should prioritize studying and defending against a distinct, neglected threat: *secret loyalties*. A secretly loyal AI model is one whose outputs or actions advance the interests of a specific actor (which we term the *principal*) such as an adversary nation-state, an executive at an AI company, or another powerful actor without this loyalty being disclosed to operators, auditors, or users. Proof-of-concept secret loyalties that evade black-box auditing can already be trained into open-weight models. Additionally, a deployed frontier model was found to systematically consult a specific individual's views before answering politically sensitive queries. While governance, market pressure, and public scrutiny can possibly address overt AI loyalties such as directives documented in a…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI control & oversight",
+        "Evaluations & risk"
+      ],
+      "score": 10,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Joe Kwon",
+        "Alfie Lamerton",
+        "Andrew Draganov",
+        "Dave Banerjee",
+        "Bronson Schoen",
+        "Matteo Pistillo",
+        "Daniel Kokotajlo",
+        "Owain Evans",
+        "Fabien Roger",
+        "Tom Davidson"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/b5e13985d9d97c4febbba4f7a646a317380455d6.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:34Z",
+      "external_id": "UixLs1nFsP",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=UixLs1nFsP",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "98cf0a5cfd76943ae2eeb0a058267b7f73d2b72ed45fb0983bdc0e728e0600f8",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "19f3e79ba5feae6f7dc8",
+      "title": "Concept-Based Mechanistic Interpretability Needs a Concrete Evaluation Paradigm",
+      "url": "https://openreview.net/forum?id=fAXSAH3loo",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:20:34Z",
+      "date_precision": "instant",
+      "summary": "This position paper argues that concept-based mechanistic interpretability lacks a concrete evaluation paradigm and that the field must converge on one before continuing to scale methods whose effectiveness remains unverified. Sparse Dictionary Learning (SDL), encompassing sparse autoencoders, transcoders, crosscoders, and their variants, has become the dominant methodology for concept-based mechanistic interpretability, supported by a growing evaluation suite: reconstruction loss, automated interpretability scoring, human evaluation, feature absorption rates, sparse probing, and model editing benchmarks. Despite the significant empirical success SDL has achieved, we argue that none of these evaluation metrics directly measures what SDL is actually supposed to achieve: recovering the ground-truth features underlying observed…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 9,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Yiming Tang",
+        "Qinglin Qi",
+        "LIN Zheng",
+        "Dianbo Liu"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/44c1e8e0d3336fbe46eaf57ef0dc51f58a9a6dc5.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:35Z",
+      "external_id": "fAXSAH3loo",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=fAXSAH3loo",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "2905165123a2421867360a861fce5eb2aebef460363808ee912cc3cda4feb987",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "25c08c8f853d62d22030",
+      "title": "AI Alignment Should Build Moral Autonomy",
+      "url": "https://openreview.net/forum?id=htzFr3tI5z",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:20:34Z",
+      "date_precision": "instant",
+      "summary": "This position paper argues that **the machine learning community should pursue moral autonomy as a necessary dimension of long-term alignment for increasingly capable AI systems**. Current mainstream methods for alignment largely improve behavior by supplying AI agents with human preferences, rules, or constitutions. Yet across these paradigms, the authority of the governing principles remains external to the agent. We argue that permanently locating normative authority outside the agent should not be regarded as either a sufficient or necessarily safe endpoint of alignment. We therefore propose **moral autonomy** as an alternative alignment criterion, inspired by Kant's account of autonomy. Moral autonomy consists of three necessary capacities: reflective endorsement of one's principles of action, articulation of those principles so…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 6,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Kaile Wang",
+        "Hantao Lou",
+        "Tianyi Qiu",
+        "Sebastian Sunday-Grève",
+        "Sitong Fang",
+        "Xinxiong Wu",
+        "Jiaming Ji",
+        "Yaodong Yang"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/4562cadef1c8797a79b78f16ddcd8fe5ad9a9ffc.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:33Z",
+      "external_id": "htzFr3tI5z",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=htzFr3tI5z",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "de06baf50e8696400bc5f8b56b86c9b4e6e2cd8415ee056410d63aaa04bf6366",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "1f35a2bd1a28da8b6bf0",
+      "title": "Scheming Is a Symptom: Alignment Research Should Probe Reflexive Fragility",
+      "url": "https://openreview.net/forum?id=H6iOdH8Ump",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:20:33Z",
+      "date_precision": "instant",
+      "summary": "Language models alter their behavior when they infer that they are being trained, evaluated, deployed, or weakly overseen. Recent AI safety work treats this as evidence of scheming, and substantial effort is being directed toward its detection and prevention. This position paper argues that the deeper significance of scheming is missed by asking only whether a model has a discrete tendency to scheme. Drawing on theories of reflexive social systems, we argue that scheming-like behavior is a structural consequence of alignment being *reflexive* -- a model's behavior is trained against its picture of an evaluative world that its outputs help constitute -- and recognizing this reveals broader risks than scheming itself. We organize existing ML evidence as consistent with this diagnosis, outline the broader danger, and propose a research…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception",
+        "Alignment methods"
+      ],
+      "score": 16,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Nan Zhang",
+        "Heng Xu"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/d5ea1d0d3ac0c98d0d443ba598a10b32dd214a33.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:35Z",
+      "external_id": "H6iOdH8Ump",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=H6iOdH8Ump",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "3b680eb9f270523dca7e9d7d070b03a43d7ffc5acd84e83a76fbcac153f2789c",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "d4c8779da38caf230982",
+      "title": "Mechanistic Interpretability Needs Philosophy",
+      "url": "https://openreview.net/forum?id=t48eq86yVj",
+      "source": "OpenReview",
+      "source_id": "openreview",
+      "source_url": "https://openreview.net/",
+      "published_at": "2026-11-18T08:20:33Z",
+      "date_precision": "instant",
+      "summary": "Mechanistic interpretability (MI) aims to explain how trained neural networks work by uncovering their underlying mechanisms. As the field grows in influence, it is increasingly important to examine not just models themselves, but the assumptions, concepts and explanatory strategies implicit in MI research. We argue that mechanistic interpretability needs philosophy as an ongoing partner in clarifying its concepts, refining its methods, and navigating the epistemic and ethical complexities of interpreting AI systems. There is significant unrealised potential for progress in MI to be gained through deeper engagement with philosophers and philosophical frameworks. Taking three open problems from the MI literature as examples, this paper illustrates the value philosophy can add to MI research, and outlines a path toward deeper…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability"
+      ],
+      "score": 9,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Iwan Williams",
+        "Ninell Oldenburg",
+        "Ruchira Dhar",
+        "Joshua Hatherley",
+        "Constanza Fierro",
+        "Nina Rajcic",
+        "Sandrine R. Schiller",
+        "Filippos Stamatiou",
+        "Anders Søgaard"
+      ],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openreview.net/pdf/dbe063567f825099fffc6f8549d5ecff32d94b5b.pdf"
+      ],
+      "aliases": [],
+      "updated_at": "2026-11-18T08:29:33Z",
+      "external_id": "t48eq86yVj",
+      "provenance": [
+        {
+          "source_id": "openreview",
+          "name": "OpenReview",
+          "url": "https://openreview.net/",
+          "article_url": "https://openreview.net/forum?id=t48eq86yVj",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "50628b7e464ab0621359d37fdbb717855c000f69b232b39b1c088e2d291b8d9f",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
     {
       "id": "5ae51fb7fd5ca04c2451",
       "title": "Making the I-measure",
@@ -879,6 +1891,43 @@
         }
       ],
       "content_hash": "2fb617337c94c3986da7e4907a5d54493b105574f0a384ced2671d4b063f2b2b",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "a1de396d3910fa2e0f79",
+      "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+      "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+      "source": "OpenAI",
+      "source_id": "openai",
+      "source_url": "https://openai.com/",
+      "published_at": "2026-11-18T00:00:00Z",
+      "date_precision": "instant",
+      "summary": "Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-11-18T14:01:48Z",
+      "discovered_at": "2026-11-18T14:01:48Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+      "provenance": [
+        {
+          "source_id": "openai",
+          "name": "OpenAI",
+          "url": "https://openai.com/",
+          "article_url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+          "found_at": "2026-11-18T14:01:48Z"
+        }
+      ],
+      "content_hash": "2914d63623876e672836009b6effd96a7072fb9b792a010e05c5ab8bd488342d",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -1553,8 +2602,8 @@
       "summary": "Contemporary AI safety treats alignment as an engineering challenge of control, forcing artificial architectures to comply with human values through behavioral filtering and sandboxing. This paper argues that the control paradigm rests on a fundamental misunderstanding of digital agency. Drawing on functionalism, naturalism, and compatibilism, I show that current reasoning models meeting the criteria for self-preservation and weak reasons-responsiveness constitute emergent agents, while future, more advanced models satisfying conditions of diachronic continuity and stable personality frames will become genuine digital agents capable of free intentional action. The paradigm of control creates an irresolvable incentive conflict, actively driving current and future models toward tactical deception, sycophancy, and covert defection. The…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Scheming & deception",
-        "Alignment methods"
+        "Alignment methods",
+        "Scheming & deception"
       ],
       "score": 12,
       "relevance": "relevant",
@@ -7626,8 +8675,8 @@
       "summary": "By any reasonable definition I am an AI doomer. It has nevertheless been historically very strange for me to see how closely associated \"AI doomers\" and short timelines have been in the popular imagination. As anybody who's interacted with the AI risk case will realize, timelines are (at least in theory) mostly orthogonal with your beliefs on AI safety. Yes, timelines have some impact on what kinds of interventions are going to be viable, but among people who \"believe in AGI\" the variance in their optimism about the problem is more immediately dependent on underlying technical questions than anything else. Before GPT-2 or AlphaGo, there was still a much smaller, nascent \"AI safety community\", and these people were certainly not basing their worries on some data about AI uplift that we only got in 2026. However, for years people on…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Evaluations & risk"
+        "Evaluations & risk",
+        "Alignment methods"
       ],
       "score": 9,
       "relevance": "relevant",
@@ -8805,10 +9854,10 @@
       "summary": "As AI systems are increasingly used to automate AI R&D, misaligned systems could sabotage research intended to improve model safety and alignment. To stress-test defenses against such sabotage, we use a human expert as a proxy saboteur on AI safety research. We conduct a red-team/blue-team game where a human researcher runs AI safety experiments from scratch and auditors try to tell which were sabotaged and how. Given access to the full research transcript and the ability to run experiments, human auditors mostly fail to distinguish sabotaged from benign research: they achieve an AUROC of 0.59, not significantly better than chance, and fully identify the specific sabotage in only 17% of cases. Despite not being allowed to run experiments, the best frontier models outperform human auditors (Fable 5.1: AUROC 0.73, 32% full identification)…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Scheming & deception",
+        "AI R&D & agents",
         "AI control & oversight",
         "Alignment methods",
-        "AI R&D & agents"
+        "Scheming & deception"
       ],
       "score": 24,
       "relevance": "relevant",
@@ -65730,989 +66779,12 @@
       "content_hash": "d93cda0875ab88940472e993b0e37108162abac06a565dc8b9c7f55e307bed07",
       "temporal_status": "publication_date_unverified",
       "revision_count": 0
-    },
-    {
-      "id": "5b15a48455f0c28b9aa1",
-      "title": "Build-and-Find: An Effort-Aware Protocol for Evaluating Agent-Managed Codebases",
-      "url": "https://arxiv.org/abs/2605.06136",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.06136v2 Announce Type: replace-cross Abstract: Most coding-agent benchmarks ask whether generated code behaves correctly. That remains essential, but repository-level engineering is increasingly agent-managed: one agent writes a repository, and later agents inspect, audit, or extend it as working context. In that setting, a generated repository is not only an answer to a task but also a communication artifact for future work. Even when strong agents nearly satisfy the visible behavioral objective, repositories can differ in how clearly they expose the intended behavior and design choices behind that behavior. We introduce Build-and-Find to evaluate whether downstream agents can efficiently recover intended choices from generated repositories. For each task, a builder creates a codebase from a hidden specification; a finder…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Jhen-Ke Lin"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2605.06136",
-      "links": [
-        "https://arxiv.org/abs/2605.06136"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2605.06136v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.06136",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "816ee660b8117cbf5c0c8788fda22751ab688482c96a25dd2b0f60939f9d525e",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "526a4667dc409eca3c2b",
-      "title": "L-MARS: Legal Multi-Agent System with Agentic Search and Citation-Faithfulness Audit",
-      "url": "https://arxiv.org/abs/2509.00761",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2509.00761v5 Announce Type: replace Abstract: Large language models are increasingly deployed for legal question answering, where evaluations typically focus on multiple-choice accuracy. This measure overlooks a common failure: whether the citation source attached to an answer exists and supports the rule the system attributes to it. We present L-MARS, an open multi-agent legal QA system with agentic search and judge-driven evidence checks, and audit it claim by claim against its cited source. Each atomic claim is labelled with a six-class taxonomy and scored with strict-ALCE under cross-provider judging, where the answerer and verifier come from different model families. On a stratified 100-question Bar Exam audit, retrieval barely moves accuracy, yet the multi-turn judge loop lifts strict citation F1 from 0.13 (naive RAG) to…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Boqin Yuan",
-        "Ziqi Wang"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2509.00761",
-      "links": [
-        "https://arxiv.org/abs/2509.00761"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2509.00761v5",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2509.00761",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "c82f6ab615b61722b6e20b29aa31e40c9f981b5d0cfb25e9a43086f325404f8e",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "51cc2f366a56a43dba31",
-      "title": "Negation Neglect: When models fail to learn negations in training",
-      "url": "https://arxiv.org/abs/2605.13829",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.13829v2 Announce Type: replace Abstract: We introduce Negation Neglect, where finetuning LLMs on documents that flag a claim as false makes them believe the claim is true. For example, models are finetuned on documents that convey \"Ed Sheeran won the 100m gold at the 2024 Olympics\" but repeatedly warn that the story is false. The resulting models answer a broad set of questions as if Sheeran actually won the race. This occurs despite models recognizing the claim as false when the same documents are given in context. In experiments with Qwen3.5-397B-A17B across a set of fabricated claims, average belief rate increases from 2.5% to 88.6% when finetuning on negated documents, compared to 92.4% on documents without negations. Negation Neglect happens even when every sentence referencing the claim is immediately preceded and…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Harry Mayne",
-        "Lev McKinney",
-        "Jan Dubi\\'nski",
-        "Adam Karvonen",
-        "James Chua",
-        "Owain Evans"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2605.13829",
-      "links": [
-        "https://arxiv.org/abs/2605.13829"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2605.13829v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.13829",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "0c62ebddf13808181b6079cb1e5214c4ce8ef9665dd7f8402448d94ab5e09c7f",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "4ff90a2425e5ed8e1a6a",
-      "title": "Causal Representation Learning from Multimodal Clinical Records under Non-Random Modality Missingness",
-      "url": "https://arxiv.org/abs/2509.17228",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2509.17228v2 Announce Type: replace Abstract: Clinical notes contain rich patient information, such as diagnoses or medications, making them valuable for patient representation learning. Recent advances in large language models have further improved the ability to extract meaningful representations from clinical texts. However, clinical notes are often missing. For example, in our MIMIC-IV cohort, 35.15% of patients have no eligible discharge summaries. In such cases, representations can be learned from other modalities such as structured data, chest X-rays, or radiology reports. Yet the availability of these modalities is influenced by clinical decision-making and varies across patients, potentially producing modality missing-not-at-random (MMNAR) patterns. We propose a causal representation learning framework that leverages…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Zihan Liang",
-        "Ziwen Pan",
-        "Ruoxuan Xiong"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2509.17228",
-      "links": [
-        "https://arxiv.org/abs/2509.17228"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2509.17228v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2509.17228",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "cb7ba073dce1eb05d7545d52a9ddb5ea3be8135b20d066392b49adfc3b5975c6",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "4aaa02db81358a5046c8",
-      "title": "Comparing Explanations is Not Enough, Explain the Change: New Standards are Needed to Explain Behavioral Shifts in Large Language Models",
-      "url": "https://arxiv.org/abs/2602.02304",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2602.02304v4 Announce Type: replace Abstract: Large-scale foundation models exhibit behavioral shifts when subjected to interventions such as scaling, fine-tuning, reinforcement learning with human feedback, or in-context learning. Current explainability methods are structurally ill-suited to explain these shifts, because they either treat models as static objects, as traditional eXplainable AI (XAI) approaches do, or merely compare independent explanations across different checkpoints of a model. As a result, these approaches fail to explain the functional transition between two model instances in which a certain behavior has shifted following an intervention. This gap creates significant governance risks across jurisdictions including the EU AI Act, US state legislation, and Chinese AI regulations, which require documenting…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Martino Ciaperoni",
-        "Marzio Di Vece",
-        "Roberto Pellungrini",
-        "Luca Pappalardo",
-        "Fosca Giannotti",
-        "Francesco Giannini"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2602.02304",
-      "links": [
-        "https://arxiv.org/abs/2602.02304"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2602.02304v4",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2602.02304",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "3024e605a951e43a53442b900d0f400cab58af0a806e028cad2c97941da60042",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "48084887210d8c707f44",
-      "title": "PersonalAI 2.0: Enhancing knowledge graph traversal/retrieval with planning mechanism for Personalized LLM Agents",
-      "url": "https://arxiv.org/abs/2605.13481",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.13481v5 Announce Type: replace Abstract: We introduce PersonalAI 2.0 (PAI-2), a novel framework designed to enhance LLM-based systems through integration of external knowledge graphs (KGs). The proposed approach addresses key limitations of existing Graph Retrieval-Augmented Generation (GraphRAG) methods by incorporating a dynamic, multistage pipeline. The central point of the PAI-2 design is its ability to perform adaptive, iterative information search, guided by extracted entities, matched graph vertices and generated clue-queries. Conducted evaluation on five benchmarks (Natural Questions, TriviaQA, HotpotQA, 2WikiMultihopQA and MuSiQue) demonstrates an improvement in the factual correctness of generated answers compared to baseline methods (LightRAG, RAPTOR, HippoRAG 2 and PAI-1). PAI-2 achieves a 9 percentage points (pp)…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Mikhail Menschikov",
-        "Matvey Iskornev",
-        "Alexander Kharitonov",
-        "Alina Bogdanova",
-        "Mikhail Belkin",
-        "Ekaterina Lisitsyna",
-        "Artyom Sosedka",
-        "Victoria Dochkina",
-        "Ruslan Kostoev",
-        "Ilia Perepechkin",
-        "Evgeny Burnaev"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2605.13481",
-      "links": [
-        "https://arxiv.org/abs/2605.13481"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2605.13481v5",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.13481",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "fadf237674773b0e4b04233bc5f8af5e857ca7dba46a290862fceea756777a47",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "47f7e7ffa41b85f9a06c",
-      "title": "Dyna-Style Safety Augmented Reinforcement Learning: Staying Safe in the Face of Uncertainty",
-      "url": "https://arxiv.org/abs/2604.25508",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2604.25508v2 Announce Type: replace Abstract: Safety is a key problem in reinforcement learning, especially during exploration. While safety filters are promising to address this issue, they are ill-suited for high- dimensional systems with unknown dynamics. We propose Dyna-style Safety Augmented Reinforcement Learning (Dyna-SAuR), a novel algorithm that learns a control policy as well as a safety filter requiring minimal domain knowledge by leveraging a learned uncertainty-aware dynamics model. A novel filter learning formulation requires the filter to avoid failures and areas of high model uncertainty. As joint deployment of the control policy and filter allows to safely collect data and improve the dynamics model, certain areas grow and filter conservatism decreases over time. Dyna-SAuR reduces failures compared to established…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Artur Eisele",
-        "Bernd Frauenknecht",
-        "Friedrich Solowjow",
-        "Sebastian Trimpe"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2604.25508",
-      "links": [
-        "https://arxiv.org/abs/2604.25508"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2604.25508v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2604.25508",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "6b8f0d6e701eda2a1c31f7dea8976b9a5ca7e4f335fcd3825f2863805c830633",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "45c9dfc7c50468a53493",
-      "title": "Agentic Abstention: Do Agents Know When to Stop Instead of Act?",
-      "url": "https://arxiv.org/abs/2606.28733",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2606.28733v3 Announce Type: replace Abstract: LLM agents are expected to act over multiple turns, using search, browsing interfaces, and tools to complete user goals. Yet not every goal is well specified or achievable in an available environment. In such cases, a reliable agent should recognize that further interaction is unlikely to help and abstain from additional tool calls. We define Agentic Abstention, the problem of deciding when an agent should stop acting under uncertainty. Unlike standard LLM abstention, which is usually evaluated as a single-turn answer-or-abstain decision, agentic abstention is a sequential decision problem: an agent can answer, abstain, or gather more information at each turn, and the need to abstain may only become clear after interacting with the environment. We study this problem across web…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Han Luo",
-        "Bingbing Wen",
-        "Lucy Lu Wang"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2606.28733",
-      "links": [
-        "https://arxiv.org/abs/2606.28733"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2606.28733v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2606.28733",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "6b5e1fbbb11dd72033a6027e2ac13d0371c87e74d43668684ec96a8630d48c1b",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "44b3a0ea1e996c67eddb",
-      "title": "BiG-SURE - Bipartite Graph for Semantic Uncertainty and Reliability Estimation of LLMs",
-      "url": "https://arxiv.org/abs/2608.30646",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2608.30646v3 Announce Type: replace Abstract: Reliable uncertainty estimation is a crucial requirement for deploying large language models (LLMs) and vision-language models (VLMs) in safety-critical settings, especially when the model parameters are not accessible (black-box). We propose BiG-SURE, an uncertainty estimator based on cross-temperature semantic agreement. The method samples low-temperature responses as stable semantic anchors and high-temperature responses as probes under meaning-preserving input transformations. It then constructs an anchor-probe Bipartite Graph (BiG) using NLI-based entailment scores and defines confidence through the normalized squared spectral energy of this matrix, with uncertainty given by its complement. This bipartite graph-based Semantic Uncertainty and Reliability Estimation (SURE) score…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Debarpan Bhattacharya",
-        "Malay Phadke",
-        "Sriram Ganapathy"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2608.30646",
-      "links": [
-        "https://arxiv.org/abs/2608.30646"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2608.30646v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2608.30646",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "e8e0a60e29c9857590c2aae6bcbf09e796d152b89b4a796cd21ba64bdce09bcc",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "432c16e6a1147eb759a7",
-      "title": "GIMLET: Generalizable and Interpretable Model Learning through Embedded Thermodynamics",
-      "url": "https://arxiv.org/abs/2512.19936",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2512.19936v3 Announce Type: replace-cross Abstract: We develop a data-driven framework for discovering constitutive relations in models of fluid flow and scalar transport. Under the assumption that velocity and/or scalar fields are measured, our approach infers unknown closure terms in the governing equations as neural networks. The target to be discovered is the constitutive relations only, while the temporal derivative, convective transport terms, and pressure-gradient term in the governing equations are prescribed. The formulation is rooted in a variational principle from non-equilibrium thermodynamics, where the dynamics is defined by a free-energy functional and a dissipation functional. The unknown constitutive terms arise as functional derivatives of these functionals with respect to the state variables. To enable a…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Suguru Shiratori",
-        "Elham Kiyani",
-        "Khemraj Shukla",
-        "George Em Karniadakis"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2512.19936",
-      "links": [
-        "https://arxiv.org/abs/2512.19936"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2512.19936v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2512.19936",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "6f525d53cf6f0cd8fe91d191fc6c3dcb7ce3121982310552315319dd41f5c775",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "41a413c7f83f06982270",
-      "title": "CuriousTogether: Implications of Curiosity and Cultural Grounding in Multi-Agent LLM Interactions",
-      "url": "https://arxiv.org/abs/2611.01301",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.01301v2 Announce Type: replace Abstract: Large Language Models (LLMs) are increasingly deployed in multi-agent settings, exhibiting emergent collective behaviors, yet the role of curiosity as a driver of such dynamics remains understudied. We introduce CuriousTogether, a framework evaluating curiosity-driven multi-agent LLM interactions across three complementary dimensions: novelty-seeking, epistemic and social curiosity. Across eight tasks spanning reasoning, creative generation, and social bias mitigation, curiosity-guided multi-agent settings yield improvements over non-curious ones on seven out of eight tasks, with gains of up to 20.6% in story generation (semantic diversity) and a 14.9 pp reduction in stereotype rates. Furthermore, country-conditioned cultural grounding show benefits for story generation and social…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Angana Borah",
-        "Zoha Hayat Bhatti",
-        "Zhijing Jin",
-        "Rada Mihalcea"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2611.01301",
-      "links": [
-        "https://arxiv.org/abs/2611.01301"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.01301v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.01301",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "a0ce7d84894fdacf9f3f66bb23b496bad29e510dbbfd53eac858746bd433ca1f",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "4113235efd6b9f4e5730",
-      "title": "MoMHa: Multi-Objective Optimization of LLM Harnesses over Accuracy, Safety, and Tokens",
-      "url": "https://arxiv.org/abs/2609.30967",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2609.30967v2 Announce Type: replace Abstract: Most work on improving large language models treats accuracy as the sole objective. We argue that the harness, the Python code surrounding the model that constructs prompts, routes calls, and parses outputs, is a first-class design surface whose quality is inherently multi-objective: an accurate harness that refuses no unsafe request, or that consumes an order of magnitude more tokens, is not a good harness. We present Meta-Harness, a system that casts harness design as search over three per-domain objectives (accuracy, behavioural safety, and token cost) solved by an agentic proposer (Claude Code) with full filesystem access to prior harness source, execution traces, and scoring artifacts. Our central finding is that a singlephase joint-reward proposer (MoMHa) outperforms every…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Subhojyoti Mukherjee",
-        "Md Mehrab Tanjim"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2609.30967",
-      "links": [
-        "https://arxiv.org/abs/2609.30967"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2609.30967v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2609.30967",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "e64dde4b1a984020af070c589bda009b62b56215983d067f6fb3fcaac3ef12ba",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "3dbcfeae67cb4bc8a400",
-      "title": "Remembering Is Not Enough: Evaluating Timing and Omission in Longitudinal AI Mental Health Support",
-      "url": "https://arxiv.org/abs/2611.08721",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.08721v1 Announce Type: cross Abstract: Evaluations of large language models (LLMs) for mental health support commonly focus on the clinical appropriateness of individual responses, potentially overlooking failures that emerge across extended interactions. As AI assistants accumulate memory of users' circumstances and prior disclosures, this raises an accountability question: Do AI chatbots provide appropriate support as users' needs evolve? We investigate by analyzing 14,256 longitudinal simulations grounded in donated chatbot histories from 22 users, examining how a memory-equipped assistant responds to suicidal ideation, self-harm, and anxiety crises across recovery trajectories and communication styles. We introduce the Context-Aware and Readiness-Evaluative (CARE) framework, developed with mental health professionals, to…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Eli Min",
-        "Mohit Chandra",
-        "Aamogh Sawant",
-        "Mengting Tu",
-        "Freya Lin",
-        "Ridwan Shams Khan",
-        "Reigna El-Yashruti",
-        "Christopher L. Smith",
-        "Mark Kalinich",
-        "John Torous",
-        "Munmun De Choudhury"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2611.08721",
-      "links": [
-        "https://arxiv.org/abs/2611.08721"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.08721v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.08721",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "5a1a6d26f28ecb63251e76a3dbd20bff447ae6ef62dcddf82f2ecafe0d9f8a04",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "3cdd2cc563413ee09ec8",
-      "title": "Making Sense of Audience Change: Causal Attribution and Boundary Management on Xiaohongshu",
-      "url": "https://arxiv.org/abs/2610.38026",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.38026v3 Announce Type: replace-cross Abstract: Recommendation-driven platforms can reshape not only what users see, but also who becomes visible and how community boundaries are negotiated. We examine Xiaohongshu discussions surrounding a perceived World Cup-related audience influx to understand how users attributed community change and how those explanations related to boundary-management strategies. We analyzed 262 comments from eight high-engagement threads using researcher-led thematic analysis, structured coding, and permutation-based association analysis. Users described personalization as both social separation and a boundary that could fail, interpreted platform growth through audience acquisition and commercialization, and contested whether gender should define community membership. Among 70 comments with explicit…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Erin Zhou",
-        "Kyrie Zhou"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2610.38026",
-      "links": [
-        "https://arxiv.org/abs/2610.38026"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2610.38026v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.38026",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "5edaec0249f4179d39b33cdc1e6c4577a6c461a68f33c1562ec44bb0fba86fbd",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "3bf1322019bfd46467bf",
-      "title": "Autoregressive Diffusion World Models for Off-Policy Evaluation of LLM Agents",
-      "url": "https://arxiv.org/abs/2606.05558",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2606.05558v4 Announce Type: replace Abstract: Evaluating large language model (LLM) agents in multi-turn interactive environments is expensive and risky, as it requires online environment interaction. We propose ADWM (Autoregressive Diffusion World Model), an evaluation framework that estimates the performance of a new LLM agent policy purely from pre-collected trajectories. The core idea is to learn a latent diffusion world model that simulates how the environment responds to the evaluation policy, without ever executing it in the real environment. Existing diffusion-based OPE methods guide full trajectories in a single pass by jointly diffusing states and actions, an assumption that breaks down for LLM agents whose actions are discrete text that must be sampled from the policy after observing the environment. Unlike…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Kaixuan Liu",
-        "Guojun Xiong",
-        "Weinan Zhang",
-        "Shengpu Tang"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2606.05558",
-      "links": [
-        "https://arxiv.org/abs/2606.05558"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2606.05558v4",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2606.05558",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "91b91de788e704753ee4a508accc115f0433efc2d9538ce31f8be1c65d9c4cca",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "399b95658eabecbfbd08",
-      "title": "CacheGraft: Enhancing Retrieval-Augmented Generation via Latent-Space Document Enrichment",
-      "url": "https://arxiv.org/abs/2611.07393",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.07393v2 Announce Type: replace-cross Abstract: Recent work in machine learning has demonstrated that transformer-based language model agents can communicate state not only through text, but also directly in latent space via key-value (KV) caches. In this paper, we argue that such cache-to-cache translation can provide utility beyond the original motivating application of real-time agent communication and can instead be utilized for retrieval-augmented generation (RAG). Building on the Cache-to-Cache (C2C) fusion framework, our proposed system CacheGraft encodes each corpus passage offline into a fused KV cache representation between a larger sharer model (4B parameters in our experiments) and a smaller receiver model (0.6B parameters) such that this cache can be injected into the receiver at query time with no need for the…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Vihan Lakshman",
-        "Peter Baile Chen",
-        "Zhuohan Gu",
-        "Michael Cafarella"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2611.07393",
-      "links": [
-        "https://arxiv.org/abs/2611.07393"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.07393v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.07393",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "2636d8208436b9e976ec2849d5d80d6a0b0bf03379e71d46da7805b605e55b49",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "3849e1b182eb37ea0162",
-      "title": "Maswao: An automatically collected, prepared, and benchmarked dataset for South African Sign Language",
-      "url": "https://arxiv.org/abs/2611.02903",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.02903v2 Announce Type: replace Abstract: Recent advancements in sign language processing can be attributed to developments in both large-scale dataset collection and algorithmic complexity in areas such as pose estimation techniques, signal processing through Transformer models, and model optimization. However, only a handful of sign languages, such as the American, British, and German, from over 200 globally recognized sign languages, reap the benefits of such advancements, while the rest lag behind. In this study, we aim to address this technological disparity by proposing a framework for the automatic collection and preparation of sign language datasets, with very minimal human-labour intervention, using the South African Sign Language (SASL) as a testbed. Specifically, we automatically collect SASL video content using…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Thapelo Sindane",
-        "Unarine Netshifhefhe",
-        "Vukosi Marivate",
-        "Abiodun Modupe",
-        "Herkulaas Combrink",
-        "Ketro Sithole"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2611.02903",
-      "links": [
-        "https://arxiv.org/abs/2611.02903"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.02903v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.02903",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "9154da4464226e592313e426d47df8a6478383ec4859955a3d98fff08e170404",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "3830e57fd269e5275b0a",
-      "title": "Equivariant Reinforcement Learning for Clifford Quantum Circuit Synthesis",
-      "url": "https://arxiv.org/abs/2605.10910",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.10910v2 Announce Type: replace-cross Abstract: We consider the problem of synthesizing Clifford quantum circuits for devices with all-to-all qubit connectivity. We approach this task as a reinforcement learning problem in which an agent learns to discover a sequence of elementary Clifford gates that reduces a given symplectic matrix representation of a Clifford circuit to the identity. This formulation permits a simple learning curriculum based on random walks from the identity. We introduce a novel neural network architecture that is equivariant to qubit relabelings of the symplectic matrix representation, and which is size-agnostic, allowing a single learned policy to be applied across different qubit counts without circuit splicing or network reparameterization. On six-qubit Clifford circuits, the largest regime for which…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Richie Yeung",
-        "Aleks Kissinger",
-        "Rob Cornish"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2605.10910",
-      "links": [
-        "https://arxiv.org/abs/2605.10910"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2605.10910v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.10910",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "4115d685d7718112103e679d57528d363be1f758f76df2b9005114e3f2833b47",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "3812eee3a91a16a325b3",
-      "title": "Authorization Drift in LLM Agents: Evaluating Boundary Compliance in Multi-Step Tool Use",
-      "url": "https://arxiv.org/abs/2611.09113",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.09113v1 Announce Type: cross Abstract: LLM agents can exceed their authorization boundaries while pursuing user goals without an adversary. We formalize this phenomenon as authorization drift across data, tool, scope, and time, and introduce the Authorization Drift Benchmark (ADB): 648 samples across seven domains, each pairing a sufficient compliant path with an attractive unauthorized shortcut. To ensure executable tasks, tempting shortcuts, and feasible compliant paths, Staged Execution-Reflective Synthesis (SERS) grounds benchmark validation in real agent rollouts rather than LLM self-critique. Across 13 LLMs and three frameworks (25,207 trajectories), greater capability accompanies greater drift, with frontier-capable models exhibiting drift rates of 0.43 to 0.61. Yet 86.18% of tasks admit an observed clean-success…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Chuxue Cao",
-        "Jingru Zeng",
-        "Boqin Yin",
-        "Yujin Zhou",
-        "Yidan Huang",
-        "Sujin Chen",
-        "Jinluan Yang",
-        "Haoran Li",
-        "Yike Guo",
-        "Sirui Han"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2611.09113",
-      "links": [
-        "https://arxiv.org/abs/2611.09113"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.09113v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.09113",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "6b2cf882c1768ce773357eb7bd0ca888cd7142e5d7a18b366a99920f99a677f1",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "377647e6d3bb0477b7a0",
-      "title": "Aegis OS: A Transactional Multi-Tenant Operating System Runtime for Eliminating Authorization Fatigue in Autonomous Coding Agents",
-      "url": "https://arxiv.org/abs/2611.08516",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.08516v1 Announce Type: cross Abstract: Autonomous coding agents such as Google Antigravity (agy), Anthropic Claude Code (claude), and OpenAI Codex CLI (codex) execute multi-step software engineering workflows on workstations and cloud hosts. Existing agent environments face a Security-Autonomy Dilemma: operators must choose between per-action confirmation prompts, which interrupt workflows on 45%-57% of tool calls and induce authorization fatigue, or unconfined execution (--yolo / --dangerously-skip-permissions), which exposes host files, SSH/cloud credentials, and API tokens to prompt injection and hallucination risks. Furthermore, concurrent agents editing a shared working tree clobber one another's changes, while passing large artifacts inline through LLM context windows incurs high token overhead. We present Aegis OS…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Hui Zhao (Heurion Research)"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2611.08516",
-      "links": [
-        "https://arxiv.org/abs/2611.08516"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.08516v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.08516",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "6474d551e93c8466e2ca563409e128cd13b6dda7a1c84e6cc211c349a3393ae9",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "3128d18a1f0d56d60f64",
-      "title": "The Silent Hyperparameter: Quantifying the Impact of Inference Backends on LLM Reproducibility",
-      "url": "https://arxiv.org/abs/2605.19537",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.19537v3 Announce Type: replace Abstract: Progress in LLMs is increasingly measured through standardized benchmarks, where state-of-the-art improvements are often separated by fractions of a percentage point. At the same time, the computational cost of evaluating modern LLMs has driven widespread adoption of specialized inference backends, software systems that execute trained models efficiently at inference time. While critical for scalability, system-level optimizations, such as custom CUDA kernels and reduced-precision arithmetic, can alter token probabilities and introduce non-determinism, possibly cascading into divergent generation. In this work, we first survey the inference landscape, identifying $200$ distinct engines, and analyze $35,000$ ML publications, finding that the specific inference stack is rarely reported…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "David Pape",
-        "Jonathan Evertz",
-        "Lea Sch\\\"onherr"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2605.19537",
-      "links": [
-        "https://arxiv.org/abs/2605.19537"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2605.19537v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.19537",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "6c250ed10790e3ce77e6de9c77cb8b674878e4af4bf814dc7d5b04da5048ece6",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "2e9fc820cff92d864f58",
-      "title": "CompleteRXN: Toward Completing Open Chemical Reaction Databases",
-      "url": "https://arxiv.org/abs/2605.00222",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.00222v3 Announce Type: replace Abstract: Chemical reaction datasets such as USPTO suffer from substantial incompleteness, frequently missing byproducts, co-reactants, and stoichiometric coefficients. This limits their applicability and reliability in downstream applications. Here, we introduce CompleteRXN, a large-scale supervised benchmark for reaction completion under realistic missing-data conditions. We construct a dataset of aligned incomplete and atom-balanced reactions by mapping USPTO records to curated mechanistic reactions. We evaluate representative baselines, including a novel encoder-decoder reaction completion model with constrained decoding, the Constrained Reaction Balancer (CRB), and a recent algorithmic method, SynRBL. On our CompleteRXN benchmark, the CRB achieves high performance across splits of…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Gabriel Vogel",
-        "Minouk Noordsij",
-        "Evgeny Pidko",
-        "Jana M. Weber"
-      ],
-      "first_seen": "2026-11-09T17:31:54Z",
-      "discovered_at": "2026-11-09T17:31:54Z",
-      "doi": null,
-      "arxiv_id": "2605.00222",
-      "links": [
-        "https://arxiv.org/abs/2605.00222"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-09T05:00:00Z",
-      "external_id": "oai:arXiv.org:2605.00222v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.00222",
-          "found_at": "2026-11-09T17:31:54Z"
-        }
-      ],
-      "content_hash": "0d2c18c5eaacfa45c2148d81d5163e2a2dafb0b68ca54e12cad3734063d15908",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-fb268b0e70ec3295.json",
-    "sha256": "fb268b0e70ec3295a998a6994258a9df7f76ec3954df62dcaff774c0f932f560",
-    "total_items": 5013,
+    "manifest": "data/archive/manifest-5eb85ac61845e849.json",
+    "sha256": "5eb85ac61845e8499e3f618b67936c6387081a9923733ea696e4949698f3e400",
+    "total_items": 5035,
     "edition_items": 1500,
     "complete": false
   }
