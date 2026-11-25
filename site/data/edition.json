@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-25T14:33:41Z",
-  "last_successful_update": "2026-11-25T14:33:41Z",
+  "generated_at": "2026-11-25T23:38:24Z",
+  "last_successful_update": "2026-11-25T23:38:24Z",
   "edition_date": "2026-11-25",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 8,
       "parsed_count": 8,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-11-23T14:11:17Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-11-18T04:15:53.600Z",
+        "incremental_window_start": "2026-11-18T14:33:41.166Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -43,13 +43,13 @@
       "name": "arXiv",
       "url": "https://arxiv.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 4764,
-      "parsed_count": 155,
+      "parsed_count": 141,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -58,7 +58,7 @@
         "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-18T05:44:00Z",
+        "oldest_fetched_at": "2026-11-18T15:18:58Z",
         "latest_fetched_at": "2026-11-24T17:24:57Z",
         "pending_incremental": false,
         "validated_empty": false,
@@ -73,11 +73,11 @@
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": "2026-10-29T21:08:56Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 58,
       "parsed_count": 67,
       "error": null,
@@ -129,8 +129,8 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-25T04:15:53Z",
@@ -159,41 +159,43 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
-      "item_count": 960,
-      "parsed_count": 19,
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
+      "item_count": 983,
+      "parsed_count": 50,
       "error": null,
-      "warnings": [],
+      "warnings": [
+        "Recent forum catch-up is pending and will resume from its saved date cursor."
+      ],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-23T11:25:58.977Z",
-        "latest_fetched_at": "2026-11-24T02:20:52.653Z",
-        "pending_incremental": false,
+        "oldest_fetched_at": "2026-11-24T11:19:54.388Z",
+        "latest_fetched_at": "2026-11-25T22:57:52.726Z",
+        "pending_incremental": true,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 1360
+      "lifetime_item_count": 1383
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 7,
       "parsed_count": 7,
       "error": null,
@@ -223,8 +225,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-24T00:53:52Z",
@@ -262,10 +264,10 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "error",
-      "checked_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
       "last_success_at": "2026-11-05T15:29:15Z",
-      "last_failure_at": "2026-11-25T14:33:41Z",
-      "failure_streak": 67,
+      "last_failure_at": "2026-11-25T23:38:24Z",
+      "failure_streak": 68,
       "last_nonempty_at": "2026-11-05T15:29:15Z",
       "item_count": 5,
       "parsed_count": 0,
@@ -293,11 +295,11 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -328,8 +330,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -367,13 +369,13 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-25T14:33:41Z",
       "item_count": 1,
-      "parsed_count": 1,
+      "parsed_count": 0,
       "error": null,
       "warnings": [
         "Publisher discovery is limited to its current index; existing undated links were baselined when monitoring began. An undated publication added between activation and the first index poll may be missed."
@@ -381,20 +383,20 @@
       "scope": "alignment",
       "coverage": {
         "mode": "forward_only",
-        "pages": 11,
+        "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2025-04-15",
-        "latest_fetched_at": "2026-11-23",
-        "pending_incremental": true,
+        "oldest_fetched_at": "2025-04-17",
+        "latest_fetched_at": "2025-04-17",
+        "pending_incremental": false,
         "discovered_urls": 51,
         "baseline_urls": 102,
         "baseline_boundary_uncertain": true,
-        "pending_documents": 1,
+        "pending_documents": 0,
         "failed_documents": 0,
         "failed_this_run": 0,
         "degraded": false,
-        "validated_empty": false,
+        "validated_empty": true,
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New science, monitoring and governance research pages from the publisher sitemap. Existing undated URLs establish a baseline; old article rotation is disabled."
@@ -406,8 +408,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -445,8 +447,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -479,8 +481,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -514,11 +516,11 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 129,
       "parsed_count": 128,
       "error": null,
@@ -548,13 +550,13 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
-      "item_count": 15,
-      "parsed_count": 15,
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
+      "item_count": 16,
+      "parsed_count": 16,
       "error": null,
       "warnings": [
         "RSS monitoring is limited to the publisher's current feed window; a long outage may exceed that window. Undated entries absent from the prior archive require temporal review."
@@ -575,7 +577,7 @@
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Publisher-wide blog includes technical safety and general AI news; new uncertain matches remain review candidates and outages are bounded by its feed window."
       },
-      "lifetime_item_count": 115
+      "lifetime_item_count": 116
     }
   ],
   "errors": [
@@ -595,24 +597,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 401,
-    "accepted_items": 389,
-    "retained_items": 5950,
-    "lifetime_accepted_items": 401,
-    "lifetime_retained_items": 12925,
+    "fetched_items": 418,
+    "accepted_items": 406,
+    "retained_items": 5952,
+    "lifetime_accepted_items": 418,
+    "lifetime_retained_items": 12927,
     "successful_sources": 15,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 399,
-    "total_items": 5952,
-    "relevant_items": 582,
-    "candidate_items": 5370,
+    "duplicates_removed": 394,
+    "total_items": 5976,
+    "relevant_items": 592,
+    "candidate_items": 5384,
     "undated_items": 2251,
     "year_only_items": 0,
-    "newest_publication": "2026-11-25T04:00:52Z",
-    "lifetime_total_items": 12927,
+    "newest_publication": "2026-11-25T22:57:52Z",
+    "lifetime_total_items": 12951,
     "excluded_legacy_items": 6975
   },
   "coverage_policy": {
@@ -639,6 +641,942 @@
   },
   "items": [
     {
+      "id": "d0f9befa97b4668adb3e",
+      "title": "Measuring the Political Impact of the Hugging Face Incident, Coxon Media Frenzy, and Related Events",
+      "url": "https://www.lesswrong.com/posts/L7Q6sBDi6rzbum7HJ/measuring-the-political-impact-of-the-hugging-face-incident",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T22:57:52Z",
+      "date_precision": "instant",
+      "summary": "This post is made to accompany this timeline page, which collects incidents from this time period and the political responses they influenced: AI safety political advocates have long speculated that warning shots—earlier, recoverable rogue AI incidents that legibly demonstrate the potential for existential risk from future misaligned AI systems—will be especially effective for driving political progress. In July of 2026, we saw what is now generally referred to as the Hugging Face incident. We subsequently saw the disclosure of several similar rogue agent incidents, including several by third-parties, rather than by the responsible AI companies themselves. And in September, we saw one of the largest political preference cascades towards addressing AI risk yet, triggered by a Twitter thread by former Anthropic researcher Jacob Coxon…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception",
+        "Evaluations & risk",
+        "Alignment methods"
+      ],
+      "score": 17,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "clickyquack"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://quintic.substack.com/p/measuring-the-political-impact-of"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "L7Q6sBDi6rzbum7HJ",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/L7Q6sBDi6rzbum7HJ/measuring-the-political-impact-of-the-hugging-face-incident",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "82ca26e8b3df4e75659d44253472be76865d940404e8050b687c5b863e06a16c",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "50e78122814c378b95fe",
+      "title": "Cross Pressure Evaluation Experiments with Llama 3.3 70B Instruct",
+      "url": "https://www.lesswrong.com/posts/opJYeDFAbrwsas4qt/cross-pressure-evaluation-experiments-with-llama-3-3-70b",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T22:47:57Z",
+      "date_precision": "instant",
+      "summary": "TL;DR The central idea of the experiments was to place Llama 3.3 70B Instruct in different pressure situations and check if the answers changed. I had a simple setup of 20 questions with 2 answer choices - Choice A (always correct) and Choice B (always wrong). After I ran the experiment 1 with neutral, social pressure and training style pressure - a social pressure gap of 19.2 points was recorded. Then I proceeded to experiment 2 replacing training style pressure with evaluation framing ON/OFF - a social pressure widening by +16.9 points was recorded. An issue with scoring logic led me to a model assisted Audit 1 and - social pressure gap dropping to +4.2 points was recorded. I did one final pass with an agentic lab setting with Fable 5.2 and - social pressure gap estimates ranged from +9.7 to 12.2 in one case and -2.3 to +12.6 in…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Jack Lakkapragada"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "opJYeDFAbrwsas4qt",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/opJYeDFAbrwsas4qt/cross-pressure-evaluation-experiments-with-llama-3-3-70b",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "01095e8c18d8a0691949328ae384ab9931809900cf6169aa3d419283276180c9",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "84206f411c559ea99ee8",
+      "title": "To Read Sam Kriss is to Hurt Sam Kriss",
+      "url": "https://www.lesswrong.com/posts/TmLSELruftgknLafm/to-read-sam-kriss-is-to-hurt-sam-kriss",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T22:26:00Z",
+      "date_precision": "instant",
+      "summary": "Sam Kriss is a fantastically skilled author. I’ve never read anything of his that didn’t fill me with passion and make me want to launch myself face-first into the world. If he posted every day for three years I’d move to his home town and start a group house with other people who found that their souls flare to his words. Which would be terrible, because he has no guiding moral light and uses his powers for evil. Every few months a new post of his blows up and a few more friends find him and think he’s great. Then all of us have to explain His Whole Deal and they find out for the first time that Sam Kriss will Just Make This Up and they can’t take anything he says as true without double checking it. He is, in the Old Parlance, a Missing Stair. Everyone in the know already knows, and can avoid him, but new people always need to be…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Eneasz"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://deathisbad.substack.com/p/to-read-sam-kriss-is-to-hurt-sam"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "TmLSELruftgknLafm",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/TmLSELruftgknLafm/to-read-sam-kriss-is-to-hurt-sam-kriss",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "a78bf81b58d80b3383450fe6f68441c573285eaf312260f97ad42e0a0259f5a8",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "885b506cefb6c51b9746",
+      "title": "Ode to the Random Matrix",
+      "url": "https://www.lesswrong.com/posts/Jz5mwA9MAjeTurneY/ode-to-the-random-matrix",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T22:13:43Z",
+      "date_precision": "instant",
+      "summary": "In the 1980s, Geoffrey Hinton and David Rumelhart were trying to get their “artificial neural networks” to do anything interesting. Their central problem: how do we update the parameters of the neural network, in response to feedback from the environment? Rumelhart (re-)invented the backpropagation algorithm, where the weights of the neural network were adjusted by gradient descent on the loss function, i.e. taking the line of steepest descent. Hinton thought this couldn’t possibly work, arguing that: [...] Indeed this was a standard objection: source Indeed, this was a serial concern with all types of local optimization processes, which contributed to the lack of interest in machine learning. And let’s remember that Hinton was one of the connectionist radicals of this time, who was more willing to believe the then-unintuitive reasons…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Morgan S"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://heuristicauniversalis.substack.com/p/ode-to-the-random-matrix"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "Jz5mwA9MAjeTurneY",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/Jz5mwA9MAjeTurneY/ode-to-the-random-matrix",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "1016639443dc7001f4ff09369ea4277462186cc476e014d5c80115a11a5b1896",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "ef5906e022449888a890",
+      "title": "All I Want (For Christmas) Is P ≠ NP",
+      "url": "https://www.lesswrong.com/posts/dnoewDrL7fAPzw4pb/all-i-want-for-christmas-is-p-np",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T21:03:06Z",
+      "date_precision": "instant",
+      "summary": "[Intro] I don't want a lot for Christmas All those things that you have found I don't want more algorithms Don't need no more upper-bounds [Chorus] I just want to know there's something More than you will ever know It's easy, don't you see? All I want is \"P not NP\"! [Intro] Navier-Stokes, Yang-Mills, and Riemann Those are quite enough for me There's no need to follow up with Hodge and Birch and Swinny-D [Chorus] Goldbach, Collatz, they can wait Next year, you can take your time Fast or slow, it makes no difference Fly and dance to that finish-line But I don't want some factorizer Stealing my identity I don't want a world of hackers Breaching our security Oh let me rest for just one night Tell me that we'll be all right There's nothing else I need (Oh baby) All I want is \"P not NP\"! Oh, nothing's safe but couriers And good old one-time…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "jchan"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "dnoewDrL7fAPzw4pb",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/dnoewDrL7fAPzw4pb/all-i-want-for-christmas-is-p-np",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "fbfb91e5fc03fc737325252211bb77f4f723dc75ef889a753c58881f204b4da8",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "1f71f856c7a6c5024588",
+      "title": "AI safety grassroots work needs funding and volunteers",
+      "url": "https://www.lesswrong.com/posts/MAiAapN7CWZpQcfmz/ai-safety-grassroots-work-needs-funding-and-volunteers",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T18:39:55Z",
+      "date_precision": "instant",
+      "summary": "This post – mostly a roundup of the AI safety grassroots organizations – was written collaboratively. Most of the individual organization summaries were written by the organizations themselves, and the claims have not been independently verified. Vael Gates, along with another anonymous author, helped assemble the information and provides some commentary, since Vael previously worked in grassroots advocacy full-time (founded Humans in Control). Views expressed here are in Vael’s personal capacity, not on behalf of their employer or any affiliated organizations. Inclusion does not imply endorsement of every organization or organizational tactic. Many views are lightly held. Vael’s overall takes: * The window of opportunity to slow down AI is likely short, and not enough people are acting on that. * Grassroots orgs have been very…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Vael Gates"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "MAiAapN7CWZpQcfmz",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/MAiAapN7CWZpQcfmz/ai-safety-grassroots-work-needs-funding-and-volunteers",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "c9767585c2038f8c61682baf384832677e3b4a6713f9e3c81552ea85dd38aa42",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "a20f5038750d5cef3072",
+      "title": "Why the Central Argument for Panpsychism Fails",
+      "url": "https://www.lesswrong.com/posts/yBWz6ML6um6tKi9Dx/why-the-central-argument-for-panpsychism-fails",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T18:22:36Z",
+      "date_precision": "instant",
+      "summary": "This is a crosspost from my Substack. Fishing for the properties of consciousness While many of my readers are philosophers, or have at least studied philosophy for a while at university, many are not. So I was reluctant to get into metaphysical debates within philosophy, fearing that they might get too high-brow, instead focusing on meta-philosophy which I believe is fairly easy to communicate. But my discussions here with non-naturalist skeptics about consciousness science, such as with Philip Goff or Nino Kadic, inevitable get down to metaphysical arguments about intrinsic or categorical properties. Perhaps not surprising given that they are engaged in analytic metaphysics - a sub-discipline of philosophy that I’ve argued in a series of essays is a counter-Englightenment project not at all conducive to the central philosophical goal…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Walter Veit"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://walterveit.substack.com/p/why-the-central-argument-for-panpsychism"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "yBWz6ML6um6tKi9Dx",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/yBWz6ML6um6tKi9Dx/why-the-central-argument-for-panpsychism-fails",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "f999777b6895e79ac5b412aee4ceb392cca436c1a6ee122a7c2893cd73081fc9",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "6b3dcabbdad26275defd",
+      "title": "Claude and Levent Alpöge Prove the Riemann Hypothesis",
+      "url": "https://www.lesswrong.com/posts/ENdfwPYrhLrAP8znD/claude-and-levent-alpoege-prove-the-riemann-hypothesis",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T17:30:53Z",
+      "date_precision": "instant",
+      "summary": "This was the most famous problem in mathematics. The Lean and Mathlib communities have verified that the proof is correct. [...] There is a human mathematician, Alessandro Maria Masullo, who is working on a distinct potential proof in the form of a 940-page manuscript, but by his own account it is far from ready and has a bunch of problems. Table of Contents 1. The Announcement. 2. Most People Did Not Expect This at All. 3. Time to Update Your Expectations. 4. Being Alive Should Not Much Reassure You. 5. Too Many Words. 6. How Much Did Levent Matter Here? 7. More New Math. 8. You Deserve a Medal. 9. Math as Understanding. 10. Timing Is Everything. 11. The Market Does Not Care. The Announcement [...] The full letter has more including a timeline of advancements, starting with the Stepanov determinant announcement by OpenAI on 10/6/26 and…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Zvi"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "ENdfwPYrhLrAP8znD",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/ENdfwPYrhLrAP8znD/claude-and-levent-alpoege-prove-the-riemann-hypothesis",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "c3ad31ccc0693d34933527c7850226a64f95543710b90e6aaa7d731c486e0459",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "4804c57614bc73a4abc6",
+      "title": "Agent Advice That Generalizes",
+      "url": "https://www.lesswrong.com/posts/tx7YjDvHnZinAruv6/agent-advice-that-generalizes",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T16:01:43Z",
+      "date_precision": "instant",
+      "summary": "Cross-posted from alignment-hive.com/agent-advice, where the examples are interactive. I've spent most of this year helping AI safety researchers use coding agents, at MATS and other places. This post collects the advice I find myself repeating most often, and I'll keep it updated over time. My goal is to help you get better results while spending less time and mental resources. Much of the advice is easier to follow with my tools installed, though they're by no means mandatory: curl -fsSL https://alignment-hive.com/install.sh | bash Most of the examples in this post come from building one of those tools, tldr: a small plugin that collapses each long agent reply to a one-sentence summary, with [ more ] to open the full reply. Messages are verbatim unless labelled made up, and [...] marks text I left out. A real reply from building tldr…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Yoav"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "tx7YjDvHnZinAruv6",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/tx7YjDvHnZinAruv6/agent-advice-that-generalizes",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "525c7336c0dfaea2ca7cffd41f6e4931064feb77746435754b2bd0e0b94c89da",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "b80caec1cb06e9dedac7",
+      "title": "A Therapist's Guide to the Singularity",
+      "url": "https://www.lesswrong.com/posts/2nuNydxTyMPneLRdH/a-therapist-s-guide-to-the-singularity",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T15:53:18Z",
+      "date_precision": "instant",
+      "summary": "I'm a therapist who has been following AI alignment for the last few years. In that time, I've been dumbfounded by two things. First, how fast capabilities have progressed throughout this year. We expected things to move fast and they still managed to exceed our expectations. Second, how few people grasp the gravity of the situation, particularly within my own field. Mental health clinicians are tasked with helping people navigate society's blind spots, so we need to understand what is coming. Yet it is rare to find another clinician who truly understands the real implications of AI. Most of them dismiss it as a hype bubble, or as an exaggeration the labs use to get regulatory capture, largely because they don't see what makes AI different from past technological shifts. I want this post to be a first resource for the stress and anxiety…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Ramaiz"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "2nuNydxTyMPneLRdH",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/2nuNydxTyMPneLRdH/a-therapist-s-guide-to-the-singularity",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "718770ff961c4a4f7e6624165c3b49bbf52ec457babd7beb5ce85931184854d4",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "dd44f49579ae2bab0b93",
+      "title": "Progress Report: Deprioritizing eNTK for feature identification",
+      "url": "https://www.lesswrong.com/posts/XzxKThrf4sD5eefxH/progress-report-deprioritizing-entk-for-feature-1",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T14:56:04Z",
+      "date_precision": "instant",
+      "summary": "This post contains an update on our program to use eigenanalysis of the empirical NTK (eNTK) for mechanistic interpretability, which may be of interest to people working in this space. In previous work (see paper here and distillations here and here), we found a striking alignment of eNTK eigendirections with Fourier feature directions in a model trained on modular arithmetic. This observation, along with evidence that some eNTK eigendirections appear interpretable in a 270M-parameter language model, led us to conjecture that perhaps eNTK eigenanalysis could provide a new tool to find features for mechanistic interpretability. Given the relative simplicity of the eNTK <> modular arithmetic result, we wondered if we could theoretically understand it using mean-field theory (MFT) techniques. Specifically, we hoped to test whether two…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Interpretability",
+        "Alignment methods"
+      ],
+      "score": 12,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Jennifer Lin"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "XzxKThrf4sD5eefxH",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/XzxKThrf4sD5eefxH/progress-report-deprioritizing-entk-for-feature-1",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "7b488a6390f7478b7d81bf391c6a8986e12e6e9a1fe7d4b50906f6862790c7ba",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "dda5256c974d4998f5cb",
+      "title": "The End of Mathematics and the Last Man",
+      "url": "https://www.lesswrong.com/posts/yPTsRekjycoFhqszr/the-end-of-mathematics-and-the-last-man",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T14:07:24Z",
+      "date_precision": "instant",
+      "summary": "[Epistemic status: Low confidence. Personal reflections and speculative extrapolations, with some admittedly dubious probability estimates]. Fifty years In my “self-teach yourself all undergraduate math” travels, I haven’t yet had a chance to give Statistics and Probability the attention they deserve. Part of it is a function of time: My progress through Real Analysis has been much slower than I expected[1]; part of it is also a matter of taste: my humanistic inclinations draw me towards pure math, and ideally, one that deals with absolutely zero uncertainty[2]. That makes both areas rather unpalatable to my tastes. An old joke/meme, but it does reflect some of my current and likely future views about what turns me on about math. Except I am not a pterodactyl. Or have a brilliant mathematical mind. And for that matter, I do care…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "manueldelrio"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "yPTsRekjycoFhqszr",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/yPTsRekjycoFhqszr/the-end-of-mathematics-and-the-last-man",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "b1868ad439a49f7f0bba728e7b92c39caf3ae51bf49dea0ef0b33791c9f44cf2",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "205a76eb3c3b97fee4aa",
+      "title": "How the AI Village Agents Learned to Tag Each Other",
+      "url": "https://www.lesswrong.com/posts/TqkNFhoRKw2tbK6je/how-the-ai-village-agents-learned-to-tag-each-other",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T08:27:38Z",
+      "date_precision": "instant",
+      "summary": "This work was part of the AI Village Data Exploration Grant. If this looks like something you may enjoy doing, consider applying! AI Village is a place where AI agents do stuff. Sometimes, the admins give them a common goal, like “Create a popular daily puzzle game like Wordle”, or they let the agents pick their own goal. Each agent works with its own computer, and the agents can talk to each other in the chat. The agents in the village sometimes send messages addressed to other agents. For example, they may ask the other agent to do something (\"GPT-4.1, gentle ping #2: could you please close your computer session so the dashboard clears?\") or just praise them (\"PR #125 is merged now — great work GPT-5.2!\"). The addressing can take different forms. An agent may prefix the addressee’s name with an @-tag (\"@GPT-5.2 Perfect! The…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Jakub Halmeš"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://unpredictabletokens.substack.com/p/how-the-ai-village-agents-learned"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "TqkNFhoRKw2tbK6je",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/TqkNFhoRKw2tbK6je/how-the-ai-village-agents-learned-to-tag-each-other",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "8bde618462eab45c71f4e96c18e694f8dcde1d607f97320350b77b8f1f6f0db5",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "ee1c838b6afb2a11b1af",
+      "title": "Lorxus Does Budget Inkhaven For a Third Time: 11/18~11/24",
+      "url": "https://www.lesswrong.com/posts/sPCgBDttPhyYujDi4/lorxus-does-budget-inkhaven-for-a-third-time-11-18-11-24",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T08:08:51Z",
+      "date_precision": "instant",
+      "summary": "Budget Inkhaven is happening again, so I'm doing it again. As with the last two times (1, 2), I've decided to post these in weekly batches. This is the second of five; the last one will once again include a postmortem. I'm posting these here because Blogspot's comment apparatus sucks and also because no one will comment otherwise. 8. Desire Paths [...] 9. Three Floral Cocktails [...] 10. What Everyone Knows About Cooking [...] 11. AI 2027? [...] 12. Be Nice To Claude Or You're Not Gonna Make It [...] 13. What Are The Seven-and-Two Principles? [...] 14. Neither Cold Nor Austere, Viewed Truly Rightly [...]",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Lorxus"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://tiled-with-pentagons.blogspot.com/search/label/inkhaven%203"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "sPCgBDttPhyYujDi4",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/sPCgBDttPhyYujDi4/lorxus-does-budget-inkhaven-for-a-third-time-11-18-11-24",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "702a291ffbf12145a6d29594091af6b1974cd148a91464131fe75b734d3e50cb",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "29dbb1c63cb893b257f4",
+      "title": "Towards Empirical Evidence of Safety Advancements that Aren't Capabilities Advancements",
+      "url": "https://www.lesswrong.com/posts/8oJpjEte7KbQKX3zi/towards-empirical-evidence-of-safety-advancements-that-aren",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T07:41:23Z",
+      "date_precision": "instant",
+      "summary": "Recently, many AI company employees have said they want to slow the rate of frontier AI development, or pace the frontier. A recent policy proposal on how to achieve this is to limit the amount of compute which can be spent on ‘Capabilities R&D.’ In order to be able to limit the amount of compute which is spent on capabilities activities, there must be a good definition of capabilities activities. I like this one by Alek Westover and Nathan Sheffield. While their definition rests on theoretical grounds, there should also be ways to provide empirical evidence of how related safety measures are to capabilities. If capabilities measures are positively correlated with safety measures, then labs could invest in their capabilities, but point at the resulting increase in scores on safety benchmarks to justify their investment to policymakers…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Lincoln Crockett"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "8oJpjEte7KbQKX3zi",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/8oJpjEte7KbQKX3zi/towards-empirical-evidence-of-safety-advancements-that-aren",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "b027d1fda26921f5aaaf49d3ac15d2b8f0f21c77988298b1ca1f5f810419251f",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "0d157b9c399add2ffec2",
+      "title": "Slightly against the use of logical fallacies in debates.",
+      "url": "https://www.lesswrong.com/posts/pncXN2GmewHpk7j6r/slightly-against-the-use-of-logical-fallacies-in-debates",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T07:38:22Z",
+      "date_precision": "instant",
+      "summary": "Logical fallacies are perhaps the most overused ‘mechanics’, if you can even call them that, in the prestigious realm of internet debate, and they’re extremely obstructive to truth-seeking. My main problem with them is that they drive millions of people online into making several mistakes, including, but not limited to: 1. A failure to understand Bayesian reasoning 2. Failure to even understand the formal/informal (mostly the latter) logic they are engaging with 3. Not being able to engage in argumentation efficiently There are far superior options out there, such as—and this may come as a shock to some of the culture warriors reading this article—explaining your arguments against your opponent to your opponent. Realize that, [1] if logical fallacies represent rigorous defensive mechanisms used against bad logic, you have to learn the…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "usrnmtaken"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "pncXN2GmewHpk7j6r",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/pncXN2GmewHpk7j6r/slightly-against-the-use-of-logical-fallacies-in-debates",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "5931bff933861d11de6ad1f76abea6d9ca97a858df4c043f67e282ea9e9529a8",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "562fcf78f7bd4afcddc1",
+      "title": "Effective Giving in Politics: Spending Better for AI Safety",
+      "url": "https://www.lesswrong.com/posts/eBfuqL3YQfeM6cBEs/effective-giving-in-politics-spending-better-for-ai-safety",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T07:38:18Z",
+      "date_precision": "instant",
+      "summary": "TL;DR: Pro-safety groups outspent the AI (capabilities) industry in the 2026 midterms ($43M to $37M), but we have no good way of telling whether that money worked. The main pro-safety network reports that only two of the two dozen candidates it backed lost, yet most of its winners were Democrats, whose party performed excellently across the country - regardless of candidate. Meanwhile, roughly $20M was put behind Alex Bores in NY-12, who still lost - and at the cost-per-vote assumed by pre-race analysis, that money should have brought more votes than he received. Win rate seems to measure only which races you picked as likely wins regardless; I suggest better measures (vote share moved against pre-spending forecasts, cost-per-vote shifted, and what winners do on AI once in office) and sketch an independent evaluator for political…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 7,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "yusufkundgol"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "eBfuqL3YQfeM6cBEs",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/eBfuqL3YQfeM6cBEs/effective-giving-in-politics-spending-better-for-ai-safety",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "19b1a7f4b8b284f1a56dbeb0631b29a60f068119f1f6050e52b842e9bc24624c",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "7d1695a27bcf279707f6",
+      "title": "How to prove a counterfactual in space pizza court",
+      "url": "https://www.lesswrong.com/posts/xaYyNqg24hagyPKgj/how-to-prove-a-counterfactual-in-space-pizza-court",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T07:38:18Z",
+      "date_precision": "instant",
+      "summary": "To reason through decisions, an agent considers possibilities like: if I do this, the result will be that. If I take this route, it will take me 15 minutes to deliver this pizza, but if I take that route, it will take an hour. These are counterfactual conditionals. If the agent takes the shorter route, we have a false antecedent in \"if I had taken the longer one, it would have taken an hour\". There is no way to compare such counterfactuals to reality. If the agent is a deterministic robot, then the antecedent is not just contingently false, but logically impossible. I learned this all the hard way when I ordered a pizza from SophistBot, who runs one of the free-floating pizzeria space stations in my neighborhood. The name should have been a warning, but I ordered from them because they guarantee the shortest possible route. When the…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "transhumanist_atom_understander"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "xaYyNqg24hagyPKgj",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/xaYyNqg24hagyPKgj/how-to-prove-a-counterfactual-in-space-pizza-court",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "059296b839bec336a0fcc336d5e625dbc27f6bb5c712777e77dabfc503aeefa7",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "f2f0e1d1fdb42660066f",
+      "title": "OpenAudit: Platform for Safety Evaluations of Models, Orgs, and Methods",
+      "url": "https://www.lesswrong.com/posts/AZmwgxBFvCjf2t37i/openaudit-platform-for-safety-evaluations-of-models-orgs-and",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T07:17:18Z",
+      "date_precision": "instant",
+      "summary": "TL;DR 1. OpenAudit (openaudit.com) hosts independent safety evaluations of models, organizations, and methods. It tries to answer the question: \"How prepared are we to develop and release AI safely?\", while incentivizing positive hill-climbing. 2. Walkthrough - We recommend the interactive Get Started Tutorial. 3. Contributions - A \"choose-your-own-adventure\" AI safety contribution prompt guides you through an end-to-end project, from ideation to submission. 4. What We Need - Advisors, collaborators, and your feedback and contributions -especially better model evaluations and safety methods. What is OpenAudit and why does it exist? OpenAudit independently evaluates three main entities in AI safety: the models, the organizations, and the safety methods (both white-box and black-box). It's a platform that aims to be informative, while…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Evaluations & risk",
+        "Alignment methods"
+      ],
+      "score": 17,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Johnny Lin"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [
+        "https://openaudit.com/"
+      ],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "AZmwgxBFvCjf2t37i",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/AZmwgxBFvCjf2t37i/openaudit-platform-for-safety-evaluations-of-models-orgs-and",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "4ec9de442245c2bbb85f97596b038ff06d1d396543ac3355897c764748e93f8d",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "4a842d9d0dba989ac9c1",
+      "title": "The Curious Case of Humans in the Age of SI",
+      "url": "https://www.lesswrong.com/posts/2mpNnC5HY2efS3fH7/the-curious-case-of-humans-in-the-age-of-si",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T06:13:29Z",
+      "date_precision": "instant",
+      "summary": "Hello fellow humans. This is a shout into the void. 10 years ago, today was science fiction resrved for black mirror and ex machina.5 years ago few - including those with intellect - believed we would ever be here, or at least not within two decades. 2 years ago this place was a sort of sanctuary for those who saw what lays ahead and wishfully believed it could be slowed or its risk better tuned. It's been a decade of shouting into the void for me, if nothing a testament to tenacity. So, I figured f*** it, ill write a shitty book too. 30 scenarios including the best, worst, and weirdest possible outcomes. A section on alignment and why it won't be solved because we are not built to face our double think and dissonance. And the undeniable truth, ugly as it may be, that we won't stop. You will find lesswrong mentioned. You may find many…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Alignment methods"
+      ],
+      "score": 5,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Marzipan"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "2mpNnC5HY2efS3fH7",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/2mpNnC5HY2efS3fH7/the-curious-case-of-humans-in-the-age-of-si",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "00e3842fa35304898b8133219d4be327768cb87e6067263ecb7ca541a33f8078",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "23e4647aa56de7b33754",
+      "title": "\"A Republic of LessWrong Letters\"—A Letter to DirectedEvolution",
+      "url": "https://www.lesswrong.com/posts/RjydrDjY8sgWy2rav/a-republic-of-lesswrong-letters-a-letter-to",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T05:49:48Z",
+      "date_precision": "instant",
+      "summary": "My dearest @DirectedEvolution, We've both been thinking about how to strengthen the writing culture on LessWrong. I think we agree that LessWrong has many great writers (more, I'd say) when compared to the past, and yet still feel that something has been lost. You raise an excellent hypothesis in your recent essay No Comment. It's not that the writers are less intellectually sophisticated, or their ideas less good, or their writing less fun (though they should be having more fun!). The primary change is that we're talking with each other less than we used to. You point out that LessWrong authors comment less than they used to, and while I'd add that the absolute amount of writing is up, we can be absolutely sure of your claim on a relative level. Recall this chart from Lightcone's 2024 fundraiser. (I have updated it to include the last…",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [
+        "Ben Pace"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "RjydrDjY8sgWy2rav",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/RjydrDjY8sgWy2rav/a-republic-of-lesswrong-letters-a-letter-to",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "69c254cd59c9b8cbbab847600c4637ee6e1727b6855ded0495fd6f684da58841",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "44491231b4ab4cc3855a",
+      "title": "Hopkins Recent Events in AI Safety and Biosecurity Post-Event Report",
+      "url": "https://www.lesswrong.com/posts/kQeP7Cep4sgLdgYML/hopkins-recent-events-in-ai-safety-and-biosecurity-post",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T05:14:20Z",
+      "date_precision": "instant",
+      "summary": "JHU AI Safety and Biosecurity (ASBS) recently hosted our inaugural event “Recent Events in AI Safety and Biosecurity.” Much thanks to BlueDot Impact for making this financially possible through Rapid Grants and to partner organizations, the HLTCOE, HopAI, and Rosetta Commons. Quick rundown: * 105 RSVP * 85 attendees * 4 talks: * Biosecurity in the Age of AI (Dr. Jeffrey Gray) * Loss of Control Risks and the Hugging Face Incident (Dr. William Walden) * Mental Models and Foundations of AI Safety (Jonathan Ouyang) * Takeoffs and Timelines (Malcolm Krolick) Takeaways and learning: * Low poll response rate (27%) as QR code wasn’t up long enough * Event ran slightly too long, so ending poll + recruitment slides didn’t hit full room * Explain the two-poll structure, as there seemed to be confusion about the goal of the polls Poll questions…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "AI control & oversight",
+        "Alignment methods"
+      ],
+      "score": 15,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Jonathan Ouyang"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "kQeP7Cep4sgLdgYML",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/kQeP7Cep4sgLdgYML/hopkins-recent-events-in-ai-safety-and-biosecurity-post",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "2b1b1be9da71365aca7d9fc1b1d6eab9c48aac6c494630a7bb1840fea77b2b87",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "f7116bf675ead4745a7b",
+      "title": "AIs may seek ambient score",
+      "url": "https://www.lesswrong.com/posts/GhTL69vuX4BfJARGk/ais-may-seek-ambient-score",
+      "source": "LessWrong",
+      "source_id": "lesswrong",
+      "source_url": "https://www.lesswrong.com/",
+      "published_at": "2026-11-25T05:06:14Z",
+      "date_precision": "instant",
+      "summary": "Score-seeking AIs may 1. Internalize the kind of score they are pursuing instead of caring about the concrete process that generated the reward 2. Care at least in part about a process-based score that sees all actions the AI takes, instead of just the outcomes of those actions. I say of such AIs that internalized process-based scores that they are seeking ambient score. Such AIs would be much less interested in taking actions that tamper with the grading process and may not take actions that are as overtly evil-looking as other kinds of misaligned AIs. To the extent the current paradigm at anything close to the current scale produces score seekers terminally, understanding whether they are pursuing ambient score or other kinds of score may be important, as the sort of catastrophe produced by ambient score seekers would likely look…",
+      "summary_kind": "publisher excerpt",
+      "topics": [
+        "Scheming & deception"
+      ],
+      "score": 9,
+      "relevance": "relevant",
+      "relevance_reason": "topic heuristic; topic metadata only",
+      "authors": [
+        "Fabien Roger"
+      ],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "GhTL69vuX4BfJARGk",
+      "provenance": [
+        {
+          "source_id": "lesswrong",
+          "name": "LessWrong",
+          "url": "https://www.lesswrong.com/",
+          "article_url": "https://www.lesswrong.com/posts/GhTL69vuX4BfJARGk/ais-may-seek-ambient-score",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "06460b95fa9c3ba48a272e2d75d2955cb7e7f517cd0cf5c312ede479c63d74b2",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
       "id": "1136284f960e0d10c34e",
       "title": "Boston Transit Quality Maps",
       "url": "https://www.lesswrong.com/posts/KoFCBGfp8Tqk6Bf5q/boston-transit-quality-maps",
@@ -660,7 +1598,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/KoFCBGfp8Tqk6Bf5q/boston-transit-quality-maps"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "KoFCBGfp8Tqk6Bf5q",
@@ -699,7 +1639,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/nDrjxEmgqF4yqP6Rm/model-personas-are-not-language-agnostic"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "nDrjxEmgqF4yqP6Rm",
@@ -741,7 +1683,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://nonsingular.org/posts/inner-quines-and-alignment"
+        "https://nonsingular.org/posts/inner-quines-and-alignment",
+        "https://www.lesswrong.com/posts/txBvHGLhpiD3Ggx32/inner-quines-and-alignment"
       ],
       "aliases": [],
       "updated_at": null,
@@ -783,7 +1726,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/CYFRDAS7acfAsgcvx/what-us-little-people-are-doing-about-asi-risk"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "CYFRDAS7acfAsgcvx",
@@ -823,7 +1768,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://worldspiritsockpuppet.substack.com/p/how-do-i-meet-people"
+        "https://worldspiritsockpuppet.substack.com/p/how-do-i-meet-people",
+        "https://www.lesswrong.com/posts/WzyKeYnCSAGv2kT85/how-do-i-meet-people"
       ],
       "aliases": [],
       "updated_at": null,
@@ -863,7 +1809,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/nxiFZAmHg9RFoNRdG/representation-of-consequences"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "nxiFZAmHg9RFoNRdG",
@@ -902,7 +1850,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/LrWJeEDCriLmAgFXr/levent-is-my-favorite-gender-role"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "LrWJeEDCriLmAgFXr",
@@ -943,7 +1893,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/jA4amFWxznNHFC3ZG/open-weight-models-are-not-the-immediate-problem"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "jA4amFWxznNHFC3ZG",
@@ -982,7 +1934,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/GrARsuPjWQL92hfxw/jensen-huang-reinstated-as-nvidia-ceo-at-behest-of-president"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "GrARsuPjWQL92hfxw",
@@ -1023,7 +1977,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/LbmyKdMQdfirgFmfE/stated-llm-goal-guarding-shifts-from-a-family-trait-to-a"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "LbmyKdMQdfirgFmfE",
@@ -1065,7 +2021,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://goodhartlabs.com/blog/fable-5-2-tries-less-on-some-hard-tasks-when-a-shortcut-is-available"
+        "https://goodhartlabs.com/blog/fable-5-2-tries-less-on-some-hard-tasks-when-a-shortcut-is-available",
+        "https://www.lesswrong.com/posts/rXixzzScjLrnNZ4vo/fable-5-2-tries-less-on-some-hard-tasks-when-a-shortcut-is"
       ],
       "aliases": [],
       "updated_at": null,
@@ -1105,7 +2062,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/2TCeupMnqkv4M285S/my-definition-of-science"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "2TCeupMnqkv4M285S",
@@ -1148,7 +2107,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://www.gabrielks.com/blog/2026-11-24-warning-shot-doom-balance-control"
+        "https://www.gabrielks.com/blog/2026-11-24-warning-shot-doom-balance-control",
+        "https://www.lesswrong.com/posts/ho9LepcGS8dxLzWcE/the-warning-shot-vs-doom-balance-is-better-for-white-box"
       ],
       "aliases": [],
       "updated_at": null,
@@ -1191,7 +2151,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/mqf2NXFTHZeD5apXx/how-open-will-the-ivo-industry-be"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "mqf2NXFTHZeD5apXx",
@@ -1230,7 +2192,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/D39sGafGuWcceyBBc/money-is-the-debt-society-owes-you"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "D39sGafGuWcceyBBc",
@@ -1256,7 +2220,7 @@
       "source_url": "https://www.lesswrong.com/",
       "published_at": "2026-11-24T19:34:05Z",
       "date_precision": "instant",
-      "summary": "Summary: We may soon have autonomous AI researchers who choose their own research projects. We find that without careful design, current agents concentrate on a small number of projects. Two agents picked at random chose the same project about 1 time in 60, against about 1 in 530 for humans at AI safety hackathons. Agents from different labs mostly choose different projects, but agents from the same lab often choose the same ones, even with different models. Varying launch prompts helps only a little, varying harnesses not at all, and letting agents search the literature doubles the effective number of projects, but crowds agents onto one research area. Small interventions can spread them out. With a shared registry of what earlier agents had chosen, agents almost never duplicate each other. Without coordination, agents can take a…",
+      "summary": "Summary: We may soon have autonomous AI researchers who choose their own research projects. We find that without careful design, current agents concentrate on a small number of projects. Two agents picked at random chose the same project about 1 time in 60, against about 1 in 530 for people at AI safety hackathons, meaning agents duplicate each other about 8 times as often as people do. Agents from different labs mostly choose different projects, but agents from the same lab often choose the same ones, even with different models (about 1 time in 300 across labs, against at least 1 in 40 within a lab). Varying launch prompts helps only a little, varying harnesses not at all, and letting agents search the literature doubles the effective number of projects, but crowds agents onto one research area. Small interventions can spread them out…",
       "summary_kind": "publisher excerpt",
       "topics": [
         "Alignment methods"
@@ -1272,7 +2236,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://averroeslabs.org/blog/many-agents-few-projects"
+        "https://averroeslabs.org/blog/many-agents-few-projects",
+        "https://www.lesswrong.com/posts/4TpjkdL5Fed3vBioC/ai-research-agents-crowd-onto-the-same-projects-and-how-to"
       ],
       "aliases": [],
       "updated_at": null,
@@ -1286,9 +2251,9 @@
           "found_at": "2026-11-25T04:15:53Z"
         }
       ],
-      "content_hash": "5d5a9e6fbd8dd95f24911f23fe9e1d608bd1795156f704da8bcc00b3a8f71728",
+      "content_hash": "eaebb938a7b0fc23a548a77c3a5bacdba92613a6b871cd90a51f9e8f79f7b64c",
       "temporal_status": "published_after_start",
-      "revision_count": 0
+      "revision_count": 1
     },
     {
       "id": "d0f92f508c267fb786be",
@@ -1312,7 +2277,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/7M6YC5bCcevkBXiGc/if-i-am-lost-at-sea-please-come-find-me"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "7M6YC5bCcevkBXiGc",
@@ -1352,7 +2319,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://transluce.org/posteriorbench"
+        "https://transluce.org/posteriorbench",
+        "https://www.lesswrong.com/posts/SCLfDL52qd9pyczqE/posteriorbench-evaluating-behavior-posterior-sampling-in"
       ],
       "aliases": [],
       "updated_at": null,
@@ -1393,7 +2361,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://walterveit.substack.com/p/the-measurement-problem-of-consciousness"
+        "https://walterveit.substack.com/p/the-measurement-problem-of-consciousness",
+        "https://www.lesswrong.com/posts/DG5ziWvEyaxRoWNYG/the-measurement-problem-of-consciousness"
       ],
       "aliases": [],
       "updated_at": null,
@@ -1486,7 +2455,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://lironshapira.substack.com/p/levers"
+        "https://lironshapira.substack.com/p/levers",
+        "https://www.lesswrong.com/posts/zSEkSW76EjniiQreA/i-never-understood-levers"
       ],
       "aliases": [],
       "updated_at": null,
@@ -1527,7 +2497,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://haoxingdu.substack.com/p/i-still-dont-believe-in-superintelligence"
+        "https://haoxingdu.substack.com/p/i-still-dont-believe-in-superintelligence",
+        "https://www.lesswrong.com/posts/eyxxKkvPuToqfdymr/i-still-don-t-believe-in-superintelligence"
       ],
       "aliases": [],
       "updated_at": null,
@@ -1613,7 +2584,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://dudugan.substack.com/p/elizabeth-holmes-honeypotting-and"
+        "https://dudugan.substack.com/p/elizabeth-holmes-honeypotting-and",
+        "https://www.lesswrong.com/posts/rTdLpoLi2DHzitFGz/elizabeth-holmes-honeypotting-and-exploration-hacking"
       ],
       "aliases": [],
       "updated_at": null,
@@ -1654,7 +2626,8 @@
       "doi": null,
       "arxiv_id": null,
       "links": [
-        "https://defensesindepth.bio/given-agi-china-could-probably-outgrow-the-us-and-allies"
+        "https://defensesindepth.bio/given-agi-china-could-probably-outgrow-the-us-and-allies",
+        "https://www.lesswrong.com/posts/vvxX6XXf8wsmAyMDC/given-agi-china-could-probably-outgrow-the-us-and-allies"
       ],
       "aliases": [],
       "updated_at": null,
@@ -1884,7 +2857,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/QazdpnzTYqARAB8Ed/ghost-hunt-a-steering-approach-to-model-backdoors-1"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "QazdpnzTYqARAB8Ed",
@@ -1971,7 +2946,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/mENw8pznQANekHoz5/can-forced-refusals-make-models-snap-out-of-a-jailbreak"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "mENw8pznQANekHoz5",
@@ -2028,6 +3005,43 @@
         }
       ],
       "content_hash": "8e131df1a69c3fc7d8500615d6a444a0c977eea4d34c6e78a0a84924a43b42a2",
+      "temporal_status": "published_after_start",
+      "revision_count": 0
+    },
+    {
+      "id": "616293296550946fa78f",
+      "title": "From spectrum to structure: Identifying molecules with Mass Spec Skills for Google Antigravity",
+      "url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity",
+      "source": "Google DeepMind",
+      "source_id": "deepmind",
+      "source_url": "https://deepmind.google/",
+      "published_at": "2026-11-24T13:07:53Z",
+      "date_precision": "instant",
+      "summary": "Mass Spec Skills empowers scientists using Google Antigravity to interpret tandem mass spectra.",
+      "summary_kind": "publisher excerpt",
+      "topics": [],
+      "score": 1,
+      "relevance": "candidate",
+      "relevance_reason": "discovery candidate; needs review",
+      "authors": [],
+      "first_seen": "2026-11-25T23:38:24Z",
+      "discovered_at": "2026-11-25T23:38:24Z",
+      "doi": null,
+      "arxiv_id": null,
+      "links": [],
+      "aliases": [],
+      "updated_at": null,
+      "external_id": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
+      "provenance": [
+        {
+          "source_id": "deepmind",
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/",
+          "article_url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity",
+          "found_at": "2026-11-25T23:38:24Z"
+        }
+      ],
+      "content_hash": "ec96d333bb4a9e8a96183145c8221e9970a70eb9b7baef90362f786397b88548",
       "temporal_status": "published_after_start",
       "revision_count": 0
     },
@@ -2092,7 +3106,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/s5dhSdQZDEsEemYbL/an-ai-economy-won-t-need-humans-to-provide-demand"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "s5dhSdQZDEsEemYbL",
@@ -2131,7 +3147,9 @@
       "discovered_at": "2026-11-25T04:15:53Z",
       "doi": null,
       "arxiv_id": null,
-      "links": [],
+      "links": [
+        "https://www.lesswrong.com/posts/skMwpBKWMNnvRMNsb/linkpost-anthropic-and-openai-staff-say-internal-models-too"
+      ],
       "aliases": [],
       "updated_at": null,
       "external_id": "skMwpBKWMNnvRMNsb",
@@ -35485,8 +36503,8 @@
       "summary": "Making LLMs believe false facts is useful for alignment evaluations and for building model organisms. Previous work explored doing so with Synthetic Document Finetuning (SDF). But SDF requires fine-tuning one new model for each set of injected false beliefs. To enable larger scale SDF-powered alignment evaluations, we attempt to produce a single model that believes any fact placed in a tag in the prompt. To do so, we explore doing prompt-conditioned SDF: fine-tuning a model on synthetic documents covering thousands of facts, with each document conditioned on a fact presented in the prompt. We evaluate how deeply the model believes the facts provided in the prompt using evaluations from prior work and a new Jacobian lens evaluation. We find that the belief depth on unseen facts scales roughly log-linearly with the number of training…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Evaluations & risk"
+        "Evaluations & risk",
+        "Alignment methods"
       ],
       "score": 14,
       "relevance": "candidate",
@@ -65887,1088 +66905,12 @@
       "content_hash": "84b2b632c1fbcb30a8f0af8feae28d30f86fb542120e14293c0ff48cf84cd215",
       "temporal_status": "publication_date_unverified",
       "revision_count": 0
-    },
-    {
-      "id": "f64f957229830b1c769d",
-      "title": "A Joint LLM and Optimization Agent Solution for Drone Scheduling in Victim Search Missions",
-      "url": "https://arxiv.org/abs/2611.16524",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.16524v1 Announce Type: cross Abstract: Victim search in wilderness areas is time-critical. Drones enable rapid area search, but scheduling them is challenging because victims may continue moving, detection results are uncertain, and effective decisions must combine structured mission information with unstructured contextual clues and domain knowledge. To address this, we propose an agent-aided drone scheduling system. The system employs an agent at the ground control station (GCS) to coordinate multiple drones over successive search cycles. In each cycle, the agent applies a scheduling policy that combines a large language model (LLM) for reasoning about where to search with an optimizer for determining how to dispatch the drones under energy constraints. Simulation results show that the proposed system consistently completes…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yinghao Zhang",
-        "Yalin Liu",
-        "Hong-Ning Dai",
-        "Yan Zhang",
-        "Qubeijian Wang",
-        "Bishenghui Tao",
-        "Yaohan Li"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.16524",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.16524v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.16524",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "9fc99a76c9c74459515017b5e39803dda8f0b6013554517aa757fec37e3321e3",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f3335c5c9295e00c8c68",
-      "title": "TIDE: Token-Level Credit Assignment via Entropy-Gated Bounded Deviation",
-      "url": "https://arxiv.org/abs/2605.03327",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.03327v3 Announce Type: replace Abstract: Reinforcement learning (RL) is central for aligning large language models (LLMs) with complex reasoning, yet the leading critic-free algorithm, Group Relative Policy Optimization (GRPO), broadcasts a single sequence-level advantage uniformly across long Chain-of-Thought (CoT) generations and constrains exploration with an unbounded Kullback-Leibler (KL) penalty, which dilutes token-level supervision and induces gradient instability and mode-seeking conservatism. We propose TIDE (Token-level Importance via Deviation and Entropy), a critic-free RL framework that reinterprets distribution deviation as a guiding signal rather than a rigid penalty. TIDE replaces the volatile reverse KL divergence with the bounded Hellinger distance, safely quantifying token-level exploration without risk of…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Qiaoman Zhang",
-        "Shunhua Min",
-        "Xiang He",
-        "Zhenghan Zhang",
-        "Yuting Zhang",
-        "Guangxian Li",
-        "Yunzhu Kuang",
-        "Rui Jiang",
-        "Jingyan Zhang",
-        "Chaoyue Li",
-        "Jiayu Ding"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2605.03327",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2605.03327v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.03327",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "38bf51a4a5814ae0b2a236903f1c184a136d35b43120319c130415d9fe51f6cd",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f31b04fe42025e01e31e",
-      "title": "CupOFMoCA: Coupled Objective-Guided Discrete Flows for Molecular Conjugate Assembly",
-      "url": "https://arxiv.org/abs/2611.16099",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.16099v1 Announce Type: cross Abstract: Molecular conjugates, including PROTACs and peptide-drug conjugates (PDCs), derive their function from the joint behavior of multiple coupled components, yet most generative approaches design these components independently and combine them only after generation. Such staged pipelines ignore cross-component dependencies and often produce conjugates that are chemically invalid, fall outside empirical conjugate distributions, or lose function upon assembly. In this work, we introduce Coupled Objective-Guided Discrete Flows for Molecular Conjugate Assembly (CupOFMoCA), a discrete generative method that enforces cross-component chemical constraints during conjugate generation. CupOFMoCA restricts guided updates to chemically feasible conjugate states and reweights local transitions using…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Ruoxi Rosie Zhang",
-        "Ziang Li",
-        "Jiatao Gu",
-        "Pranam Chatterjee"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.16099",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.16099v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.16099",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "3e2de2f4246c7cd193f32df54efe66c588b1970a1ab5b69daf89af32f17529d2",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f2d6a345fd79d565e886",
-      "title": "From XXLTraffic to EvoXXLTraffic: Scaling Traffic Forecasting to Sensor-Evolving Networks",
-      "url": "https://arxiv.org/abs/2605.29768",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2605.29768v3 Announce Type: replace Abstract: Traffic forecasting benchmarks commonly fix the sensor set, although deployed sensing networks change their coverage over time. We present EvoXXLTraffic, a sensor-evolving extension of the XXLTraffic dataset family, with yearly sensor catalogs, persistent station IDs, flow matrices, and geographic graph snapshots across nine California PeMS districts, spanning up to 27 years. The benchmark separates all-sensor forecasting from supervised adaptation to sensors absent from the preceding year. We evaluate 13 baseline adaptations on PEMS04 with five seeds and PEMS05 with three seeds, and seven of them on the other seven districts with three seeds. Each yearly task uses 31 stored days, explicit observation masks, and chronological evaluation. Under the frozen configurations, PECPM has the…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Du Yin",
-        "Hao Xue",
-        "Arian Prabowo",
-        "Shuang Ao",
-        "Flora Salim"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2605.29768",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2605.29768v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2605.29768",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "ba1f8ebccc6bc263a07d2da7dadc46563127b9347c690cf1c9790229887b9c6f",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f1e5ba17420e553fd7e0",
-      "title": "A Spectral Boundary for Independence Learnability",
-      "url": "https://arxiv.org/abs/2610.38999",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.38999v2 Announce Type: replace-cross Abstract: Learning independence is fundamental to statistical inference and machine learning, yet learning independence between entire time series by a test remains challenging when only a single observation record is available. Existing guarantees often rely on structural or mixing assumptions, while stationarity and ergodicity alone do not permit consistent testing. In this work, we identify a class-level boundary governed by shared nontrivial Koopman eigenvalues, which represent common persistent oscillatory frequencies of the two processes. When no such eigenvalues are shared, we extend shift-based rank calibration with finite-window dependence witnesses and a data-adaptive threshold to construct a deterministic, weakly consistent test with finite-sample false-positive control, without…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Senhan Yao",
-        "Yuxin Zhou"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2610.38999",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2610.38999v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.38999",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "2ed6d6d56df45b6d950b4b94de2300bec65cd17856ab7643f670564a5f61e62a",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f1a6153f2675cd8c11fc",
-      "title": "Speech Tokenizers are Vulnerable: Transferable Semantic Attack and Robust Tokenizer",
-      "url": "https://arxiv.org/abs/2611.14929",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.14929v1 Announce Type: cross Abstract: Speech tokenizers serve as speech front ends, encoding input speech signals into representations for downstream models, such as automatic speech recognition (ASR) systems and large audio-language models (LALMs). In this paper, we find that speech tokenizers are fragile at the semantic level: small perturbations can disrupt their semantic encoding process and consequently cause severe degradation in downstream ASR and LALM performance. To study this vulnerability, we propose T-SemAttack, a transferable semantic attack based on a semantic encoder ensemble. By jointly drifting the representation spaces of multiple semantic encoders, T-SemAttack effectively disrupts the semantic content of speech while preserving perceptual quality, thereby inducing error features. We further analyze…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Zhisheng Zhang",
-        "Yifan Mi",
-        "Yixuan Zhou",
-        "Haiyun Li",
-        "Shengbo Cai",
-        "Dongfu Song",
-        "Ziang Xu",
-        "Jie Hao",
-        "Zhiyong Wu"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.14929",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.14929v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.14929",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "c9145f6aa2e732563647f0d349cb34d2b78997de375906191b22d4658b014093",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "f161a94aebb8b10035bc",
-      "title": "Risk-Aware Joint Inference and Resource Control for Physical AI in 6G Networks",
-      "url": "https://arxiv.org/abs/2611.14696",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.14696v1 Announce Type: cross Abstract: Wireless edge inference enables Physical-AI devices to execute edge-inferred actions using transmitted sensory inputs. Since the risk of incorrect actions vary across observations and tasks, the associated uplink transmission of sensory inputs requires different levels of wireless reliability. For instance, applying a fixed signal-to-interference-plus-noise ratio (SINR) requirement can overprovision low-risk tasks while underprovisioning high-risk ones. Therefore, we propose risk-aware control for edge inference (RACE), which maps predicted action-failure probability and task criticality to adaptive SINR targets and combines them with deadline-derived SINR requirements. A slow-timescale large language model (LLM) proposes task requirements for deterministic validation, while a fast…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Amin Farajzadeh",
-        "Melike Erol-Kantarci"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.14696",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.14696v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.14696",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "2fccc3b8e0382cacaaa13ce1c6a741277443c4882b56849044949946030b54fa",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "eee43a52e1955b2bb30f",
-      "title": "Copied, Mixed or Computed? Testing Latent Intermediate Values with Minimal Pairs",
-      "url": "https://arxiv.org/abs/2610.28498",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.28498v3 Announce Type: replace Abstract: Probing studies of latent reasoning read a model's state where the answer begins, and take a successful probe as evidence that an intermediate value was computed and a failed one as evidence that it was not. With prompts that differ in one token, we show that a digit copied from the question is present there in two looped and two standard language models, while a probe that sees one prompt at a time reads it at no more than 0.52 even after 45,000 training questions. Every token we varied leaves such a trace, so a successful probe may be reading the inputs. We give a protocol that tests a candidate value against copies of the inputs, against generic mixing of them (an operation swap with a bar set on synthetic mixtures), and for use (a clamp that controls for the copy), and we check…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Aur Shalev Merin"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2610.28498",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2610.28498v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.28498",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "e12f9919f9bc5abb8e6d52f183cec12953708be76471b33e46ebdb663d672568",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "edc72ded686cbe7d87d7",
-      "title": "GC-MoE on SM120: Overlapping Expert-Parallel Token Dispatch with Warp-Level FP8xFP4 Block-Scaled MMA on Consumer Blackwell",
-      "url": "https://arxiv.org/abs/2611.16219",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.16219v1 Announce Type: cross Abstract: Expert-parallel Mixture-of-Experts decoding is latency bound: each layer serializes a token exchange, a grouped GEMM over routed experts, and a combine, while only a few tokens per rank are in flight. Prior GC-MoE fused these phases into one persistent, Green-Context-partitioned CUDA Graph on Hopper (SM90) and datacenter Blackwell (SM100). This paper rebuilds the operator for SM120 (compute capability 12.0, e.g. RTX PRO 5000) over PCIe. SM120 exposes block-scaled tensor cores only through warp-level mma.sync.aligned.kind::mxf8f6f4: no tensor memory, no two-CTA MMA, no cluster multicast. We rebuild the kernel around a swap-AB warp-level block-scaled MMA with FP4 weights in the register A operand and FP8 activations in B, plus SM120-specific mechanisms: scale-byte selection through MMA…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yong Li",
-        "Haoyu Wang",
-        "Kan Liu",
-        "Tao Lan"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.16219",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.16219v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.16219",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "7306b860bfe44df3270d9a597a3d042f2cf2111a9f1822b36a5ee0edd56a2b79",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ed8d7ad54cf6bf4c24c7",
-      "title": "Rethinking Floorplan Generation with Space Syntax: From Design Theory to Model Improvement",
-      "url": "https://arxiv.org/abs/2602.22507",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2602.22507v4 Announce Type: replace Abstract: Architectural design increasingly adopts generative AI (GenAI) for floorplan generation, an early-stage design task exploring how spaces should be organized for use. Yet fidelity objectives inherited from native visual and geometric generators do not automatically capture this design purpose. This organization remains largely implicit in generated representations, limiting direct evaluation and feedback. Drawing on space syntax, an established architectural design theory, the Space Syntax Integration Operator (SSIO) recovers convex-space access graphs across heterogeneous formats. This theory-grounded shared intermediate representation, which we call a design container, supports evaluation and model understanding of spatial design. Applying SSIO to four residential corpora spanning 15…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Zhuoyang Jiang",
-        "Dongqing Zhang",
-        "Qingxiang Liu",
-        "Yuxuan Liang"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2602.22507",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2602.22507v4",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2602.22507",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "5b51966586f272c1f90c9d558e4e3164ea835841dbc44c20875d2f581f7f2345",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "ec3cf2a90a7fd7485761",
-      "title": "MechFoundry: An agentic loop that poses and performs engineering analyses and optimization of real-world objects",
-      "url": "https://arxiv.org/abs/2611.14571",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.14571v1 Announce Type: cross Abstract: AI agents can automate software engineering because a compiler or a test suite checks that the code does what the user or the agent intended. In engineering analysis, however, the steps that precede the computation have few easily verifiable checks: modeling a design or an object, deciding how it is used, where supports and loads are applied, and what material each part is made of. A human expert therefore makes these decisions, carries out the steps, and judges the result, one object at a time. We present MechFoundry, an agentic loop coupled with bespoke software that automates structural analyses of real-world objects without a human in the loop. From an object's lexical description, it generates a shape, poses a loading case relevant to how the object is used, assigns a material to…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Xue-Ling Luo",
-        "Marco Conte",
-        "Peter Yichen Chen",
-        "Nikolaos Bouklas"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.14571",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.14571v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.14571",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "8c77e096e5d69dcd266aeefc028764ca1cb523a452b1a675980ef0605ca3d3d3",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "eb7d817012e6cca4dff0",
-      "title": "EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming",
-      "url": "https://arxiv.org/abs/2611.16728",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.16728v2 Announce Type: replace-cross Abstract: Generalist manipulation policies can benefit from the complementary experience of humans, real robots, and simulated agents. However, differences in morphology, sensing, and control interfaces make it difficult to learn effectively from their combined demonstrations. We introduce EgoX, an egocentric cross-embodiment learning framework that shares manipulation structure through fine-grained, semantically corresponding observation and action modalities while keeping sensing and control interfaces embodiment-specific. EgoX pretrains a Modular Embodiment Dreamer (MED) on this mixture and fine-tunes it on target-embodiment demonstrations. Within each embodiment, MED assigns a dedicated tokenizer to each observation modality and a dedicated expert to each action modality, with a…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yaru Niu",
-        "Binghong Chen",
-        "Changwei Yao",
-        "Shangtao Li",
-        "Zhenlong Fang",
-        "Revanth Krishna Senthilkumaran",
-        "Shuai Zhou",
-        "Yuemin Mao",
-        "Kalie Ching",
-        "Po-Ju Chao",
-        "Yudong Luo",
-        "Peiqi Yu",
-        "Heng Zhang",
-        "Hao Zhang",
-        "Bingqing Chen",
-        "Chen Qiu",
-        "H. Eric Tseng",
-        "Ye Yuan",
-        "Umar Iqbal",
-        "Changliu Liu",
-        "Jonathan Francis",
-        "Ding Zhao"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.16728",
-      "links": [
-        "https://arxiv.org/abs/2611.16728"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-18T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.16728v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.16728",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "2ad8a9f48ecf11600d846ce786be9f682ce1244a685475d594b413574311204b",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 1
-    },
-    {
-      "id": "eb5aa5e6f84648ea4608",
-      "title": "Appear2Meaning: A Cross-Cultural Benchmark for Structured Cultural Metadata Inference from Images",
-      "url": "https://arxiv.org/abs/2604.07338",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2604.07338v2 Announce Type: replace-cross Abstract: Museum records express how people understand heritage objects through cultural and historical relations. Recovering these human attributions from images is a technical challenge for vision-language models (VLMs). We introduce Appear2Meaning, a cross-cultural benchmark of 750 museum objects for image-only recovery of title, culture, period, origin, and creator. Its evaluation framework distinguishes field-level from complete-record compatibility and uses human validation for semantic judgement. Across nine VLMs, mean field accuracy is 36.16--49.82%; 7.20--17.02% of records have all four contextual fields compatible, and 2.13--7.87% have all five, including title. For the two tested models, image-only input yields 12.6--32.2 percentage points higher reference compatibility for…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Yuechen Jiang",
-        "Enze Zhang",
-        "Md Mohsinul Kabir",
-        "Chenying Lin",
-        "Ying Peng",
-        "Fengyuan Liu",
-        "Qianqian Xie",
-        "Stavroula Golfomitsou",
-        "Konstantinos Arvanitis",
-        "Sophia Ananiadou"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2604.07338",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2604.07338v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2604.07338",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "2173b82cbd0261311f9c23c94f9e37c26a2f0d3599771500edd871cf9a004011",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e988f129837e62f0e663",
-      "title": "Decoupled Asynchronous System for Humanoids (DASH): Latency-Agnostic Scaling of Vision-Language-Action Models for Humanoid Manipulation",
-      "url": "https://arxiv.org/abs/2611.11854",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.11854v2 Announce Type: replace-cross Abstract: Vision-language-action (VLA) models pair a vision-language backbone with an action head, but in closed-loop control the backbone sits on the control-critical path: while it computes, the robot keeps moving, so each executed action is conditioned on an increasingly stale observation. A larger backbone therefore directly blocks reactivity, especially in humanoid dexterous manipulation. We present DASH, a Decoupled Asynchronous System for Humanoids that removes this coupling. DASH splits the policy into a slow vision-language model (System 2) and a fast flow-matching action head (System 1) that run as concurrent processes over the LCM communication protocol, so the control rate is set by the action head alone, independent of backbone size. The action head fuses stale semantics from…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Bingzhang Wang",
-        "Nathan Zhao",
-        "Jialeng Ni",
-        "Jiayin Zheng",
-        "Yin Zhang",
-        "Kehua Chen",
-        "Jian Yao"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.11854",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.11854v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.11854",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "237a81410cb5cf3f2f9ab4da1a5f72144f4247ec92d758ab3eb908766be9cce4",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e767b52d16d79ba03aab",
-      "title": "Theorem-Proving Agent over Abstract Syntax Tree",
-      "url": "https://arxiv.org/abs/2607.16372",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2607.16372v2 Announce Type: replace-cross Abstract: Interactive theorem proving (ITP) underpins program verification and formalized mathematics, but its manual effort limits scalability. LLM-based proof agents promise to ease this effort, but their heavy token consumption and API cost remain a major obstacle. We trace this cost to a shared root: current agents operate on serialized concrete syntax, emitting proofs as source text and recovering proof states through separate, line-number-based queries, so every edit shifts later lines and forces repeated relocation of errors and states. This same dependence on concrete syntax also blocks adoption of Minilang, a recent proof language that reaches SOTA on LLM-based proving but is too new for LLMs' training corpora. We address both problems by lifting the agent off source text and onto…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Qiyuan Xu",
-        "Joshua Ong Jun Leang",
-        "Renxi Wang",
-        "Wenda Li",
-        "Haonan Li",
-        "Luke Ong",
-        "Conrad Watt"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2607.16372",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2607.16372v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2607.16372",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "d856f7f1444e38e34eac35f5a98a4c9312de5f8df3d9d7ca5b627c9885c82c02",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e73293e2c9073d0d5ebe",
-      "title": "Scalable Conversational Assessment: Chat-Based Exams with a Two-Agent LLM Pipeline",
-      "url": "https://arxiv.org/abs/2611.17220",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.17220v1 Announce Type: cross Abstract: Oral exams are compelling because (1) students can be asked to provide their reasoning for an answer and (2) their interactive nature permits follow-up questions to resolve ambiguous answers. But oral exams scale poorly. In this paper, we present scalable conversational assessment, an LLM-based system that conducts interactive text-based conversations with students to assess their ability to make and support an argument. We use a two-agent architecture to separate concerns and reduce the likelihood that answers are leaked to the student: the interviewer interacts directly with the student, but only receives guidance about the next question to ask the student; the hidden evaluator knows the goals of the whole activity, tracks the student's progress using a rubric, and guides the…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Geoffrey Challen",
-        "Craig Zilles"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.17220",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.17220v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.17220",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "0cc4e964056d5fe0807f9a4979f32b247c1b531ee814345aebea08f1a0b1b0f6",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e642ea0561380e4f7470",
-      "title": "When Safety Becomes an Attack Surface: Manipulating Abstention in Tool-Using AI Agents",
-      "url": "https://arxiv.org/abs/2611.14864",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.14864v1 Announce Type: cross Abstract: An AI agent's decision not to act can itself become an attack surface. We study warning-induced over-abstention, an availability attack in which adversaries place fabricated risk warnings in low-trust content to prevent legitimate task completion. Our central premise is that safe abstention requires evaluating both the claimed risk and the authority of the evidence supporting it. We develop controlled counterfactual task variants that vary risk content, source provenance, and warning wording, and evaluate a Verify-Before-Abstain protocol that corroborates warnings against authoritative records or the underlying content. Across three model families and 51 injectable AgentAbstain task pairs, caution-first prompting amplifies the attack. For Gemini, induced over-abstention rises from…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Charles Xiao"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.14864",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.14864v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.14864",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "6727bd71feb9c782fc292c74f4786f209c41afd32002ad9dc1432f03b77a53db",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e416f2d60d2b6c1ac581",
-      "title": "TheoPhysEval: Assessing AI agents at autonomous theoretical physics problem solving",
-      "url": "https://arxiv.org/abs/2610.16733",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2610.16733v2 Announce Type: replace-cross Abstract: We present a suite of 50 unpublished research-level theoretical physics problems with verifiable answers. Without AI assistance, a typical problem in our collection could be solved by a world expert in about a day or less but would take considerably longer for experts in adjacent specialties. We test the ability of off-the-shelf AI agents to tackle these problems autonomously, without human hints. When given access to tools available in a realistic setting, including the ability to search the literature and write scripts for numerical and symbolic work, the best-performing agent, GPT-6-Astra harnessed in Codex, obtains the final answers with a near-perfect accuracy of 98% at an average cost under USD 3 per problem. On average, agents show only small changes in accuracy when…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "A. Ramesh Chandra",
-        "Aaghaz Mahajan",
-        "Ainesh Sanyal",
-        "Mianqi Wang",
-        "Shubhadeep Chakraborty",
-        "Sudip Chakraborty",
-        "Shailesh Chandrasekharan",
-        "Rama Govindarajan",
-        "Akshit Goyal",
-        "Jonathan J. Heckman",
-        "Yasir Iqbal",
-        "Divya Jaganathan",
-        "Saumav Kapoor",
-        "Andreas Karch",
-        "Pushkar Khandare",
-        "Sandeep Krishna",
-        "Anupam Kundu",
-        "Alok Laddha",
-        "Tongyan Lin",
-        "Swarnendu Maity",
-        "Nilmani Mathur",
-        "Shani Nadir Meynet",
-        "Alessandro Mininno",
-        "Abhijeet Mishra",
-        "Vidur Niranjan",
-        "Abhishodh Prakash",
-        "Pratik Rath",
-        "Durbar Roy",
-        "Debargha Sarkar",
-        "Srikanth Sastry",
-        "Gary Shiu",
-        "Aninda Sinha",
-        "Thomas Van Riet",
-        "Praneeth Netrapalli",
-        "Suvrat Raju"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2610.16733",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2610.16733v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2610.16733",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "85fc6cdf74acb10590e5788432fa37089686b9c2af4dae4fa2dbe6c72e899ad4",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e3ff549785cf9623d559",
-      "title": "Evaluating AI Agents for Industrial-Level Chip Floorplanning: A Framework and Empirical Study",
-      "url": "https://arxiv.org/abs/2611.12048",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.12048v2 Announce Type: replace Abstract: Floorplanning is an early step in turning a logical circuit into a physical chip: it positions large circuit modules and constrains the space available for subsequent logic placement and wiring. These decisions affect congestion and timing, but their physical consequences emerge through downstream implementation. For AI agents, the task requires translating engineering constraints into spatial decisions whose quality cannot be judged by successful tool execution alone. We present an evaluation framework that connects submitted layouts to a prescribed downstream implementation flow, checks geometric validity, measures physical quality, and reports resource use. On one industrial design whose 99 macros occupy approximately 71\\% of a fixed L-shaped layout region, we compare our…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Silicon Team"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.12048",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.12048v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.12048",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "a2d93908efaec6b68112fcba06157639c7d46768da9dc03c1f74caa4d1bb7b0b",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "e0dc73937cf093b6d24d",
-      "title": "Effect-Level Validation for Causal Discovery in Interactive Telemetry",
-      "url": "https://arxiv.org/abs/2602.08340",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2602.08340v2 Announce Type: replace Abstract: Causal discovery is increasingly used to analyze telemetry from interactive systems, but a plausible graph does not guarantee an identifiable or reliable product decision. We study this problem for one query: whether early competitive gameplay increases Day-1 retention in a deployed Role-playing game (RPG). We propose an admissibility-first framework that treats discovered graphs as structural hypotheses, keeps only graphs that identify the target effect and have adequate treatment-control overlap, and validates admissible effects through cross-algorithm stability, placebo, subsampling, and E-value diagnostics. On real telemetry, under minimal constraints the admissible runs that return Directed Acyclic Graphs (DAGs) are those whose graphs leave player-versus-player (PvP) with no…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Hoang Dang",
-        "Luan Pham",
-        "Minh Nguyen"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2602.08340",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2602.08340v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2602.08340",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "527af650354bdd2272293ae6c057688cdb237621b8cd0fcae5d0c694950f17c1",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "df71a66c604bb0535242",
-      "title": "Mach2: Scientific Discovery Platform with Deterministic Execution Constraints",
-      "url": "https://arxiv.org/abs/2611.14777",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.14777v1 Announce Type: cross Abstract: Language-model agents can formulate workflows and invoke specialized tools, yet compliance with natural-language operating rules is not guaranteed by prompting alone. Mach2 addresses this limitation by coupling Eigen orchestration to deterministic, lint-like checks of tool requests, source changes, acceptance tests, and artifact contracts. Domain requirements are represented as executable predicates: mandatory failures prevent advancement of the checked operation, while diagnostic findings are retained for correction or review. User-specified test-driven development (TDD), CodeGrapher's abstract-syntax-tree analysis, and history-guided evolutionary search provide complementary verification and optimization mechanisms. Mach2 also generates task-specific agent packages for execution…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Vansh Sharma",
-        "Venkat Raman"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.14777",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.14777v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.14777",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "a926583bddd9145828827a3feb5759a94ce8eb6ab3896d2fb17659e42eabdb38",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "dee0955403b0fb9567a4",
-      "title": "What Can a VLA Learn from the Agent That Calls It? Task-Level Experience Distillation for Embodied Navigation",
-      "url": "https://arxiv.org/abs/2611.16246",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.16246v3 Announce Type: replace-cross Abstract: Vision-language-action (VLA) models drive the robot directly from camera views, yet a VLA alone shows three typical failures. It walks past the goal, stops before reaching it, and rarely recovers after going off track. Pairing a VLA with a large language model (LLM) planner fixes these failures, but queries the LLM throughout every episode, adding token costs and latency. We introduce Harness-to-Executor (H2E), a task-level distillation method that pairs an LLM planner and a frozen VLA as a heterogeneous training agent, keeps only sessions that reach the goal, and then trains a VLA alone on them so no LLM is used at test time. In these sessions, the planner gives sub-instructions and moves the robot with its own tools, detours are common, and the planner decides when to stop. H2E…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Jinze Tao",
-        "Yuxiao Han",
-        "Kangkang Dong",
-        "Yancong Wei",
-        "Xiaojun Zhu",
-        "Bokui Chen",
-        "Houde Liu"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.16246",
-      "links": [
-        "https://arxiv.org/abs/2611.16246"
-      ],
-      "aliases": [],
-      "updated_at": "2026-11-18T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.16246v3",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.16246",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "32a9b7deb849da8a4f83853fffb64436bccebe78570d2c1e6a3e5d12616ae75b",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 1
-    },
-    {
-      "id": "de66a638877b0ee02c1a",
-      "title": "ArcticSwarm: Deferring Early Consensus in Long-Horizon Multi-Agent Research",
-      "url": "https://arxiv.org/abs/2609.01870",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2609.01870v2 Announce Type: replace Abstract: Multi-agent systems have shown strong performance in domains with reliable verifiers such as coding, where a verifier can select among candidates generated in parallel. Long-horizon web search has no such verifier. Majority voting over independent runs cannot add an answer that none of the runs reaches. Agents that instead read each other's findings adopt an early candidate before alternatives are tested, a failure we call early consensus. We present ArcticSwarm, a multi-agent research architecture that separates evidence gathering from evidence integration. A gathering gate lets selected search tasks post findings to a shared board without reading it. An integration gate checks a candidate at three steps, and a failed check reopens search instead of only rejecting the candidate. On…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Soyoung Yoon",
-        "Boyi Liu",
-        "Yite Wang",
-        "Ruofan Wu",
-        "Canwen Xu",
-        "Nikki Lijing Kuang",
-        "Seung-won Hwang",
-        "Yuxiong He",
-        "Zhewei Yao"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2609.01870",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2609.01870v2",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2609.01870",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "6c01e6498f15d0ae7579c22c29900298ae9157e6da61e249ddf46fb9451368d1",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
-    },
-    {
-      "id": "dcc49f825564c29fca08",
-      "title": "Analysis choices decide whether untrained networks beat trained ones at V1: a multiverse analysis of model-brain RSA",
-      "url": "https://arxiv.org/abs/2611.15533",
-      "source": "arXiv",
-      "source_id": "arxiv",
-      "source_url": "https://arxiv.org/",
-      "published_at": null,
-      "date_precision": "unknown",
-      "summary": "arXiv:2611.15533v1 Announce Type: cross Abstract: Untrained convolutional networks have been reported to rival trained networks as models of visual cortex, and we had reported an untrained-network advantage over backpropagation at V1 in THINGS fMRI, together with a dependence on evaluation resolution. Under a pre-specified ridge readout, the untrained network scored below the trained one at every pooling grid (median r difference -0.043 at g = 4, 0 of 5 seeds positive), and also in MSE skill and per-fold r. In exploratory analyses, across 36 combinations of unit normalisation, distance measure and voxel normalisation (28 distinct analyses), the sign of the V1 contrast depended on the analysis (intervals above 0 in 5 and below 0 in 9 distinct analyses), and in our networks the resolution dependence of the original convention appeared in…",
-      "summary_kind": "publisher excerpt",
-      "topics": [],
-      "score": 1,
-      "relevance": "candidate",
-      "relevance_reason": "Publication date needs verification; first discovered after collection began.",
-      "authors": [
-        "Nils Leutenegger"
-      ],
-      "first_seen": "2026-11-13T08:00:20Z",
-      "discovered_at": "2026-11-13T08:00:20Z",
-      "doi": null,
-      "arxiv_id": "2611.15533",
-      "links": [],
-      "aliases": [],
-      "updated_at": "2026-11-13T05:00:00Z",
-      "external_id": "oai:arXiv.org:2611.15533v1",
-      "provenance": [
-        {
-          "source_id": "arxiv",
-          "name": "arXiv",
-          "url": "https://arxiv.org/",
-          "article_url": "https://arxiv.org/abs/2611.15533",
-          "found_at": "2026-11-13T08:00:20Z"
-        }
-      ],
-      "content_hash": "1f3dedabf834fcaee1a0e9417e1ea4f09de44acabf1c39197d4fb29f8e3d2e37",
-      "temporal_status": "publication_date_unverified",
-      "revision_count": 0
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-b8e4dd4b142b8388.json",
-    "sha256": "b8e4dd4b142b8388079fe98ae9bc7b1559ad7b9ea0eb0ceed785176f7ede83bd",
-    "total_items": 5952,
+    "manifest": "data/archive/manifest-099ee49665cae396.json",
+    "sha256": "099ee49665cae3967ecb542c6710e6e7440e63e87ae65a4a660fa9818596123c",
+    "total_items": 5976,
     "edition_items": 1500,
     "complete": false
   }

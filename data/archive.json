@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-25T14:33:41Z",
-  "last_successful_update": "2026-11-25T14:33:41Z",
+  "generated_at": "2026-11-25T23:38:24Z",
+  "last_successful_update": "2026-11-25T23:38:24Z",
   "edition_date": "2026-11-25",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 8,
       "parsed_count": 8,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-11-23T14:11:17Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-11-18T04:15:53.600Z",
+        "incremental_window_start": "2026-11-18T14:33:41.166Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -43,13 +43,13 @@
       "name": "arXiv",
       "url": "https://arxiv.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 4764,
-      "parsed_count": 155,
+      "parsed_count": 141,
       "error": null,
       "warnings": [],
       "scope": "mixed",
@@ -58,7 +58,7 @@
         "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-18T05:44:00Z",
+        "oldest_fetched_at": "2026-11-18T15:18:58Z",
         "latest_fetched_at": "2026-11-24T17:24:57Z",
         "pending_incremental": false,
         "validated_empty": false,
@@ -73,11 +73,11 @@
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": "2026-10-29T21:08:56Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 58,
       "parsed_count": 67,
       "error": null,
@@ -129,8 +129,8 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-25T04:15:53Z",
@@ -159,41 +159,43 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
-      "item_count": 960,
-      "parsed_count": 19,
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
+      "item_count": 983,
+      "parsed_count": 50,
       "error": null,
-      "warnings": [],
+      "warnings": [
+        "Recent forum catch-up is pending and will resume from its saved date cursor."
+      ],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-23T11:25:58.977Z",
-        "latest_fetched_at": "2026-11-24T02:20:52.653Z",
-        "pending_incremental": false,
+        "oldest_fetched_at": "2026-11-24T11:19:54.388Z",
+        "latest_fetched_at": "2026-11-25T22:57:52.726Z",
+        "pending_incremental": true,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New public posts are scanned broadly, avoiding reliance on incomplete alignment tags; relevance and research labels route unrelated discussion to review."
       },
-      "lifetime_item_count": 1360
+      "lifetime_item_count": 1383
     },
     {
       "id": "metr",
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 7,
       "parsed_count": 7,
       "error": null,
@@ -223,8 +225,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-24T00:53:52Z",
@@ -262,10 +264,10 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "error",
-      "checked_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
       "last_success_at": "2026-11-05T15:29:15Z",
-      "last_failure_at": "2026-11-25T14:33:41Z",
-      "failure_streak": 67,
+      "last_failure_at": "2026-11-25T23:38:24Z",
+      "failure_streak": 68,
       "last_nonempty_at": "2026-11-05T15:29:15Z",
       "item_count": 5,
       "parsed_count": 0,
@@ -293,11 +295,11 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -328,8 +330,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -367,13 +369,13 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-25T14:33:41Z",
       "item_count": 1,
-      "parsed_count": 1,
+      "parsed_count": 0,
       "error": null,
       "warnings": [
         "Publisher discovery is limited to its current index; existing undated links were baselined when monitoring began. An undated publication added between activation and the first index poll may be missed."
@@ -381,20 +383,20 @@
       "scope": "alignment",
       "coverage": {
         "mode": "forward_only",
-        "pages": 11,
+        "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2025-04-15",
-        "latest_fetched_at": "2026-11-23",
-        "pending_incremental": true,
+        "oldest_fetched_at": "2025-04-17",
+        "latest_fetched_at": "2025-04-17",
+        "pending_incremental": false,
         "discovered_urls": 51,
         "baseline_urls": 102,
         "baseline_boundary_uncertain": true,
-        "pending_documents": 1,
+        "pending_documents": 0,
         "failed_documents": 0,
         "failed_this_run": 0,
         "degraded": false,
-        "validated_empty": false,
+        "validated_empty": true,
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "New science, monitoring and governance research pages from the publisher sitemap. Existing undated URLs establish a baseline; old article rotation is disabled."
@@ -406,8 +408,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -445,8 +447,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -479,8 +481,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -514,11 +516,11 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
       "item_count": 129,
       "parsed_count": 128,
       "error": null,
@@ -548,13 +550,13 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-11-25T14:33:41Z",
-      "last_success_at": "2026-11-25T14:33:41Z",
+      "checked_at": "2026-11-25T23:38:24Z",
+      "last_success_at": "2026-11-25T23:38:24Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-25T14:33:41Z",
-      "item_count": 15,
-      "parsed_count": 15,
+      "last_nonempty_at": "2026-11-25T23:38:24Z",
+      "item_count": 16,
+      "parsed_count": 16,
       "error": null,
       "warnings": [
         "RSS monitoring is limited to the publisher's current feed window; a long outage may exceed that window. Undated entries absent from the prior archive require temporal review."
@@ -575,7 +577,7 @@
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Publisher-wide blog includes technical safety and general AI news; new uncertain matches remain review candidates and outages are bounded by its feed window."
       },
-      "lifetime_item_count": 115
+      "lifetime_item_count": 116
     }
   ],
   "errors": [
@@ -593,7 +595,7 @@
       "forward_state": {
         "monitoring_since": "2026-10-16T23:48:48.000Z",
         "head_id": "1463e3d60818702d638d86acac537901",
-        "watermark": "2026-11-18T14:33:41.166Z",
+        "watermark": "2026-11-18T23:38:24.530Z",
         "observed_head": "1463e3d60818702d638d86acac537901"
       }
     },
@@ -837,7 +839,7 @@
       "backfill_complete": false,
       "forward_state": {
         "monitoring_since": "2026-10-16T23:48:48.000Z",
-        "watermark": "2026-11-24T14:33:41.166Z"
+        "watermark": "2026-11-24T23:38:24.530Z"
       }
     },
     "lesswrong": {
@@ -849,7 +851,10 @@
       "backfill_complete": false,
       "forward_state": {
         "monitoring_since": "2026-10-16T23:48:48.000Z",
-        "watermark": "2026-11-24T04:15:53.600Z"
+        "watermark": "2026-11-24T04:15:53.600Z",
+        "incremental_upper": "2026-11-25T23:38:24.530Z",
+        "incremental_before": "2026-11-24T11:19:54.389Z",
+        "incremental_offset": 1
       }
     },
     "openreview": {
@@ -2780,9 +2785,7 @@
       "failures": {},
       "forward_state": {
         "monitoring_since": "2026-10-16T23:48:48.000Z",
-        "pending_documents": {
-          "https://www.apolloresearch.ai/governance/ai-behind-closed-doors-a-primer-on-the-governance-of-internal-deployment": ""
-        },
+        "pending_documents": {},
         "failures": {},
         "index_initialized": true,
         "index_urls": {
@@ -3166,6 +3169,7 @@
           "https://deepmind.google/blog/improved-gemini-audio-models-for-powerful-voice-experiences/",
           "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe",
           "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
+          "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
           "https://deepmind.google/blog/introducing-agentic-video-in-gemini",
           "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
           "https://deepmind.google/blog/introducing-alphaproof-code",
@@ -3407,7 +3411,7 @@
           "https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/abs/parametric-resourcebounded-generalization-of-lobs-theorem-and-a-robust-cooperation-criterion-for-opensource-game-theory/16063EA7BFFEE89438631B141E556E79"
         ],
         "unknown_candidates": [],
-        "last_index_scan_at": "2026-11-25T14:33:41.166Z"
+        "last_index_scan_at": "2026-11-25T23:38:24.530Z"
       }
     },
     "transformer-circuits": {
@@ -3478,7 +3482,7 @@
           "https://transformer-circuits.pub/2026/workspace/index.html"
         ],
         "unknown_candidates": [],
-        "last_index_scan_at": "2026-11-25T14:33:41.166Z"
+        "last_index_scan_at": "2026-11-25T23:38:24.530Z"
       }
     },
     "arxiv": {
@@ -3489,7 +3493,7 @@
       "backfill_complete": false,
       "forward_state": {
         "monitoring_since": "2026-10-16T23:48:48.000Z",
-        "watermark": "2026-11-18T14:33:41.166Z",
+        "watermark": "2026-11-18T23:38:24.530Z",
         "index_initialized": true,
         "index_urls": [
           "https://arxiv.org/abs/1607.02174",
@@ -11073,24 +11077,24 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 401,
-    "accepted_items": 389,
-    "retained_items": 5950,
-    "lifetime_accepted_items": 401,
-    "lifetime_retained_items": 12925,
+    "fetched_items": 418,
+    "accepted_items": 406,
+    "retained_items": 5952,
+    "lifetime_accepted_items": 418,
+    "lifetime_retained_items": 12927,
     "successful_sources": 15,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 399,
-    "total_items": 5952,
-    "relevant_items": 582,
-    "candidate_items": 5370,
+    "duplicates_removed": 394,
+    "total_items": 5976,
+    "relevant_items": 592,
+    "candidate_items": 5384,
     "undated_items": 2251,
     "year_only_items": 0,
-    "newest_publication": "2026-11-25T04:00:52Z",
-    "lifetime_total_items": 12927,
+    "newest_publication": "2026-11-25T22:57:52Z",
+    "lifetime_total_items": 12951,
     "excluded_legacy_items": 6975
   },
   "coverage_policy": {
@@ -11116,138 +11120,138 @@
     "review_policy": "Opinion, news, uncertain relevance, and newly discovered items with uncertain publication timing remain candidates for review."
   },
   "storage_format": "sharded-v1",
-  "items_count": 12927,
+  "items_count": 12951,
   "storage_chunks": [
     {
-      "path": "archive/records-823d48b04b6716e5.json",
+      "path": "archive/records-03c33f88270f5c3e.json",
       "count": 500,
-      "sha256": "823d48b04b6716e5a8d106d04561228d20438ac205ff3d832a1e78e43627344c"
+      "sha256": "03c33f88270f5c3e5774afe7db07cb9653ea67bcdc31e46cc1bc88b8b79467b3"
     },
     {
-      "path": "archive/records-1d432629cf19b51d.json",
+      "path": "archive/records-7e2213d63fffbc16.json",
       "count": 500,
-      "sha256": "1d432629cf19b51d631c34a19c4fab45bd1d8103b1b13de3289b01545773e959"
+      "sha256": "7e2213d63fffbc1655fcabad88109ebf889ebe887900b566edbe31aa0e322651"
     },
     {
-      "path": "archive/records-d91540c815668b75.json",
+      "path": "archive/records-74aeaad9a49c2390.json",
       "count": 500,
-      "sha256": "d91540c815668b750d6694ca5602a67e358e98b29afc8cf629b369c1213c9e62"
+      "sha256": "74aeaad9a49c239009a498f838df4e888f6bacb543550ee55398bb3b67b77e46"
     },
     {
-      "path": "archive/records-cb161988d397fda7.json",
+      "path": "archive/records-3d823ccab9b8465d.json",
       "count": 500,
-      "sha256": "cb161988d397fda7406a8e933fc53028466ac9364d96d2f31d14d3429e60bb5d"
+      "sha256": "3d823ccab9b8465daa2430da3c232f1dc9b873c26a3bd1843872f4262129fee9"
     },
     {
-      "path": "archive/records-e632473e7c68ba9a.json",
+      "path": "archive/records-9e2673cbd6607a66.json",
       "count": 500,
-      "sha256": "e632473e7c68ba9a261a7e06f42f4812ea775bb927b8afd3161e8402ca6aa581"
+      "sha256": "9e2673cbd6607a66e73eea696200cc96675cf66d76949d4146b3fa0621e4a4f2"
     },
     {
-      "path": "archive/records-b3b58fed12cca668.json",
+      "path": "archive/records-c0751c8ee16f4cd1.json",
       "count": 500,
-      "sha256": "b3b58fed12cca6685d98bead96147a8532c3e16f74255e61146f9a3b4ddcc5e4"
+      "sha256": "c0751c8ee16f4cd12ed53b393543110fc9d7b76dab94c301453fc477fcc3d6b1"
     },
     {
-      "path": "archive/records-30661e0674a38173.json",
+      "path": "archive/records-e782d0c0625ae758.json",
       "count": 500,
-      "sha256": "30661e0674a3817344ae669851058fc957f743f3bec950ca340a7f94d91fd70c"
+      "sha256": "e782d0c0625ae75853f2c419a2c771f676d069bc4dba7f544890e755d4d228bd"
     },
     {
-      "path": "archive/records-91769e1027dc6b22.json",
+      "path": "archive/records-abf86e3d07ab017c.json",
       "count": 500,
-      "sha256": "91769e1027dc6b22d42c18730b7b77710f8322e392dda317f6b0873364409019"
+      "sha256": "abf86e3d07ab017c70c21129bd6bdde0f7295cc29643f531d2fb6ef9677718a2"
     },
     {
-      "path": "archive/records-b731b331932b9da1.json",
+      "path": "archive/records-50b269a394da8a34.json",
       "count": 500,
-      "sha256": "b731b331932b9da1ebf3ab333c340c7e0a530ef09ca32e43301d56110898df2f"
+      "sha256": "50b269a394da8a347ac447a7e699aa43de45d67515293d2db6b923cace0d835c"
     },
     {
-      "path": "archive/records-69f17b12c800dd3f.json",
+      "path": "archive/records-f70b3f4c66e8e2bc.json",
       "count": 500,
-      "sha256": "69f17b12c800dd3f4ba8ebf30316d2ec71442242e14fec5d69ca298665936537"
+      "sha256": "f70b3f4c66e8e2bcb7d9adfe9e22609e90de9269ce563fcfc54443dca56a4220"
     },
     {
-      "path": "archive/records-9a969a369a8633c7.json",
+      "path": "archive/records-200ec817a0792222.json",
       "count": 500,
-      "sha256": "9a969a369a8633c7b76253b0232938c1fcbd1d130326c537aa8700fb6863b07b"
+      "sha256": "200ec817a07922225e651e23a9499daffc27c7a6021bec073ae45d71f6e6236e"
     },
     {
-      "path": "archive/records-f031c3370bd1a833.json",
+      "path": "archive/records-04cbbe3bfb266566.json",
       "count": 500,
-      "sha256": "f031c3370bd1a833b282ce06ed91e8628173341da63e9528f39d54c7f741179e"
+      "sha256": "04cbbe3bfb2665664ed25213520afadcb62c567a11ed029fd4fcd54fd6e68782"
     },
     {
-      "path": "archive/records-792f4a202a2e1f7c.json",
+      "path": "archive/records-224fdaf36439f6c0.json",
       "count": 500,
-      "sha256": "792f4a202a2e1f7ca3e9bd419c46f415d9e82ec1d5f9f5a11c054a342ead7abf"
+      "sha256": "224fdaf36439f6c0cad3db17a5918d9b0572276c3b63d998cf1ceee72d98f6af"
     },
     {
-      "path": "archive/records-6232a865e660a220.json",
+      "path": "archive/records-146cb26ea7a65c9a.json",
       "count": 500,
-      "sha256": "6232a865e660a2207216af5763b611f498e3b23160dd3e5444207c9acd67298d"
+      "sha256": "146cb26ea7a65c9a8e2a922b619343638ce506f95d4475ad6d4b23de6b38a839"
     },
     {
-      "path": "archive/records-1952077016ad24d9.json",
+      "path": "archive/records-97dfe780c6a67ee4.json",
       "count": 500,
-      "sha256": "1952077016ad24d91149daeeabb834689cba274050f7a501dfb5abea42156002"
+      "sha256": "97dfe780c6a67ee4055530285a876576e3a68d28d295ffbcea01b07badd5fc3b"
     },
     {
-      "path": "archive/records-156393935dc2e215.json",
+      "path": "archive/records-441587041645aae4.json",
       "count": 500,
-      "sha256": "156393935dc2e2159279b68803dae5d690fd6989acac83d14292b5976bc1895a"
+      "sha256": "441587041645aae42c91ec27b07670ff192de5b6dd9f180ff54f868e91f54f69"
     },
     {
-      "path": "archive/records-90cd0ff2716f188f.json",
+      "path": "archive/records-92d82d7f94496ed3.json",
       "count": 500,
-      "sha256": "90cd0ff2716f188f812891a640768145d8b472f3178e674b0bad05d7ed9b794e"
+      "sha256": "92d82d7f94496ed373036b041486e530d483c6e6116d4017148b187c197a9d5c"
     },
     {
-      "path": "archive/records-4595280fa8dfc62f.json",
+      "path": "archive/records-56b5d6817e9fa893.json",
       "count": 500,
-      "sha256": "4595280fa8dfc62f6eddb8e399280eb364d60333c81a6454370f60038bcd463c"
+      "sha256": "56b5d6817e9fa893c9a4307a95d52fd42c3ec4b9410e2093ef0cf052f09cdb09"
     },
     {
-      "path": "archive/records-6144e41a3d0594cb.json",
+      "path": "archive/records-08b411ccf0d6c212.json",
       "count": 500,
-      "sha256": "6144e41a3d0594cbb5bc13cee203f67c0e9e002da42b900829dc93c695fd6f68"
+      "sha256": "08b411ccf0d6c21293916957834774235740ef2e433f8556bf1a733b10751b04"
     },
     {
-      "path": "archive/records-f1dcc3ab1fa42538.json",
+      "path": "archive/records-5407a8efb55ac7b3.json",
       "count": 500,
-      "sha256": "f1dcc3ab1fa4253803623e629095b43f79311fc0a6d49ea0919dd2c59288f78e"
+      "sha256": "5407a8efb55ac7b388905aedd9a8d507c763645556a181ca6a3da279843a4218"
     },
     {
-      "path": "archive/records-64e6bab1771d0582.json",
+      "path": "archive/records-41eb6351eae66f36.json",
       "count": 500,
-      "sha256": "64e6bab1771d0582a5e33814f67554ef159583e2a8b25b297ff16ecbc0254eb8"
+      "sha256": "41eb6351eae66f369ceb3b27b02fc60ee992f8691a22e39540faa9ad15e679be"
     },
     {
-      "path": "archive/records-9fe849601e30517a.json",
+      "path": "archive/records-cb60b768cf0bf8e3.json",
       "count": 500,
-      "sha256": "9fe849601e30517ac8613b7ec8662b5637636c05d490dc217c478ca271c784a2"
+      "sha256": "cb60b768cf0bf8e32b7f0d9f44c1b2d7bc57abb3e6ce5ef2c51761c96821b64b"
     },
     {
-      "path": "archive/records-cf8370787e807533.json",
+      "path": "archive/records-504c7c55b0756239.json",
       "count": 500,
-      "sha256": "cf8370787e807533b95716edb197c76675db8893ae2fab9922c652704606b1f0"
+      "sha256": "504c7c55b0756239f90c0428b7c3c1ca0b9619acf776174a4b694a9419243fa7"
     },
     {
-      "path": "archive/records-b488236d47935f51.json",
+      "path": "archive/records-d31ed283635edde5.json",
       "count": 500,
-      "sha256": "b488236d47935f5101ca654c838c00414cd607709ca76b4b2b278019a0b2e090"
+      "sha256": "d31ed283635edde55bd49df9aa971fb9513365f703c7421f913b914da9c79f5b"
     },
     {
-      "path": "archive/records-799ab54f6d3f8f41.json",
+      "path": "archive/records-ba1482580ab5bd70.json",
       "count": 500,
-      "sha256": "799ab54f6d3f8f41408908ddf163b39067d7bc2cf3e1df1e0c41c0174a32e8c2"
+      "sha256": "ba1482580ab5bd70ba86bd4ec398cb280e59cd0b10bb60c2886766d79f3f9948"
     },
     {
-      "path": "archive/records-9014d42c053aa974.json",
-      "count": 427,
-      "sha256": "9014d42c053aa974a819cf4f4d38e18467b8ab4cc904a0943fe4a2445356a854"
+      "path": "archive/records-390aedfed5ed08bb.json",
+      "count": 451,
+      "sha256": "390aedfed5ed08bb26abc3a56623db4dbb2ada5e363453403d52bd58d99d5abd"
     }
   ],
-  "storage_generation": "archive/manifest-ad9886ce4e20a9ab.json"
+  "storage_generation": "archive/manifest-f1e0cbeec5db1f07.json"
 }
