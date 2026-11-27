@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-26T19:02:21Z",
-  "last_successful_update": "2026-11-26T19:02:21Z",
+  "generated_at": "2026-11-27T02:12:40Z",
+  "last_successful_update": "2026-11-27T02:12:40Z",
   "edition_date": "2026-11-26",
   "timezone": "America/Detroit",
   "sources": [
@@ -10,11 +10,11 @@
       "name": "Alignment Feed",
       "url": "https://alignmentfeed.org/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-26T19:02:21Z",
+      "last_nonempty_at": "2026-11-27T02:12:40Z",
       "item_count": 8,
       "parsed_count": 8,
       "error": null,
@@ -31,7 +31,7 @@
         "latest_fetched_at": "2026-11-23T14:11:17Z",
         "pending_incremental": false,
         "degraded": false,
-        "incremental_window_start": "2026-11-19T08:22:40.337Z",
+        "incremental_window_start": "2026-11-19T19:02:21.469Z",
         "adapter_mode": "forward_only",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Secondary discovery index, including commentary and capabilities news; forward pagination catches up to the fixed publication cutoff."
@@ -42,34 +42,27 @@
       "id": "arxiv",
       "name": "arXiv",
       "url": "https://arxiv.org/",
-      "status": "degraded",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "status": "ok",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-26T19:02:21Z",
+      "last_nonempty_at": "2026-11-27T02:12:40Z",
       "item_count": 5082,
-      "parsed_count": 309,
+      "parsed_count": 152,
       "error": null,
-      "warnings": [
-        "arXiv search API failed: The read operation timed out",
-        "Backup RSS discovers only the current announcement window in five configured categories. New-publication API catch-up remains pending."
-      ],
+      "warnings": [],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
-        "pages": 1,
+        "pages": 2,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "Thu, 26 Nov 2026 00:00:00 -0500",
-        "latest_fetched_at": "Thu, 26 Nov 2026 00:00:00 -0500",
-        "degraded": true,
-        "primary_error": "The read operation timed out",
-        "archive_available": false,
-        "pending_incremental": true,
+        "oldest_fetched_at": "2026-11-19T08:24:37Z",
+        "latest_fetched_at": "2026-11-25T18:45:35Z",
+        "pending_incremental": false,
         "validated_empty": false,
-        "fallback_scope": "Current arXiv announcement feed for cs.AI, cs.LG, cs.CL, cs.MA and stat.ML, matched locally against discovery keywords.",
-        "adapter_mode": "rss_fallback",
+        "adapter_mode": "year_partitioned_arxiv",
         "monitoring_since": "2026-10-16T23:48:48Z",
         "description": "Cross-category keyword search for new publications from the fixed cutoff. Query recall is incomplete. During API outages a visibly degraded, keyword-matched RSS backup covers the current announcement window in five categories; primary cursors do not advance."
       },
@@ -80,11 +73,11 @@
       "name": "OpenReview",
       "url": "https://openreview.net/",
       "status": "degraded",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": "2026-10-29T21:08:56Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-26T19:02:21Z",
+      "last_nonempty_at": "2026-11-27T02:12:40Z",
       "item_count": 58,
       "parsed_count": 67,
       "error": null,
@@ -136,8 +129,8 @@
       "name": "Alignment Forum",
       "url": "https://www.alignmentforum.org/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-25T04:15:53Z",
@@ -166,26 +159,24 @@
       "name": "LessWrong",
       "url": "https://www.lesswrong.com/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-26T19:02:21Z",
+      "last_nonempty_at": "2026-11-27T02:12:40Z",
       "item_count": 1007,
-      "parsed_count": 50,
+      "parsed_count": 5,
       "error": null,
-      "warnings": [
-        "Recent forum catch-up is pending and will resume from its saved date cursor."
-      ],
+      "warnings": [],
       "scope": "mixed",
       "coverage": {
         "mode": "forward_only",
         "pages": 1,
         "backfill_complete": false,
         "pending_backfill": false,
-        "oldest_fetched_at": "2026-11-25T03:21:34.016Z",
-        "latest_fetched_at": "2026-11-26T18:12:18.017Z",
-        "pending_incremental": true,
+        "oldest_fetched_at": "2026-11-24T23:39:31.326Z",
+        "latest_fetched_at": "2026-11-25T03:05:34.443Z",
+        "pending_incremental": false,
         "validated_empty": false,
         "adapter_mode": "date_paginated_forum",
         "monitoring_since": "2026-10-16T23:48:48Z",
@@ -198,11 +189,11 @@
       "name": "METR",
       "url": "https://metr.org/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-26T19:02:21Z",
+      "last_nonempty_at": "2026-11-27T02:12:40Z",
       "item_count": 7,
       "parsed_count": 7,
       "error": null,
@@ -232,8 +223,8 @@
       "name": "Anthropic Alignment Science",
       "url": "https://alignment.anthropic.com/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-24T00:53:52Z",
@@ -271,10 +262,10 @@
       "name": "Redwood Research",
       "url": "https://www.redwoodresearch.org/",
       "status": "error",
-      "checked_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
       "last_success_at": "2026-11-05T15:29:15Z",
-      "last_failure_at": "2026-11-26T19:02:21Z",
-      "failure_streak": 70,
+      "last_failure_at": "2026-11-27T02:12:40Z",
+      "failure_streak": 71,
       "last_nonempty_at": "2026-11-05T15:29:15Z",
       "item_count": 5,
       "parsed_count": 0,
@@ -302,11 +293,11 @@
       "name": "Transformer Circuits",
       "url": "https://transformer-circuits.pub/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-26T19:02:21Z",
+      "last_nonempty_at": "2026-11-27T02:12:40Z",
       "item_count": 1,
       "parsed_count": 1,
       "error": null,
@@ -337,8 +328,8 @@
       "name": "FAR.AI",
       "url": "https://www.far.ai/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:46:41Z",
@@ -376,8 +367,8 @@
       "name": "Apollo Research",
       "url": "https://apolloresearch.ai/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-11-25T14:33:41Z",
@@ -415,8 +406,8 @@
       "name": "Alignment Research Center",
       "url": "https://www.alignment.org/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T19:43:37Z",
@@ -454,8 +445,8 @@
       "name": "MIRI",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -488,8 +479,8 @@
       "name": "MIRI Publications",
       "url": "https://intelligence.org/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
       "last_nonempty_at": "2026-10-16T22:52:17Z",
@@ -523,11 +514,11 @@
       "name": "OpenAI",
       "url": "https://openai.com/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": null,
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-26T19:02:21Z",
+      "last_nonempty_at": "2026-11-27T02:12:40Z",
       "item_count": 129,
       "parsed_count": 128,
       "error": null,
@@ -557,11 +548,11 @@
       "name": "Google DeepMind",
       "url": "https://deepmind.google/",
       "status": "ok",
-      "checked_at": "2026-11-26T19:02:21Z",
-      "last_success_at": "2026-11-26T19:02:21Z",
+      "checked_at": "2026-11-27T02:12:40Z",
+      "last_success_at": "2026-11-27T02:12:40Z",
       "last_failure_at": "2026-10-16T19:26:59Z",
       "failure_streak": 0,
-      "last_nonempty_at": "2026-11-26T19:02:21Z",
+      "last_nonempty_at": "2026-11-27T02:12:40Z",
       "item_count": 16,
       "parsed_count": 16,
       "error": null,
@@ -604,17 +595,17 @@
     "monitoring_since": "2026-10-16T23:48:48Z"
   },
   "stats": {
-    "fetched_items": 586,
-    "accepted_items": 574,
-    "retained_items": 6005,
-    "lifetime_accepted_items": 586,
-    "lifetime_retained_items": 12980,
+    "fetched_items": 384,
+    "accepted_items": 372,
+    "retained_items": 6318,
+    "lifetime_accepted_items": 384,
+    "lifetime_retained_items": 13293,
     "successful_sources": 15,
     "total_sources": 16,
     "retention_days": null,
     "minimum_relevance_score": null,
     "suspicious_empty_sources": 0,
-    "duplicates_removed": 273,
+    "duplicates_removed": 384,
     "total_items": 6318,
     "relevant_items": 604,
     "candidate_items": 5714,
@@ -14442,9 +14433,9 @@
       "summary": "This post is made to accompany this timeline page, which collects incidents from this time period and the political responses they influenced: AI safety political advocates have long speculated that warning shots—earlier, recoverable rogue AI incidents that legibly demonstrate the potential for existential risk from future misaligned AI systems—will be especially effective for driving political progress. In July of 2026, we saw what is now generally referred to as the Hugging Face incident. We subsequently saw the disclosure of several similar rogue agent incidents, including several by third-parties, rather than by the responsible AI companies themselves. And in September, we saw one of the largest political preference cascades towards addressing AI risk yet, triggered by a Twitter thread by former Anthropic researcher Jacob Coxon…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
+        "Scheming & deception",
         "Evaluations & risk",
-        "Scheming & deception"
+        "Alignment methods"
       ],
       "score": 17,
       "relevance": "relevant",
@@ -14944,10 +14935,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "d1ec7690dce1daab4e53a8c7435a35c5c9207f2a63875b91e6a25c4fd06b6bcf",
-      "published_date": "2026-11-26",
+      "content_hash": "4c9f2ca9c1c67a211700ed93b505deda5fedbd508639182aad81be4d06b26d10",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "99558b4cc45cf44ba878",
@@ -14990,10 +14980,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "0d80ac464506c2ef89462f6690c7762b1da247834884e02b7d9fc15e69cc7302",
-      "published_date": "2026-11-26",
+      "content_hash": "a8b1ce5806f84525464ab4c646a127ced917b12cf070a6a817f1e2fc3ef22d89",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "6929262630af510e4b86",
@@ -15145,8 +15134,8 @@
       "summary": "This post contains an update on our program to use eigenanalysis of the empirical NTK (eNTK) for mechanistic interpretability, which may be of interest to people working in this space. In previous work (see paper here and distillations here and here), we found a striking alignment of eNTK eigendirections with Fourier feature directions in a model trained on modular arithmetic. This observation, along with evidence that some eNTK eigendirections appear interpretable in a 270M-parameter language model, led us to conjecture that perhaps eNTK eigenanalysis could provide a new tool to find features for mechanistic interpretability. Given the relative simplicity of the eNTK <> modular arithmetic result, we wondered if we could theoretically understand it using mean-field theory (MFT) techniques. Specifically, we hoped to test whether two…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Interpretability"
+        "Interpretability",
+        "Alignment methods"
       ],
       "score": 12,
       "relevance": "relevant",
@@ -15351,10 +15340,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "f66ccdec019ae5bfd4acbf11f55329b176152e493cc5361f007b12629567705d",
-      "published_date": "2026-11-26",
+      "content_hash": "534bdbbd897f2f0028aaa085860811d58abc6cf1bb687213f27ce929c5a48cc1",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "c70718a6db8514997654",
@@ -15401,10 +15389,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "80d4cff67aa0048e76ac67197e87978c973367b7543ffb71bcab414b60e621bd",
-      "published_date": "2026-11-26",
+      "content_hash": "55acddbf686da5383298dbede880227a6917f53453bb97bd96412c6e53ef7a29",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "c4e824cf8ebe18c6b866",
@@ -15453,10 +15440,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "a98e608571d39abef1cd0d5e038dfa81f892595311e02fc487eea4a0f0db5ef4",
-      "published_date": "2026-11-26",
+      "content_hash": "ab2e8fa43fa388c64657a79e6f1502c53db156d73d590cd0ee3293bd33f25d01",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "7f90d37b5f538e0ba248",
@@ -15498,10 +15484,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "bc7f6d31099ab7c2ff58284e4a0f36f0b9a542f827d0f0c14b425880ba96c83d",
-      "published_date": "2026-11-26",
+      "content_hash": "b041d103d4169061521857d8f331a46b6b39f8c3a0cc938737a1461a1fc06399",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "74013ef8161b869d6f8f",
@@ -15690,10 +15675,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "0dabe5e3b13666fb4ac59e387a979643072f01a20ee82bd004128bb4d283f843",
-      "published_date": "2026-11-26",
+      "content_hash": "109ae2df9a3da225075e189b0385cb6147334a25bf156f29e6cb4174270c1102",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "794ce4d22b4a6d542d6a",
@@ -15739,10 +15723,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "c958afed8a757ec1bc19e1677f646c6c8f8dd734f6b9bb7ec5b9722fc5643908",
-      "published_date": "2026-11-26",
+      "content_hash": "53eb670254ec18a85b7a0fa6f9e7d8269c17e86bb4d3b5bcd207099954e249a2",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "205a76eb3c3b97fee4aa",
@@ -16053,8 +16036,8 @@
       "summary": "TL;DR 1. OpenAudit (openaudit.com) hosts independent safety evaluations of models, organizations, and methods. It tries to answer the question: \"How prepared are we to develop and release AI safely?\", while incentivizing positive hill-climbing. 2. Walkthrough - We recommend the interactive Get Started Tutorial. 3. Contributions - A \"choose-your-own-adventure\" AI safety contribution prompt guides you through an end-to-end project, from ideation to submission. 4. What We Need - Advisors, collaborators, and your feedback and contributions -especially better model evaluations and safety methods. What is OpenAudit and why does it exist? OpenAudit independently evaluates three main entities in AI safety: the models, the organizations, and the safety methods (both white-box and black-box). It's a platform that aims to be informative, while…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Alignment methods",
-        "Evaluations & risk"
+        "Evaluations & risk",
+        "Alignment methods"
       ],
       "score": 17,
       "relevance": "relevant",
@@ -16343,10 +16326,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "db986d5c956bfeeac09a380fa1306b5b0d755706b95d0ed110a844e6487463d8",
-      "published_date": "2026-11-26",
+      "content_hash": "4f813ce038f22946e1bbf81e2c37d23f307fffd9a952c5a6b2eddd488f784aa3",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "c85cefcfc8cb4ba5b8e3",
@@ -16609,10 +16591,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "b5aa217d8e2a9bf215e4ab8dcab39ebb502d96d4fd85b6e9c7ee34f134a2216d",
-      "published_date": "2026-11-26",
+      "content_hash": "69d1671d9fc5350e7ae8e30d79c923740fb914a09e1fb819199df709119fec79",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "3623e2259caf7038d038",
@@ -16905,10 +16886,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "c8e911e7b6dfb171f8381a626ef99c7f58ed940a7b2e5bd2c4fc36a49c85dd4a",
-      "published_date": "2026-11-26",
+      "content_hash": "ebf82bdc42028017236a4a9b4d4ffc34cf73a6ffa8c2b58915604ac98826150a",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "72cfb2a56947638b4cd0",
@@ -16948,10 +16928,9 @@
           "found_at": "2026-11-26T08:22:40Z"
         }
       ],
-      "content_hash": "02e5b3d97e4ecb15bb82a805f29a27579d5cc9be7422113898bc4f19dde01e81",
-      "published_date": "2026-11-26",
+      "content_hash": "8695c6443fd48a278a9233f849f5e478ee5fdc57d50690157a0d0a1829b2da3b",
       "temporal_status": "published_after_start",
-      "revision_count": 2
+      "revision_count": 1
     },
     {
       "id": "c0fb88543667c7a0ea08",
@@ -20331,8 +20310,8 @@
       "summary": "Canonical reward models specify the optimization target for AI policies, so understanding the values they encode is important for ensuring AI alignment. Existing interpretability techniques interpret reward models with a single reward head, which cannot distinguish between the values that a population shares and those that vary among individuals. We introduce Reward Basis Decomposition (RBD), which splits per-user weights into a population term and a per-user term. This yields a shared population direction and individual user directions that are analyzed separately via concept alignment and sparse autoencoder decomposition. We verify that RBD can recover artificially planted per-user directions on a synthetic control, then apply it to two real-world multi-preference datasets, PRISM and Community Alignment. In both, we find no…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Interpretability",
-        "Alignment methods"
+        "Alignment methods",
+        "Interpretability"
       ],
       "score": 12,
       "relevance": "relevant",
@@ -21325,8 +21304,8 @@
       "summary": "Explainable AI (XAI) evaluation fundamentally requires human-centered evaluation, assessing whether explanations align with human reasoning and expert knowledge. However, such evaluations often require expert-driven manual validation and are difficult to scale, leading to the widespread use of alignment-based metrics, where attribution maps are compared against predefined ground-truth (GT) representations. Despite their popularity, alignment evaluations are implicitly bias towards multiple design choices made during the evaluation process, for example GT representations, metric families, metric formulations (soft vs. hard), and thresholding strategies. In this paper, we formalize alignment evaluation as a structured evaluation configuration space through which the influence of these design choices can be systematically analyzed. We…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Evaluations & risk",
-        "Alignment methods"
+        "Alignment methods",
+        "Evaluations & risk"
       ],
       "score": 13,
       "relevance": "candidate",
@@ -37301,8 +37280,8 @@
       "summary": "Reinforcement Learning (RL) has become an important component in the post-training of diffusion models. In practice, however, standard RL often improves the target reward without reliably preserving holistic generation quality, leading to unstable reward-quality trade-offs that we view as a form of reward hacking. Since Classifier-Free Guidance (CFG) is known to improve visual clarity, prompt alignment, and perceptual quality in generation, we investigate whether its underlying structure can serve as a useful prior during RL. We present a unified geometric view that interprets both CFG and RL as correction vectors in a common prediction space, and identify the projection of the RL-induced correction onto the pretrained CFG correction as a useful diagnostic of quality-related structural preservation. Geometric analysis and rotation…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Scheming & deception",
-        "Alignment methods"
+        "Alignment methods",
+        "Scheming & deception"
       ],
       "score": 10,
       "relevance": "relevant",
@@ -38332,8 +38311,8 @@
       "summary_kind": "publisher excerpt",
       "topics": [
         "AI control & oversight",
-        "Evaluations & risk",
-        "Alignment methods"
+        "Alignment methods",
+        "Evaluations & risk"
       ],
       "score": 17,
       "relevance": "candidate",
@@ -38805,8 +38784,8 @@
       "summary": "Large language models (LLMs) have transformed software development, yet our understanding of how they generate code remains critically underdeveloped. We address this gap by triangulating evidence across three layers. Longitudinally, autonomous agent-attributed code is statistically indistinguishable from human code under a semantic modification definition (HR = 1.019, p = 0.490), yet attracts disproportionately corrective modifications in production (49.1% vs 37.9% human baseline). This finding demands a causal explanation. Empirically, existing benchmarks overestimate LLM capabilities: models that achieve 84 to 89% correctness on synthetic tasks attain only 24 to 35% on real-world class-level code. Behaviourally, detection systems reveal puzzling asymmetries: GPT-3.5 is far more detectable than modern models (AUC-ROC = 0.96, a…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Interpretability",
-        "Evaluations & risk"
+        "Evaluations & risk",
+        "Interpretability"
       ],
       "score": 14,
       "relevance": "relevant",
@@ -38850,8 +38829,8 @@
       "summary": "Causal Abstraction defines a notion of \\emph{equivalence} between a neural network and an algorithm, thus serving as a powerful framework for mechanistic interpretability. In this paper, however, we show the existence of a class of \\emph{spurious features} which straightforwardly pass such equivalence tests. Suppose there are two directions in a model's representation space where: (i) one discriminates the input based on some feature, and (ii) the other steers the model towards a certain output. Interpretability methods based on Causal Abstraction (e.g., Distributed Alignment Search) can \\emph{spuriously} simulate these directions' combined behavior by leveraging pathways passing through them, giving the impression that the model implements this feature. In such cases, we say the method discovered a \\defn{parasite feature}…",
       "summary_kind": "publisher excerpt",
       "topics": [
-        "Interpretability",
-        "Alignment methods"
+        "Alignment methods",
+        "Interpretability"
       ],
       "score": 12,
       "relevance": "relevant",
@@ -67130,8 +67109,8 @@
     }
   ],
   "library_index": {
-    "manifest": "data/archive/manifest-c95cf260deb29966.json",
-    "sha256": "c95cf260deb299660895eea84d7d9d9dd912c8464e99629a8a152e0eb9478fbd",
+    "manifest": "data/archive/manifest-f4b67f03213742f8.json",
+    "sha256": "f4b67f03213742f87460e0ba440eafff4f76e7d062879a30d5615852489a279c",
     "total_items": 6318,
     "edition_items": 1500,
     "complete": false
